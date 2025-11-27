@@ -1,0 +1,16 @@
+{
+  "workflow_id": "fan-out-fan-in",
+  "domain": "patterns",
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "fan-out-fan-in",
+    "scatter-gather",
+    "parallel-processing",
+    "aggregation",
+    "map-reduce",
+    "concurrency"
+  ],
+  "description": "Fan-out/fan-in pattern with work distribution to parallel workers, concurrent execution, result aggregation, and error handling for partial failures."
+}

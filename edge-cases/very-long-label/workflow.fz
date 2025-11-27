@@ -1,0 +1,14 @@
+laneA { # Lanea
+  n1: circle label:"Start Very Long Label"
+  n2: diamond label:"Very long label for demonstration for demonstration for demonstration for demonstration for demonstration for demonstration for demonstration for demonstration "
+  n3: rectangle label:"Very Long Label step 3"
+  n4: rectangle label:"Very Long Label step 4"
+  n5: circle label:"End Very Long Label"
+
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left) [label="Yes/Approved"]
+  n2.handle(bottom) -> n4.handle(top) [label="No/Rejected"]
+  n3.handle(right) -> n5.handle(left)
+  n4.handle(right) -> n5.handle(left)
+}
+loop [retry until success] n2 n3 n4

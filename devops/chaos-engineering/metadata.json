@@ -1,0 +1,16 @@
+{
+  "workflow_id": "chaos-engineering",
+  "domain": "devops",
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "chaos-engineering",
+    "fault-injection",
+    "resilience-testing",
+    "game-day",
+    "blast-radius",
+    "steady-state"
+  ],
+  "description": "Chaos engineering workflow with hypothesis definition, steady-state monitoring, controlled fault injection, blast radius limitation, and resilience validation."
+}

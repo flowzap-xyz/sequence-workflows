@@ -1,0 +1,15 @@
+{
+  "workflow_id": "callback-pattern",
+  "domain": "patterns",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "callback",
+    "pattern",
+    "patterns",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models an async operation that notifies a callback when done."
+}

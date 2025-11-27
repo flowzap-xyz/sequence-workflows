@@ -1,0 +1,16 @@
+{
+  "workflow_id": "backup-restore",
+  "domain": "devops",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "backup-restore",
+    "disaster-recovery",
+    "rpo-rto",
+    "snapshot",
+    "data-protection",
+    "recovery-testing"
+  ],
+  "description": "Backup and restore workflow with scheduled backups, offsite replication, retention policy enforcement, restore testing, and RTO/RPO validation."
+}

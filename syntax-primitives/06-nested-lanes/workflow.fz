@@ -1,0 +1,18 @@
+laneA { # Lane A
+  n1: circle label:"Start 06 Nested Lanes"
+  n4: rectangle label:"06 Nested Lanes step 4"
+
+  n1.handle(bottom) -> laneB.n2.handle(top)
+  n4.handle(bottom) -> laneB.n5.handle(top)
+}
+laneB { # Lane B
+  n2: rectangle label:"06 Nested Lanes step 2"
+  n5: circle label:"End 06 Nested Lanes"
+
+  n2.handle(bottom) -> laneC.n3.handle(top)
+}
+laneC { # Lane C
+  n3: rectangle label:"06 Nested Lanes step 3"
+
+  n3.handle(bottom) -> laneA.n4.handle(top)
+}

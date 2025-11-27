@@ -1,0 +1,16 @@
+{
+  "workflow_id": "blue-green-deploy",
+  "domain": "patterns",
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "blue-green-deployment",
+    "zero-downtime",
+    "traffic-switching",
+    "rollback",
+    "load-balancer",
+    "release-management"
+  ],
+  "description": "Blue-green deployment pattern with parallel environment setup, smoke testing, load balancer traffic switch, and instant rollback capability."
+}

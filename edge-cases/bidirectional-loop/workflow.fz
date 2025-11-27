@@ -1,0 +1,46 @@
+laneA { # Lanea
+  n1: circle label:"Start Bidirectional Loop"
+  n2: diamond label:"Bidirectional Loop step 2"
+  n5: rectangle label:"Bidirectional Loop step 5"
+  n9: rectangle label:"Bidirectional Loop step 9"
+  n13: rectangle label:"Bidirectional Loop step 13"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> laneC.n3.handle(top) [label="Yes/Approved"]
+  n2.handle(bottom) -> laneD.n4.handle(top) [label="No/Rejected"]
+  n5.handle(bottom) -> laneB.n6.handle(top)
+  n9.handle(bottom) -> laneB.n10.handle(top)
+  n13.handle(bottom) -> laneB.n14.handle(top)
+  n2.handle(right) -> laneC.n3.handle(left) [label="Forward"]
+  loop [retry until success] n2 n5 n9 n13 n6 n10 n14 n3 n7 n11 n15 n4 n8 n12
+}
+
+laneB { # Laneb
+  n6: rectangle label:"Bidirectional Loop step 6"
+  n10: rectangle label:"Bidirectional Loop step 10"
+  n14: rectangle label:"Bidirectional Loop step 14"
+  n6.handle(bottom) -> laneC.n7.handle(top)
+  n10.handle(bottom) -> laneC.n11.handle(top)
+  n14.handle(bottom) -> laneC.n15.handle(top)
+}
+
+laneC { # Lanec
+  n3: rectangle label:"Bidirectional Loop step 3"
+  n7: rectangle label:"Bidirectional Loop step 7"
+  n11: rectangle label:"Bidirectional Loop step 11"
+  n15: rectangle label:"Bidirectional Loop step 15"
+  n7.handle(bottom) -> laneD.n8.handle(top)
+  n11.handle(bottom) -> laneD.n12.handle(top)
+  n15.handle(bottom) -> laneD.n16.handle(top)
+  n3.handle(left) -> laneA.n2.handle(right) [label="Back"]
+  n3.handle(right) -> laneA.n5.handle(left)
+}
+
+laneD { # Laned
+  n4: rectangle label:"Bidirectional Loop step 4"
+  n8: rectangle label:"Bidirectional Loop step 8"
+  n12: rectangle label:"Bidirectional Loop step 12"
+  n16: circle label:"End Bidirectional Loop"
+  n12.handle(right) -> laneA.n13.handle(left)
+  n8.handle(right) -> laneA.n9.handle(left)
+  n4.handle(right) -> laneA.n5.handle(left)
+}

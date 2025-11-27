@@ -1,0 +1,19 @@
+supplier { # Supplier
+  n1: circle label:"Start Delivery Confirmation"
+  n3: rectangle label:"Review Delivery Confirmation details"
+  n5: diamond label:"Update records for Delivery Confirmation"
+  n7: circle label:"End Delivery Confirmation"
+  n1.handle(bottom) -> warehouse.n2.handle(top)
+  n3.handle(bottom) -> warehouse.n4.handle(top) [label="Processed"]
+  n5.handle(bottom) -> warehouse.n6.handle(top)
+  n5.handle(right) -> warehouse.n4.handle(right) [label="Retry/Rejected"]
+}
+
+warehouse { # Warehouse
+  n2: rectangle label:"Receive Delivery Confirmation request"
+  n4: rectangle label:"Make Delivery Confirmation decision"
+  n6: rectangle label:"Continue Delivery Confirmation process"
+  n6.handle(right) -> supplier.n7.handle(bottom) [label="Success"]
+  n4.handle(bottom) -> supplier.n5.handle(left)
+  n2.handle(right) -> supplier.n3.handle(left)
+}

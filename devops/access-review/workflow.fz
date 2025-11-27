@@ -1,0 +1,45 @@
+IAM { # Identity Management
+n1: circle label:"Start"
+n2: rectangle label:"Initiate quarterly review"
+n3: rectangle label:"Generate access report"
+n4: rectangle label:"Complete review cycle"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Manager.n6.handle(top) [label="Review needed"]
+n4.handle(right) -> n5.handle(left)
+}
+Manager { # Manager Review
+n6: rectangle label:"Review direct reports access"
+n7: diamond label:"Access appropriate?"
+n8: rectangle label:"Certify access"
+n9: rectangle label:"Flag for removal"
+n10: rectangle label:"Request justification"
+n11: diamond label:"More users to review?"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="Yes"]
+n7.handle(bottom) -> n9.handle(top) [label="No"]
+n7.handle(left) -> n10.handle(top) [label="Unsure"]
+n8.handle(right) -> n11.handle(left)
+n9.handle(right) -> n11.handle(top)
+n10.handle(right) -> n7.handle(top)
+n11.handle(right) -> n6.handle(bottom) [label="Yes"]
+n11.handle(bottom) -> Remediation.n12.handle(top) [label="No"]
+}
+Remediation { # Access Remediation
+n12: rectangle label:"Collect flagged accounts"
+n13: rectangle label:"Disable excess permissions"
+n14: rectangle label:"Remove orphaned accounts"
+n15: diamond label:"Exceptions requested?"
+n16: rectangle label:"Route to security team"
+n17: rectangle label:"Generate compliance report"
+n18: rectangle label:"Archive review evidence"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Yes"]
+n15.handle(bottom) -> n17.handle(top) [label="No"]
+n16.handle(right) -> n17.handle(top)
+n17.handle(right) -> n18.handle(left)
+n18.handle(top) -> IAM.n4.handle(bottom) [label="Complete"]
+}

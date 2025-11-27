@@ -1,0 +1,46 @@
+Importer { # Importer
+n1: circle label:"Start"
+n2: rectangle label:"Submit shipment details"
+n3: rectangle label:"Provide commercial invoice"
+n4: rectangle label:"Receive clearance status"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Broker.n6.handle(top) [label="Submit docs"]
+n4.handle(right) -> n5.handle(left)
+}
+Broker { # Customs Broker
+n6: rectangle label:"Review documentation"
+n7: rectangle label:"Classify HS codes"
+n8: rectangle label:"Calculate duties and taxes"
+n9: diamond label:"Documents complete?"
+n10: rectangle label:"File customs entry"
+n11: rectangle label:"Request missing documents"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left) [label="Yes"]
+n9.handle(bottom) -> n11.handle(top) [label="No"]
+n10.handle(bottom) -> Customs.n12.handle(top) [label="Submit"]
+n11.handle(top) -> Importer.n3.handle(bottom) [label="Request"]
+}
+Customs { # Customs Authority
+n12: rectangle label:"Receive entry filing"
+n13: diamond label:"Inspection required?"
+n14: rectangle label:"Physical examination"
+n15: rectangle label:"Document review only"
+n16: diamond label:"Cleared?"
+n17: rectangle label:"Release shipment"
+n18: rectangle label:"Hold for investigation"
+n19: rectangle label:"Issue clearance certificate"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left) [label="Yes"]
+n13.handle(bottom) -> n15.handle(top) [label="No"]
+n14.handle(right) -> n16.handle(left)
+n15.handle(right) -> n16.handle(top)
+n16.handle(right) -> n17.handle(left) [label="Yes"]
+n16.handle(bottom) -> n18.handle(top) [label="No"]
+n17.handle(right) -> n19.handle(left)
+n18.handle(top) -> Broker.n6.handle(bottom) [label="Resolve"]
+n19.handle(top) -> Importer.n4.handle(bottom) [label="Cleared"]
+}

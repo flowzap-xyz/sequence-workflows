@@ -1,0 +1,12 @@
+{
+  "workflow_id": "minimal-workflow",
+  "domain": "edge-cases",
+  "complexity": 2,
+  "num_nodes": 1,
+  "num_lanes": 2,
+  "tags": [
+    "minimal",
+    "workflow"
+  ],
+  "description": "This workflow models a workflow with a single node only."
+}

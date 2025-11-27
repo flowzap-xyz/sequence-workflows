@@ -1,0 +1,34 @@
+supplier { # Supplier
+  n1: circle label:"Start Cycle Counting"
+  n4: rectangle label:"Make Cycle Counting decision"
+  n7: rectangle label:"Continue Cycle Counting process"
+  n10: circle label:"End Cycle Counting"
+  n1.handle(bottom) -> warehouse.n2.handle(top)
+  n1.handle(bottom) -> iot_sensor.n3.handle(top)
+  n1.handle(right) -> n4.handle(left)
+  n1.handle(bottom) -> warehouse.n5.handle(top)
+  n1.handle(bottom) -> iot_sensor.n6.handle(top)
+  n1.handle(right) -> n7.handle(left)
+  n1.handle(bottom) -> warehouse.n8.handle(top)
+  n1.handle(bottom) -> iot_sensor.n9.handle(top)
+  n7.handle(right) -> n10.handle(left)
+  n4.handle(top) -> n10.handle(top)
+}
+
+warehouse { # Warehouse
+  n2: rectangle label:"Receive Cycle Counting request"
+  n5: rectangle label:"Update records for Cycle Counting"
+  n8: rectangle label:"Continue Cycle Counting process"
+  n8.handle(right) -> supplier.n10.handle(bottom)
+  n5.handle(right) -> supplier.n10.handle(bottom)
+  n2.handle(right) -> supplier.n10.handle(bottom)
+}
+
+iot_sensor { # Iot_Sensor
+  n3: rectangle label:"Review Cycle Counting details"
+  n6: rectangle label:"Continue Cycle Counting process"
+  n9: rectangle label:"Continue Cycle Counting process"
+  n9.handle(right) -> supplier.n10.handle(bottom)
+  n6.handle(right) -> supplier.n10.handle(bottom)
+  n3.handle(right) -> supplier.n10.handle(bottom)
+}

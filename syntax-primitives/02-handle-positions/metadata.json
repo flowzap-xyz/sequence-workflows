@@ -1,0 +1,13 @@
+{
+  "workflow_id": "02-handle-positions",
+  "domain": "syntax-primitives",
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "02",
+    "handle",
+    "positions"
+  ],
+  "description": "This workflow models nodes with explicit top, bottom, left, and right handle connections."
+}

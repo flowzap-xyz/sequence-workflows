@@ -1,0 +1,17 @@
+Client { # Client
+  n1: circle label:"Start Transaction"
+  n2: rectangle label:"Attempt Payment"
+  n5: circle label:"Payment Success"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> Server.n3.handle(top) [label="Submit"]
+  n2.handle(right) -> n5.handle(left) [label="Authorized"]
+}
+
+Server { # Server
+  n3: rectangle label:"Process Payment"
+  n4: diamond label:"Authorized?"
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(right) -> Client.n5.handle(bottom) [label="Approved"]
+  n4.handle(top) -> Client.n2.handle(bottom) [label="Decline/Retry"]
+  loop [Retry until approved] n2 n3 n4
+}

@@ -1,0 +1,13 @@
+{
+  "workflow_id": "15-optional-parameters",
+  "domain": "syntax-primitives",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "15",
+    "optional",
+    "parameters"
+  ],
+  "description": "This workflow models a taskbox with some optional fields left out."
+}

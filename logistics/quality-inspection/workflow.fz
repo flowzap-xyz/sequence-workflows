@@ -1,0 +1,48 @@
+Receiving { # Receiving
+n1: circle label:"Start"
+n2: rectangle label:"Select items for inspection"
+n3: rectangle label:"Generate inspection lot"
+n4: rectangle label:"Record inspection results"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Inspector.n6.handle(top) [label="Inspect"]
+n4.handle(right) -> n5.handle(left)
+}
+Inspector { # Quality Inspector
+n6: rectangle label:"Review inspection criteria"
+n7: rectangle label:"Perform visual inspection"
+n8: rectangle label:"Take measurements"
+n9: diamond label:"Within tolerance?"
+n10: rectangle label:"Test functionality"
+n11: rectangle label:"Document defects"
+n12: diamond label:"Defect severity?"
+n13: rectangle label:"Mark as passed"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left) [label="Yes"]
+n9.handle(bottom) -> n11.handle(top) [label="No"]
+n10.handle(right) -> n13.handle(left)
+n11.handle(right) -> n12.handle(left)
+n12.handle(right) -> Disposition.n14.handle(left) [label="Minor"]
+n12.handle(bottom) -> Disposition.n17.handle(top) [label="Major"]
+n13.handle(bottom) -> Disposition.n14.handle(top) [label="Accept"]
+}
+Disposition { # Disposition
+n14: rectangle label:"Accept with deviation"
+n15: rectangle label:"Move to inventory"
+n16: rectangle label:"Update quality records"
+n17: rectangle label:"Reject lot"
+n18: diamond label:"Return or scrap?"
+n19: rectangle label:"Create return to vendor"
+n20: rectangle label:"Schedule for scrap"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(top) -> Receiving.n4.handle(bottom) [label="Complete"]
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left) [label="Return"]
+n18.handle(bottom) -> n20.handle(top) [label="Scrap"]
+n19.handle(top) -> Receiving.n4.handle(bottom) [label="RTV created"]
+n20.handle(top) -> Receiving.n4.handle(bottom) [label="Scrapped"]
+}

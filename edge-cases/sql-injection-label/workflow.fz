@@ -1,0 +1,19 @@
+laneA { # Lanea
+  n1: circle label:"Start Sql Injection Label"
+  n3: rectangle label:"Sql Injection Label step 3"
+  n5: rectangle label:"Sql Injection Label step 5"
+  n7: circle label:"End Sql Injection Label"
+
+  n1.handle(bottom) -> laneB.n2.handle(top)
+  n3.handle(bottom) -> laneB.n4.handle(top) [label="Processed"]
+  n5.handle(bottom) -> laneB.n6.handle(top)
+}
+laneB { # Laneb
+  n2: rectangle label:"SELECT * FROM users WHERE name='admin' OR 1=1; --"
+  n4: rectangle label:"Sql Injection Label step 4"
+  n6: rectangle label:"Sql Injection Label step 6"
+
+  n2.handle(bottom) -> laneA.n3.handle(top)
+  n4.handle(bottom) -> laneA.n5.handle(top)
+  n6.handle(bottom) -> laneA.n7.handle(top) [label="Success"]
+}

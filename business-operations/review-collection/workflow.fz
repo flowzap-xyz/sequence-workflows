@@ -1,0 +1,56 @@
+n8nSchedule { # n8n Schedule Trigger
+  n1: circle label:"Start"
+  n2: rectangle label:"Trigger daily at 10 AM"
+  n3: rectangle label:"Query Shopify orders"
+  n4: rectangle label:"Filter delivered 7 days ago"
+  n5: circle label:"End"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(bottom) -> n8nFilter.n6.handle(top) [label="Orders list"]
+}
+
+n8nFilter { # n8n Filter Node
+  n6: rectangle label:"Check if review exists"
+  n7: diamond label:"Already reviewed?"
+  n8: rectangle label:"Skip customer"
+  n9: rectangle label:"Add to review queue"
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(right) -> n8.handle(left) [label="Yes"]
+  n7.handle(bottom) -> n9.handle(top) [label="No"]
+  n8.handle(top) -> n8nSchedule.n5.handle(bottom) [label="Skip"]
+  n9.handle(bottom) -> n8nEmail.n10.handle(top) [label="Request review"]
+}
+
+n8nEmail { # n8n SendGrid Node
+  n10: rectangle label:"Build personalized email"
+  n11: rectangle label:"Include product image"
+  n12: rectangle label:"Add review link with token"
+  n13: rectangle label:"Send via SendGrid API"
+  n14: diamond label:"Email sent?"
+  n15: rectangle label:"Log to Google Sheets"
+  n16: rectangle label:"Queue for retry"
+  n10.handle(right) -> n11.handle(left)
+  n11.handle(right) -> n12.handle(left)
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(right) -> n14.handle(left)
+  n14.handle(right) -> n15.handle(left) [label="Yes"]
+  n14.handle(bottom) -> n16.handle(top) [label="No"]
+  n15.handle(bottom) -> n8nWebhook.n17.handle(top) [label="Track"]
+  n16.handle(top) -> n13.handle(bottom) [label="Retry"]
+}
+
+n8nWebhook { # n8n Webhook Response
+  n17: rectangle label:"Wait for review submission"
+  n18: rectangle label:"Validate review content"
+  n19: diamond label:"Rating 4 or 5 stars?"
+  n20: rectangle label:"Post to Trustpilot API"
+  n21: rectangle label:"Flag for internal review"
+  n22: rectangle label:"Send thank you email"
+  n17.handle(right) -> n18.handle(left)
+  n18.handle(right) -> n19.handle(left)
+  n19.handle(right) -> n20.handle(left) [label="Yes"]
+  n19.handle(bottom) -> n21.handle(top) [label="No"]
+  n20.handle(right) -> n22.handle(left)
+  n21.handle(right) -> n22.handle(top)
+  n22.handle(top) -> n8nSchedule.n5.handle(bottom) [label="Complete"]
+}

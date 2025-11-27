@@ -1,0 +1,47 @@
+Scheduler { # On-Call Scheduler
+n1: circle label:"Start"
+n2: rectangle label:"Load rotation schedule"
+n3: rectangle label:"Determine current on-call"
+n4: rectangle label:"Complete handoff"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Handoff.n6.handle(top) [label="Rotation due"]
+n4.handle(right) -> n5.handle(left)
+}
+Handoff { # Handoff Process
+n6: rectangle label:"Notify outgoing engineer"
+n7: rectangle label:"Notify incoming engineer"
+n8: diamond label:"Handoff acknowledged?"
+n9: rectangle label:"Transfer pager access"
+n10: rectangle label:"Escalate to manager"
+n11: rectangle label:"Update PagerDuty schedule"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n9.handle(right) -> n11.handle(left)
+n10.handle(right) -> n9.handle(top)
+n11.handle(bottom) -> Alerting.n12.handle(top) [label="Active"]
+}
+Alerting { # Alert Routing
+n12: rectangle label:"Receive incoming alert"
+n13: diamond label:"Severity level?"
+n14: rectangle label:"Page on-call immediately"
+n15: rectangle label:"Send Slack notification"
+n16: rectangle label:"Queue for review"
+n17: diamond label:"Acknowledged in 5 min?"
+n18: rectangle label:"Escalate to backup"
+n19: rectangle label:"Log acknowledgment"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left) [label="Critical"]
+n13.handle(bottom) -> n15.handle(top) [label="Warning"]
+n13.handle(left) -> n16.handle(top) [label="Info"]
+n14.handle(right) -> n17.handle(left)
+n15.handle(right) -> n19.handle(left)
+n16.handle(right) -> n19.handle(top)
+n17.handle(right) -> n19.handle(left) [label="Yes"]
+n17.handle(bottom) -> n18.handle(top) [label="No"]
+n18.handle(right) -> n17.handle(top)
+n19.handle(top) -> Scheduler.n4.handle(bottom) [label="Handled"]
+}

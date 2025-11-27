@@ -1,0 +1,14 @@
+{
+  "workflow_id": "relocation-assistance",
+  "domain": "hr",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "relocation",
+    "assistance",
+    "hr",
+    "decision"
+  ],
+  "description": "This workflow models helping employees relocate."
+}

@@ -1,0 +1,55 @@
+ExternalService { # External Service
+  n1: circle label:"Start"
+  n2: rectangle label:"Event occurs"
+  n3: rectangle label:"Prepare webhook payload"
+  n4: rectangle label:"Send HTTP POST request"
+  n5: diamond label:"Response 2xx?"
+  n6: rectangle label:"Log successful delivery"
+  n7: circle label:"End"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(bottom) -> WebhookReceiver.n8.handle(top) [label="POST /webhook"]
+  n5.handle(right) -> n6.handle(left) [label="Yes"]
+  n5.handle(bottom) -> RetryQueue.n15.handle(top) [label="No"]
+  n6.handle(right) -> n7.handle(left)
+}
+
+WebhookReceiver { # Webhook Receiver
+  n8: rectangle label:"Validate signature header"
+  n9: diamond label:"Signature valid?"
+  n10: rectangle label:"Parse JSON payload"
+  n11: rectangle label:"Acknowledge with 200 OK"
+  n12: rectangle label:"Return 401 Unauthorized"
+  n13: rectangle label:"Queue for async processing"
+  n14: rectangle label:"Return 400 Bad Request"
+  n8.handle(right) -> n9.handle(left)
+  n9.handle(right) -> n10.handle(left) [label="Yes"]
+  n9.handle(bottom) -> n12.handle(top) [label="No"]
+  n10.handle(right) -> n11.handle(left)
+  n11.handle(right) -> n13.handle(left)
+  n12.handle(top) -> ExternalService.n5.handle(bottom) [label="401"]
+  n13.handle(bottom) -> EventProcessor.n18.handle(top) [label="Process"]
+  n14.handle(top) -> ExternalService.n5.handle(bottom) [label="400"]
+}
+
+RetryQueue { # Retry Queue
+  n15: rectangle label:"Add to retry queue"
+  n16: rectangle label:"Wait with backoff"
+  n17: rectangle label:"Retry delivery"
+  n15.handle(right) -> n16.handle(left)
+  n16.handle(right) -> n17.handle(left)
+  n17.handle(top) -> ExternalService.n4.handle(bottom) [label="Retry"]
+  loop [retry up to 5 times] n15 n16 n17
+}
+
+EventProcessor { # Event Processor
+  n18: rectangle label:"Deserialize event data"
+  n19: rectangle label:"Route to handler"
+  n20: rectangle label:"Execute business logic"
+  n21: rectangle label:"Update local state"
+  n18.handle(right) -> n19.handle(left)
+  n19.handle(right) -> n20.handle(left)
+  n20.handle(right) -> n21.handle(left)
+  n21.handle(top) -> ExternalService.n7.handle(bottom) [label="Complete"]
+}

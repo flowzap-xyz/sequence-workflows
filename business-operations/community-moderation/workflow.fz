@@ -1,0 +1,44 @@
+User { # User
+n1: circle label:"Start"
+n2: rectangle label:"Report content or user"
+n3: rectangle label:"Receive moderation outcome"
+n4: diamond label:"Appeal decision?"
+n5: rectangle label:"Submit appeal with reason"
+n6: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> AutoMod.n7.handle(top) [label="Flag content"]
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n6.handle(left) [label="No"]
+n4.handle(bottom) -> n5.handle(top) [label="Yes"]
+n5.handle(bottom) -> HumanMod.n15.handle(top) [label="Review appeal"]
+}
+AutoMod { # Auto Moderation
+n7: rectangle label:"Scan content with AI"
+n8: diamond label:"Violates policy?"
+n9: rectangle label:"Auto-remove content"
+n10: rectangle label:"Mark as safe"
+n11: diamond label:"Confidence high?"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n11.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n11.handle(right) -> n9.handle(left) [label="Yes"]
+n11.handle(bottom) -> HumanMod.n12.handle(top) [label="No - Escalate"]
+n9.handle(top) -> User.n3.handle(bottom) [label="Removed"]
+n10.handle(top) -> User.n3.handle(bottom) [label="Approved"]
+}
+HumanMod { # Human Moderator
+n12: rectangle label:"Review flagged content"
+n13: diamond label:"Policy violation?"
+n14: rectangle label:"Apply appropriate action"
+n15: rectangle label:"Review appeal case"
+n16: diamond label:"Overturn decision?"
+n17: rectangle label:"Restore content"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left) [label="Yes"]
+n13.handle(bottom) -> AutoMod.n10.handle(bottom) [label="No"]
+n14.handle(top) -> User.n3.handle(bottom) [label="Action taken"]
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left) [label="Yes"]
+n16.handle(bottom) -> User.n6.handle(top) [label="No - Upheld"]
+n17.handle(top) -> User.n3.handle(bottom) [label="Restored"]
+}

@@ -1,0 +1,16 @@
+{
+  "workflow_id": "delivery-confirmation",
+  "domain": "logistics",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "delivery-confirmation",
+    "pod",
+    "signature-capture",
+    "order-completion",
+    "customer-notification",
+    "tracking-update"
+  ],
+  "description": "Delivery confirmation workflow with proof of delivery capture, signature collection, photo documentation, order status update, and customer notification."
+}

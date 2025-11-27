@@ -1,0 +1,16 @@
+{
+  "workflow_id": "webinar-registration",
+  "domain": "business-operations",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "webinar",
+    "event-registration",
+    "zoom",
+    "calendar-invite",
+    "reminder-sequence",
+    "lead-capture"
+  ],
+  "description": "Webinar registration workflow with signup form, calendar invite, reminder email sequence, attendance tracking, and post-event follow-up."
+}

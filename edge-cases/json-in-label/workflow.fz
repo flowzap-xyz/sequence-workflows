@@ -1,0 +1,39 @@
+laneA { # Lanea
+  n1: circle label:"Start Json In Label"
+  n5: rectangle label:"Json In Label step 5"
+  n9: rectangle label:"Json In Label step 9"
+  n13: circle label:"End Json In Label"
+
+  n1.handle(bottom) -> laneB.n2.handle(top)
+  n5.handle(bottom) -> laneB.n6.handle(top)
+  n9.handle(bottom) -> laneB.n10.handle(top) [label="Valid"]
+}
+laneB { # Laneb
+  n2: rectangle label:"{\"key\":\"value\",\"count\":3}"
+  n6: rectangle label:"Json In Label step 6"
+  n10: rectangle label:"Json In Label step 10"
+
+  n2.handle(bottom) -> laneC.n3.handle(top)
+  n6.handle(bottom) -> laneC.n7.handle(top) [label="Success"]
+  n10.handle(bottom) -> laneC.n11.handle(top)
+}
+laneC { # Lanec
+  n3: rectangle label:"Json In Label step 3"
+  n7: rectangle label:"Json In Label step 7"
+  n11: rectangle label:"Json In Label step 11"
+
+  n3.handle(bottom) -> laneD.n4.handle(top) [label="Processed"]
+  n7.handle(bottom) -> laneD.n8.handle(top)
+  n11.handle(bottom) -> laneD.n12.handle(top)
+}
+laneD { # Laned
+  n4: diamond label:"Json In Label step 4"
+  n8: rectangle label:"Json In Label step 8"
+  n12: diamond label:"Json In Label step 12"
+
+  n4.handle(bottom) -> laneA.n5.handle(top)
+  n4.handle(right) -> laneC.n3.handle(right) [label="Retry/Rejected"]
+  n8.handle(bottom) -> laneA.n9.handle(top)
+  n12.handle(bottom) -> laneA.n13.handle(top) [label="Next"]
+  n12.handle(right) -> laneC.n11.handle(right) [label="Retry/Rejected"]
+}

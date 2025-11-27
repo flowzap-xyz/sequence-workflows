@@ -1,0 +1,53 @@
+Controller { # Controller
+n1: circle label:"Start"
+n2: rectangle label:"Initiate month-end close"
+n3: rectangle label:"Review close checklist"
+n4: rectangle label:"Approve financial statements"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Accounting.n6.handle(top) [label="Begin close"]
+n3.handle(bottom) -> Reporting.n18.handle(top) [label="Generate reports"]
+n4.handle(right) -> n5.handle(left)
+}
+Accounting { # Accounting Team
+n6: rectangle label:"Post pending transactions"
+n7: rectangle label:"Reconcile bank accounts"
+n8: diamond label:"Reconciliation balanced?"
+n9: rectangle label:"Record accruals"
+n10: rectangle label:"Investigate variances"
+n11: rectangle label:"Post depreciation"
+n12: rectangle label:"Review intercompany"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n9.handle(right) -> n11.handle(left)
+n10.handle(top) -> n7.handle(bottom) [label="Recheck"]
+n11.handle(right) -> n12.handle(left)
+n12.handle(bottom) -> Validation.n13.handle(top) [label="Validate"]
+}
+Validation { # Validation
+n13: rectangle label:"Run trial balance"
+n14: diamond label:"Debits equal credits?"
+n15: rectangle label:"Review account balances"
+n16: rectangle label:"Identify discrepancies"
+n17: rectangle label:"Lock accounting period"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left) [label="Yes"]
+n14.handle(bottom) -> n16.handle(top) [label="No"]
+n15.handle(right) -> n17.handle(left)
+n16.handle(top) -> Accounting.n6.handle(bottom) [label="Correct"]
+n17.handle(top) -> Controller.n3.handle(bottom) [label="Period closed"]
+}
+Reporting { # Financial Reporting
+n18: rectangle label:"Generate income statement"
+n19: rectangle label:"Generate balance sheet"
+n20: rectangle label:"Generate cash flow statement"
+n21: rectangle label:"Prepare variance analysis"
+n22: rectangle label:"Package for leadership"
+n18.handle(right) -> n19.handle(left)
+n19.handle(right) -> n20.handle(left)
+n20.handle(right) -> n21.handle(left)
+n21.handle(right) -> n22.handle(left)
+n22.handle(top) -> Controller.n4.handle(bottom) [label="Ready for review"]
+}

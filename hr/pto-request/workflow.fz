@@ -1,0 +1,51 @@
+Employee { # Employee
+n1: circle label:"Start"
+n2: rectangle label:"Select PTO dates"
+n3: rectangle label:"Add request notes"
+n4: rectangle label:"Receive decision notification"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> HRSystem.n6.handle(top) [label="Check balance"]
+n3.handle(bottom) -> Manager.n11.handle(top) [label="Submit"]
+n4.handle(right) -> n5.handle(left)
+}
+HRSystem { # HR System
+n6: rectangle label:"Fetch PTO balance"
+n7: diamond label:"Sufficient balance?"
+n8: rectangle label:"Check blackout dates"
+n9: diamond label:"Dates available?"
+n10: rectangle label:"Show insufficient balance"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="Yes"]
+n7.handle(bottom) -> n10.handle(top) [label="No"]
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> Employee.n3.handle(bottom) [label="Yes"]
+n9.handle(bottom) -> Employee.n2.handle(bottom) [label="No - Blocked"]
+n10.handle(top) -> Employee.n2.handle(bottom) [label="Select less"]
+}
+Manager { # Manager
+n11: rectangle label:"Review PTO request"
+n12: rectangle label:"Check team coverage"
+n13: diamond label:"Approve request?"
+n14: rectangle label:"Approve with comment"
+n15: rectangle label:"Deny with reason"
+n16: rectangle label:"Suggest alternate dates"
+n11.handle(right) -> n12.handle(left)
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left) [label="Yes"]
+n13.handle(bottom) -> n15.handle(top) [label="No"]
+n13.handle(left) -> n16.handle(top) [label="Partial"]
+n14.handle(bottom) -> Calendar.n17.handle(top) [label="Approved"]
+n15.handle(top) -> Employee.n4.handle(bottom) [label="Denied"]
+n16.handle(top) -> Employee.n2.handle(bottom) [label="Revise dates"]
+}
+Calendar { # Calendar System
+n17: rectangle label:"Block dates on calendar"
+n18: rectangle label:"Deduct PTO balance"
+n19: rectangle label:"Send confirmation email"
+n20: rectangle label:"Notify team members"
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left)
+n19.handle(right) -> n20.handle(left)
+n20.handle(top) -> Employee.n4.handle(bottom) [label="Confirmed"]
+}

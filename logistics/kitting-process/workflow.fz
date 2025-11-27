@@ -1,0 +1,19 @@
+supplier { # Supplier
+  n1: circle label:"Start Kitting Process"
+  n3: diamond label:"Review Kitting Process details"
+  n5: rectangle label:"Update records for Kitting Process"
+  n7: circle label:"End Kitting Process"
+  n1.handle(bottom) -> warehouse.n2.handle(top)
+  n3.handle(bottom) -> warehouse.n4.handle(top)
+  n3.handle(right) -> warehouse.n2.handle(right) [label="Retry/Rejected"]
+  n5.handle(bottom) -> warehouse.n6.handle(top) [label="Done"]
+}
+
+warehouse { # Warehouse
+  n2: rectangle label:"Receive Kitting Process request"
+  n4: rectangle label:"Make Kitting Process decision"
+  n6: rectangle label:"Continue Kitting Process process"
+  n6.handle(right) -> supplier.n7.handle(bottom)
+  n4.handle(right) -> supplier.n5.handle(left)
+  n2.handle(bottom) -> supplier.n3.handle(left) [label="Next"]
+}

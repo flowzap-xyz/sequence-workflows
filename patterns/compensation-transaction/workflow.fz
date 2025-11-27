@@ -1,0 +1,19 @@
+user { # User
+  n1: circle label:"Start Compensation Transaction"
+  n2: diamond label:"Receive Compensation Transaction event"
+  n3: rectangle label:"Validate Compensation Transaction conditions"
+  n5: rectangle label:"Record Compensation Transaction outcome"
+  n7: circle label:"End Compensation Transaction"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left) [label="Yes/Approved"]
+  n2.handle(bottom) -> app.n4.handle(top) [label="No/Rejected"]
+  n3.handle(right) -> n5.handle(left)
+  n5.handle(right) -> app.n6.handle(top)
+}
+
+app { # App
+  n4: rectangle label:"Execute Compensation Transaction action"
+  n6: rectangle label:"Monitor Compensation Transaction status"
+  n6.handle(right) -> user.n7.handle(bottom)
+  n4.handle(right) -> user.n5.handle(bottom)
+}

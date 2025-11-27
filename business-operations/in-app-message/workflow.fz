@@ -1,0 +1,46 @@
+n8nTrigger { # n8n Webhook Trigger
+  n1: circle label:"Start"
+  n2: rectangle label:"Receive user event webhook"
+  n3: rectangle label:"Parse event payload"
+  n4: diamond label:"Event type?"
+  n5: rectangle label:"Route to onboarding flow"
+  n6: rectangle label:"Route to engagement flow"
+  n7: rectangle label:"Route to retention flow"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(right) -> n5.handle(left) [label="signup"]
+  n4.handle(bottom) -> n6.handle(top) [label="feature_used"]
+  n4.handle(left) -> n7.handle(top) [label="inactive"]
+  n5.handle(bottom) -> Segmentation.n8.handle(top) [label="Check segment"]
+  n6.handle(bottom) -> Segmentation.n8.handle(top) [label="Check segment"]
+  n7.handle(bottom) -> Segmentation.n8.handle(top) [label="Check segment"]
+}
+Segmentation { # n8n IF Node
+  n8: rectangle label:"Fetch user profile from DB"
+  n9: diamond label:"User segment?"
+  n10: rectangle label:"Select premium template"
+  n11: rectangle label:"Select standard template"
+  n12: rectangle label:"Select trial template"
+  n8.handle(right) -> n9.handle(left)
+  n9.handle(right) -> n10.handle(left) [label="Premium"]
+  n9.handle(bottom) -> n11.handle(top) [label="Standard"]
+  n9.handle(left) -> n12.handle(top) [label="Trial"]
+  n10.handle(bottom) -> Delivery.n13.handle(top) [label="Template"]
+  n11.handle(bottom) -> Delivery.n13.handle(top) [label="Template"]
+  n12.handle(bottom) -> Delivery.n13.handle(top) [label="Template"]
+}
+Delivery { # n8n HTTP Request
+  n13: rectangle label:"Personalize message content"
+  n14: rectangle label:"POST to Intercom API"
+  n15: diamond label:"Delivery successful?"
+  n16: rectangle label:"Log to Google Sheets"
+  n17: rectangle label:"Send Slack alert"
+  n18: circle label:"End"
+  n13.handle(right) -> n14.handle(left)
+  n14.handle(right) -> n15.handle(left)
+  n15.handle(right) -> n16.handle(left) [label="Yes"]
+  n15.handle(bottom) -> n17.handle(top) [label="No"]
+  n16.handle(right) -> n18.handle(left)
+  n17.handle(right) -> n18.handle(top)
+}

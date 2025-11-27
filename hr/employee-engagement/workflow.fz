@@ -1,0 +1,22 @@
+employee { # Employee
+  n1: circle label:"Start Employee Engagement"
+  n3: rectangle label:"Review Employee Engagement details"
+  n5: rectangle label:"Update records for Employee Engagement"
+  n7: circle label:"End Employee Engagement"
+  n1.handle(bottom) -> manager.n2.handle(top)
+  n1.handle(right) -> n3.handle(left)
+  n1.handle(bottom) -> manager.n4.handle(top)
+  n1.handle(right) -> n5.handle(left)
+  n1.handle(bottom) -> manager.n6.handle(top)
+  n3.handle(right) -> n7.handle(left)
+  n5.handle(right) -> n7.handle(left)
+}
+
+manager { # Manager
+  n2: rectangle label:"Receive Employee Engagement request"
+  n4: rectangle label:"Make Employee Engagement decision"
+  n6: rectangle label:"Continue Employee Engagement process"
+  n6.handle(right) -> employee.n7.handle(bottom)
+  n4.handle(right) -> employee.n7.handle(bottom)
+  n2.handle(right) -> employee.n7.handle(bottom)
+}

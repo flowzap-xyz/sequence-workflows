@@ -1,0 +1,44 @@
+laneA { # Lanea
+  n1: circle label:"Start Xml In Label"
+  n5: rectangle label:"Xml In Label step 5"
+  n9: rectangle label:"Xml In Label step 9"
+  n13: rectangle label:"Xml In Label step 13"
+
+  n1.handle(bottom) -> laneB.n2.handle(top) [label="Success"]
+  n5.handle(bottom) -> laneB.n6.handle(top)
+  n9.handle(bottom) -> laneB.n10.handle(top)
+  n13.handle(bottom) -> laneB.n14.handle(top) [label="Processed"]
+}
+laneB { # Laneb
+  n2: rectangle label:"<note><to>User</to><body>Example</body></note>"
+  n6: rectangle label:"Xml In Label step 6"
+  n10: rectangle label:"Xml In Label step 10"
+  n14: rectangle label:"Xml In Label step 14"
+
+  n2.handle(bottom) -> laneC.n3.handle(top)
+  n6.handle(bottom) -> laneC.n7.handle(top)
+  n10.handle(bottom) -> laneC.n11.handle(top) [label="Done"]
+  n14.handle(bottom) -> laneC.n15.handle(top)
+}
+laneC { # Lanec
+  n3: rectangle label:"Xml In Label step 3"
+  n7: rectangle label:"Xml In Label step 7"
+  n11: rectangle label:"Xml In Label step 11"
+  n15: rectangle label:"Xml In Label step 15"
+
+  n3.handle(bottom) -> laneD.n4.handle(top)
+  n7.handle(bottom) -> laneD.n8.handle(top) [label="Next"]
+  n11.handle(bottom) -> laneD.n12.handle(top)
+  n15.handle(bottom) -> laneD.n16.handle(top)
+}
+laneD { # Laned
+  n4: rectangle label:"Xml In Label step 4"
+  n8: diamond label:"Xml In Label step 8"
+  n12: rectangle label:"Xml In Label step 12"
+  n16: circle label:"End Xml In Label"
+
+  n4.handle(bottom) -> laneA.n5.handle(top) [label="Valid"]
+  n8.handle(bottom) -> laneA.n9.handle(top)
+  n8.handle(right) -> laneC.n7.handle(right) [label="Retry/Rejected"]
+  n12.handle(bottom) -> laneA.n13.handle(top)
+}

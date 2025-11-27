@@ -1,0 +1,16 @@
+{
+  "workflow_id": "bank-reconciliation",
+  "domain": "finance",
+  "complexity": 4,
+  "num_nodes": 18,
+  "num_lanes": 3,
+  "tags": [
+    "bank-reconciliation",
+    "gl-matching",
+    "variance-analysis",
+    "journal-entries",
+    "auto-matching",
+    "discrepancy-resolution"
+  ],
+  "description": "Bank reconciliation workflow with automated transaction matching, variance reporting, discrepancy research, and journal entry creation for timing differences and bank errors."
+}

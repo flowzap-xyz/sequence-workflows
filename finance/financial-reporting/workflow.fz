@@ -1,0 +1,28 @@
+employee { # Employee
+  n1: circle label:"Start Financial Reporting"
+  n4: rectangle label:"Make Financial Reporting decision"
+  n7: rectangle label:"Continue Financial Reporting process"
+  n10: circle label:"End Financial Reporting"
+  n1.handle(bottom) -> manager.n2.handle(top)
+  n4.handle(bottom) -> manager.n5.handle(top)
+  n7.handle(bottom) -> manager.n8.handle(top)
+}
+
+manager { # Manager
+  n2: rectangle label:"Receive Financial Reporting request"
+  n5: rectangle label:"Update records for Financial Reporting"
+  n8: rectangle label:"Continue Financial Reporting process"
+  n2.handle(bottom) -> finance_app.n3.handle(top) [label="Next"]
+  n5.handle(bottom) -> finance_app.n6.handle(top) [label="Done"]
+  n8.handle(bottom) -> finance_app.n9.handle(top) [label="Processed"]
+}
+
+finance_app { # Finance_App
+  n3: rectangle label:"Review Financial Reporting details"
+  n6: diamond label:"Continue Financial Reporting process"
+  n9: rectangle label:"Continue Financial Reporting process"
+  n9.handle(right) -> employee.n10.handle(bottom)
+  n6.handle(right) -> employee.n7.handle(left)
+  n6.handle(left) -> manager.n5.handle(left) [label="Retry/Rejected"]
+  n3.handle(right) -> employee.n4.handle(left)
+}

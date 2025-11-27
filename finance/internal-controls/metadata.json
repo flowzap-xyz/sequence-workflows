@@ -1,0 +1,16 @@
+{
+  "workflow_id": "internal-controls",
+  "domain": "finance",
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "internal-controls",
+    "sox-compliance",
+    "control-testing",
+    "segregation-of-duties",
+    "risk-assessment",
+    "remediation"
+  ],
+  "description": "Internal controls testing workflow with risk assessment, control design evaluation, operating effectiveness testing, deficiency identification, and remediation tracking."
+}

@@ -1,0 +1,40 @@
+ProductManager { # Product Manager
+n1: circle label:"Start"
+n2: rectangle label:"Define test hypothesis"
+n3: rectangle label:"Select target audience segment"
+n4: rectangle label:"Review test results"
+n5: diamond label:"Statistically significant?"
+n6: rectangle label:"Document findings"
+n7: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Engineering.n8.handle(top) [label="Request setup"]
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left) [label="Yes"]
+n5.handle(bottom) -> Analytics.n14.handle(top) [label="No - Extend test"]
+n6.handle(right) -> n7.handle(left)
+}
+Engineering { # Engineering
+n8: rectangle label:"Create feature flags"
+n9: rectangle label:"Implement variant A"
+n10: rectangle label:"Implement variant B"
+n11: diamond label:"QA passed?"
+n12: rectangle label:"Deploy to production"
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> n9.handle(bottom) [label="No - Fix bugs"]
+n12.handle(bottom) -> Analytics.n13.handle(top) [label="Start tracking"]
+}
+Analytics { # Analytics
+n13: rectangle label:"Configure tracking events"
+n14: rectangle label:"Monitor conversion metrics"
+n15: diamond label:"Enough sample size?"
+n16: rectangle label:"Generate statistical report"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Yes"]
+n15.handle(bottom) -> n14.handle(bottom) [label="No - Continue"]
+n16.handle(top) -> ProductManager.n4.handle(bottom) [label="Results ready"]
+}

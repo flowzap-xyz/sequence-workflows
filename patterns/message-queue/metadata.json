@@ -1,0 +1,14 @@
+{
+  "workflow_id": "message-queue",
+  "domain": "patterns",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "message",
+    "queue",
+    "patterns",
+    "decision"
+  ],
+  "description": "This workflow models asynchronous processing of work via a queue."
+}

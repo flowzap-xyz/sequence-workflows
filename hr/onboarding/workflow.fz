@@ -1,0 +1,47 @@
+NewHire { # New Hire
+n1: circle label:"Start"
+n2: rectangle label:"Accept offer letter"
+n3: rectangle label:"Complete I-9 and W-4 forms"
+n4: rectangle label:"Set up direct deposit"
+n5: rectangle label:"Complete first day orientation"
+n6: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> HR.n7.handle(top) [label="Signed"]
+n3.handle(bottom) -> IT.n14.handle(top) [label="Docs complete"]
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left)
+}
+HR { # Human Resources
+n7: rectangle label:"Create employee record"
+n8: rectangle label:"Enroll in benefits"
+n9: rectangle label:"Assign to department"
+n10: rectangle label:"Schedule orientation"
+n11: diamond label:"Background check clear?"
+n12: rectangle label:"Proceed with onboarding"
+n13: rectangle label:"Rescind offer"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> n13.handle(top) [label="No"]
+n12.handle(top) -> NewHire.n3.handle(bottom) [label="Continue"]
+n13.handle(top) -> NewHire.n6.handle(bottom) [label="Terminated"]
+}
+IT { # IT Department
+n14: rectangle label:"Create user accounts"
+n15: rectangle label:"Provision laptop"
+n16: rectangle label:"Set up email and Slack"
+n17: rectangle label:"Grant system access"
+n18: diamond label:"Equipment ready?"
+n19: rectangle label:"Ship to employee"
+n20: rectangle label:"Order equipment"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left) [label="Yes"]
+n18.handle(bottom) -> n20.handle(top) [label="No"]
+n19.handle(top) -> NewHire.n4.handle(bottom) [label="Ready"]
+n20.handle(right) -> n19.handle(top)
+}

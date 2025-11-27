@@ -1,0 +1,22 @@
+supplier { # Supplier
+  n1: circle label:"Start Cold Chain Monitoring"
+  n3: rectangle label:"Review Cold Chain Monitoring details"
+  n5: rectangle label:"Update records for Cold Chain Monitoring"
+  n7: circle label:"End Cold Chain Monitoring"
+  n1.handle(bottom) -> warehouse.n2.handle(top)
+  n1.handle(right) -> n3.handle(left)
+  n1.handle(bottom) -> warehouse.n4.handle(top)
+  n1.handle(right) -> n5.handle(left)
+  n1.handle(bottom) -> warehouse.n6.handle(top)
+  n5.handle(right) -> n7.handle(left)
+  n3.handle(right) -> n7.handle(top)
+}
+
+warehouse { # Warehouse
+  n2: rectangle label:"Receive Cold Chain Monitoring request"
+  n4: rectangle label:"Make Cold Chain Monitoring decision"
+  n6: diamond label:"Continue Cold Chain Monitoring process"
+  n6.handle(right) -> supplier.n7.handle(bottom)
+  n4.handle(right) -> supplier.n7.handle(bottom)
+  n2.handle(right) -> supplier.n7.handle(bottom)
+}

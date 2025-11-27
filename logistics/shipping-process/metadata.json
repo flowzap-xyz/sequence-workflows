@@ -1,0 +1,16 @@
+{
+  "workflow_id": "shipping-process",
+  "domain": "logistics",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "shipping-process",
+    "order-fulfillment",
+    "carrier-selection",
+    "label-generation",
+    "tracking-number",
+    "dispatch"
+  ],
+  "description": "Order shipping workflow with carrier selection, rate shopping, label generation, tracking number assignment, and dispatch confirmation."
+}

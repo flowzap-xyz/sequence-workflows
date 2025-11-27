@@ -1,0 +1,47 @@
+Producer { # Event Producer
+n1: circle label:"Start"
+n2: rectangle label:"User action occurs"
+n3: rectangle label:"Create event payload"
+n4: rectangle label:"Publish to message broker"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> MessageBroker.n6.handle(top) [label="Publish"]
+n4.handle(right) -> n5.handle(left)
+}
+MessageBroker { # Message Broker
+n6: rectangle label:"Receive event message"
+n7: rectangle label:"Validate message schema"
+n8: diamond label:"Valid schema?"
+n9: rectangle label:"Route to topic partition"
+n10: rectangle label:"Send to dead letter queue"
+n11: rectangle label:"Acknowledge receipt"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n9.handle(right) -> n11.handle(left)
+n10.handle(top) -> Producer.n5.handle(bottom) [label="DLQ"]
+n11.handle(top) -> Producer.n4.handle(bottom) [label="ACK"]
+n11.handle(bottom) -> Consumer.n12.handle(top) [label="Deliver"]
+}
+Consumer { # Event Consumer
+n12: rectangle label:"Poll for new messages"
+n13: rectangle label:"Deserialize event"
+n14: diamond label:"Event type?"
+n15: rectangle label:"Handle order created"
+n16: rectangle label:"Handle payment received"
+n17: rectangle label:"Handle user registered"
+n18: rectangle label:"Process business logic"
+n19: rectangle label:"Commit offset"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left) [label="order.created"]
+n14.handle(bottom) -> n16.handle(top) [label="payment.received"]
+n14.handle(left) -> n17.handle(top) [label="user.registered"]
+n15.handle(bottom) -> n18.handle(top)
+n16.handle(bottom) -> n18.handle(top)
+n17.handle(bottom) -> n18.handle(top)
+n18.handle(right) -> n19.handle(left)
+n19.handle(top) -> Producer.n5.handle(bottom) [label="Complete"]
+}

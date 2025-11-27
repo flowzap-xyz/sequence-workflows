@@ -1,0 +1,39 @@
+Analyst { # Analyst
+n1: circle label:"Start"
+n2: rectangle label:"Define cohort criteria"
+n3: rectangle label:"Set analysis time window"
+n4: rectangle label:"Review analysis results"
+n5: diamond label:"Insights actionable?"
+n6: rectangle label:"Create recommendations report"
+n7: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> DataPipeline.n8.handle(top) [label="Extract data"]
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left) [label="Yes"]
+n5.handle(bottom) -> n2.handle(bottom) [label="No - Refine criteria"]
+n6.handle(right) -> n7.handle(left)
+}
+DataPipeline { # Data Pipeline
+n8: rectangle label:"Query user events database"
+n9: rectangle label:"Group users by signup date"
+n10: rectangle label:"Calculate retention metrics"
+n11: diamond label:"Data quality check?"
+n12: rectangle label:"Flag data anomalies"
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> Analytics.n13.handle(left) [label="Pass"]
+n11.handle(bottom) -> n12.handle(top) [label="Fail"]
+n12.handle(left) -> n8.handle(bottom) [label="Reprocess"]
+}
+Analytics { # Analytics Engine
+n13: rectangle label:"Compute cohort curves"
+n14: rectangle label:"Calculate churn rates"
+n15: rectangle label:"Identify behavior patterns"
+n16: rectangle label:"Generate visualizations"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(top) -> Analyst.n4.handle(bottom) [label="Results ready"]
+}

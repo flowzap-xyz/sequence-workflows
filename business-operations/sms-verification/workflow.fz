@@ -1,0 +1,47 @@
+User { # User
+n1: circle label:"Start"
+n2: rectangle label:"Enter phone number"
+n3: rectangle label:"Receive SMS code"
+n4: rectangle label:"Enter verification code"
+n5: rectangle label:"Access granted"
+n6: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> App.n7.handle(top) [label="Submit"]
+n3.handle(right) -> n4.handle(left)
+n4.handle(bottom) -> App.n12.handle(top) [label="Verify"]
+n5.handle(right) -> n6.handle(left)
+}
+App { # Application
+n7: rectangle label:"Validate phone format"
+n8: diamond label:"Valid E.164 format?"
+n9: rectangle label:"Generate 6-digit OTP"
+n10: rectangle label:"Store OTP with expiry"
+n11: rectangle label:"Return format error"
+n12: diamond label:"Code matches?"
+n13: rectangle label:"Mark phone verified"
+n14: rectangle label:"Increment attempt counter"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n11.handle(top) [label="No"]
+n9.handle(right) -> n10.handle(left)
+n10.handle(bottom) -> Twilio.n15.handle(top) [label="Send SMS"]
+n11.handle(top) -> User.n2.handle(bottom) [label="Try again"]
+n12.handle(right) -> n13.handle(left) [label="Yes"]
+n12.handle(bottom) -> n14.handle(top) [label="No"]
+n13.handle(top) -> User.n5.handle(bottom) [label="Verified"]
+n14.handle(top) -> User.n4.handle(bottom) [label="Retry"]
+loop [retry up to 3 times] n12 n14
+}
+Twilio { # Twilio API
+n15: rectangle label:"Format SMS message"
+n16: rectangle label:"POST to Messages API"
+n17: diamond label:"Delivery status?"
+n18: rectangle label:"Log successful delivery"
+n19: rectangle label:"Queue for retry"
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left) [label="delivered"]
+n17.handle(bottom) -> n19.handle(top) [label="failed"]
+n18.handle(top) -> User.n3.handle(bottom) [label="SMS sent"]
+n19.handle(top) -> n16.handle(bottom) [label="Retry"]
+}

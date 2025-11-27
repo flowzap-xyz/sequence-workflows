@@ -1,0 +1,14 @@
+{
+  "workflow_id": "error-retry-loop",
+  "domain": "patterns",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "error",
+    "retry",
+    "loop",
+    "patterns"
+  ],
+  "description": "This workflow models a failed operation that retries with backoff."
+}

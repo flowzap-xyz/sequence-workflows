@@ -1,0 +1,19 @@
+supplier { # Supplier
+  n1: circle label:"Start Container Loading"
+  n3: diamond label:"Review Container Loading details"
+  n5: rectangle label:"Update records for Container Loading"
+  n7: circle label:"End Container Loading"
+  n1.handle(bottom) -> warehouse.n2.handle(top)
+  n3.handle(bottom) -> warehouse.n4.handle(top)
+  n3.handle(right) -> warehouse.n2.handle(right) [label="Retry/Rejected"]
+  n5.handle(bottom) -> warehouse.n6.handle(top) [label="Done"]
+}
+
+warehouse { # Warehouse
+  n2: rectangle label:"Receive Container Loading request"
+  n4: rectangle label:"Make Container Loading decision"
+  n6: rectangle label:"Continue Container Loading process"
+  n6.handle(right) -> supplier.n7.handle(bottom)
+  n4.handle(right) -> supplier.n5.handle(left)
+  n2.handle(bottom) -> supplier.n3.handle(left) [label="Next"]
+}

@@ -1,0 +1,44 @@
+Accountant { # Accountant
+n1: circle label:"Start"
+n2: rectangle label:"Import bank statement"
+n3: rectangle label:"Review reconciliation report"
+n4: rectangle label:"Approve reconciliation"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> ReconciliationEngine.n6.handle(top) [label="Process"]
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left)
+}
+ReconciliationEngine { # Reconciliation Engine
+n6: rectangle label:"Parse bank transactions"
+n7: rectangle label:"Match with GL entries"
+n8: diamond label:"Auto-match rate?"
+n9: rectangle label:"Flag unmatched items"
+n10: rectangle label:"Apply matching rules"
+n11: rectangle label:"Generate variance report"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n11.handle(left) [label="> 95%"]
+n8.handle(bottom) -> n9.handle(top) [label="< 95%"]
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(top)
+n11.handle(bottom) -> ManualReview.n12.handle(top) [label="Review"]
+}
+ManualReview { # Manual Review
+n12: rectangle label:"Display unmatched items"
+n13: rectangle label:"Research discrepancies"
+n14: diamond label:"Discrepancy type?"
+n15: rectangle label:"Create journal entry"
+n16: rectangle label:"Flag for investigation"
+n17: rectangle label:"Mark as bank error"
+n18: rectangle label:"Update reconciliation status"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left) [label="Timing"]
+n14.handle(bottom) -> n16.handle(top) [label="Unknown"]
+n14.handle(left) -> n17.handle(top) [label="Bank error"]
+n15.handle(right) -> n18.handle(left)
+n16.handle(right) -> n18.handle(top)
+n17.handle(right) -> n18.handle(top)
+n18.handle(top) -> Accountant.n3.handle(bottom) [label="Complete"]
+}

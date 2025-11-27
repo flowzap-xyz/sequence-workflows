@@ -1,0 +1,46 @@
+TaxTeam { # Tax Team
+n1: circle label:"Start"
+n2: rectangle label:"Gather financial data"
+n3: rectangle label:"Prepare tax schedules"
+n4: rectangle label:"Submit filing"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Calculation.n6.handle(top) [label="Calculate"]
+n4.handle(right) -> n5.handle(left)
+}
+Calculation { # Tax Calculation
+n6: rectangle label:"Calculate taxable income"
+n7: rectangle label:"Apply deductions"
+n8: rectangle label:"Compute tax liability"
+n9: diamond label:"Tax credits applicable?"
+n10: rectangle label:"Apply tax credits"
+n11: rectangle label:"Calculate final amount"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left) [label="Yes"]
+n9.handle(bottom) -> n11.handle(top) [label="No"]
+n10.handle(right) -> n11.handle(top)
+n11.handle(bottom) -> Review.n12.handle(top) [label="Review"]
+}
+Review { # Tax Review
+n12: rectangle label:"Review calculations"
+n13: diamond label:"Discrepancies found?"
+n14: rectangle label:"Investigate variances"
+n15: rectangle label:"Prepare filing documents"
+n16: diamond label:"Filing type?"
+n17: rectangle label:"E-file with IRS"
+n18: rectangle label:"Mail paper return"
+n19: rectangle label:"Confirm receipt"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n15.handle(left) [label="No"]
+n13.handle(bottom) -> n14.handle(top) [label="Yes"]
+n14.handle(top) -> Calculation.n6.handle(bottom) [label="Recalculate"]
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left) [label="Electronic"]
+n16.handle(bottom) -> n18.handle(top) [label="Paper"]
+n17.handle(right) -> n19.handle(left)
+n18.handle(right) -> n19.handle(top)
+n19.handle(top) -> TaxTeam.n4.handle(bottom) [label="Filed"]
+}

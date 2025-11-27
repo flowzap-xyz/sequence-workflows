@@ -1,0 +1,16 @@
+{
+  "workflow_id": "background-check",
+  "domain": "hr",
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "background-check",
+    "pre-employment",
+    "criminal-history",
+    "employment-verification",
+    "education-verification",
+    "drug-screening"
+  ],
+  "description": "Pre-employment background check workflow with criminal history search, employment verification, education verification, and drug screening coordination."
+}

@@ -1,0 +1,20 @@
+employee { # Employee
+  n1: circle label:"Start Bonus Allocation"
+  n2: diamond label:"Receive Bonus Allocation request"
+  n3: rectangle label:"Review Bonus Allocation details"
+  n5: rectangle label:"Update records for Bonus Allocation"
+  n7: circle label:"End Bonus Allocation"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left) [label="Yes/Approved"]
+  n2.handle(bottom) -> manager.n4.handle(top) [label="No/Rejected"]
+  n3.handle(right) -> n5.handle(left)
+  n5.handle(bottom) -> manager.n6.handle(top)
+  loop [retry until success] n2 n3 n5 n4 n6
+}
+
+manager { # Manager
+  n4: rectangle label:"Make Bonus Allocation decision"
+  n6: rectangle label:"Continue Bonus Allocation process"
+  n4.handle(right) -> employee.n5.handle(left)
+  n6.handle(right) -> employee.n7.handle(bottom)
+}

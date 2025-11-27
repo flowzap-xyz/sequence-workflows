@@ -1,0 +1,28 @@
+supplier { # Supplier
+  n1: circle label:"Start Hazmat Handling"
+  n2: diamond label:"Receive Hazmat Handling request"
+  n4: rectangle label:"Make Hazmat Handling decision"
+  n7: rectangle label:"Continue Hazmat Handling process"
+  n10: circle label:"End Hazmat Handling"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> iot_sensor.n3.handle(top) [label="Yes/Approved"]
+  n4.handle(bottom) -> warehouse.n5.handle(top)
+  n7.handle(bottom) -> warehouse.n8.handle(top)
+  n2.handle(top) -> n4.handle(top) [label="No/Rejected"]
+}
+
+warehouse { # Warehouse
+  n5: rectangle label:"Update records for Hazmat Handling"
+  n8: rectangle label:"Continue Hazmat Handling process"
+  n5.handle(bottom) -> iot_sensor.n6.handle(top)
+  n8.handle(bottom) -> iot_sensor.n9.handle(top)
+}
+
+iot_sensor { # Iot_Sensor
+  n3: rectangle label:"Review Hazmat Handling details"
+  n6: rectangle label:"Continue Hazmat Handling process"
+  n9: rectangle label:"Continue Hazmat Handling process"
+  n9.handle(right) -> supplier.n10.handle(bottom)
+  n6.handle(right) -> supplier.n7.handle(left)
+  n3.handle(left) -> warehouse.n5.handle(left)
+}

@@ -1,0 +1,55 @@
+Customer { # Customer
+n1: circle label:"Start"
+n2: rectangle label:"Request plan downgrade"
+n3: rectangle label:"Review feature changes"
+n4: diamond label:"Confirm downgrade?"
+n5: rectangle label:"Receive downgrade confirmation"
+n6: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> RetentionFlow.n7.handle(top) [label="Process request"]
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n6.handle(left) [label="No - Keep plan"]
+n4.handle(bottom) -> Billing.n14.handle(top) [label="Yes"]
+n5.handle(right) -> n6.handle(left)
+}
+RetentionFlow { # Retention Flow
+n7: rectangle label:"Check usage patterns"
+n8: diamond label:"Heavy feature user?"
+n9: rectangle label:"Offer discount to stay"
+n10: rectangle label:"Show feature comparison"
+n11: diamond label:"Accept offer?"
+n12: rectangle label:"Apply retention discount"
+n13: rectangle label:"Continue to downgrade"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n9.handle(right) -> n11.handle(left)
+n10.handle(top) -> Customer.n3.handle(bottom) [label="Review"]
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> n13.handle(top) [label="No"]
+n12.handle(top) -> Customer.n6.handle(bottom) [label="Retained"]
+n13.handle(top) -> Customer.n3.handle(bottom) [label="Proceed"]
+}
+Billing { # Billing System
+n14: rectangle label:"Calculate credit balance"
+n15: rectangle label:"Schedule plan change"
+n16: diamond label:"Immediate or end of period?"
+n17: rectangle label:"Apply immediately"
+n18: rectangle label:"Queue for period end"
+n19: rectangle label:"Issue prorated credit"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left) [label="Immediate"]
+n16.handle(bottom) -> n18.handle(top) [label="Period end"]
+n17.handle(right) -> n19.handle(left)
+n18.handle(bottom) -> Provisioning.n20.handle(top) [label="Scheduled"]
+n19.handle(bottom) -> Provisioning.n20.handle(top) [label="Process"]
+}
+Provisioning { # Feature Provisioning
+n20: rectangle label:"Disable premium features"
+n21: rectangle label:"Update usage limits"
+n22: rectangle label:"Send downgrade email"
+n20.handle(right) -> n21.handle(left)
+n21.handle(right) -> n22.handle(left)
+n22.handle(top) -> Customer.n5.handle(bottom) [label="Complete"]
+}

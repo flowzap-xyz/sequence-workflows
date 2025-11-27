@@ -1,0 +1,12 @@
+laneA { # Lane A
+  n1: circle label:"Start 04 Labeled Arrows"
+  n2: rectangle label:"04 Labeled Arrows step 2"
+  n3: rectangle label:"04 Labeled Arrows step 3"
+  n4: rectangle label:"04 Labeled Arrows step 4"
+  n5: circle label:"End 04 Labeled Arrows"
+
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(right) -> n5.handle(left)
+}

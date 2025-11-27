@@ -1,0 +1,29 @@
+customer { # Customer
+  n1: circle label:"Start Webinar Registration"
+  n4: rectangle label:"Make Webinar Registration decision"
+  n7: rectangle label:"Continue Webinar Registration process"
+  n10: circle label:"End Webinar Registration"
+
+  n1.handle(bottom) -> agent.n2.handle(top)
+  n4.handle(bottom) -> agent.n5.handle(top)
+  n7.handle(bottom) -> agent.n8.handle(top)
+}
+agent { # Agent
+  n2: rectangle label:"Receive Webinar Registration request"
+  n5: diamond label:"Update records for Webinar Registration"
+  n8: rectangle label:"Continue Webinar Registration process"
+
+  n2.handle(bottom) -> billing.n3.handle(top) [label="Next"]
+  n5.handle(bottom) -> billing.n6.handle(top) [label="Done"]
+  n5.handle(right) -> customer.n4.handle(right) [label="Retry/Rejected"]
+  n8.handle(bottom) -> billing.n9.handle(top) [label="Processed"]
+}
+billing { # Billing
+  n3: rectangle label:"Review Webinar Registration details"
+  n6: rectangle label:"Continue Webinar Registration process"
+  n9: rectangle label:"Continue Webinar Registration process"
+
+  n3.handle(bottom) -> customer.n4.handle(top)
+  n6.handle(bottom) -> customer.n7.handle(top)
+  n9.handle(bottom) -> customer.n10.handle(top)
+}

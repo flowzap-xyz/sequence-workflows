@@ -1,0 +1,13 @@
+{
+  "workflow_id": "markdown-in-label",
+  "domain": "edge-cases",
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "markdown",
+    "in",
+    "label"
+  ],
+  "description": "This workflow models a label that contains markdown formatting."
+}

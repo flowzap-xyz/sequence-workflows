@@ -1,0 +1,13 @@
+{
+  "workflow_id": "pub-sub",
+  "domain": "patterns",
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "pub",
+    "sub",
+    "patterns"
+  ],
+  "description": "This workflow models one publisher notifying many subscribers of events."
+}

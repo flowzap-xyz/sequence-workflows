@@ -1,0 +1,13 @@
+{
+  "workflow_id": "claim-check",
+  "domain": "patterns",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "claim",
+    "check",
+    "patterns"
+  ],
+  "description": "This workflow models keeping large payloads external and only passing references."
+}

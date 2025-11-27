@@ -1,0 +1,17 @@
+{
+  "workflow_id": "certificate-renewal",
+  "domain": "devops",
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 3,
+  "tags": [
+    "ssl-certificate",
+    "tls-renewal",
+    "lets-encrypt",
+    "certificate-authority",
+    "domain-validation",
+    "load-balancer",
+    "health-check"
+  ],
+  "description": "SSL/TLS certificate renewal workflow with expiration monitoring, certificate request by type (DV/OV/EV), domain validation, deployment to load balancers, and health check verification with rollback."
+}

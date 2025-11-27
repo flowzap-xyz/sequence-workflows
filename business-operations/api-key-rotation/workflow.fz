@@ -1,0 +1,47 @@
+Scheduler { # Scheduler
+  n1: circle label:"Start"
+  n2: rectangle label:"Trigger rotation job"
+  n3: rectangle label:"Log rotation event"
+  n4: circle label:"End"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> KeyVault.n5.handle(top) [label="Initiate"]
+  n3.handle(right) -> n4.handle(left)
+}
+
+KeyVault { # Key Vault
+  n5: rectangle label:"Generate new API key"
+  n6: rectangle label:"Store new key securely"
+  n7: diamond label:"Key generated?"
+  n8: rectangle label:"Update key metadata"
+  n5.handle(right) -> n7.handle(left)
+  n7.handle(right) -> n6.handle(left) [label="Yes"]
+  n7.handle(bottom) -> n5.handle(bottom) [label="No - Retry"]
+  n6.handle(right) -> n8.handle(left)
+  n8.handle(bottom) -> Services.n9.handle(top) [label="Distribute"]
+  loop [retry up to 3 times] n5 n7
+}
+
+Services { # Services
+  n9: rectangle label:"Receive new key"
+  n10: rectangle label:"Update configuration"
+  n11: diamond label:"Health check passed?"
+  n12: rectangle label:"Confirm deployment"
+  n13: rectangle label:"Rollback to old key"
+  n9.handle(right) -> n10.handle(left)
+  n10.handle(right) -> n11.handle(left)
+  n11.handle(right) -> n12.handle(left) [label="Yes"]
+  n11.handle(bottom) -> n13.handle(top) [label="No"]
+  n12.handle(bottom) -> Cleanup.n14.handle(top) [label="Success"]
+  n13.handle(bottom) -> Cleanup.n17.handle(top) [label="Alert"]
+}
+
+Cleanup { # Cleanup
+  n14: rectangle label:"Mark old key for deletion"
+  n15: rectangle label:"Wait grace period"
+  n16: rectangle label:"Revoke old key"
+  n17: rectangle label:"Send alert to ops team"
+  n14.handle(right) -> n15.handle(left)
+  n15.handle(right) -> n16.handle(left)
+  n16.handle(top) -> Scheduler.n3.handle(bottom) [label="Complete"]
+  n17.handle(top) -> Scheduler.n3.handle(bottom) [label="Failed"]
+}

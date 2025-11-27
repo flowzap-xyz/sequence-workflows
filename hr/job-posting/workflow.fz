@@ -1,0 +1,45 @@
+HiringManager { # Hiring Manager
+n1: circle label:"Start"
+n2: rectangle label:"Submit job requisition"
+n3: rectangle label:"Define requirements"
+n4: rectangle label:"Review candidates"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Recruiter.n6.handle(top) [label="Request"]
+n3.handle(bottom) -> Recruiter.n11.handle(top) [label="Approved"]
+n4.handle(right) -> n5.handle(left)
+}
+Recruiter { # Recruiter
+n6: rectangle label:"Review requisition"
+n7: diamond label:"Headcount approved?"
+n8: rectangle label:"Draft job description"
+n9: rectangle label:"Return for budget approval"
+n10: rectangle label:"Select job boards"
+n11: rectangle label:"Post to career sites"
+n12: rectangle label:"Post to LinkedIn"
+n13: rectangle label:"Post to Indeed"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="Yes"]
+n7.handle(bottom) -> n9.handle(top) [label="No"]
+n8.handle(right) -> n10.handle(left)
+n9.handle(top) -> HiringManager.n3.handle(bottom) [label="Revise"]
+n10.handle(bottom) -> n11.handle(top)
+n11.handle(right) -> n12.handle(left)
+n12.handle(right) -> n13.handle(left)
+n13.handle(bottom) -> ATS.n14.handle(top) [label="Track"]
+}
+ATS { # Applicant Tracking System
+n14: rectangle label:"Collect applications"
+n15: rectangle label:"Screen resumes with AI"
+n16: diamond label:"Minimum qualifications?"
+n17: rectangle label:"Add to candidate pool"
+n18: rectangle label:"Send auto-rejection"
+n19: rectangle label:"Notify recruiter"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left) [label="Yes"]
+n16.handle(bottom) -> n18.handle(top) [label="No"]
+n17.handle(right) -> n19.handle(left)
+n18.handle(top) -> HiringManager.n5.handle(bottom) [label="Rejected"]
+n19.handle(top) -> HiringManager.n4.handle(bottom) [label="Candidates ready"]
+}

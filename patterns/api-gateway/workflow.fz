@@ -1,0 +1,44 @@
+Client { # Client
+n1: circle label:"Start"
+n2: rectangle label:"Send API request"
+n3: rectangle label:"Receive response"
+n4: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Gateway.n5.handle(top) [label="HTTP Request"]
+n3.handle(right) -> n4.handle(left)
+}
+Gateway { # API Gateway
+n5: rectangle label:"Receive incoming request"
+n6: rectangle label:"Validate API key"
+n7: diamond label:"Authenticated?"
+n8: rectangle label:"Check rate limits"
+n9: rectangle label:"Return 401 Unauthorized"
+n10: diamond label:"Within rate limit?"
+n11: rectangle label:"Route to service"
+n12: rectangle label:"Return 429 Too Many Requests"
+n13: rectangle label:"Transform response"
+n5.handle(right) -> n6.handle(left)
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="Yes"]
+n7.handle(bottom) -> n9.handle(top) [label="No"]
+n8.handle(right) -> n10.handle(left)
+n9.handle(top) -> Client.n3.handle(bottom) [label="401"]
+n10.handle(right) -> n11.handle(left) [label="Yes"]
+n10.handle(bottom) -> n12.handle(top) [label="No"]
+n11.handle(bottom) -> Backend.n14.handle(top) [label="Forward"]
+n12.handle(top) -> Client.n3.handle(bottom) [label="429"]
+n13.handle(top) -> Client.n3.handle(bottom) [label="Response"]
+}
+Backend { # Backend Service
+n14: rectangle label:"Process request"
+n15: diamond label:"Request valid?"
+n16: rectangle label:"Execute business logic"
+n17: rectangle label:"Return error response"
+n18: rectangle label:"Return success response"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Yes"]
+n15.handle(bottom) -> n17.handle(top) [label="No"]
+n16.handle(right) -> n18.handle(left)
+n17.handle(top) -> Gateway.n13.handle(bottom) [label="Error"]
+n18.handle(top) -> Gateway.n13.handle(bottom) [label="Success"]
+}

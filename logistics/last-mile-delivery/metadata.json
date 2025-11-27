@@ -1,0 +1,16 @@
+{
+  "workflow_id": "last-mile-delivery",
+  "domain": "logistics",
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "last-mile-delivery",
+    "route-optimization",
+    "proof-of-delivery",
+    "delivery-exception",
+    "customer-notification",
+    "gps-tracking"
+  ],
+  "description": "Last mile delivery workflow with route optimization, real-time GPS tracking, delivery attempt handling, proof of delivery capture, and customer notification."
+}

@@ -1,0 +1,28 @@
+user { # User
+  n1: circle label:"Start Feature Toggle"
+  n4: rectangle label:"Execute Feature Toggle action"
+  n7: rectangle label:"Monitor Feature Toggle status"
+  n10: circle label:"End Feature Toggle"
+  n1.handle(bottom) -> app.n2.handle(top)
+  n4.handle(bottom) -> app.n5.handle(top)
+  n7.handle(bottom) -> app.n8.handle(top)
+}
+
+app { # App
+  n2: rectangle label:"Receive Feature Toggle event"
+  n5: rectangle label:"Record Feature Toggle outcome"
+  n8: rectangle label:"Monitor Feature Toggle status"
+  n2.handle(bottom) -> service.n3.handle(top)
+  n5.handle(bottom) -> service.n6.handle(top)
+  n8.handle(bottom) -> service.n9.handle(top)
+}
+
+service { # Service
+  n3: rectangle label:"Validate Feature Toggle conditions"
+  n6: diamond label:"Monitor Feature Toggle status"
+  n9: rectangle label:"Monitor Feature Toggle status"
+  n9.handle(right) -> user.n10.handle(bottom) [label="Valid"]
+  n6.handle(left) -> app.n5.handle(left) [label="Retry/Rejected"]
+  n6.handle(right) -> user.n7.handle(left) [label="Success"]
+  n3.handle(right) -> user.n4.handle(left) [label="Processed"]
+}

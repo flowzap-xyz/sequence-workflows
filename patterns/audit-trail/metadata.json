@@ -1,0 +1,15 @@
+{
+  "workflow_id": "audit-trail",
+  "domain": "patterns",
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "audit",
+    "trail",
+    "patterns",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models logging all important actions for compliance."
+}

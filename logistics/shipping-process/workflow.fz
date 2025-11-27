@@ -1,0 +1,48 @@
+OrderSystem { # Order System
+n1: circle label:"Start"
+n2: rectangle label:"Receive shipping request"
+n3: rectangle label:"Validate shipping address"
+n4: rectangle label:"Update tracking status"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Warehouse.n6.handle(top) [label="Pick order"]
+n3.handle(bottom) -> Carrier.n14.handle(top) [label="Ship"]
+n4.handle(right) -> n5.handle(left)
+}
+Warehouse { # Warehouse
+n6: rectangle label:"Locate items in inventory"
+n7: rectangle label:"Pick items from shelves"
+n8: diamond label:"All items available?"
+n9: rectangle label:"Pack items securely"
+n10: rectangle label:"Flag backorder items"
+n11: rectangle label:"Generate packing slip"
+n12: rectangle label:"Apply shipping label"
+n13: rectangle label:"Move to shipping dock"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n9.handle(right) -> n11.handle(left)
+n10.handle(top) -> OrderSystem.n4.handle(bottom) [label="Partial ship"]
+n11.handle(right) -> n12.handle(left)
+n12.handle(right) -> n13.handle(left)
+n13.handle(top) -> OrderSystem.n3.handle(bottom) [label="Ready"]
+}
+Carrier { # Carrier
+n14: rectangle label:"Scan package barcode"
+n15: rectangle label:"Load onto delivery vehicle"
+n16: rectangle label:"Update tracking number"
+n17: diamond label:"Delivery attempt?"
+n18: rectangle label:"Deliver to recipient"
+n19: rectangle label:"Leave at door"
+n20: rectangle label:"Return to facility"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left) [label="Recipient home"]
+n17.handle(bottom) -> n19.handle(top) [label="Safe location"]
+n17.handle(left) -> n20.handle(top) [label="Failed"]
+n18.handle(top) -> OrderSystem.n4.handle(bottom) [label="Delivered"]
+n19.handle(top) -> OrderSystem.n4.handle(bottom) [label="Delivered"]
+n20.handle(top) -> OrderSystem.n4.handle(bottom) [label="Exception"]
+}

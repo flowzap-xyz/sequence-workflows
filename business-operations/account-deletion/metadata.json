@@ -1,0 +1,16 @@
+{
+  "workflow_id": "account-deletion",
+  "domain": "business-operations",
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "account-deletion",
+    "user-offboarding",
+    "data-cleanup",
+    "subscription-cancel",
+    "retention-offer",
+    "exit-survey"
+  ],
+  "description": "Account deletion workflow with cancellation reason capture, retention offer, subscription termination, data cleanup, and confirmation email."
+}

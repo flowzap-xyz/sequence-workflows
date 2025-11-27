@@ -1,0 +1,48 @@
+Manager { # Manager
+n1: circle label:"Start"
+n2: rectangle label:"Initiate termination request"
+n3: rectangle label:"Document performance issues"
+n4: rectangle label:"Conduct final meeting"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> HR.n6.handle(top) [label="Request"]
+n3.handle(bottom) -> HR.n10.handle(top) [label="Documentation"]
+n4.handle(right) -> n5.handle(left)
+}
+HR { # Human Resources
+n6: rectangle label:"Review termination request"
+n7: diamond label:"Termination type?"
+n8: rectangle label:"Verify cause documentation"
+n9: rectangle label:"Process voluntary resignation"
+n10: diamond label:"Legal review required?"
+n11: rectangle label:"Route to legal counsel"
+n12: rectangle label:"Prepare separation agreement"
+n13: rectangle label:"Calculate final pay"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="Involuntary"]
+n7.handle(bottom) -> n9.handle(top) [label="Voluntary"]
+n8.handle(right) -> n10.handle(left)
+n9.handle(bottom) -> n13.handle(top)
+n10.handle(right) -> n11.handle(left) [label="Yes"]
+n10.handle(bottom) -> n12.handle(top) [label="No"]
+n11.handle(right) -> n12.handle(top)
+n12.handle(right) -> n13.handle(left)
+n13.handle(bottom) -> Payroll.n14.handle(top) [label="Process"]
+}
+Payroll { # Payroll
+n14: rectangle label:"Calculate accrued PTO"
+n15: rectangle label:"Process final paycheck"
+n16: rectangle label:"Generate COBRA notice"
+n17: rectangle label:"Issue W-2 instructions"
+n18: diamond label:"Severance applicable?"
+n19: rectangle label:"Process severance payment"
+n20: rectangle label:"Complete termination"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left) [label="Yes"]
+n18.handle(bottom) -> n20.handle(top) [label="No"]
+n19.handle(right) -> n20.handle(top)
+n20.handle(top) -> Manager.n4.handle(bottom) [label="Finalized"]
+}

@@ -1,0 +1,7 @@
+laneA { # Lanea
+  n1: circle label:"Start Minimal Workflow"
+
+}
+laneB { # Laneb
+
+}

@@ -1,0 +1,15 @@
+{
+  "workflow_id": "compensation-transaction",
+  "domain": "patterns",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "compensation",
+    "transaction",
+    "patterns",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models rolling back work when a later step fails."
+}

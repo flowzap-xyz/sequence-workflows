@@ -1,0 +1,46 @@
+user { # User
+  n1: circle label:"Start Parallel Execution"
+  n5: rectangle label:"Record Parallel Execution outcome"
+  n9: diamond label:"Monitor Parallel Execution status"
+  n13: circle label:"End Parallel Execution"
+  n1.handle(bottom) -> app.n2.handle(top)
+  n1.handle(bottom) -> service.n3.handle(top)
+  n1.handle(bottom) -> database.n4.handle(top)
+  n1.handle(right) -> n5.handle(left)
+  n1.handle(bottom) -> app.n6.handle(top)
+  n1.handle(bottom) -> service.n7.handle(top)
+  n1.handle(bottom) -> database.n8.handle(top)
+  n1.handle(bottom) -> app.n10.handle(top)
+  n1.handle(bottom) -> service.n11.handle(top)
+  n1.handle(bottom) -> database.n12.handle(top)
+  n5.handle(right) -> n13.handle(left)
+  n9.handle(right) -> n13.handle(left)
+  n1.handle(top) -> n9.handle(top)
+}
+
+app { # App
+  n2: rectangle label:"Receive Parallel Execution event"
+  n6: rectangle label:"Monitor Parallel Execution status"
+  n10: rectangle label:"Monitor Parallel Execution status"
+  n10.handle(right) -> user.n13.handle(bottom)
+  n6.handle(right) -> user.n13.handle(bottom)
+  n2.handle(right) -> user.n13.handle(bottom)
+}
+
+service { # Service
+  n3: rectangle label:"Validate Parallel Execution conditions"
+  n7: rectangle label:"Monitor Parallel Execution status"
+  n11: rectangle label:"Monitor Parallel Execution status"
+  n3.handle(right) -> user.n13.handle(bottom)
+  n7.handle(right) -> user.n13.handle(bottom)
+  n11.handle(right) -> user.n13.handle(bottom)
+}
+
+database { # Database
+  n4: rectangle label:"Execute Parallel Execution action"
+  n8: rectangle label:"Monitor Parallel Execution status"
+  n12: rectangle label:"Monitor Parallel Execution status"
+  n12.handle(right) -> user.n13.handle(bottom)
+  n8.handle(right) -> user.n13.handle(bottom)
+  n4.handle(right) -> user.n13.handle(bottom)
+}

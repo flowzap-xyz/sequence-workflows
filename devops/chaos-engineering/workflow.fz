@@ -1,0 +1,49 @@
+SRE { # SRE Team
+  n1: circle label:"Start"
+  n2: rectangle label:"Define experiment hypothesis"
+  n3: rectangle label:"Select blast radius"
+  n4: rectangle label:"Review experiment results"
+  n5: rectangle label:"Document learnings"
+  n6: circle label:"End"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(bottom) -> ChaosMonkey.n7.handle(top) [label="Configure"]
+  n4.handle(right) -> n5.handle(left)
+  n5.handle(right) -> n6.handle(left)
+}
+ChaosMonkey { # Chaos Monkey
+  n7: rectangle label:"Schedule experiment window"
+  n8: diamond label:"Steady state verified?"
+  n9: rectangle label:"Inject failure"
+  n10: rectangle label:"Abort experiment"
+  n11: diamond label:"Failure type?"
+  n12: rectangle label:"Kill random instance"
+  n13: rectangle label:"Inject network latency"
+  n14: rectangle label:"Exhaust CPU resources"
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(right) -> n9.handle(left) [label="Yes"]
+  n8.handle(bottom) -> n10.handle(top) [label="No"]
+  n9.handle(right) -> n11.handle(left)
+  n10.handle(top) -> SRE.n4.handle(bottom) [label="Aborted"]
+  n11.handle(right) -> n12.handle(left) [label="Instance"]
+  n11.handle(bottom) -> n13.handle(top) [label="Network"]
+  n11.handle(left) -> n14.handle(top) [label="Resource"]
+  n12.handle(bottom) -> Observability.n15.handle(top) [label="Monitor"]
+  n13.handle(bottom) -> Observability.n15.handle(top) [label="Monitor"]
+  n14.handle(bottom) -> Observability.n15.handle(top) [label="Monitor"]
+}
+Observability { # Observability
+  n15: rectangle label:"Monitor system metrics"
+  n16: rectangle label:"Track error rates"
+  n17: diamond label:"System recovered?"
+  n18: rectangle label:"Record recovery time"
+  n19: rectangle label:"Trigger rollback"
+  n20: rectangle label:"Generate experiment report"
+  n15.handle(right) -> n16.handle(left)
+  n16.handle(right) -> n17.handle(left)
+  n17.handle(right) -> n18.handle(left) [label="Yes"]
+  n17.handle(bottom) -> n19.handle(top) [label="No"]
+  n18.handle(right) -> n20.handle(left)
+  n19.handle(right) -> n20.handle(top)
+  n20.handle(top) -> SRE.n4.handle(bottom) [label="Results ready"]
+}

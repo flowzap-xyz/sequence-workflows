@@ -1,0 +1,104 @@
+laneA { # Lane A
+  n1: circle label:"Start 16 Max Nodes"
+  n3: rectangle label:"16 Max Nodes step 3"
+  n5: rectangle label:"16 Max Nodes step 5"
+  n7: rectangle label:"16 Max Nodes step 7"
+  n9: rectangle label:"16 Max Nodes step 9"
+  n11: rectangle label:"16 Max Nodes step 11"
+  n13: rectangle label:"16 Max Nodes step 13"
+  n15: rectangle label:"16 Max Nodes step 15"
+  n17: rectangle label:"16 Max Nodes step 17"
+  n19: rectangle label:"16 Max Nodes step 19"
+  n21: rectangle label:"16 Max Nodes step 21"
+  n23: rectangle label:"16 Max Nodes step 23"
+  n25: rectangle label:"16 Max Nodes step 25"
+  n27: rectangle label:"16 Max Nodes step 27"
+  n29: rectangle label:"16 Max Nodes step 29"
+  n31: rectangle label:"16 Max Nodes step 31"
+  n33: rectangle label:"16 Max Nodes step 33"
+  n35: rectangle label:"16 Max Nodes step 35"
+  n37: rectangle label:"16 Max Nodes step 37"
+  n39: rectangle label:"16 Max Nodes step 39"
+  n41: rectangle label:"16 Max Nodes step 41"
+  n43: rectangle label:"16 Max Nodes step 43"
+  n45: rectangle label:"16 Max Nodes step 45"
+  n47: rectangle label:"16 Max Nodes step 47"
+  n49: rectangle label:"16 Max Nodes step 49"
+  n1.handle(bottom) -> laneB.n2.handle(top)
+  n3.handle(bottom) -> laneB.n4.handle(top)
+  n5.handle(bottom) -> laneB.n6.handle(top)
+  n7.handle(bottom) -> laneB.n8.handle(top)
+  n9.handle(bottom) -> laneB.n10.handle(top)
+  n11.handle(bottom) -> laneB.n12.handle(top)
+  n13.handle(bottom) -> laneB.n14.handle(top)
+  n15.handle(bottom) -> laneB.n16.handle(top)
+  n17.handle(bottom) -> laneB.n18.handle(top)
+  n19.handle(bottom) -> laneB.n20.handle(top)
+  n21.handle(bottom) -> laneB.n22.handle(top)
+  n23.handle(bottom) -> laneB.n24.handle(top)
+  n25.handle(bottom) -> laneB.n26.handle(top)
+  n27.handle(bottom) -> laneB.n28.handle(top)
+  n29.handle(bottom) -> laneB.n30.handle(top)
+  n31.handle(bottom) -> laneB.n32.handle(top)
+  n33.handle(bottom) -> laneB.n34.handle(top)
+  n35.handle(bottom) -> laneB.n36.handle(top)
+  n37.handle(bottom) -> laneB.n38.handle(top)
+  n39.handle(bottom) -> laneB.n40.handle(top)
+  n41.handle(bottom) -> laneB.n42.handle(top)
+  n43.handle(bottom) -> laneB.n44.handle(top)
+  n45.handle(bottom) -> laneB.n46.handle(top)
+  n47.handle(bottom) -> laneB.n48.handle(top)
+  n49.handle(bottom) -> laneB.n50.handle(top)
+}
+
+laneB { # Lane B
+  n2: rectangle label:"16 Max Nodes step 2"
+  n4: rectangle label:"16 Max Nodes step 4"
+  n6: rectangle label:"16 Max Nodes step 6"
+  n8: rectangle label:"16 Max Nodes step 8"
+  n10: rectangle label:"16 Max Nodes step 10"
+  n12: rectangle label:"16 Max Nodes step 12"
+  n14: rectangle label:"16 Max Nodes step 14"
+  n16: rectangle label:"16 Max Nodes step 16"
+  n18: rectangle label:"16 Max Nodes step 18"
+  n20: rectangle label:"16 Max Nodes step 20"
+  n22: rectangle label:"16 Max Nodes step 22"
+  n24: rectangle label:"16 Max Nodes step 24"
+  n26: rectangle label:"16 Max Nodes step 26"
+  n28: rectangle label:"16 Max Nodes step 28"
+  n30: rectangle label:"16 Max Nodes step 30"
+  n32: rectangle label:"16 Max Nodes step 32"
+  n34: rectangle label:"16 Max Nodes step 34"
+  n36: rectangle label:"16 Max Nodes step 36"
+  n38: rectangle label:"16 Max Nodes step 38"
+  n40: rectangle label:"16 Max Nodes step 40"
+  n42: rectangle label:"16 Max Nodes step 42"
+  n44: rectangle label:"16 Max Nodes step 44"
+  n46: rectangle label:"16 Max Nodes step 46"
+  n48: rectangle label:"16 Max Nodes step 48"
+  n50: circle label:"End 16 Max Nodes"
+  n2.handle(right) -> laneA.n3.handle(left)
+  n4.handle(right) -> laneA.n5.handle(left)
+  n6.handle(right) -> laneA.n7.handle(left)
+  n8.handle(right) -> laneA.n9.handle(left)
+  n10.handle(right) -> laneA.n11.handle(left)
+  n12.handle(right) -> laneA.n13.handle(left)
+  n14.handle(right) -> laneA.n15.handle(left)
+  n16.handle(right) -> laneA.n17.handle(left)
+  n18.handle(right) -> laneA.n19.handle(left)
+  n20.handle(right) -> laneA.n21.handle(left)
+  n22.handle(right) -> laneA.n23.handle(left)
+  n24.handle(right) -> laneA.n25.handle(left)
+  n26.handle(right) -> laneA.n27.handle(left)
+  n28.handle(right) -> laneA.n29.handle(left)
+  n30.handle(right) -> laneA.n31.handle(left)
+  n32.handle(right) -> laneA.n33.handle(left)
+  n34.handle(right) -> laneA.n35.handle(left)
+  n36.handle(right) -> laneA.n37.handle(left)
+  n38.handle(right) -> laneA.n39.handle(left)
+  n40.handle(right) -> laneA.n41.handle(left)
+  n42.handle(right) -> laneA.n43.handle(left)
+  n44.handle(right) -> laneA.n45.handle(left)
+  n46.handle(right) -> laneA.n47.handle(left)
+  n48.handle(right) -> laneA.n49.handle(left)
+}

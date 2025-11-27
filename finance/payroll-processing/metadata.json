@@ -1,0 +1,17 @@
+{
+  "workflow_id": "payroll-processing",
+  "domain": "finance",
+  "complexity": 5,
+  "num_nodes": 24,
+  "num_lanes": 4,
+  "tags": [
+    "payroll-processing",
+    "salary-calculation",
+    "tax-withholding",
+    "fica",
+    "ach-direct-deposit",
+    "benefits-deductions",
+    "compliance"
+  ],
+  "description": "Complete payroll processing workflow with timesheet collection, gross pay calculation, overtime, tax withholding (federal, state, FICA), benefits deductions, compliance validation, and ACH direct deposit."
+}

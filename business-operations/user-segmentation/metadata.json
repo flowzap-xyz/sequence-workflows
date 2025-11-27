@@ -1,0 +1,16 @@
+{
+  "workflow_id": "user-segmentation",
+  "domain": "business-operations",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "user-segmentation",
+    "audience-targeting",
+    "behavioral-cohorts",
+    "customer-segments",
+    "segment",
+    "marketing-automation"
+  ],
+  "description": "User segmentation workflow with attribute collection, behavioral event tracking, segment rule definition, dynamic membership, and downstream sync."
+}

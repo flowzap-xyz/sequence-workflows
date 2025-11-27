@@ -1,0 +1,14 @@
+{
+  "workflow_id": "polling-pattern",
+  "domain": "patterns",
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "polling",
+    "pattern",
+    "patterns",
+    "loop"
+  ],
+  "description": "This workflow models periodically checking status until work is done."
+}

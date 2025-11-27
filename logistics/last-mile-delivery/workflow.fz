@@ -1,0 +1,50 @@
+DispatchCenter { # Dispatch Center
+n1: circle label:"Start"
+n2: rectangle label:"Receive delivery batch"
+n3: rectangle label:"Optimize delivery routes"
+n4: rectangle label:"Assign to driver"
+n5: rectangle label:"Update delivery status"
+n6: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left)
+n4.handle(bottom) -> Driver.n7.handle(top) [label="Dispatch"]
+n5.handle(right) -> n6.handle(left)
+}
+Driver { # Delivery Driver
+n7: rectangle label:"Load packages into van"
+n8: rectangle label:"Navigate to address"
+n9: rectangle label:"Arrive at location"
+n10: diamond label:"Customer available?"
+n11: rectangle label:"Deliver to customer"
+n12: rectangle label:"Capture signature"
+n13: diamond label:"Safe drop location?"
+n14: rectangle label:"Leave at door"
+n15: rectangle label:"Attempt redelivery"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left) [label="Yes"]
+n10.handle(bottom) -> n13.handle(top) [label="No"]
+n11.handle(right) -> n12.handle(left)
+n12.handle(bottom) -> Confirmation.n16.handle(top) [label="Signed"]
+n13.handle(right) -> n14.handle(left) [label="Yes"]
+n13.handle(bottom) -> n15.handle(top) [label="No"]
+n14.handle(bottom) -> Confirmation.n16.handle(top) [label="Photo proof"]
+n15.handle(bottom) -> Confirmation.n20.handle(top) [label="Failed"]
+}
+Confirmation { # Delivery Confirmation
+n16: rectangle label:"Take delivery photo"
+n17: rectangle label:"Update GPS coordinates"
+n18: rectangle label:"Mark as delivered"
+n19: rectangle label:"Send customer notification"
+n20: rectangle label:"Schedule redelivery"
+n21: diamond label:"More stops?"
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left)
+n19.handle(right) -> n21.handle(left)
+n20.handle(top) -> DispatchCenter.n5.handle(bottom) [label="Rescheduled"]
+n21.handle(right) -> Driver.n8.handle(bottom) [label="Yes"]
+n21.handle(bottom) -> DispatchCenter.n5.handle(top) [label="No"]
+}

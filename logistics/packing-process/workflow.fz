@@ -1,0 +1,19 @@
+supplier { # Supplier
+  n1: circle label:"Start Packing Process"
+  n3: diamond label:"Review Packing Process details"
+  n5: rectangle label:"Update records for Packing Process"
+  n7: circle label:"End Packing Process"
+  n1.handle(bottom) -> warehouse.n2.handle(top)
+  n3.handle(bottom) -> warehouse.n4.handle(top) [label="Processed"]
+  n3.handle(right) -> warehouse.n2.handle(right) [label="Retry/Rejected"]
+  n5.handle(bottom) -> warehouse.n6.handle(top)
+}
+
+warehouse { # Warehouse
+  n2: rectangle label:"Receive Packing Process request"
+  n4: rectangle label:"Make Packing Process decision"
+  n6: rectangle label:"Continue Packing Process process"
+  n6.handle(right) -> supplier.n7.handle(bottom) [label="Success"]
+  n4.handle(right) -> supplier.n5.handle(left)
+  n2.handle(bottom) -> supplier.n3.handle(left)
+}

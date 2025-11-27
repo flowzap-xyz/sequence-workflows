@@ -1,0 +1,44 @@
+Scheduler { # Rotation Scheduler
+n1: circle label:"Start"
+n2: rectangle label:"Check secret expiration dates"
+n3: rectangle label:"Identify secrets due for rotation"
+n4: rectangle label:"Verify rotation complete"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Vault.n6.handle(top) [label="Rotate"]
+n4.handle(right) -> n5.handle(left)
+}
+Vault { # Secret Vault
+n6: rectangle label:"Generate new secret value"
+n7: rectangle label:"Store new version"
+n8: diamond label:"Secret type?"
+n9: rectangle label:"Rotate API key"
+n10: rectangle label:"Rotate database password"
+n11: rectangle label:"Rotate certificate"
+n12: rectangle label:"Update secret metadata"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="API key"]
+n8.handle(bottom) -> n10.handle(top) [label="DB password"]
+n8.handle(left) -> n11.handle(top) [label="Certificate"]
+n9.handle(bottom) -> n12.handle(top)
+n10.handle(bottom) -> n12.handle(top)
+n11.handle(bottom) -> n12.handle(top)
+n12.handle(bottom) -> Deployment.n13.handle(top) [label="Deploy"]
+}
+Deployment { # Secret Deployment
+n13: rectangle label:"Update Kubernetes secrets"
+n14: rectangle label:"Trigger rolling restart"
+n15: diamond label:"Services healthy?"
+n16: rectangle label:"Mark rotation successful"
+n17: rectangle label:"Rollback to previous"
+n18: rectangle label:"Send rotation report"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Yes"]
+n15.handle(bottom) -> n17.handle(top) [label="No"]
+n16.handle(right) -> n18.handle(left)
+n17.handle(right) -> n18.handle(top)
+n18.handle(top) -> Scheduler.n4.handle(bottom) [label="Complete"]
+}

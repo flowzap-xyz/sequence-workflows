@@ -1,0 +1,17 @@
+{
+  "workflow_id": "cqrs",
+  "domain": "patterns",
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 4,
+  "tags": [
+    "cqrs",
+    "command-query-separation",
+    "event-sourcing",
+    "read-model",
+    "write-model",
+    "domain-events",
+    "eventual-consistency"
+  ],
+  "description": "CQRS (Command Query Responsibility Segregation) pattern with separate command and query paths, domain event publishing, read model synchronization, and DTO transformation."
+}

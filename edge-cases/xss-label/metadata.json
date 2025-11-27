@@ -1,0 +1,12 @@
+{
+  "workflow_id": "xss-label",
+  "domain": "edge-cases",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "xss",
+    "label"
+  ],
+  "description": "This workflow models a label that looks like an XSS script."
+}

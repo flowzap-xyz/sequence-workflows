@@ -1,0 +1,20 @@
+customer { # Customer
+  n1: circle label:"Start User Segmentation"
+  n3: diamond label:"Review User Segmentation details"
+  n5: rectangle label:"Update records for User Segmentation"
+  n7: circle label:"End User Segmentation"
+
+  n1.handle(bottom) -> agent.n2.handle(top) [label="Success"]
+  n3.handle(bottom) -> agent.n4.handle(top)
+  n3.handle(right) -> agent.n2.handle(right) [label="Retry/Rejected"]
+  n5.handle(bottom) -> agent.n6.handle(top)
+}
+agent { # Agent
+  n2: rectangle label:"Receive User Segmentation request"
+  n4: rectangle label:"Make User Segmentation decision"
+  n6: rectangle label:"Continue User Segmentation process"
+
+  n2.handle(bottom) -> customer.n3.handle(top)
+  n4.handle(bottom) -> customer.n5.handle(top) [label="Valid"]
+  n6.handle(bottom) -> customer.n7.handle(top)
+}

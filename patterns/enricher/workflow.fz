@@ -1,0 +1,28 @@
+user { # User
+  n1: circle label:"Start Enricher"
+  n4: diamond label:"Execute Enricher action"
+  n7: rectangle label:"Monitor Enricher status"
+  n10: circle label:"End Enricher"
+  n1.handle(bottom) -> app.n2.handle(top)
+  n4.handle(bottom) -> app.n5.handle(top)
+  n4.handle(right) -> service.n3.handle(right) [label="Retry/Rejected"]
+  n7.handle(bottom) -> app.n8.handle(top)
+}
+
+app { # App
+  n2: rectangle label:"Receive Enricher event"
+  n5: rectangle label:"Record Enricher outcome"
+  n8: rectangle label:"Monitor Enricher status"
+  n2.handle(bottom) -> service.n3.handle(top)
+  n5.handle(bottom) -> service.n6.handle(top)
+  n8.handle(bottom) -> service.n9.handle(top)
+}
+
+service { # Service
+  n3: rectangle label:"Validate Enricher conditions"
+  n6: rectangle label:"Monitor Enricher status"
+  n9: rectangle label:"Monitor Enricher status"
+  n9.handle(right) -> user.n10.handle(bottom) [label="Valid"]
+  n6.handle(right) -> user.n7.handle(left) [label="Success"]
+  n3.handle(bottom) -> user.n4.handle(left) [label="Processed"]
+}

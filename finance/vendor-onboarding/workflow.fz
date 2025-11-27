@@ -1,0 +1,47 @@
+Vendor { # Vendor
+n1: circle label:"Start"
+n2: rectangle label:"Submit registration form"
+n3: rectangle label:"Upload required documents"
+n4: rectangle label:"Receive approval notification"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Procurement.n6.handle(top) [label="Apply"]
+n3.handle(bottom) -> Compliance.n12.handle(top) [label="Documents"]
+n4.handle(right) -> n5.handle(left)
+}
+Procurement { # Procurement
+n6: rectangle label:"Review vendor application"
+n7: diamond label:"Business need valid?"
+n8: rectangle label:"Request additional info"
+n9: rectangle label:"Assign vendor category"
+n10: rectangle label:"Set payment terms"
+n11: rectangle label:"Reject application"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n9.handle(left) [label="Yes"]
+n7.handle(bottom) -> n8.handle(top) [label="Need info"]
+n7.handle(left) -> n11.handle(top) [label="No"]
+n8.handle(top) -> Vendor.n3.handle(bottom) [label="Request docs"]
+n9.handle(right) -> n10.handle(left)
+n10.handle(bottom) -> Compliance.n12.handle(top) [label="Verify"]
+n11.handle(top) -> Vendor.n4.handle(bottom) [label="Rejected"]
+}
+Compliance { # Compliance
+n12: rectangle label:"Verify W-9 or W-8BEN"
+n13: rectangle label:"Check insurance certificates"
+n14: diamond label:"Compliance passed?"
+n15: rectangle label:"Run background check"
+n16: rectangle label:"Flag compliance issues"
+n17: diamond label:"Background clear?"
+n18: rectangle label:"Approve vendor"
+n19: rectangle label:"Reject vendor"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left) [label="Yes"]
+n14.handle(bottom) -> n16.handle(top) [label="No"]
+n15.handle(right) -> n17.handle(left)
+n16.handle(top) -> Vendor.n3.handle(bottom) [label="Fix issues"]
+n17.handle(right) -> n18.handle(left) [label="Yes"]
+n17.handle(bottom) -> n19.handle(top) [label="No"]
+n18.handle(top) -> Vendor.n4.handle(bottom) [label="Approved"]
+n19.handle(top) -> Vendor.n4.handle(bottom) [label="Rejected"]
+}

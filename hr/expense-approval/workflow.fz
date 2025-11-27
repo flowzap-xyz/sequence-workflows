@@ -1,0 +1,51 @@
+Employee { # Employee
+n1: circle label:"Start"
+n2: rectangle label:"Submit expense report"
+n3: rectangle label:"Attach receipts"
+n4: rectangle label:"Receive reimbursement"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> ExpenseSystem.n6.handle(top) [label="Submit"]
+n4.handle(right) -> n5.handle(left)
+}
+ExpenseSystem { # Expense System
+n6: rectangle label:"Validate receipt images"
+n7: rectangle label:"Extract expense data via OCR"
+n8: diamond label:"Policy compliant?"
+n9: rectangle label:"Auto-approve under threshold"
+n10: rectangle label:"Flag policy violation"
+n11: rectangle label:"Route for approval"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes - Under $100"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n8.handle(left) -> n11.handle(top) [label="Yes - Over $100"]
+n9.handle(bottom) -> Finance.n17.handle(top) [label="Queue payment"]
+n10.handle(top) -> Employee.n2.handle(bottom) [label="Revise"]
+n11.handle(bottom) -> Manager.n12.handle(top) [label="Review"]
+}
+Manager { # Manager
+n12: rectangle label:"Review expense details"
+n13: diamond label:"Approve expense?"
+n14: rectangle label:"Add approval note"
+n15: rectangle label:"Reject with reason"
+n16: rectangle label:"Request clarification"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left) [label="Yes"]
+n13.handle(bottom) -> n15.handle(top) [label="No"]
+n13.handle(left) -> n16.handle(top) [label="Need info"]
+n14.handle(bottom) -> Finance.n17.handle(top) [label="Approved"]
+n15.handle(top) -> Employee.n2.handle(bottom) [label="Rejected"]
+n16.handle(top) -> Employee.n3.handle(bottom) [label="Update"]
+}
+Finance { # Finance
+n17: rectangle label:"Schedule reimbursement"
+n18: rectangle label:"Process direct deposit"
+n19: rectangle label:"Update GL accounts"
+n20: rectangle label:"Send confirmation email"
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left)
+n19.handle(right) -> n20.handle(left)
+n20.handle(top) -> Employee.n4.handle(bottom) [label="Paid"]
+}

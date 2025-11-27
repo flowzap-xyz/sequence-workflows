@@ -1,0 +1,12 @@
+{
+  "workflow_id": "empty-lane",
+  "domain": "edge-cases",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "empty",
+    "lane"
+  ],
+  "description": "This workflow models a lane with no nodes."
+}

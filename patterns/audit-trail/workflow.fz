@@ -1,0 +1,37 @@
+user { # User
+  n1: circle label:"Start Audit Trail"
+  n2: diamond label:"Receive Audit Trail event"
+  n5: rectangle label:"Record Audit Trail outcome"
+  n9: rectangle label:"Monitor Audit Trail status"
+  n13: circle label:"End Audit Trail"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> service.n3.handle(top) [label="Yes/Approved"]
+  n2.handle(bottom) -> database.n4.handle(top) [label="No/Rejected"]
+  n5.handle(bottom) -> app.n6.handle(top)
+  n9.handle(bottom) -> app.n10.handle(top)
+}
+
+app { # App
+  n6: rectangle label:"Monitor Audit Trail status"
+  n10: rectangle label:"Monitor Audit Trail status"
+  n6.handle(bottom) -> service.n7.handle(top)
+  n10.handle(bottom) -> service.n11.handle(top)
+}
+
+service { # Service
+  n3: rectangle label:"Validate Audit Trail conditions"
+  n7: rectangle label:"Monitor Audit Trail status"
+  n11: rectangle label:"Monitor Audit Trail status"
+  n7.handle(bottom) -> database.n8.handle(top)
+  n11.handle(bottom) -> database.n12.handle(top)
+  n3.handle(right) -> user.n5.handle(left)
+}
+
+database { # Database
+  n4: rectangle label:"Execute Audit Trail action"
+  n8: rectangle label:"Monitor Audit Trail status"
+  n12: rectangle label:"Monitor Audit Trail status"
+  n12.handle(right) -> user.n13.handle(bottom)
+  n8.handle(right) -> user.n9.handle(left)
+  n4.handle(right) -> user.n5.handle(bottom)
+}

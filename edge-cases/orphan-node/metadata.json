@@ -1,0 +1,12 @@
+{
+  "workflow_id": "orphan-node",
+  "domain": "edge-cases",
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "orphan",
+    "node"
+  ],
+  "description": "This workflow models a node with no connections."
+}

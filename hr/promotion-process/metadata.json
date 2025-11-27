@@ -1,0 +1,16 @@
+{
+  "workflow_id": "promotion-process",
+  "domain": "hr",
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "promotion-process",
+    "career-advancement",
+    "job-leveling",
+    "title-change",
+    "compensation-adjustment",
+    "succession-planning"
+  ],
+  "description": "Employee promotion workflow with performance validation, job level assessment, compensation adjustment, title change, and announcement coordination."
+}

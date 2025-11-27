@@ -1,0 +1,44 @@
+Publisher { # Publisher
+n1: circle label:"Start"
+n2: rectangle label:"Create message payload"
+n3: rectangle label:"Serialize to JSON"
+n4: rectangle label:"Publish to topic"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> MessageBroker.n6.handle(top) [label="Publish"]
+n4.handle(right) -> n5.handle(left)
+}
+MessageBroker { # Message Broker
+n6: rectangle label:"Receive message"
+n7: rectangle label:"Validate message schema"
+n8: diamond label:"Topic exists?"
+n9: rectangle label:"Store in topic partition"
+n10: rectangle label:"Create topic"
+n11: rectangle label:"Notify subscribers"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n9.handle(right) -> n11.handle(left)
+n10.handle(right) -> n9.handle(top)
+n11.handle(bottom) -> Subscriber.n12.handle(top) [label="Deliver"]
+n11.handle(top) -> Publisher.n4.handle(bottom) [label="ACK"]
+}
+Subscriber { # Subscriber
+n12: rectangle label:"Receive notification"
+n13: rectangle label:"Fetch message from topic"
+n14: rectangle label:"Deserialize payload"
+n15: diamond label:"Processing successful?"
+n16: rectangle label:"Acknowledge message"
+n17: rectangle label:"Negative acknowledge"
+n18: rectangle label:"Update consumer offset"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Yes"]
+n15.handle(bottom) -> n17.handle(top) [label="No"]
+n16.handle(right) -> n18.handle(left)
+n17.handle(top) -> n13.handle(bottom) [label="Retry"]
+n18.handle(top) -> Publisher.n5.handle(bottom) [label="Complete"]
+}

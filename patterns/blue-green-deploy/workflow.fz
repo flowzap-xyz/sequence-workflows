@@ -1,0 +1,48 @@
+CI { # CI Pipeline
+n1: circle label:"Start"
+n2: rectangle label:"Build new version"
+n3: rectangle label:"Run automated tests"
+n4: rectangle label:"Verify deployment success"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> BlueGreen.n6.handle(top) [label="Deploy"]
+n4.handle(right) -> n5.handle(left)
+}
+BlueGreen { # Blue-Green Controller
+n6: rectangle label:"Identify current environment"
+n7: diamond label:"Current active?"
+n8: rectangle label:"Deploy to Green"
+n9: rectangle label:"Deploy to Blue"
+n10: rectangle label:"Run smoke tests"
+n11: diamond label:"Tests passed?"
+n12: rectangle label:"Switch load balancer"
+n13: rectangle label:"Rollback deployment"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="Blue"]
+n7.handle(bottom) -> n9.handle(top) [label="Green"]
+n8.handle(right) -> n10.handle(left)
+n9.handle(right) -> n10.handle(top)
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> n13.handle(top) [label="No"]
+n12.handle(bottom) -> LoadBalancer.n14.handle(top) [label="Switch"]
+n13.handle(top) -> CI.n4.handle(bottom) [label="Failed"]
+}
+LoadBalancer { # Load Balancer
+n14: rectangle label:"Update target group"
+n15: rectangle label:"Drain old connections"
+n16: rectangle label:"Route traffic to new env"
+n17: rectangle label:"Monitor error rates"
+n18: diamond label:"Stable?"
+n19: rectangle label:"Mark deployment complete"
+n20: rectangle label:"Revert to old environment"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left) [label="Yes"]
+n18.handle(bottom) -> n20.handle(top) [label="No"]
+n19.handle(top) -> CI.n4.handle(bottom) [label="Success"]
+n20.handle(top) -> CI.n4.handle(bottom) [label="Rolled back"]
+}

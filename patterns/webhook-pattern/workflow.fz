@@ -1,0 +1,47 @@
+Sender { # Webhook Sender
+n1: circle label:"Start"
+n2: rectangle label:"Event occurs in system"
+n3: rectangle label:"Build webhook payload"
+n4: rectangle label:"Log delivery result"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Delivery.n6.handle(top) [label="Send"]
+n4.handle(right) -> n5.handle(left)
+}
+Delivery { # Webhook Delivery
+n6: rectangle label:"Sign payload with HMAC"
+n7: rectangle label:"POST to subscriber URL"
+n8: diamond label:"Response status?"
+n9: rectangle label:"Mark as delivered"
+n10: rectangle label:"Schedule retry"
+n11: diamond label:"Max retries reached?"
+n12: rectangle label:"Mark as failed"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="2xx"]
+n8.handle(bottom) -> n10.handle(top) [label="4xx/5xx"]
+n9.handle(top) -> Sender.n4.handle(bottom) [label="Success"]
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> n7.handle(bottom) [label="No"]
+n12.handle(top) -> Sender.n4.handle(bottom) [label="Failed"]
+loop [retry up to 5 times] n7 n8 n10 n11
+}
+Receiver { # Webhook Receiver
+n13: rectangle label:"Receive POST request"
+n14: rectangle label:"Verify HMAC signature"
+n15: diamond label:"Signature valid?"
+n16: rectangle label:"Parse JSON payload"
+n17: rectangle label:"Return 401 Unauthorized"
+n18: rectangle label:"Process event"
+n19: rectangle label:"Return 200 OK"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Yes"]
+n15.handle(bottom) -> n17.handle(top) [label="No"]
+n16.handle(right) -> n18.handle(left)
+n17.handle(top) -> Sender.n4.handle(bottom) [label="Rejected"]
+n18.handle(right) -> n19.handle(left)
+n19.handle(top) -> Sender.n4.handle(bottom) [label="Processed"]
+}

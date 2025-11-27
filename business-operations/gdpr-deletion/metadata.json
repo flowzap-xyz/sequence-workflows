@@ -1,0 +1,16 @@
+{
+  "workflow_id": "gdpr-deletion",
+  "domain": "business-operations",
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "gdpr-deletion",
+    "right-to-be-forgotten",
+    "data-privacy",
+    "pii-removal",
+    "compliance",
+    "dsar"
+  ],
+  "description": "GDPR data deletion workflow with identity verification, data inventory scan, PII removal across systems, backup purging, and deletion confirmation."
+}

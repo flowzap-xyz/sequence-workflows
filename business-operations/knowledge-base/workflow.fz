@@ -1,0 +1,44 @@
+Author { # Content Author
+  n1: circle label:"Start"
+  n2: rectangle label:"Draft article content"
+  n3: rectangle label:"Add media attachments"
+  n4: rectangle label:"Receive publication notice"
+  n5: circle label:"End"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(bottom) -> Review.n6.handle(top) [label="Submit"]
+  n4.handle(right) -> n5.handle(left)
+}
+Review { # Editorial Review
+  n6: rectangle label:"Check content accuracy"
+  n7: rectangle label:"Review SEO optimization"
+  n8: diamond label:"Content quality?"
+  n9: rectangle label:"Approve for publication"
+  n10: rectangle label:"Request revisions"
+  n11: rectangle label:"Reject article"
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(right) -> n9.handle(left) [label="Approved"]
+  n8.handle(bottom) -> n10.handle(top) [label="Needs work"]
+  n8.handle(left) -> n11.handle(top) [label="Rejected"]
+  n9.handle(bottom) -> CMS.n12.handle(top) [label="Publish"]
+  n10.handle(top) -> Author.n2.handle(bottom) [label="Revise"]
+  n11.handle(top) -> Author.n5.handle(bottom) [label="Closed"]
+}
+CMS { # Content Management System
+  n12: rectangle label:"Assign categories and tags"
+  n13: rectangle label:"Generate URL slug"
+  n14: rectangle label:"Index for search"
+  n15: rectangle label:"Publish to live site"
+  n16: diamond label:"Featured article?"
+  n17: rectangle label:"Add to homepage"
+  n18: rectangle label:"Standard listing"
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(right) -> n14.handle(left)
+  n14.handle(right) -> n15.handle(left)
+  n15.handle(right) -> n16.handle(left)
+  n16.handle(right) -> n17.handle(left) [label="Yes"]
+  n16.handle(bottom) -> n18.handle(top) [label="No"]
+  n17.handle(top) -> Author.n4.handle(bottom) [label="Published"]
+  n18.handle(top) -> Author.n4.handle(bottom) [label="Published"]
+}

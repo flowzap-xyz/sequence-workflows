@@ -1,0 +1,50 @@
+Customer { # Customer
+n1: circle label:"Start"
+n2: rectangle label:"Submit support request"
+n3: rectangle label:"Receive ticket number"
+n4: rectangle label:"Provide additional info"
+n5: rectangle label:"Rate support experience"
+n6: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Triage.n7.handle(top) [label="Create ticket"]
+n3.handle(bottom) -> Agent.n14.handle(top) [label="Reply"]
+n4.handle(bottom) -> Agent.n14.handle(top) [label="Update"]
+n5.handle(right) -> n6.handle(left)
+}
+Triage { # Triage System
+n7: rectangle label:"Parse ticket content"
+n8: rectangle label:"Classify by category"
+n9: diamond label:"Priority level?"
+n10: rectangle label:"Route to L1 queue"
+n11: rectangle label:"Route to L2 queue"
+n12: rectangle label:"Escalate to L3"
+n13: rectangle label:"Send confirmation email"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left) [label="Low/Medium"]
+n9.handle(bottom) -> n11.handle(top) [label="High"]
+n9.handle(left) -> n12.handle(top) [label="Critical"]
+n10.handle(bottom) -> Agent.n14.handle(top) [label="Assign"]
+n11.handle(bottom) -> Agent.n14.handle(top) [label="Assign"]
+n12.handle(bottom) -> Agent.n14.handle(top) [label="Assign"]
+n13.handle(top) -> Customer.n3.handle(bottom) [label="Ticket created"]
+}
+Agent { # Support Agent
+n14: rectangle label:"Review ticket details"
+n15: diamond label:"Can resolve?"
+n16: rectangle label:"Provide solution"
+n17: rectangle label:"Request more info"
+n18: rectangle label:"Escalate to specialist"
+n19: diamond label:"Customer satisfied?"
+n20: rectangle label:"Close ticket"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Yes"]
+n15.handle(bottom) -> n17.handle(top) [label="Need info"]
+n15.handle(left) -> n18.handle(top) [label="No - Complex"]
+n16.handle(right) -> n19.handle(left)
+n17.handle(top) -> Customer.n4.handle(bottom) [label="Request sent"]
+n18.handle(bottom) -> Triage.n12.handle(bottom) [label="Escalate"]
+n19.handle(right) -> n20.handle(left) [label="Yes"]
+n19.handle(bottom) -> n14.handle(bottom) [label="No - Reopen"]
+n20.handle(top) -> Customer.n5.handle(bottom) [label="Survey sent"]
+}

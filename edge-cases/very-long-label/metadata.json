@@ -1,0 +1,15 @@
+{
+  "workflow_id": "very-long-label",
+  "domain": "edge-cases",
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "very",
+    "long",
+    "label",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models labels with very long text."
+}

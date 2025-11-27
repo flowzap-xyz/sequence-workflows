@@ -1,0 +1,44 @@
+APClerk { # AP Clerk
+n1: circle label:"Start"
+n2: rectangle label:"Select invoices for payment"
+n3: rectangle label:"Create payment batch"
+n4: rectangle label:"Confirm payments sent"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Approval.n6.handle(top) [label="Submit"]
+n4.handle(right) -> n5.handle(left)
+}
+Approval { # Payment Approval
+n6: rectangle label:"Review payment batch"
+n7: diamond label:"Batch amount?"
+n8: rectangle label:"Single approver"
+n9: rectangle label:"Dual approval required"
+n10: diamond label:"Approved?"
+n11: rectangle label:"Return for correction"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="< $50K"]
+n7.handle(bottom) -> n9.handle(top) [label=">= $50K"]
+n8.handle(right) -> n10.handle(left)
+n9.handle(right) -> n10.handle(top)
+n10.handle(right) -> Banking.n12.handle(left) [label="Yes"]
+n10.handle(bottom) -> n11.handle(top) [label="No"]
+n11.handle(top) -> APClerk.n2.handle(bottom) [label="Revise"]
+}
+Banking { # Banking System
+n12: rectangle label:"Generate ACH file"
+n13: rectangle label:"Generate check run"
+n14: diamond label:"Payment method?"
+n15: rectangle label:"Submit to bank"
+n16: rectangle label:"Print checks"
+n17: rectangle label:"Confirm transmission"
+n18: rectangle label:"Update vendor records"
+n12.handle(right) -> n14.handle(left)
+n13.handle(right) -> n14.handle(top)
+n14.handle(right) -> n15.handle(left) [label="ACH"]
+n14.handle(bottom) -> n16.handle(top) [label="Check"]
+n15.handle(right) -> n17.handle(left)
+n16.handle(right) -> n17.handle(top)
+n17.handle(right) -> n18.handle(left)
+n18.handle(top) -> APClerk.n4.handle(bottom) [label="Complete"]
+}

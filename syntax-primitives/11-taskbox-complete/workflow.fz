@@ -1,0 +1,18 @@
+laneA { # Lane A
+  n1: circle label:"Start 11 Taskbox Complete"
+  n3: taskbox owner:"" description:"" system:""
+  n5: rectangle label:"11 Taskbox Complete step 5"
+  n7: circle label:"End 11 Taskbox Complete"
+  n1.handle(bottom) -> laneB.n2.handle(top)
+  n3.handle(bottom) -> laneB.n4.handle(top)
+  n5.handle(bottom) -> laneB.n6.handle(top)
+}
+
+laneB { # Lane B
+  n2: rectangle label:"11 Taskbox Complete step 2"
+  n4: taskbox owner:"" description:"" system:""
+  n6: rectangle label:"11 Taskbox Complete step 6"
+  n6.handle(right) -> laneA.n7.handle(left)
+  n4.handle(right) -> laneA.n5.handle(left)
+  n2.handle(right) -> laneA.n3.handle(left)
+}

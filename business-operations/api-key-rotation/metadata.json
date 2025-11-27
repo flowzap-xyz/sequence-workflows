@@ -1,0 +1,16 @@
+{
+  "workflow_id": "api-key-rotation",
+  "domain": "business-operations",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "api-key-rotation",
+    "security",
+    "credential-management",
+    "zero-downtime",
+    "secrets-manager",
+    "compliance"
+  ],
+  "description": "API key rotation workflow with new key generation, dual-key transition period, client notification, old key deprecation, and audit logging."
+}

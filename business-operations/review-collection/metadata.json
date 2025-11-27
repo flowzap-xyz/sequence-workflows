@@ -1,0 +1,16 @@
+{
+  "workflow_id": "review-collection",
+  "domain": "business-operations",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "review-collection",
+    "customer-feedback",
+    "nps",
+    "ratings",
+    "social-proof",
+    "testimonials"
+  ],
+  "description": "Customer review collection workflow with post-purchase trigger, review request email, rating submission, moderation, and public display."
+}

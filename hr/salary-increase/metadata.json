@@ -1,0 +1,16 @@
+{
+  "workflow_id": "salary-increase",
+  "domain": "hr",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "salary-increase",
+    "compensation",
+    "merit-raise",
+    "market-adjustment",
+    "budget-approval",
+    "comp-ratio"
+  ],
+  "description": "Salary increase workflow with market analysis, comp ratio review, budget validation, tiered approval based on increase percentage, and payroll system update."
+}

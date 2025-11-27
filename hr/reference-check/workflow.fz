@@ -1,0 +1,34 @@
+employee { # Employee
+  n1: circle label:"Start Reference Check"
+  n4: diamond label:"Make Reference Check decision"
+  n7: rectangle label:"Continue Reference Check process"
+  n10: circle label:"End Reference Check"
+  n1.handle(bottom) -> manager.n2.handle(top)
+  n1.handle(bottom) -> hr_system.n3.handle(top)
+  n1.handle(right) -> n4.handle(left)
+  n1.handle(bottom) -> manager.n5.handle(top)
+  n1.handle(bottom) -> hr_system.n6.handle(top)
+  n1.handle(right) -> n7.handle(left)
+  n1.handle(bottom) -> manager.n8.handle(top)
+  n1.handle(bottom) -> hr_system.n9.handle(top)
+  n4.handle(right) -> n10.handle(left)
+  n7.handle(right) -> n10.handle(left)
+}
+
+manager { # Manager
+  n2: rectangle label:"Receive Reference Check request"
+  n5: rectangle label:"Update records for Reference Check"
+  n8: rectangle label:"Continue Reference Check process"
+  n2.handle(right) -> employee.n10.handle(bottom)
+  n5.handle(right) -> employee.n10.handle(bottom)
+  n8.handle(right) -> employee.n10.handle(bottom)
+}
+
+hr_system { # Hr_System
+  n3: rectangle label:"Review Reference Check details"
+  n6: rectangle label:"Continue Reference Check process"
+  n9: rectangle label:"Continue Reference Check process"
+  n9.handle(right) -> employee.n10.handle(bottom)
+  n6.handle(right) -> employee.n10.handle(bottom)
+  n3.handle(right) -> employee.n10.handle(bottom)
+}

@@ -1,0 +1,16 @@
+{
+  "workflow_id": "email-campaign",
+  "domain": "business-operations",
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "email-campaign",
+    "marketing-automation",
+    "mailchimp",
+    "segmentation",
+    "a-b-testing",
+    "deliverability"
+  ],
+  "description": "Email marketing campaign workflow with audience segmentation, A/B testing, send scheduling, deliverability monitoring, and engagement analytics."
+}

@@ -1,0 +1,19 @@
+user { # User
+  n1: circle label:"Start Strangler Fig"
+  n2: diamond label:"Receive Strangler Fig event"
+  n3: rectangle label:"Validate Strangler Fig conditions"
+  n5: rectangle label:"Record Strangler Fig outcome"
+  n7: circle label:"End Strangler Fig"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left) [label="Yes/Approved"]
+  n2.handle(bottom) -> app.n4.handle(top) [label="No/Rejected"]
+  n3.handle(right) -> n5.handle(left)
+  n5.handle(bottom) -> app.n6.handle(top)
+}
+
+app { # App
+  n4: rectangle label:"Execute Strangler Fig action"
+  n6: rectangle label:"Monitor Strangler Fig status"
+  n4.handle(right) -> user.n5.handle(left)
+  n6.handle(right) -> user.n7.handle(bottom)
+}

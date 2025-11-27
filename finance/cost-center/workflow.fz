@@ -1,0 +1,19 @@
+employee { # Employee
+  n1: circle label:"Start Cost Center"
+  n2: diamond label:"Receive Cost Center request"
+  n3: rectangle label:"Review Cost Center details"
+  n5: rectangle label:"Update records for Cost Center"
+  n7: circle label:"End Cost Center"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left) [label="Yes/Approved"]
+  n2.handle(bottom) -> manager.n4.handle(top) [label="No/Rejected"]
+  n3.handle(right) -> n5.handle(left)
+  n5.handle(bottom) -> manager.n6.handle(top)
+}
+
+manager { # Manager
+  n4: rectangle label:"Make Cost Center decision"
+  n6: rectangle label:"Continue Cost Center process"
+  n6.handle(right) -> employee.n7.handle(bottom)
+  n4.handle(right) -> employee.n5.handle(top)
+}

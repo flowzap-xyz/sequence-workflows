@@ -1,0 +1,48 @@
+DeptManager { # Department Manager
+n1: circle label:"Start"
+n2: rectangle label:"Submit budget request"
+n3: rectangle label:"Justify line items"
+n4: rectangle label:"Receive approval status"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Finance.n6.handle(top) [label="Submit"]
+n4.handle(right) -> n5.handle(left)
+}
+Finance { # Finance Department
+n6: rectangle label:"Review budget request"
+n7: rectangle label:"Compare to prior year"
+n8: diamond label:"Within guidelines?"
+n9: rectangle label:"Recommend approval"
+n10: rectangle label:"Request justification"
+n11: rectangle label:"Recommend reduction"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="Need info"]
+n8.handle(left) -> n11.handle(top) [label="Over budget"]
+n9.handle(bottom) -> Executive.n12.handle(top) [label="Forward"]
+n10.handle(top) -> DeptManager.n3.handle(bottom) [label="Revise"]
+n11.handle(bottom) -> Executive.n12.handle(top) [label="Forward"]
+}
+Executive { # Executive Approval
+n12: rectangle label:"Review budget package"
+n13: diamond label:"Budget amount?"
+n14: rectangle label:"CFO approval"
+n15: rectangle label:"CEO approval"
+n16: rectangle label:"Board approval"
+n17: diamond label:"Approved?"
+n18: rectangle label:"Allocate funds"
+n19: rectangle label:"Return for revision"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left) [label="< $100K"]
+n13.handle(bottom) -> n15.handle(top) [label="$100K-$1M"]
+n13.handle(left) -> n16.handle(top) [label="> $1M"]
+n14.handle(bottom) -> n17.handle(top)
+n15.handle(bottom) -> n17.handle(top)
+n16.handle(bottom) -> n17.handle(top)
+n17.handle(right) -> n18.handle(left) [label="Yes"]
+n17.handle(bottom) -> n19.handle(top) [label="No"]
+n18.handle(top) -> DeptManager.n4.handle(bottom) [label="Approved"]
+n19.handle(top) -> DeptManager.n3.handle(bottom) [label="Revise"]
+}

@@ -1,0 +1,13 @@
+{
+  "workflow_id": "deep-nesting",
+  "domain": "edge-cases",
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "deep",
+    "nesting",
+    "parallel"
+  ],
+  "description": "This workflow models lanes that are conceptually nested within each other."
+}

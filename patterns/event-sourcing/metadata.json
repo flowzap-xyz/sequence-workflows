@@ -1,0 +1,16 @@
+{
+  "workflow_id": "event-sourcing",
+  "domain": "patterns",
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "event-sourcing",
+    "event-store",
+    "aggregate",
+    "replay",
+    "audit-log",
+    "temporal-query"
+  ],
+  "description": "Event sourcing pattern with event capture, event store persistence, aggregate reconstruction, snapshot optimization, and temporal state queries."
+}

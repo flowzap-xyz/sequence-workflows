@@ -1,0 +1,22 @@
+user { # User
+  n1: circle label:"Start Validator"
+  n3: rectangle label:"Validate Validator conditions"
+  n5: rectangle label:"Record Validator outcome"
+  n7: circle label:"End Validator"
+  n1.handle(bottom) -> app.n2.handle(top)
+  n1.handle(right) -> n3.handle(left)
+  n1.handle(bottom) -> app.n4.handle(top)
+  n1.handle(bottom) -> app.n6.handle(top)
+  n5.handle(right) -> n7.handle(left)
+  n3.handle(top) -> n7.handle(top)
+  n1.handle(right) -> n5.handle(bottom)
+}
+
+app { # App
+  n2: rectangle label:"Receive Validator event"
+  n4: rectangle label:"Execute Validator action"
+  n6: diamond label:"Monitor Validator status"
+  n6.handle(right) -> user.n7.handle(bottom)
+  n4.handle(right) -> user.n7.handle(bottom)
+  n2.handle(right) -> user.n7.handle(bottom)
+}

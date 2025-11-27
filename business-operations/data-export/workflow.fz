@@ -1,0 +1,41 @@
+User { # User
+  n1: circle label:"Start"
+  n2: rectangle label:"Request data export"
+  n3: rectangle label:"Verify identity"
+  n4: rectangle label:"Download export file"
+  n5: circle label:"End"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> App.n6.handle(top) [label="Submit request"]
+  n3.handle(bottom) -> App.n9.handle(top) [label="Verified"]
+  n4.handle(right) -> n5.handle(left)
+}
+App { # Application
+  n6: rectangle label:"Validate request"
+  n7: rectangle label:"Send verification email"
+  n8: diamond label:"Identity confirmed?"
+  n9: rectangle label:"Queue export job"
+  n10: rectangle label:"Reject request"
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(top) -> User.n3.handle(bottom) [label="Check email"]
+  n8.handle(right) -> n9.handle(left) [label="Yes"]
+  n8.handle(bottom) -> n10.handle(top) [label="No"]
+  n9.handle(bottom) -> ExportService.n11.handle(top) [label="Process"]
+  n10.handle(top) -> User.n5.handle(bottom) [label="Denied"]
+}
+ExportService { # Export Service
+  n11: rectangle label:"Gather data from all sources"
+  n12: rectangle label:"Compile user profile data"
+  n13: rectangle label:"Include activity history"
+  n14: rectangle label:"Package as ZIP archive"
+  n15: diamond label:"File size acceptable?"
+  n16: rectangle label:"Split into multiple files"
+  n17: rectangle label:"Generate download link"
+  n11.handle(right) -> n12.handle(left)
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(right) -> n14.handle(left)
+  n14.handle(right) -> n15.handle(left)
+  n15.handle(right) -> n17.handle(left) [label="Yes"]
+  n15.handle(bottom) -> n16.handle(top) [label="No"]
+  n16.handle(right) -> n17.handle(top)
+  n17.handle(top) -> User.n4.handle(bottom) [label="Ready"]
+}

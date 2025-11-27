@@ -1,0 +1,20 @@
+supplier { # Supplier
+  n1: circle label:"Start Fleet Maintenance"
+  n2: diamond label:"Receive Fleet Maintenance request"
+  n3: rectangle label:"Review Fleet Maintenance details"
+  n5: rectangle label:"Update records for Fleet Maintenance"
+  n7: circle label:"End Fleet Maintenance"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left) [label="Yes/Approved"]
+  n2.handle(bottom) -> warehouse.n4.handle(top) [label="No/Rejected"]
+  n3.handle(right) -> n5.handle(left)
+  n5.handle(bottom) -> warehouse.n6.handle(top)
+  loop [retry until success] n2 n3 n5 n4 n6
+}
+
+warehouse { # Warehouse
+  n4: rectangle label:"Make Fleet Maintenance decision"
+  n6: rectangle label:"Continue Fleet Maintenance process"
+  n6.handle(right) -> supplier.n7.handle(bottom)
+  n4.handle(right) -> supplier.n5.handle(top)
+}

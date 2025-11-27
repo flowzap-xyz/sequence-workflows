@@ -1,0 +1,46 @@
+MakeWebhook { # Make.com Webhook
+  n1: circle label:"Start"
+  n2: rectangle label:"Receive trigger from Airtable"
+  n3: rectangle label:"Get record details"
+  n4: diamond label:"Notification type?"
+  n5: rectangle label:"Format promotional message"
+  n6: rectangle label:"Format transactional message"
+  n7: rectangle label:"Format reminder message"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(right) -> n5.handle(left) [label="promo"]
+  n4.handle(bottom) -> n6.handle(top) [label="transaction"]
+  n4.handle(left) -> n7.handle(top) [label="reminder"]
+  n5.handle(bottom) -> OneSignal.n8.handle(top) [label="Send"]
+  n6.handle(bottom) -> OneSignal.n8.handle(top) [label="Send"]
+  n7.handle(bottom) -> OneSignal.n8.handle(top) [label="Send"]
+}
+OneSignal { # Make.com OneSignal Module
+  n8: rectangle label:"Create notification payload"
+  n9: rectangle label:"Set target segments"
+  n10: rectangle label:"POST to OneSignal API"
+  n11: diamond label:"API response OK?"
+  n12: rectangle label:"Extract notification ID"
+  n13: rectangle label:"Log error details"
+  n8.handle(right) -> n9.handle(left)
+  n9.handle(right) -> n10.handle(left)
+  n10.handle(right) -> n11.handle(left)
+  n11.handle(right) -> n12.handle(left) [label="200"]
+  n11.handle(bottom) -> n13.handle(top) [label="Error"]
+  n12.handle(bottom) -> Analytics.n14.handle(top) [label="Track"]
+  n13.handle(bottom) -> Analytics.n19.handle(top) [label="Alert"]
+}
+Analytics { # Make.com Data Store
+  n14: rectangle label:"Update Airtable record"
+  n15: rectangle label:"Increment send counter"
+  n16: rectangle label:"Calculate delivery rate"
+  n17: rectangle label:"Update Google Analytics"
+  n18: circle label:"End"
+  n19: rectangle label:"Send Slack error alert"
+  n14.handle(right) -> n15.handle(left)
+  n15.handle(right) -> n16.handle(left)
+  n16.handle(right) -> n17.handle(left)
+  n17.handle(right) -> n18.handle(left)
+  n19.handle(right) -> n18.handle(top)
+}

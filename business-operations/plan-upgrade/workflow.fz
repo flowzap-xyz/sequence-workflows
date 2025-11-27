@@ -1,0 +1,59 @@
+Customer { # Customer
+  n1: circle label:"Start"
+  n2: rectangle label:"Select new plan tier"
+  n3: rectangle label:"Review price difference"
+  n4: rectangle label:"Enter payment details"
+  n5: rectangle label:"Receive upgrade confirmation"
+  n6: circle label:"End"
+
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> PricingEngine.n7.handle(top) [label="Calculate"]
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(bottom) -> Billing.n12.handle(top) [label="Process payment"]
+  n5.handle(right) -> n6.handle(left)
+}
+
+PricingEngine { # Pricing Engine
+  n7: rectangle label:"Fetch current subscription"
+  n8: rectangle label:"Calculate prorated amount"
+  n9: diamond label:"Credit balance available?"
+  n10: rectangle label:"Apply credit to upgrade"
+  n11: rectangle label:"Show full price"
+
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(right) -> n9.handle(left)
+  n9.handle(right) -> n10.handle(left) [label="Yes"]
+  n9.handle(bottom) -> n11.handle(top) [label="No"]
+  n10.handle(top) -> Customer.n3.handle(bottom) [label="Price ready"]
+  n11.handle(top) -> Customer.n3.handle(bottom) [label="Price ready"]
+}
+
+Billing { # Billing System
+  n12: rectangle label:"Validate payment method"
+  n13: diamond label:"Payment valid?"
+  n14: rectangle label:"Charge prorated amount"
+  n15: rectangle label:"Return payment error"
+  n16: diamond label:"Charge successful?"
+  n17: rectangle label:"Update subscription tier"
+  n18: rectangle label:"Log failed charge"
+
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(right) -> n14.handle(left) [label="Yes"]
+  n13.handle(bottom) -> n15.handle(top) [label="No"]
+  n14.handle(right) -> n16.handle(left)
+  n15.handle(top) -> Customer.n4.handle(bottom) [label="Try again"]
+  n16.handle(right) -> n17.handle(left) [label="Yes"]
+  n16.handle(bottom) -> n18.handle(top) [label="No"]
+  n17.handle(bottom) -> Provisioning.n19.handle(top) [label="Activate"]
+  n18.handle(top) -> Customer.n4.handle(bottom) [label="Retry"]
+}
+
+Provisioning { # Feature Provisioning
+  n19: rectangle label:"Enable premium features"
+  n20: rectangle label:"Update usage limits"
+  n21: rectangle label:"Send upgrade email"
+
+  n19.handle(right) -> n20.handle(left)
+  n20.handle(right) -> n21.handle(left)
+  n21.handle(top) -> Customer.n5.handle(bottom) [label="Complete"]
+}

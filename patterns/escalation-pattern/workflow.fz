@@ -1,0 +1,28 @@
+user { # User
+  n1: circle label:"Start Escalation Pattern"
+  n4: rectangle label:"Execute Escalation Pattern action"
+  n7: rectangle label:"Monitor Escalation Pattern status"
+  n10: circle label:"End Escalation Pattern"
+  n1.handle(bottom) -> app.n2.handle(top)
+  n4.handle(bottom) -> app.n5.handle(top)
+  n7.handle(bottom) -> app.n8.handle(top)
+}
+
+app { # App
+  n2: rectangle label:"Receive Escalation Pattern event"
+  n5: rectangle label:"Record Escalation Pattern outcome"
+  n8: rectangle label:"Monitor Escalation Pattern status"
+  n2.handle(bottom) -> service.n3.handle(top)
+  n5.handle(bottom) -> service.n6.handle(top)
+  n8.handle(bottom) -> service.n9.handle(top)
+}
+
+service { # Service
+  n3: rectangle label:"Validate Escalation Pattern conditions"
+  n6: rectangle label:"Monitor Escalation Pattern status"
+  n9: diamond label:"Monitor Escalation Pattern status"
+  n3.handle(right) -> user.n4.handle(left) [label="Processed"]
+  n9.handle(left) -> app.n8.handle(left) [label="Retry/Rejected"]
+  n9.handle(right) -> user.n10.handle(bottom) [label="Valid"]
+  n6.handle(right) -> user.n7.handle(left) [label="Success"]
+}

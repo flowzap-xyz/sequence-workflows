@@ -1,0 +1,16 @@
+{
+  "workflow_id": "canary-deploy",
+  "domain": "patterns",
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "canary-deployment",
+    "progressive-rollout",
+    "traffic-splitting",
+    "metrics-monitoring",
+    "gradual-release",
+    "feature-flags"
+  ],
+  "description": "Canary deployment pattern with gradual traffic shifting, real-time metrics monitoring, automatic rollback triggers, and progressive rollout to full production."
+}

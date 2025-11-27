@@ -1,0 +1,28 @@
+user { # User
+  n1: circle label:"Start Callback Pattern"
+  n2: diamond label:"Receive Callback Pattern event"
+  n4: rectangle label:"Execute Callback Pattern action"
+  n7: rectangle label:"Monitor Callback Pattern status"
+  n10: circle label:"End Callback Pattern"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> service.n3.handle(top) [label="Yes/Approved"]
+  n4.handle(bottom) -> app.n5.handle(top)
+  n7.handle(right) -> app.n8.handle(top)
+  n2.handle(top) -> n4.handle(top) [label="No/Rejected"]
+}
+
+app { # App
+  n5: rectangle label:"Record Callback Pattern outcome"
+  n8: rectangle label:"Monitor Callback Pattern status"
+  n5.handle(bottom) -> service.n6.handle(top)
+  n8.handle(bottom) -> service.n9.handle(top)
+}
+
+service { # Service
+  n3: rectangle label:"Validate Callback Pattern conditions"
+  n6: rectangle label:"Monitor Callback Pattern status"
+  n9: rectangle label:"Monitor Callback Pattern status"
+  n9.handle(right) -> user.n10.handle(bottom)
+  n6.handle(right) -> user.n7.handle(bottom)
+  n3.handle(left) -> app.n5.handle(left)
+}

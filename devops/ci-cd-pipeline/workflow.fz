@@ -1,0 +1,53 @@
+Developer { # Developer
+n1: circle label:"Start"
+n2: rectangle label:"Push code to repository"
+n3: rectangle label:"Review pipeline status"
+n4: rectangle label:"Merge to main branch"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> CI.n6.handle(top) [label="Trigger build"]
+n3.handle(right) -> n4.handle(left)
+n4.handle(bottom) -> CD.n18.handle(top) [label="Deploy"]
+}
+CI { # Continuous Integration
+n6: rectangle label:"Checkout source code"
+n7: rectangle label:"Install dependencies"
+n8: rectangle label:"Run linting checks"
+n9: diamond label:"Lint passed?"
+n10: rectangle label:"Run unit tests"
+n11: diamond label:"Tests passed?"
+n12: rectangle label:"Build artifacts"
+n13: rectangle label:"Push to artifact registry"
+n14: rectangle label:"Notify build failure"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left) [label="Yes"]
+n9.handle(bottom) -> n14.handle(top) [label="No"]
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> n14.handle(top) [label="No"]
+n12.handle(right) -> n13.handle(left)
+n13.handle(top) -> Developer.n3.handle(bottom) [label="Build ready"]
+n14.handle(top) -> Developer.n3.handle(bottom) [label="Failed"]
+}
+CD { # Continuous Deployment
+n15: rectangle label:"Pull latest artifacts"
+n16: rectangle label:"Deploy to staging"
+n17: diamond label:"Staging tests pass?"
+n18: rectangle label:"Deploy to production"
+n19: rectangle label:"Run smoke tests"
+n20: diamond label:"Health check OK?"
+n21: rectangle label:"Update load balancer"
+n22: rectangle label:"Rollback deployment"
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left) [label="Yes"]
+n17.handle(bottom) -> n22.handle(top) [label="No"]
+n18.handle(right) -> n19.handle(left)
+n19.handle(right) -> n20.handle(left)
+n20.handle(right) -> n21.handle(left) [label="Yes"]
+n20.handle(bottom) -> n22.handle(top) [label="No"]
+n21.handle(top) -> Developer.n5.handle(bottom) [label="Live"]
+n22.handle(top) -> Developer.n3.handle(bottom) [label="Rolled back"]
+}

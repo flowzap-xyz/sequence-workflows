@@ -1,0 +1,16 @@
+{
+  "workflow_id": "api-gateway",
+  "domain": "patterns",
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "api-gateway",
+    "microservices",
+    "rate-limiting",
+    "request-routing",
+    "authentication",
+    "load-balancing"
+  ],
+  "description": "API Gateway pattern with request authentication, rate limiting, request routing to backend services, response aggregation, and error handling."
+}

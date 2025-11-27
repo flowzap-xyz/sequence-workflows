@@ -1,0 +1,19 @@
+user { # User
+  n1: circle label:"Start Batch Processing"
+  n3: rectangle label:"Validate Batch Processing conditions"
+  n5: rectangle label:"Record Batch Processing outcome"
+  n7: circle label:"End Batch Processing"
+  n1.handle(bottom) -> app.n2.handle(top)
+  n3.handle(bottom) -> app.n4.handle(top) [label="Processed"]
+  n5.handle(bottom) -> app.n6.handle(top)
+}
+
+app { # App
+  n2: rectangle label:"Receive Batch Processing event"
+  n4: diamond label:"Execute Batch Processing action"
+  n6: rectangle label:"Monitor Batch Processing status"
+  n6.handle(right) -> user.n7.handle(left) [label="Success"]
+  n2.handle(right) -> user.n3.handle(left)
+  n4.handle(left) -> user.n3.handle(left) [label="Retry/Rejected"]
+  n4.handle(right) -> user.n5.handle(left)
+}

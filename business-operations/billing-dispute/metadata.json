@@ -1,0 +1,16 @@
+{
+  "workflow_id": "billing-dispute",
+  "domain": "business-operations",
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "billing-dispute",
+    "chargeback",
+    "refund-request",
+    "dispute-resolution",
+    "fraud-review",
+    "stripe"
+  ],
+  "description": "Billing dispute workflow with dispute intake, transaction review, fraud analysis, resolution decision, and chargeback response handling."
+}

@@ -1,0 +1,41 @@
+Referrer { # Referrer
+  n1: circle label:"Start"
+  n2: rectangle label:"Generate referral link"
+  n3: rectangle label:"Share link with friend"
+  n4: rectangle label:"Receive reward notification"
+  n5: circle label:"End"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> ReferralSystem.n6.handle(top) [label="Create link"]
+  n3.handle(bottom) -> ReferralSystem.n9.handle(top) [label="Track click"]
+  n4.handle(right) -> n5.handle(left)
+}
+ReferralSystem { # Referral System
+  n6: rectangle label:"Generate unique tracking code"
+  n7: rectangle label:"Store referrer association"
+  n8: rectangle label:"Return shareable URL"
+  n9: rectangle label:"Log referral click"
+  n10: diamond label:"New user signup?"
+  n11: rectangle label:"Attribute to referrer"
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(top) -> Referrer.n3.handle(bottom) [label="Link ready"]
+  n9.handle(right) -> n10.handle(left)
+  n10.handle(right) -> n11.handle(left) [label="Yes"]
+  n10.handle(bottom) -> Referrer.n5.handle(top) [label="No - Existing user"]
+  n11.handle(bottom) -> Rewards.n12.handle(top) [label="Validate"]
+}
+Rewards { # Rewards Engine
+  n12: rectangle label:"Check eligibility rules"
+  n13: diamond label:"Qualifies for reward?"
+  n14: rectangle label:"Calculate reward amount"
+  n15: rectangle label:"Credit referrer account"
+  n16: rectangle label:"Credit referee bonus"
+  n17: rectangle label:"Log rejection reason"
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(right) -> n14.handle(left) [label="Yes"]
+  n13.handle(bottom) -> n17.handle(top) [label="No"]
+  n14.handle(right) -> n15.handle(left)
+  n15.handle(right) -> n16.handle(left)
+  n16.handle(top) -> Referrer.n4.handle(bottom) [label="Rewards issued"]
+  n17.handle(top) -> Referrer.n5.handle(bottom) [label="Ineligible"]
+}

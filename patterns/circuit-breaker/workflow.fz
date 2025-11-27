@@ -1,0 +1,43 @@
+Client { # Client Application
+n1: circle label:"Start"
+n2: rectangle label:"Initiate service call"
+n3: rectangle label:"Receive response"
+n4: rectangle label:"Process fallback response"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> CircuitBreaker.n6.handle(top) [label="Request"]
+n3.handle(right) -> n5.handle(left)
+n4.handle(right) -> n5.handle(left)
+}
+CircuitBreaker { # Circuit Breaker
+n6: diamond label:"Circuit state?"
+n7: rectangle label:"Allow request through"
+n8: rectangle label:"Return cached fallback"
+n9: rectangle label:"Increment failure count"
+n10: diamond label:"Failure threshold reached?"
+n11: rectangle label:"Open circuit"
+n12: rectangle label:"Reset failure count"
+n13: rectangle label:"Start half-open timer"
+n6.handle(right) -> n7.handle(left) [label="Closed"]
+n6.handle(bottom) -> n8.handle(top) [label="Open"]
+n6.handle(left) -> n7.handle(top) [label="Half-Open"]
+n7.handle(bottom) -> ExternalService.n14.handle(top) [label="Forward"]
+n8.handle(top) -> Client.n4.handle(bottom) [label="Fallback"]
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left) [label="Yes"]
+n10.handle(bottom) -> n12.handle(top) [label="No"]
+n11.handle(right) -> n13.handle(left)
+n12.handle(top) -> Client.n3.handle(bottom) [label="Success"]
+n13.handle(top) -> Client.n4.handle(bottom) [label="Tripped"]
+}
+ExternalService { # External Service
+n14: rectangle label:"Process request"
+n15: diamond label:"Request successful?"
+n16: rectangle label:"Return success response"
+n17: rectangle label:"Return error response"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Yes"]
+n15.handle(bottom) -> n17.handle(top) [label="No"]
+n16.handle(top) -> CircuitBreaker.n12.handle(bottom) [label="OK"]
+n17.handle(top) -> CircuitBreaker.n9.handle(bottom) [label="Error"]
+}

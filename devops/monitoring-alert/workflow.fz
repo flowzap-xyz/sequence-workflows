@@ -1,0 +1,45 @@
+Prometheus { # Prometheus
+n1: circle label:"Start"
+n2: rectangle label:"Scrape metrics endpoint"
+n3: rectangle label:"Evaluate alert rules"
+n4: diamond label:"Threshold breached?"
+n5: rectangle label:"Fire alert to Alertmanager"
+n6: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left) [label="Yes"]
+n4.handle(bottom) -> n6.handle(top) [label="No"]
+n5.handle(bottom) -> Alertmanager.n7.handle(top) [label="Alert fired"]
+}
+Alertmanager { # Alertmanager
+n7: rectangle label:"Receive alert"
+n8: rectangle label:"Deduplicate alerts"
+n9: rectangle label:"Group related alerts"
+n10: diamond label:"Silenced or inhibited?"
+n11: rectangle label:"Route to receiver"
+n12: rectangle label:"Drop alert"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left) [label="No"]
+n10.handle(bottom) -> n12.handle(top) [label="Yes"]
+n11.handle(bottom) -> Notification.n13.handle(top) [label="Notify"]
+n12.handle(top) -> Prometheus.n6.handle(bottom) [label="Suppressed"]
+}
+Notification { # Notification Channels
+n13: rectangle label:"Format alert message"
+n14: diamond label:"Channel type?"
+n15: rectangle label:"Send to Slack"
+n16: rectangle label:"Send to PagerDuty"
+n17: rectangle label:"Send email"
+n18: rectangle label:"Log delivery status"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left) [label="Slack"]
+n14.handle(bottom) -> n16.handle(top) [label="PagerDuty"]
+n14.handle(left) -> n17.handle(top) [label="Email"]
+n15.handle(bottom) -> n18.handle(top)
+n16.handle(right) -> n18.handle(left)
+n17.handle(bottom) -> n18.handle(left)
+n18.handle(top) -> Prometheus.n6.handle(bottom) [label="Delivered"]
+}

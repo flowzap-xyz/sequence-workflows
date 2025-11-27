@@ -1,0 +1,18 @@
+employee { # Employee
+  n1: circle label:"Start Training Enrollment"
+  n3: rectangle label:"Review Training Enrollment details"
+  n5: rectangle label:"Update records for Training Enrollment"
+  n7: circle label:"End Training Enrollment"
+  n1.handle(bottom) -> manager.n2.handle(top) [label="Success"]
+  n3.handle(bottom) -> manager.n4.handle(top)
+  n5.handle(bottom) -> manager.n6.handle(top)
+}
+
+manager { # Manager
+  n2: rectangle label:"Receive Training Enrollment request"
+  n4: rectangle label:"Make Training Enrollment decision"
+  n6: rectangle label:"Continue Training Enrollment process"
+  n6.handle(right) -> employee.n7.handle(bottom)
+  n4.handle(right) -> employee.n5.handle(left) [label="Valid"]
+  n2.handle(right) -> employee.n3.handle(left)
+}

@@ -1,0 +1,18 @@
+user { # User
+  n1: circle label:"Start Notification Pattern"
+  n3: rectangle label:"Validate Notification Pattern conditions"
+  n5: rectangle label:"Record Notification Pattern outcome"
+  n7: circle label:"End Notification Pattern"
+  n1.handle(bottom) -> app.n2.handle(top)
+  n3.handle(bottom) -> app.n4.handle(top)
+  n5.handle(bottom) -> app.n6.handle(top) [label="Done"]
+}
+
+app { # App
+  n2: rectangle label:"Receive Notification Pattern event"
+  n4: rectangle label:"Execute Notification Pattern action"
+  n6: rectangle label:"Monitor Notification Pattern status"
+  n2.handle(right) -> user.n3.handle(left) [label="Next"]
+  n4.handle(right) -> user.n5.handle(left)
+  n6.handle(right) -> user.n7.handle(left)
+}

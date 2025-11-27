@@ -1,0 +1,18 @@
+laneA { # Lane A
+  n1: circle label:"Start 12 Bidirectional Arrows"
+  n3: rectangle label:"12 Bidirectional Arrows step 3"
+  n5: rectangle label:"12 Bidirectional Arrows step 5"
+  n7: circle label:"End 12 Bidirectional Arrows"
+  n1.handle(bottom) -> laneB.n2.handle(top)
+  n3.handle(bottom) -> laneB.n4.handle(top)
+  n5.handle(bottom) -> laneB.n6.handle(top)
+}
+
+laneB { # Lane B
+  n2: rectangle label:"12 Bidirectional Arrows step 2"
+  n4: rectangle label:"12 Bidirectional Arrows step 4"
+  n6: rectangle label:"12 Bidirectional Arrows step 6"
+  n2.handle(right) -> laneA.n3.handle(left)
+  n4.handle(right) -> laneA.n5.handle(left)
+  n6.handle(right) -> laneA.n7.handle(left)
+}

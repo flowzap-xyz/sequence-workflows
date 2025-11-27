@@ -1,0 +1,13 @@
+{
+  "workflow_id": "13-parallel-flows",
+  "domain": "syntax-primitives",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "13",
+    "parallel",
+    "flows"
+  ],
+  "description": "This workflow models one node splitting into three parallel tasks."
+}

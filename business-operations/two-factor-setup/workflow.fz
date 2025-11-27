@@ -1,0 +1,43 @@
+User { # User
+n1: circle label:"Start"
+n2: rectangle label:"Navigate to security settings"
+n3: rectangle label:"Select 2FA method"
+n4: rectangle label:"Scan QR code with app"
+n5: rectangle label:"Enter verification code"
+n6: rectangle label:"Save backup codes"
+n7: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> AuthService.n8.handle(top) [label="Enable 2FA"]
+n3.handle(bottom) -> AuthService.n10.handle(top) [label="TOTP selected"]
+n4.handle(bottom) -> AuthService.n13.handle(top) [label="Submit code"]
+n5.handle(right) -> n6.handle(left)
+n6.handle(right) -> n7.handle(left)
+}
+AuthService { # Auth Service
+n8: rectangle label:"Check current 2FA status"
+n9: rectangle label:"Present method options"
+n10: rectangle label:"Generate TOTP secret"
+n11: rectangle label:"Create QR code"
+n12: rectangle label:"Store pending secret"
+n13: diamond label:"Code valid?"
+n14: rectangle label:"Activate 2FA"
+n15: rectangle label:"Show error message"
+n8.handle(right) -> n9.handle(left)
+n9.handle(top) -> User.n3.handle(bottom) [label="Choose method"]
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left)
+n12.handle(top) -> User.n4.handle(bottom) [label="Display QR"]
+n13.handle(right) -> n14.handle(left) [label="Yes"]
+n13.handle(bottom) -> n15.handle(top) [label="No"]
+n14.handle(bottom) -> BackupCodes.n16.handle(top) [label="Generate backups"]
+n15.handle(top) -> User.n4.handle(bottom) [label="Try again"]
+loop [retry until valid] n13 n15
+}
+BackupCodes { # Backup Codes
+n16: rectangle label:"Generate 10 backup codes"
+n17: rectangle label:"Hash and store codes"
+n18: rectangle label:"Display codes to user"
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left)
+n18.handle(top) -> User.n5.handle(bottom) [label="Save these"]
+}

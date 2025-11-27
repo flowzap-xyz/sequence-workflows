@@ -1,0 +1,49 @@
+Vendor { # Vendor
+n1: circle label:"Start"
+n2: rectangle label:"Submit invoice via email"
+n3: rectangle label:"Receive payment notification"
+n4: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> APAutomation.n5.handle(top) [label="Invoice received"]
+n3.handle(right) -> n4.handle(left)
+}
+APAutomation { # AP Automation
+n5: rectangle label:"Extract invoice data via OCR"
+n6: rectangle label:"Match to purchase order"
+n7: diamond label:"PO match found?"
+n8: rectangle label:"Auto-approve for payment"
+n9: rectangle label:"Flag for manual review"
+n10: diamond label:"Amount within threshold?"
+n5.handle(right) -> n6.handle(left)
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n10.handle(left) [label="Yes"]
+n7.handle(bottom) -> n9.handle(top) [label="No"]
+n10.handle(right) -> n8.handle(left) [label="Yes"]
+n10.handle(bottom) -> Approvals.n11.handle(top) [label="No"]
+n8.handle(bottom) -> Payment.n16.handle(top) [label="Queue payment"]
+n9.handle(bottom) -> Approvals.n11.handle(top) [label="Review"]
+}
+Approvals { # Approval Workflow
+n11: rectangle label:"Route to department manager"
+n12: diamond label:"Manager approved?"
+n13: rectangle label:"Route to finance director"
+n14: diamond label:"Director approved?"
+n15: rectangle label:"Reject with reason"
+n11.handle(right) -> n12.handle(left)
+n12.handle(right) -> n13.handle(left) [label="Yes - Over limit"]
+n12.handle(bottom) -> n15.handle(top) [label="No"]
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> Payment.n16.handle(top) [label="Yes"]
+n14.handle(bottom) -> n15.handle(top) [label="No"]
+n15.handle(top) -> Vendor.n3.handle(bottom) [label="Rejected"]
+}
+Payment { # Payment Processing
+n16: rectangle label:"Schedule payment batch"
+n17: rectangle label:"Execute bank transfer"
+n18: rectangle label:"Update GL entries"
+n19: rectangle label:"Send remittance advice"
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left)
+n19.handle(top) -> Vendor.n3.handle(bottom) [label="Payment sent"]
+}

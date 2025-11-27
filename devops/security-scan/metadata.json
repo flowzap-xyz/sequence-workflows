@@ -1,0 +1,16 @@
+{
+  "workflow_id": "security-scan",
+  "domain": "devops",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "security-scanning",
+    "sast",
+    "dast",
+    "dependency-check",
+    "snyk",
+    "devsecops"
+  ],
+  "description": "Security scanning workflow with SAST, DAST, dependency vulnerability scanning, finding triage, and remediation tracking in CI/CD pipeline."
+}

@@ -1,0 +1,55 @@
+DepartingEmployee { # Departing Employee
+n1: circle label:"Start"
+n2: rectangle label:"Submit resignation"
+n3: rectangle label:"Complete exit interview"
+n4: rectangle label:"Return company equipment"
+n5: rectangle label:"Receive final paycheck"
+n6: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> HR.n7.handle(top) [label="Resignation"]
+n3.handle(bottom) -> HR.n14.handle(top) [label="Feedback"]
+n4.handle(bottom) -> IT.n18.handle(top) [label="Equipment"]
+n5.handle(right) -> n6.handle(left)
+}
+HR { # Human Resources
+n7: rectangle label:"Process resignation"
+n8: rectangle label:"Calculate last working day"
+n9: rectangle label:"Notify payroll"
+n10: rectangle label:"Schedule exit interview"
+n11: diamond label:"Notice period waived?"
+n12: rectangle label:"Process immediate departure"
+n13: rectangle label:"Standard notice period"
+n14: rectangle label:"Conduct exit interview"
+n15: rectangle label:"Document feedback"
+n16: rectangle label:"Calculate final pay"
+n17: rectangle label:"Process severance if applicable"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> n13.handle(top) [label="No"]
+n12.handle(top) -> DepartingEmployee.n3.handle(bottom) [label="Exit now"]
+n13.handle(top) -> DepartingEmployee.n3.handle(bottom) [label="Work notice"]
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(top) -> DepartingEmployee.n5.handle(bottom) [label="Pay ready"]
+}
+IT { # IT Department
+n18: rectangle label:"Revoke system access"
+n19: rectangle label:"Disable email account"
+n20: rectangle label:"Backup user data"
+n21: rectangle label:"Collect laptop and badge"
+n22: diamond label:"All equipment returned?"
+n23: rectangle label:"Clear security checklist"
+n24: rectangle label:"Charge for missing items"
+n18.handle(right) -> n19.handle(left)
+n19.handle(right) -> n20.handle(left)
+n20.handle(right) -> n21.handle(left)
+n21.handle(right) -> n22.handle(left)
+n22.handle(right) -> n23.handle(left) [label="Yes"]
+n22.handle(bottom) -> n24.handle(top) [label="No"]
+n23.handle(top) -> DepartingEmployee.n4.handle(bottom) [label="Cleared"]
+n24.handle(top) -> DepartingEmployee.n4.handle(bottom) [label="Deducted"]
+}

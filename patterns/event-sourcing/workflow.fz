@@ -1,0 +1,43 @@
+Command { # Command Handler
+n1: circle label:"Start"
+n2: rectangle label:"Receive command"
+n3: rectangle label:"Validate command"
+n4: rectangle label:"Query current state"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> EventStore.n6.handle(top) [label="Process"]
+n4.handle(right) -> n5.handle(left)
+}
+EventStore { # Event Store
+n6: rectangle label:"Load aggregate events"
+n7: rectangle label:"Replay to build state"
+n8: diamond label:"Command valid for state?"
+n9: rectangle label:"Create new event"
+n10: rectangle label:"Reject command"
+n11: rectangle label:"Append to event stream"
+n12: rectangle label:"Publish to subscribers"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n9.handle(right) -> n11.handle(left)
+n10.handle(top) -> Command.n4.handle(bottom) [label="Invalid"]
+n11.handle(right) -> n12.handle(left)
+n12.handle(bottom) -> Projection.n13.handle(top) [label="Notify"]
+}
+Projection { # Read Model Projection
+n13: rectangle label:"Receive event notification"
+n14: rectangle label:"Update read model"
+n15: diamond label:"Projection type?"
+n16: rectangle label:"Update SQL database"
+n17: rectangle label:"Update search index"
+n18: rectangle label:"Acknowledge processing"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Database"]
+n15.handle(bottom) -> n17.handle(top) [label="Search"]
+n16.handle(right) -> n18.handle(left)
+n17.handle(right) -> n18.handle(top)
+n18.handle(top) -> Command.n4.handle(bottom) [label="Complete"]
+}

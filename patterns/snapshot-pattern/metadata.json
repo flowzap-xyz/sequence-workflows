@@ -1,0 +1,15 @@
+{
+  "workflow_id": "snapshot-pattern",
+  "domain": "patterns",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "snapshot",
+    "pattern",
+    "patterns",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models taking periodic snapshots of important state."
+}

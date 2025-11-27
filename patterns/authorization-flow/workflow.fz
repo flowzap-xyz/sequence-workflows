@@ -1,0 +1,28 @@
+user { # User
+  n1: circle label:"Start Authorization Flow"
+  n4: rectangle label:"Execute Authorization Flow action"
+  n7: rectangle label:"Monitor Authorization Flow status"
+  n10: circle label:"End Authorization Flow"
+  n1.handle(bottom) -> app.n2.handle(top)
+  n4.handle(bottom) -> app.n5.handle(top)
+  n7.handle(bottom) -> app.n8.handle(top)
+}
+
+app { # App
+  n2: rectangle label:"Receive Authorization Flow event"
+  n5: rectangle label:"Record Authorization Flow outcome"
+  n8: rectangle label:"Monitor Authorization Flow status"
+  n2.handle(bottom) -> service.n3.handle(top) [label="Next"]
+  n5.handle(bottom) -> service.n6.handle(top) [label="Done"]
+  n8.handle(bottom) -> service.n9.handle(top) [label="Processed"]
+}
+
+service { # Service
+  n3: diamond label:"Validate Authorization Flow conditions"
+  n6: rectangle label:"Monitor Authorization Flow status"
+  n9: rectangle label:"Monitor Authorization Flow status"
+  n9.handle(right) -> user.n10.handle(left)
+  n6.handle(right) -> user.n7.handle(left)
+  n3.handle(left) -> app.n2.handle(left) [label="Retry/Rejected"]
+  n3.handle(right) -> user.n4.handle(left)
+}

@@ -1,0 +1,37 @@
+user { # User
+  n1: circle label:"Start Timeout Pattern"
+  n5: diamond label:"Record Timeout Pattern outcome"
+  n9: rectangle label:"Monitor Timeout Pattern status"
+  n13: circle label:"End Timeout Pattern"
+  n1.handle(bottom) -> app.n2.handle(top)
+  n5.handle(bottom) -> app.n6.handle(top)
+  n5.handle(right) -> database.n4.handle(right) [label="Retry/Rejected"]
+  n9.handle(bottom) -> app.n10.handle(top) [label="Valid"]
+}
+
+app { # App
+  n2: rectangle label:"Receive Timeout Pattern event"
+  n6: rectangle label:"Monitor Timeout Pattern status"
+  n10: rectangle label:"Monitor Timeout Pattern status"
+  n2.handle(bottom) -> service.n3.handle(top)
+  n6.handle(bottom) -> service.n7.handle(top) [label="Success"]
+  n10.handle(bottom) -> service.n11.handle(top)
+}
+
+service { # Service
+  n3: rectangle label:"Validate Timeout Pattern conditions"
+  n7: rectangle label:"Monitor Timeout Pattern status"
+  n11: rectangle label:"Monitor Timeout Pattern status"
+  n3.handle(bottom) -> database.n4.handle(top) [label="Processed"]
+  n7.handle(bottom) -> database.n8.handle(top)
+  n11.handle(bottom) -> database.n12.handle(top)
+}
+
+database { # Database
+  n4: rectangle label:"Execute Timeout Pattern action"
+  n8: rectangle label:"Monitor Timeout Pattern status"
+  n12: rectangle label:"Monitor Timeout Pattern status"
+  n12.handle(right) -> user.n13.handle(bottom) [label="Next"]
+  n8.handle(right) -> user.n9.handle(left)
+  n4.handle(bottom) -> user.n5.handle(left)
+}

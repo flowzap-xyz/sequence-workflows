@@ -1,0 +1,40 @@
+User { # User
+n1: circle label:"Start"
+n2: rectangle label:"Request account deletion"
+n3: rectangle label:"Confirm via email link"
+n4: rectangle label:"Download data export"
+n5: rectangle label:"Receive deletion confirmation"
+n6: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> App.n7.handle(top) [label="Submit request"]
+n3.handle(bottom) -> App.n10.handle(top) [label="Confirmed"]
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left)
+}
+App { # Application
+n7: rectangle label:"Validate user identity"
+n8: diamond label:"Active subscriptions?"
+n9: rectangle label:"Send confirmation email"
+n10: rectangle label:"Queue deletion job"
+n11: rectangle label:"Generate data export"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="No"]
+n8.handle(bottom) -> Billing.n15.handle(top) [label="Yes - Cancel first"]
+n9.handle(top) -> User.n3.handle(bottom) [label="Email sent"]
+n10.handle(bottom) -> Backend.n12.handle(top) [label="Process"]
+n11.handle(top) -> User.n4.handle(bottom) [label="Ready"]
+}
+Backend { # Backend
+n12: rectangle label:"Anonymize user records"
+n13: rectangle label:"Delete personal data"
+n14: rectangle label:"Purge from backups"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(top) -> App.n11.handle(bottom) [label="Complete"]
+}
+Billing { # Billing
+n15: rectangle label:"Cancel active subscriptions"
+n16: rectangle label:"Process final invoice"
+n15.handle(right) -> n16.handle(left)
+n16.handle(top) -> App.n9.handle(bottom) [label="Cleared"]
+}

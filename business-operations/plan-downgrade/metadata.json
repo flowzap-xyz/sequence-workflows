@@ -1,0 +1,16 @@
+{
+  "workflow_id": "plan-downgrade",
+  "domain": "business-operations",
+  "complexity": 3,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "plan-downgrade",
+    "retention",
+    "feature-restriction",
+    "data-migration",
+    "churn-prevention",
+    "billing"
+  ],
+  "description": "Subscription plan downgrade workflow with retention offer, feature restriction warning, data migration handling, and end-of-period scheduling."
+}

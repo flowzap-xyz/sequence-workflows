@@ -1,0 +1,50 @@
+Client { # Client
+n1: circle label:"Start"
+n2: rectangle label:"Prepare API request"
+n3: rectangle label:"Process successful response"
+n4: rectangle label:"Handle permanent failure"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> RetryHandler.n6.handle(top) [label="Send request"]
+n3.handle(right) -> n5.handle(left)
+n4.handle(right) -> n5.handle(left)
+}
+RetryHandler { # Retry Handler
+n6: rectangle label:"Initialize retry state"
+n7: rectangle label:"Execute HTTP request"
+n8: diamond label:"Response status?"
+n9: rectangle label:"Return success"
+n10: diamond label:"Retryable error?"
+n11: diamond label:"Retries remaining?"
+n12: rectangle label:"Calculate backoff delay"
+n13: rectangle label:"Wait exponential delay"
+n14: rectangle label:"Increment retry counter"
+n15: rectangle label:"Return final error"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="2xx"]
+n8.handle(bottom) -> n10.handle(top) [label="4xx/5xx"]
+n9.handle(top) -> Client.n3.handle(bottom) [label="Success"]
+n10.handle(right) -> n11.handle(left) [label="Yes"]
+n10.handle(bottom) -> n15.handle(top) [label="No"]
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> n15.handle(top) [label="No"]
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(top) -> n7.handle(bottom) [label="Retry"]
+n15.handle(top) -> Client.n4.handle(bottom) [label="Failed"]
+loop [retry up to 3 times] n7 n8 n10 n11 n12 n13 n14
+}
+APIServer { # API Server
+n16: rectangle label:"Receive request"
+n17: diamond label:"Server healthy?"
+n18: rectangle label:"Process request"
+n19: rectangle label:"Return 503 Service Unavailable"
+n20: rectangle label:"Return 200 OK"
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left) [label="Yes"]
+n17.handle(bottom) -> n19.handle(top) [label="No"]
+n18.handle(right) -> n20.handle(left)
+n19.handle(top) -> RetryHandler.n8.handle(bottom) [label="Error"]
+n20.handle(top) -> RetryHandler.n8.handle(bottom) [label="Success"]
+}

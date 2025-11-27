@@ -1,0 +1,17 @@
+{
+  "workflow_id": "job-posting",
+  "domain": "hr",
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 3,
+  "tags": [
+    "job-posting",
+    "job-requisition",
+    "ats",
+    "linkedin",
+    "indeed",
+    "ai-screening",
+    "talent-acquisition"
+  ],
+  "description": "Job posting workflow with requisition approval, job description drafting, multi-channel posting (LinkedIn, Indeed, career sites), AI resume screening, and ATS candidate tracking."
+}

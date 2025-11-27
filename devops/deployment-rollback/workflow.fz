@@ -1,0 +1,52 @@
+AlertSystem { # Alert System
+n1: circle label:"Start"
+n2: rectangle label:"Detect anomaly in metrics"
+n3: rectangle label:"Trigger rollback alert"
+n4: rectangle label:"Notify on-call engineer"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Orchestrator.n6.handle(top) [label="Initiate rollback"]
+n4.handle(right) -> n5.handle(left)
+}
+Orchestrator { # Deployment Orchestrator
+n6: rectangle label:"Identify current version"
+n7: rectangle label:"Fetch previous stable version"
+n8: diamond label:"Previous version available?"
+n9: rectangle label:"Prepare rollback manifest"
+n10: rectangle label:"Halt manual rollback"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n9.handle(bottom) -> Kubernetes.n11.handle(top) [label="Apply"]
+n10.handle(top) -> AlertSystem.n4.handle(bottom) [label="Manual needed"]
+}
+Kubernetes { # Kubernetes Cluster
+n11: rectangle label:"Scale down new pods"
+n12: rectangle label:"Deploy previous image"
+n13: rectangle label:"Wait for pods ready"
+n14: diamond label:"All pods healthy?"
+n15: rectangle label:"Update service selector"
+n16: rectangle label:"Mark rollback failed"
+n11.handle(right) -> n12.handle(left)
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left) [label="Yes"]
+n14.handle(bottom) -> n16.handle(top) [label="No"]
+n15.handle(bottom) -> Verification.n17.handle(top) [label="Traffic shifted"]
+n16.handle(top) -> AlertSystem.n4.handle(bottom) [label="Failed"]
+}
+Verification { # Verification
+n17: rectangle label:"Run smoke tests"
+n18: diamond label:"Tests passing?"
+n19: rectangle label:"Update deployment status"
+n20: rectangle label:"Cleanup old resources"
+n21: rectangle label:"Escalate to team lead"
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left) [label="Yes"]
+n18.handle(bottom) -> n21.handle(top) [label="No"]
+n19.handle(right) -> n20.handle(left)
+n20.handle(top) -> AlertSystem.n4.handle(bottom) [label="Rollback complete"]
+n21.handle(top) -> AlertSystem.n4.handle(bottom) [label="Needs attention"]
+}

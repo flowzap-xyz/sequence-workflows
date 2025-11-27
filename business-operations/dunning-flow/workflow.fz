@@ -1,0 +1,43 @@
+BillingSystem { # Billing System
+n1: circle label:"Start"
+n2: rectangle label:"Detect failed payment"
+n3: rectangle label:"Log payment failure"
+n4: diamond label:"First failure?"
+n5: rectangle label:"Schedule retry in 24h"
+n6: rectangle label:"Increment failure count"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left) [label="Yes"]
+n4.handle(bottom) -> n6.handle(top) [label="No"]
+n5.handle(bottom) -> PaymentRetry.n7.handle(top) [label="Queue"]
+n6.handle(bottom) -> Notifications.n12.handle(top) [label="Escalate"]
+}
+PaymentRetry { # Payment Retry
+n7: rectangle label:"Attempt payment retry"
+n8: diamond label:"Payment successful?"
+n9: rectangle label:"Update subscription status"
+n10: rectangle label:"Mark retry failed"
+n11: circle label:"End"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n9.handle(right) -> n11.handle(left)
+n10.handle(bottom) -> Notifications.n12.handle(top) [label="Notify"]
+}
+Notifications { # Notifications
+n12: rectangle label:"Send payment failed email"
+n13: diamond label:"Max retries reached?"
+n14: rectangle label:"Send final warning email"
+n15: rectangle label:"Schedule next retry"
+n16: rectangle label:"Suspend account"
+n17: rectangle label:"Send suspension notice"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left) [label="Yes"]
+n13.handle(bottom) -> n15.handle(top) [label="No"]
+n14.handle(right) -> n16.handle(left)
+n15.handle(top) -> PaymentRetry.n7.handle(bottom) [label="Retry later"]
+n16.handle(right) -> n17.handle(left)
+n17.handle(top) -> PaymentRetry.n11.handle(bottom) [label="Complete"]
+loop [retry up to 4 times] n7 n8 n10 n12 n13 n15
+}

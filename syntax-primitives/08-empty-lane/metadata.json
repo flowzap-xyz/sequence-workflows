@@ -1,0 +1,13 @@
+{
+  "workflow_id": "08-empty-lane",
+  "domain": "syntax-primitives",
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "08",
+    "empty",
+    "lane"
+  ],
+  "description": "This workflow models a lane with no nodes to test empty-lane handling."
+}

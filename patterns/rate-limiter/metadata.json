@@ -1,0 +1,13 @@
+{
+  "workflow_id": "rate-limiter",
+  "domain": "patterns",
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "rate",
+    "limiter",
+    "patterns"
+  ],
+  "description": "This workflow models preventing too many requests from being processed."
+}

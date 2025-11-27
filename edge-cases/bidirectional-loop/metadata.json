@@ -1,0 +1,13 @@
+{
+  "workflow_id": "bidirectional-loop",
+  "domain": "edge-cases",
+  "complexity": 5,
+  "num_nodes": 16,
+  "num_lanes": 4,
+  "tags": [
+    "bidirectional",
+    "loop",
+    "decision"
+  ],
+  "description": "This workflow models circular references between nodes in both directions."
+}

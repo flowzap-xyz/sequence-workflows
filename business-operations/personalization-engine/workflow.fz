@@ -1,0 +1,49 @@
+MakeScenario { # Make.com Scenario
+n1: circle label:"Start"
+n2: rectangle label:"Watch Segment user events"
+n3: rectangle label:"Parse user properties"
+n4: diamond label:"Event type?"
+n5: rectangle label:"Handle page view"
+n6: rectangle label:"Handle purchase"
+n7: rectangle label:"Handle signup"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left) [label="page"]
+n4.handle(bottom) -> n6.handle(top) [label="purchase"]
+n4.handle(left) -> n7.handle(top) [label="signup"]
+n5.handle(bottom) -> MLModel.n8.handle(top) [label="Predict"]
+n6.handle(bottom) -> MLModel.n8.handle(top) [label="Predict"]
+n7.handle(bottom) -> MLModel.n8.handle(top) [label="Predict"]
+}
+MLModel { # Make.com HTTP Module
+n8: rectangle label:"POST to recommendation API"
+n9: rectangle label:"Parse ML predictions"
+n10: diamond label:"Confidence score?"
+n11: rectangle label:"Use personalized content"
+n12: rectangle label:"Use default content"
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left) [label="> 0.7"]
+n10.handle(bottom) -> n12.handle(top) [label="<= 0.7"]
+n11.handle(bottom) -> ContentDelivery.n13.handle(top) [label="Personalized"]
+n12.handle(bottom) -> ContentDelivery.n13.handle(top) [label="Default"]
+}
+ContentDelivery { # Make.com Iterator
+n13: rectangle label:"Fetch content variants"
+n14: rectangle label:"Select best variant"
+n15: rectangle label:"Update Braze user profile"
+n16: rectangle label:"Trigger Braze campaign"
+n17: diamond label:"Channel preference?"
+n18: rectangle label:"Send via email"
+n19: rectangle label:"Send via push"
+n20: circle label:"End"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left) [label="email"]
+n17.handle(bottom) -> n19.handle(top) [label="push"]
+n18.handle(right) -> n20.handle(left)
+n19.handle(right) -> n20.handle(top)
+}

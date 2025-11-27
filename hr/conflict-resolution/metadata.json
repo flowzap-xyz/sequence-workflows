@@ -1,0 +1,16 @@
+{
+  "workflow_id": "conflict-resolution",
+  "domain": "hr",
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "conflict-resolution",
+    "workplace-dispute",
+    "mediation",
+    "hr-investigation",
+    "employee-relations",
+    "grievance"
+  ],
+  "description": "Workplace conflict resolution workflow with complaint intake, HR investigation, mediation sessions, resolution documentation, and follow-up monitoring."
+}

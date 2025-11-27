@@ -1,0 +1,14 @@
+{
+  "workflow_id": "disconnected-lanes",
+  "domain": "edge-cases",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "disconnected",
+    "lanes",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models lanes that never connect to each other."
+}

@@ -1,0 +1,12 @@
+{
+  "workflow_id": "max-lanes",
+  "domain": "edge-cases",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 10,
+  "tags": [
+    "max",
+    "lanes"
+  ],
+  "description": "This workflow models 10 lanes with simple cross-lane arrows."
+}

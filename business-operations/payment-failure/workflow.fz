@@ -1,0 +1,43 @@
+PaymentGateway { # Payment Gateway
+n1: circle label:"Start"
+n2: rectangle label:"Receive payment request"
+n3: diamond label:"Card valid?"
+n4: rectangle label:"Attempt charge"
+n5: diamond label:"Charge successful?"
+n6: rectangle label:"Return success response"
+n7: rectangle label:"Log failure reason"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left) [label="Yes"]
+n3.handle(bottom) -> n7.handle(top) [label="No - Invalid"]
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left) [label="Yes"]
+n5.handle(bottom) -> RetryEngine.n8.handle(top) [label="No - Declined"]
+n6.handle(bottom) -> App.n15.handle(top) [label="Confirmed"]
+n7.handle(bottom) -> App.n16.handle(top) [label="Card error"]
+}
+RetryEngine { # Retry Engine
+n8: diamond label:"Retries remaining?"
+n9: rectangle label:"Wait with exponential backoff"
+n10: rectangle label:"Retry payment"
+n11: rectangle label:"Mark as failed"
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n11.handle(top) [label="No"]
+n9.handle(right) -> n10.handle(left)
+n10.handle(top) -> PaymentGateway.n4.handle(bottom) [label="Retry"]
+n11.handle(bottom) -> App.n16.handle(top) [label="Max retries"]
+loop [retry up to 3 times] n8 n9 n10
+}
+App { # Application
+n12: rectangle label:"Update order status"
+n13: rectangle label:"Send confirmation email"
+n14: circle label:"End"
+n15: rectangle label:"Mark payment complete"
+n16: rectangle label:"Notify customer of failure"
+n17: rectangle label:"Offer alternative payment"
+n15.handle(right) -> n12.handle(left)
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n14.handle(top)
+}

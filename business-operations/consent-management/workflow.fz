@@ -1,0 +1,42 @@
+Visitor { # Visitor
+n1: circle label:"Start"
+n2: rectangle label:"Land on website"
+n3: rectangle label:"View cookie banner"
+n4: diamond label:"Accept all cookies?"
+n5: rectangle label:"Customize preferences"
+n6: rectangle label:"Browse with preferences"
+n7: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> ConsentPlatform.n8.handle(top) [label="Check consent"]
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n6.handle(left) [label="Yes"]
+n4.handle(bottom) -> n5.handle(top) [label="No"]
+n5.handle(bottom) -> ConsentPlatform.n12.handle(top) [label="Save choices"]
+n6.handle(right) -> n7.handle(left)
+}
+ConsentPlatform { # Consent Platform
+n8: diamond label:"Prior consent exists?"
+n9: rectangle label:"Load saved preferences"
+n10: rectangle label:"Show cookie banner"
+n11: rectangle label:"Store consent record"
+n12: rectangle label:"Update preference record"
+n13: rectangle label:"Sync with ad platforms"
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n9.handle(top) -> Visitor.n6.handle(bottom) [label="Apply"]
+n10.handle(top) -> Visitor.n3.handle(bottom) [label="Display"]
+n11.handle(right) -> n13.handle(left)
+n12.handle(right) -> n11.handle(left)
+n13.handle(top) -> Visitor.n6.handle(bottom) [label="Ready"]
+}
+Analytics { # Analytics
+n14: rectangle label:"Check consent for tracking"
+n15: diamond label:"Analytics consent given?"
+n16: rectangle label:"Initialize tracking scripts"
+n17: rectangle label:"Run in privacy mode"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Yes"]
+n15.handle(bottom) -> n17.handle(top) [label="No"]
+n16.handle(top) -> Visitor.n6.handle(bottom) [label="Tracking active"]
+n17.handle(top) -> Visitor.n6.handle(bottom) [label="Limited mode"]
+}

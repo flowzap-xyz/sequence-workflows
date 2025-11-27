@@ -1,0 +1,53 @@
+CI { # CI Pipeline
+n1: circle label:"Start"
+n2: rectangle label:"Checkout code"
+n3: rectangle label:"Install dependencies"
+n4: rectangle label:"Trigger security scans"
+n5: rectangle label:"Review scan results"
+n6: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left)
+n4.handle(bottom) -> SAST.n7.handle(top) [label="Static analysis"]
+n4.handle(bottom) -> SCA.n12.handle(top) [label="Dependency scan"]
+n5.handle(right) -> n6.handle(left)
+}
+SAST { # Static Analysis
+n7: rectangle label:"Run Semgrep rules"
+n8: rectangle label:"Scan for secrets"
+n9: diamond label:"Critical findings?"
+n10: rectangle label:"Generate SARIF report"
+n11: rectangle label:"Block pipeline"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left) [label="No"]
+n9.handle(bottom) -> n11.handle(top) [label="Yes"]
+n10.handle(bottom) -> SecurityDashboard.n17.handle(top) [label="Upload"]
+n11.handle(top) -> CI.n5.handle(bottom) [label="Failed"]
+}
+SCA { # Software Composition Analysis
+n12: rectangle label:"Parse dependency manifest"
+n13: rectangle label:"Check CVE databases"
+n14: diamond label:"High severity CVEs?"
+n15: rectangle label:"Generate SBOM"
+n16: rectangle label:"Flag vulnerable packages"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left) [label="No"]
+n14.handle(bottom) -> n16.handle(top) [label="Yes"]
+n15.handle(bottom) -> SecurityDashboard.n17.handle(top) [label="Upload"]
+n16.handle(bottom) -> SecurityDashboard.n17.handle(top) [label="Report"]
+}
+SecurityDashboard { # Security Dashboard
+n17: rectangle label:"Aggregate scan results"
+n18: rectangle label:"Calculate risk score"
+n19: diamond label:"Meets security policy?"
+n20: rectangle label:"Approve for deployment"
+n21: rectangle label:"Create remediation tickets"
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left)
+n19.handle(right) -> n20.handle(left) [label="Yes"]
+n19.handle(bottom) -> n21.handle(top) [label="No"]
+n20.handle(top) -> CI.n5.handle(bottom) [label="Passed"]
+n21.handle(top) -> CI.n5.handle(bottom) [label="Action required"]
+}

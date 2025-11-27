@@ -1,0 +1,17 @@
+{
+  "workflow_id": "retry-with-backoff",
+  "domain": "patterns",
+  "complexity": 4,
+  "num_nodes": 20,
+  "num_lanes": 3,
+  "tags": [
+    "retry-pattern",
+    "exponential-backoff",
+    "fault-tolerance",
+    "api-resilience",
+    "transient-errors",
+    "http-retry",
+    "jitter"
+  ],
+  "description": "Exponential backoff retry pattern for API calls with configurable retry limits, delay calculation, retryable error detection, and graceful degradation on permanent failures."
+}

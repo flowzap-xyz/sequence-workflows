@@ -1,0 +1,13 @@
+{
+  "workflow_id": "validator",
+  "domain": "patterns",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "validator",
+    "patterns",
+    "parallel"
+  ],
+  "description": "This workflow models checking that incoming data is valid."
+}

@@ -1,0 +1,16 @@
+{
+  "workflow_id": "reference-check",
+  "domain": "hr",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "reference-check",
+    "employment-verification",
+    "professional-references",
+    "hiring-decision",
+    "candidate-vetting",
+    "feedback-collection"
+  ],
+  "description": "Professional reference check workflow with reference collection, outreach scheduling, structured interview questions, feedback documentation, and hiring recommendation."
+}

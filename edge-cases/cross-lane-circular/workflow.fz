@@ -1,0 +1,38 @@
+laneA { # Lane A
+  n1: circle label:"Start Cross Lane Circular"
+  n5: rectangle label:"Cross Lane Circular step 5"
+  n9: rectangle label:"Cross Lane Circular step 9"
+  n13: circle label:"End Cross Lane Circular"
+  n1.handle(bottom) -> laneB.n2.handle(top)
+  n5.handle(bottom) -> laneB.n6.handle(top) [label="Done"]
+  n9.handle(bottom) -> laneB.n10.handle(top)
+}
+
+laneB { # Lane B
+  n2: rectangle label:"Cross Lane Circular step 2"
+  n6: rectangle label:"Cross Lane Circular step 6"
+  n10: rectangle label:"Cross Lane Circular step 10"
+  n2.handle(bottom) -> laneC.n3.handle(top) [label="Next"]
+  n6.handle(bottom) -> laneC.n7.handle(top)
+  n10.handle(bottom) -> laneC.n11.handle(top)
+}
+
+laneC { # Lane C
+  n3: rectangle label:"Cross Lane Circular step 3"
+  n7: rectangle label:"Cross Lane Circular step 7"
+  n11: rectangle label:"Cross Lane Circular step 11"
+  n3.handle(bottom) -> laneD.n4.handle(top)
+  n7.handle(bottom) -> laneD.n8.handle(top)
+  n11.handle(bottom) -> laneD.n12.handle(top) [label="Success"]
+}
+
+laneD { # Lane D
+  n4: diamond label:"Cross Lane Circular step 4"
+  n8: rectangle label:"Cross Lane Circular step 8"
+  n12: diamond label:"Cross Lane Circular step 12"
+  n12.handle(left) -> laneC.n11.handle(left) [label="Retry/Rejected"]
+  n12.handle(right) -> laneA.n13.handle(bottom)
+  n8.handle(right) -> laneA.n9.handle(left) [label="Processed"]
+  n4.handle(right) -> laneA.n5.handle(left)
+  n4.handle(left) -> laneC.n3.handle(left) [label="Retry/Rejected"]
+}

@@ -1,0 +1,55 @@
+Customer { # Customer
+n1: circle label:"Start"
+n2: rectangle label:"Request return authorization"
+n3: rectangle label:"Ship item back"
+n4: rectangle label:"Receive refund or replacement"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> CustomerService.n6.handle(top) [label="RMA request"]
+n3.handle(bottom) -> Warehouse.n13.handle(top) [label="Package shipped"]
+n4.handle(right) -> n5.handle(left)
+}
+CustomerService { # Customer Service
+n6: rectangle label:"Verify order details"
+n7: diamond label:"Within return window?"
+n8: rectangle label:"Generate RMA number"
+n9: rectangle label:"Deny return request"
+n10: rectangle label:"Email return label"
+n11: diamond label:"Prepaid return?"
+n12: rectangle label:"Charge return shipping"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="Yes"]
+n7.handle(bottom) -> n9.handle(top) [label="No"]
+n8.handle(right) -> n11.handle(left)
+n9.handle(top) -> Customer.n5.handle(bottom) [label="Denied"]
+n11.handle(right) -> n10.handle(left) [label="Yes"]
+n11.handle(bottom) -> n12.handle(top) [label="No"]
+n10.handle(top) -> Customer.n3.handle(bottom) [label="Label sent"]
+n12.handle(top) -> Customer.n3.handle(bottom) [label="Pay shipping"]
+}
+Warehouse { # Warehouse
+n13: rectangle label:"Receive returned package"
+n14: rectangle label:"Inspect item condition"
+n15: diamond label:"Item condition?"
+n16: rectangle label:"Return to inventory"
+n17: rectangle label:"Process as defective"
+n18: rectangle label:"Flag as damaged by customer"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Like new"]
+n15.handle(bottom) -> n17.handle(top) [label="Defective"]
+n15.handle(left) -> n18.handle(top) [label="Damaged"]
+n16.handle(bottom) -> Refunds.n19.handle(top) [label="Full refund"]
+n17.handle(bottom) -> Refunds.n19.handle(top) [label="Full refund"]
+n18.handle(bottom) -> Refunds.n22.handle(top) [label="Partial refund"]
+}
+Refunds { # Refunds Processing
+n19: rectangle label:"Calculate refund amount"
+n20: rectangle label:"Process refund to payment method"
+n21: rectangle label:"Update order status"
+n22: rectangle label:"Apply restocking fee"
+n19.handle(right) -> n20.handle(left)
+n20.handle(right) -> n21.handle(left)
+n21.handle(top) -> Customer.n4.handle(bottom) [label="Refund issued"]
+n22.handle(right) -> n20.handle(top)
+}

@@ -1,0 +1,44 @@
+MainQueue { # Main Queue
+n1: circle label:"Start"
+n2: rectangle label:"Receive message"
+n3: rectangle label:"Attempt processing"
+n4: diamond label:"Processing successful?"
+n5: rectangle label:"Acknowledge message"
+n6: rectangle label:"Increment retry count"
+n7: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left) [label="Yes"]
+n4.handle(bottom) -> n6.handle(top) [label="No"]
+n5.handle(right) -> n7.handle(left)
+n6.handle(bottom) -> RetryLogic.n8.handle(top) [label="Check retries"]
+}
+RetryLogic { # Retry Logic
+n8: diamond label:"Max retries exceeded?"
+n9: rectangle label:"Wait with backoff"
+n10: rectangle label:"Requeue message"
+n11: rectangle label:"Move to DLQ"
+n8.handle(right) -> n9.handle(left) [label="No"]
+n8.handle(bottom) -> n11.handle(top) [label="Yes"]
+n9.handle(right) -> n10.handle(left)
+n10.handle(top) -> MainQueue.n3.handle(bottom) [label="Retry"]
+n11.handle(bottom) -> DeadLetterQueue.n12.handle(top) [label="Failed"]
+}
+DeadLetterQueue { # Dead Letter Queue
+n12: rectangle label:"Store failed message"
+n13: rectangle label:"Log failure details"
+n14: rectangle label:"Send alert notification"
+n15: rectangle label:"Await manual review"
+n16: diamond label:"Reprocess or discard?"
+n17: rectangle label:"Move back to main queue"
+n18: rectangle label:"Archive and delete"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left) [label="Reprocess"]
+n16.handle(bottom) -> n18.handle(top) [label="Discard"]
+n17.handle(top) -> MainQueue.n2.handle(bottom) [label="Retry"]
+n18.handle(top) -> MainQueue.n7.handle(bottom) [label="Discarded"]
+}

@@ -1,0 +1,28 @@
+user { # User
+  n1: circle label:"Start Decision Diamond"
+  n2: diamond label:"Receive Decision Diamond event"
+  n4: rectangle label:"Execute Decision Diamond action"
+  n7: rectangle label:"Monitor Decision Diamond status"
+  n10: circle label:"End Decision Diamond"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> service.n3.handle(top) [label="Yes/Approved"]
+  n4.handle(bottom) -> app.n5.handle(top)
+  n7.handle(bottom) -> app.n8.handle(top)
+  n2.handle(top) -> n4.handle(top) [label="No/Rejected"]
+}
+
+app { # App
+  n5: rectangle label:"Record Decision Diamond outcome"
+  n8: rectangle label:"Monitor Decision Diamond status"
+  n5.handle(bottom) -> service.n6.handle(top)
+  n8.handle(bottom) -> service.n9.handle(top)
+}
+
+service { # Service
+  n3: diamond label:"Validate Decision Diamond conditions"
+  n6: rectangle label:"Monitor Decision Diamond status"
+  n9: rectangle label:"Monitor Decision Diamond status"
+  n9.handle(right) -> user.n10.handle(bottom)
+  n6.handle(right) -> user.n7.handle(left)
+  n3.handle(left) -> app.n5.handle(left)
+}

@@ -1,0 +1,13 @@
+{
+  "workflow_id": "11-taskbox-complete",
+  "domain": "syntax-primitives",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "11",
+    "taskbox",
+    "complete"
+  ],
+  "description": "This workflow models a taskbox with owner, description, and system parameters."
+}

@@ -1,0 +1,43 @@
+User { # User
+  n1: circle label:"Start"
+  n2: rectangle label:"Click Login with Provider"
+  n3: rectangle label:"Grant permissions"
+  n4: rectangle label:"Receive access token"
+  n5: circle label:"End"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> ClientApp.n6.handle(top) [label="Initiate"]
+  n3.handle(bottom) -> AuthServer.n12.handle(top) [label="Approve"]
+  n4.handle(right) -> n5.handle(left)
+}
+ClientApp { # Client App
+  n6: rectangle label:"Generate state parameter"
+  n7: rectangle label:"Build authorization URL"
+  n8: rectangle label:"Redirect to auth server"
+  n9: rectangle label:"Receive authorization code"
+  n10: rectangle label:"Exchange code for tokens"
+  n11: rectangle label:"Store tokens securely"
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(bottom) -> AuthServer.n13.handle(top) [label="Redirect"]
+  n9.handle(right) -> n10.handle(left)
+  n10.handle(bottom) -> AuthServer.n17.handle(top) [label="Token request"]
+  n11.handle(top) -> User.n4.handle(bottom) [label="Authenticated"]
+}
+AuthServer { # Auth Server
+  n12: rectangle label:"Validate client credentials"
+  n13: rectangle label:"Display consent screen"
+  n14: diamond label:"User consents?"
+  n15: rectangle label:"Generate authorization code"
+  n16: rectangle label:"Return error response"
+  n17: diamond label:"Valid code and secret?"
+  n18: rectangle label:"Issue access and refresh tokens"
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(top) -> User.n3.handle(bottom) [label="Show consent"]
+  n14.handle(right) -> n15.handle(left) [label="Yes"]
+  n14.handle(bottom) -> n16.handle(top) [label="No"]
+  n15.handle(top) -> ClientApp.n9.handle(bottom) [label="Callback"]
+  n16.handle(top) -> ClientApp.n6.handle(bottom) [label="Access denied"]
+  n17.handle(right) -> n18.handle(left) [label="Yes"]
+  n17.handle(bottom) -> n16.handle(left) [label="No"]
+  n18.handle(top) -> ClientApp.n11.handle(bottom) [label="Tokens"]
+}

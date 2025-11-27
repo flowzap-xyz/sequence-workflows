@@ -1,0 +1,41 @@
+DataSubject { # Data Subject
+  n1: circle label:"Start"
+  n2: rectangle label:"Submit erasure request"
+  n3: rectangle label:"Verify identity via email"
+  n4: rectangle label:"Receive confirmation"
+  n5: circle label:"End"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> DPO.n6.handle(top) [label="Request received"]
+  n3.handle(bottom) -> DPO.n9.handle(top) [label="Identity confirmed"]
+  n4.handle(right) -> n5.handle(left)
+}
+DPO { # Data Protection Officer
+  n6: rectangle label:"Log request in register"
+  n7: rectangle label:"Send identity verification"
+  n8: diamond label:"Identity verified?"
+  n9: rectangle label:"Approve deletion request"
+  n10: rectangle label:"Reject with explanation"
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(top) -> DataSubject.n3.handle(bottom) [label="Verify"]
+  n8.handle(right) -> n9.handle(left) [label="Yes"]
+  n8.handle(bottom) -> n10.handle(top) [label="No"]
+  n9.handle(bottom) -> DataSystems.n11.handle(top) [label="Execute"]
+  n10.handle(top) -> DataSubject.n4.handle(bottom) [label="Denied"]
+}
+DataSystems { # Data Systems
+  n11: rectangle label:"Query all data stores"
+  n12: rectangle label:"Delete from primary database"
+  n13: rectangle label:"Remove from analytics"
+  n14: rectangle label:"Purge from backups"
+  n15: diamond label:"Third-party data shared?"
+  n16: rectangle label:"Send deletion requests to partners"
+  n17: rectangle label:"Generate deletion certificate"
+  n11.handle(right) -> n12.handle(left)
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(right) -> n14.handle(left)
+  n14.handle(right) -> n15.handle(left)
+  n15.handle(right) -> n16.handle(left) [label="Yes"]
+  n15.handle(bottom) -> n17.handle(top) [label="No"]
+  n16.handle(bottom) -> n17.handle(left)
+  n17.handle(top) -> DataSubject.n4.handle(bottom) [label="Complete"]
+}

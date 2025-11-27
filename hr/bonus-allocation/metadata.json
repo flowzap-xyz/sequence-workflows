@@ -1,0 +1,16 @@
+{
+  "workflow_id": "bonus-allocation",
+  "domain": "hr",
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "bonus-allocation",
+    "annual-bonus",
+    "performance-bonus",
+    "budget-pool",
+    "calibration",
+    "payout"
+  ],
+  "description": "Annual bonus allocation workflow with budget pool distribution, performance-based calculation, manager calibration, executive approval, and payroll processing."
+}

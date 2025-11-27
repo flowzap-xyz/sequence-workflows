@@ -1,0 +1,16 @@
+{
+  "workflow_id": "cross-docking",
+  "domain": "logistics",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "cross-docking",
+    "flow-through",
+    "dock-scheduling",
+    "sortation",
+    "consolidation",
+    "just-in-time"
+  ],
+  "description": "Cross-docking workflow with inbound scheduling, sortation by destination, outbound consolidation, and direct transfer without storage for just-in-time delivery."
+}

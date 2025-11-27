@@ -1,0 +1,16 @@
+{
+  "workflow_id": "ab-test-setup",
+  "domain": "business-operations",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "ab-testing",
+    "experimentation",
+    "split-testing",
+    "statistical-significance",
+    "conversion-optimization",
+    "optimizely"
+  ],
+  "description": "A/B test setup workflow with hypothesis definition, variant creation, traffic allocation, statistical analysis, and winner deployment."
+}

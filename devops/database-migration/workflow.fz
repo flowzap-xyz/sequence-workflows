@@ -1,0 +1,50 @@
+Developer { # Developer
+n1: circle label:"Start"
+n2: rectangle label:"Create migration script"
+n3: rectangle label:"Test locally"
+n4: rectangle label:"Review migration results"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> CI.n6.handle(top) [label="Push to repo"]
+n4.handle(right) -> n5.handle(left)
+}
+CI { # CI Pipeline
+n6: rectangle label:"Run migration in test DB"
+n7: diamond label:"Migration successful?"
+n8: rectangle label:"Generate rollback script"
+n9: rectangle label:"Fail build with errors"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="Yes"]
+n7.handle(bottom) -> n9.handle(top) [label="No"]
+n8.handle(bottom) -> DBA.n10.handle(top) [label="Approve"]
+n9.handle(top) -> Developer.n2.handle(bottom) [label="Fix script"]
+}
+DBA { # Database Admin
+n10: rectangle label:"Review migration plan"
+n11: diamond label:"Approve for production?"
+n12: rectangle label:"Schedule maintenance window"
+n13: rectangle label:"Request changes"
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> n13.handle(top) [label="No"]
+n12.handle(bottom) -> Production.n14.handle(top) [label="Execute"]
+n13.handle(top) -> Developer.n2.handle(bottom) [label="Revise"]
+}
+Production { # Production Database
+n14: rectangle label:"Create backup snapshot"
+n15: rectangle label:"Enable maintenance mode"
+n16: rectangle label:"Execute migration script"
+n17: diamond label:"Migration completed?"
+n18: rectangle label:"Verify data integrity"
+n19: rectangle label:"Execute rollback script"
+n20: rectangle label:"Disable maintenance mode"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left) [label="Yes"]
+n17.handle(bottom) -> n19.handle(top) [label="No"]
+n18.handle(right) -> n20.handle(left)
+n19.handle(right) -> n20.handle(top)
+n20.handle(top) -> Developer.n4.handle(bottom) [label="Complete"]
+}

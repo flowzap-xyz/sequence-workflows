@@ -1,0 +1,16 @@
+{
+  "workflow_id": "quality-inspection",
+  "domain": "logistics",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "quality-inspection",
+    "incoming-inspection",
+    "aql-sampling",
+    "defect-tracking",
+    "supplier-quality",
+    "hold-release"
+  ],
+  "description": "Incoming quality inspection workflow with AQL sampling, defect classification, hold/release decision, supplier notification, and quality metrics tracking."
+}

@@ -1,0 +1,56 @@
+Monitoring { # Monitoring System
+n1: circle label:"Start"
+n2: rectangle label:"Alert triggered"
+n3: rectangle label:"Page on-call responder"
+n4: rectangle label:"Log incident timeline"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> OnCall.n6.handle(top) [label="SEV-1 Alert"]
+n3.handle(bottom) -> OnCall.n6.handle(top) [label="Paged"]
+n4.handle(right) -> n5.handle(left)
+}
+OnCall { # On-Call Responder
+n6: rectangle label:"Acknowledge incident"
+n7: rectangle label:"Assess severity and impact"
+n8: diamond label:"Severity level?"
+n9: rectangle label:"Declare major incident"
+n10: rectangle label:"Begin troubleshooting"
+n11: rectangle label:"Escalate to team lead"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="SEV-1/2"]
+n8.handle(bottom) -> n10.handle(top) [label="SEV-3/4"]
+n9.handle(bottom) -> IncidentCommand.n12.handle(top) [label="Open bridge"]
+n10.handle(bottom) -> Resolution.n18.handle(top) [label="Investigate"]
+n11.handle(bottom) -> IncidentCommand.n12.handle(top) [label="Needs help"]
+}
+IncidentCommand { # Incident Command
+n12: rectangle label:"Open war room bridge"
+n13: rectangle label:"Assign incident commander"
+n14: rectangle label:"Coordinate response teams"
+n15: rectangle label:"Communicate status updates"
+n16: diamond label:"Customer impact?"
+n17: rectangle label:"Notify customer success"
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left) [label="Yes"]
+n16.handle(bottom) -> Resolution.n18.handle(top) [label="No"]
+n17.handle(bottom) -> Resolution.n18.handle(top) [label="Notified"]
+}
+Resolution { # Resolution
+n18: rectangle label:"Identify root cause"
+n19: rectangle label:"Implement fix"
+n20: diamond label:"Issue resolved?"
+n21: rectangle label:"Verify recovery"
+n22: rectangle label:"Close incident"
+n23: rectangle label:"Schedule postmortem"
+n18.handle(right) -> n19.handle(left)
+n19.handle(right) -> n20.handle(left)
+n20.handle(right) -> n21.handle(left) [label="Yes"]
+n20.handle(bottom) -> n18.handle(bottom) [label="No - Continue"]
+n21.handle(right) -> n22.handle(left)
+n22.handle(right) -> n23.handle(left)
+n23.handle(top) -> Monitoring.n4.handle(bottom) [label="Complete"]
+}

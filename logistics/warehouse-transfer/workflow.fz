@@ -1,0 +1,27 @@
+supplier { # Supplier
+  n1: circle label:"Start Warehouse Transfer"
+  n4: rectangle label:"Make Warehouse Transfer decision"
+  n7: rectangle label:"Continue Warehouse Transfer process"
+  n10: circle label:"End Warehouse Transfer"
+  n1.handle(bottom) -> warehouse.n2.handle(top)
+  n4.handle(bottom) -> warehouse.n5.handle(top)
+  n7.handle(bottom) -> warehouse.n8.handle(top)
+}
+
+warehouse { # Warehouse
+  n2: rectangle label:"Receive Warehouse Transfer request"
+  n5: rectangle label:"Update records for Warehouse Transfer"
+  n8: rectangle label:"Continue Warehouse Transfer process"
+  n2.handle(bottom) -> iot_sensor.n3.handle(top) [label="Next"]
+  n5.handle(bottom) -> iot_sensor.n6.handle(top) [label="Done"]
+  n8.handle(bottom) -> iot_sensor.n9.handle(top) [label="Processed"]
+}
+
+iot_sensor { # Iot Sensor
+  n3: rectangle label:"Review Warehouse Transfer details"
+  n6: rectangle label:"Continue Warehouse Transfer process"
+  n9: rectangle label:"Continue Warehouse Transfer process"
+  n9.handle(right) -> supplier.n10.handle(bottom)
+  n6.handle(right) -> supplier.n7.handle(left)
+  n3.handle(right) -> supplier.n4.handle(left)
+}

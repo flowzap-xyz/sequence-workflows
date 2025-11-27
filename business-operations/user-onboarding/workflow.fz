@@ -1,0 +1,20 @@
+customer { # Customer
+  n1: circle label:"Start User Onboarding"
+  n3: rectangle label:"Review User Onboarding details"
+  n5: rectangle label:"Update records for User Onboarding"
+  n7: circle label:"End User Onboarding"
+
+  n1.handle(bottom) -> agent.n2.handle(top)
+  n3.handle(bottom) -> agent.n4.handle(top) [label="Processed"]
+  n5.handle(bottom) -> agent.n6.handle(top)
+}
+agent { # Agent
+  n2: rectangle label:"Receive User Onboarding request"
+  n4: rectangle label:"Make User Onboarding decision"
+  n6: diamond label:"Continue User Onboarding process"
+
+  n2.handle(bottom) -> customer.n3.handle(top)
+  n4.handle(bottom) -> customer.n5.handle(top)
+  n6.handle(bottom) -> customer.n7.handle(top) [label="Success"]
+  n6.handle(right) -> customer.n5.handle(right) [label="Retry/Rejected"]
+}

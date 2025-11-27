@@ -1,0 +1,45 @@
+QAEngineer { # QA Engineer
+n1: circle label:"Start"
+n2: rectangle label:"Define load test scenarios"
+n3: rectangle label:"Configure virtual users"
+n4: rectangle label:"Review test results"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> LoadGenerator.n6.handle(top) [label="Execute"]
+n4.handle(right) -> n5.handle(left)
+}
+LoadGenerator { # Load Generator
+n6: rectangle label:"Spin up worker nodes"
+n7: rectangle label:"Ramp up virtual users"
+n8: rectangle label:"Execute test scripts"
+n9: diamond label:"Target load reached?"
+n10: rectangle label:"Maintain steady state"
+n11: rectangle label:"Increase load gradually"
+n12: rectangle label:"Ramp down users"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left) [label="Yes"]
+n9.handle(bottom) -> n11.handle(top) [label="No"]
+n10.handle(right) -> n12.handle(left)
+n11.handle(top) -> n8.handle(bottom) [label="Continue"]
+n12.handle(bottom) -> Metrics.n13.handle(top) [label="Collect metrics"]
+}
+Metrics { # Metrics Collection
+n13: rectangle label:"Aggregate response times"
+n14: rectangle label:"Calculate percentiles"
+n15: rectangle label:"Measure throughput"
+n16: diamond label:"SLA met?"
+n17: rectangle label:"Generate pass report"
+n18: rectangle label:"Flag performance issues"
+n19: rectangle label:"Create detailed report"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left) [label="Yes"]
+n16.handle(bottom) -> n18.handle(top) [label="No"]
+n17.handle(right) -> n19.handle(left)
+n18.handle(right) -> n19.handle(top)
+n19.handle(top) -> QAEngineer.n4.handle(bottom) [label="Results ready"]
+}

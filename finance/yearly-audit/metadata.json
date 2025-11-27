@@ -1,0 +1,16 @@
+{
+  "workflow_id": "yearly-audit",
+  "domain": "finance",
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "annual-audit",
+    "external-auditors",
+    "sox-compliance",
+    "financial-statements",
+    "audit-findings",
+    "management-letter"
+  ],
+  "description": "Annual financial audit workflow with external auditor engagement, document preparation, fieldwork coordination, findings remediation, and management letter response."
+}

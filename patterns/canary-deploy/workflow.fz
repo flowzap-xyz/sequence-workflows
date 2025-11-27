@@ -1,0 +1,48 @@
+Deployment { # Deployment Pipeline
+n1: circle label:"Start"
+n2: rectangle label:"Build container image"
+n3: rectangle label:"Push to registry"
+n4: rectangle label:"Complete rollout"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> CanaryController.n6.handle(top) [label="Deploy canary"]
+n4.handle(right) -> n5.handle(left)
+}
+CanaryController { # Canary Controller
+n6: rectangle label:"Deploy to 5% of pods"
+n7: rectangle label:"Configure traffic split"
+n8: rectangle label:"Wait observation period"
+n9: diamond label:"Metrics healthy?"
+n10: rectangle label:"Increase to 25%"
+n11: rectangle label:"Rollback canary"
+n12: diamond label:"Still healthy?"
+n13: rectangle label:"Increase to 50%"
+n14: rectangle label:"Full rollout 100%"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left) [label="Yes"]
+n9.handle(bottom) -> n11.handle(top) [label="No"]
+n10.handle(right) -> n12.handle(left)
+n11.handle(top) -> Deployment.n4.handle(bottom) [label="Aborted"]
+n12.handle(right) -> n13.handle(left) [label="Yes"]
+n12.handle(bottom) -> n11.handle(top) [label="No"]
+n13.handle(right) -> n14.handle(left)
+n14.handle(bottom) -> Monitoring.n15.handle(top) [label="Monitor"]
+}
+Monitoring { # Monitoring
+n15: rectangle label:"Track error rate"
+n16: rectangle label:"Measure latency p99"
+n17: rectangle label:"Check resource usage"
+n18: diamond label:"All metrics pass?"
+n19: rectangle label:"Mark deployment success"
+n20: rectangle label:"Trigger automatic rollback"
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left) [label="Yes"]
+n18.handle(bottom) -> n20.handle(top) [label="No"]
+n19.handle(top) -> Deployment.n4.handle(bottom) [label="Success"]
+n20.handle(top) -> Deployment.n4.handle(bottom) [label="Rolled back"]
+}

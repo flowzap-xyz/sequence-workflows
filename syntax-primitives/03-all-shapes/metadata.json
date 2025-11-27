@@ -1,0 +1,13 @@
+{
+  "workflow_id": "03-all-shapes",
+  "domain": "syntax-primitives",
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "03",
+    "all",
+    "shapes"
+  ],
+  "description": "This workflow models a workflow that demonstrates circle, rectangle, diamond, and taskbox shapes."
+}

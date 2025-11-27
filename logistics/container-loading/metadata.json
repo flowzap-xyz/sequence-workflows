@@ -1,0 +1,16 @@
+{
+  "workflow_id": "container-loading",
+  "domain": "logistics",
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "container-loading",
+    "load-planning",
+    "weight-distribution",
+    "cube-utilization",
+    "seal-verification",
+    "ocean-freight"
+  ],
+  "description": "Container loading workflow with load plan optimization, weight distribution, cube utilization maximization, seal application, and bill of lading generation."
+}

@@ -1,0 +1,16 @@
+{
+  "workflow_id": "credit-control",
+  "domain": "finance",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "credit-control",
+    "credit-limit",
+    "customer-credit",
+    "credit-scoring",
+    "collections",
+    "accounts-receivable"
+  ],
+  "description": "Customer credit control workflow with credit limit assessment, credit scoring, order hold management, collections escalation, and payment plan negotiation."
+}

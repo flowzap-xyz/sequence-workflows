@@ -1,0 +1,47 @@
+Monitor { # Certificate Monitor
+n1: circle label:"Start"
+n2: rectangle label:"Scan certificate inventory"
+n3: rectangle label:"Check expiration dates"
+n4: rectangle label:"Verify renewal complete"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> CertManager.n6.handle(top) [label="Expiring soon"]
+n4.handle(right) -> n5.handle(left)
+}
+CertManager { # Certificate Manager
+n6: diamond label:"Certificate type?"
+n7: rectangle label:"Request from Let's Encrypt"
+n8: rectangle label:"Request from DigiCert"
+n9: rectangle label:"Generate self-signed"
+n10: rectangle label:"Complete ACME challenge"
+n11: diamond label:"Validation passed?"
+n12: rectangle label:"Download new certificate"
+n13: rectangle label:"Retry validation"
+n6.handle(right) -> n7.handle(left) [label="Public"]
+n6.handle(bottom) -> n8.handle(top) [label="Enterprise"]
+n6.handle(left) -> n9.handle(top) [label="Internal"]
+n7.handle(right) -> n10.handle(left)
+n8.handle(right) -> n10.handle(top)
+n9.handle(right) -> n12.handle(top)
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> n13.handle(top) [label="No"]
+n12.handle(bottom) -> Deployment.n14.handle(top) [label="Install"]
+n13.handle(top) -> n10.handle(bottom) [label="Retry"]
+}
+Deployment { # Certificate Deployment
+n14: rectangle label:"Update load balancer"
+n15: rectangle label:"Update Kubernetes ingress"
+n16: rectangle label:"Reload web servers"
+n17: diamond label:"SSL handshake OK?"
+n18: rectangle label:"Update certificate inventory"
+n19: rectangle label:"Rollback to previous cert"
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left) [label="Yes"]
+n17.handle(bottom) -> n19.handle(top) [label="No"]
+n18.handle(top) -> Monitor.n4.handle(bottom) [label="Renewed"]
+n19.handle(top) -> CertManager.n6.handle(bottom) [label="Retry"]
+}

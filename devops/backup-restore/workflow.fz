@@ -1,0 +1,47 @@
+BackupScheduler { # Backup Scheduler
+n1: circle label:"Start"
+n2: rectangle label:"Trigger scheduled backup"
+n3: rectangle label:"Select backup targets"
+n4: rectangle label:"Verify backup completion"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> BackupAgent.n6.handle(top) [label="Execute"]
+n4.handle(right) -> n5.handle(left)
+}
+BackupAgent { # Backup Agent
+n6: rectangle label:"Create database snapshot"
+n7: rectangle label:"Compress backup files"
+n8: rectangle label:"Encrypt with AES-256"
+n9: rectangle label:"Upload to S3 bucket"
+n10: diamond label:"Upload successful?"
+n11: rectangle label:"Update backup catalog"
+n12: rectangle label:"Retry upload"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left) [label="Yes"]
+n10.handle(bottom) -> n12.handle(top) [label="No"]
+n11.handle(top) -> BackupScheduler.n4.handle(bottom) [label="Complete"]
+n12.handle(top) -> n9.handle(bottom) [label="Retry"]
+}
+RestoreProcess { # Restore Process
+n13: rectangle label:"Select restore point"
+n14: rectangle label:"Download from S3"
+n15: rectangle label:"Decrypt backup"
+n16: rectangle label:"Decompress files"
+n17: diamond label:"Restore type?"
+n18: rectangle label:"Full database restore"
+n19: rectangle label:"Point-in-time recovery"
+n20: rectangle label:"Verify data integrity"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left) [label="Full"]
+n17.handle(bottom) -> n19.handle(top) [label="PITR"]
+n18.handle(right) -> n20.handle(left)
+n19.handle(right) -> n20.handle(top)
+n20.handle(top) -> BackupScheduler.n4.handle(bottom) [label="Restored"]
+}

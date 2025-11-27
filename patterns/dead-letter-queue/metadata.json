@@ -1,0 +1,16 @@
+{
+  "workflow_id": "dead-letter-queue",
+  "domain": "patterns",
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "dead-letter-queue",
+    "dlq",
+    "message-retry",
+    "poison-message",
+    "error-handling",
+    "message-queue"
+  ],
+  "description": "Dead letter queue pattern for handling failed messages with retry exhaustion detection, DLQ routing, manual inspection, and reprocessing capability."
+}

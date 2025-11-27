@@ -1,0 +1,19 @@
+employee { # Employee
+  n1: circle label:"Start Background Check"
+  n3: rectangle label:"Review Background Check details"
+  n5: rectangle label:"Update records for Background Check"
+  n7: circle label:"End Background Check"
+  n1.handle(bottom) -> manager.n2.handle(top)
+  n3.handle(bottom) -> manager.n4.handle(top)
+  n5.handle(bottom) -> manager.n6.handle(top) [label="Done"]
+}
+
+manager { # Manager
+  n2: rectangle label:"Receive Background Check request"
+  n4: diamond label:"Make Background Check decision"
+  n6: rectangle label:"Continue Background Check process"
+  n6.handle(right) -> employee.n7.handle(bottom)
+  n4.handle(right) -> employee.n5.handle(left)
+  n4.handle(left) -> employee.n3.handle(left) [label="Retry/Rejected"]
+  n2.handle(right) -> employee.n3.handle(top) [label="Next"]
+}

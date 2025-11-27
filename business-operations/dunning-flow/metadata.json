@@ -1,0 +1,16 @@
+{
+  "workflow_id": "dunning-flow",
+  "domain": "business-operations",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "dunning-flow",
+    "collections",
+    "overdue-payment",
+    "payment-reminder",
+    "account-suspension",
+    "revenue-recovery"
+  ],
+  "description": "Dunning collection workflow with escalating reminder emails, grace period management, account suspension, and payment recovery tracking."
+}

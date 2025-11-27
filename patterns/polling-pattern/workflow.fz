@@ -1,0 +1,38 @@
+user { # User
+  n1: circle label:"Start Polling Pattern"
+  n5: rectangle label:"Record Polling Pattern outcome"
+  n9: rectangle label:"Monitor Polling Pattern status"
+  n13: circle label:"End Polling Pattern"
+  n1.handle(bottom) -> app.n2.handle(top)
+  n5.handle(bottom) -> app.n6.handle(top) [label="Done"]
+  n9.handle(bottom) -> app.n10.handle(top)
+}
+
+app { # App
+  n2: rectangle label:"Receive Polling Pattern event"
+  n6: rectangle label:"Monitor Polling Pattern status"
+  n10: rectangle label:"Monitor Polling Pattern status"
+  n2.handle(bottom) -> service.n3.handle(top) [label="Next"]
+  n6.handle(bottom) -> service.n7.handle(top)
+  n10.handle(bottom) -> service.n11.handle(top)
+}
+
+service { # Service
+  n3: rectangle label:"Validate Polling Pattern conditions"
+  n7: rectangle label:"Monitor Polling Pattern status"
+  n11: rectangle label:"Monitor Polling Pattern status"
+  n3.handle(bottom) -> database.n4.handle(top)
+  n7.handle(bottom) -> database.n8.handle(top)
+  n11.handle(bottom) -> database.n12.handle(top) [label="Success"]
+}
+
+database { # Database
+  n4: diamond label:"Execute Polling Pattern action"
+  n8: rectangle label:"Monitor Polling Pattern status"
+  n12: diamond label:"Monitor Polling Pattern status"
+  n12.handle(left) -> service.n11.handle(left) [label="Retry/Rejected"]
+  n12.handle(right) -> user.n13.handle(left)
+  n8.handle(right) -> user.n9.handle(left) [label="Processed"]
+  n4.handle(left) -> service.n3.handle(left) [label="Retry/Rejected"]
+  n4.handle(right) -> user.n5.handle(left)
+}

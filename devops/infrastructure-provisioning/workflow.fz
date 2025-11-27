@@ -1,0 +1,46 @@
+DevOps { # DevOps Engineer
+n1: circle label:"Start"
+n2: rectangle label:"Define infrastructure requirements"
+n3: rectangle label:"Write Terraform configuration"
+n4: rectangle label:"Review provisioned resources"
+n5: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> Terraform.n6.handle(top) [label="Plan"]
+n4.handle(right) -> n5.handle(left)
+}
+Terraform { # Terraform
+n6: rectangle label:"Initialize providers"
+n7: rectangle label:"Generate execution plan"
+n8: diamond label:"Plan valid?"
+n9: rectangle label:"Display planned changes"
+n10: rectangle label:"Show validation errors"
+n11: diamond label:"Approve changes?"
+n12: rectangle label:"Apply configuration"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n10.handle(top) [label="No"]
+n9.handle(right) -> n11.handle(left)
+n10.handle(top) -> DevOps.n3.handle(bottom) [label="Fix config"]
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> DevOps.n3.handle(bottom) [label="No"]
+n12.handle(bottom) -> CloudProvider.n13.handle(top) [label="Provision"]
+}
+CloudProvider { # Cloud Provider
+n13: rectangle label:"Create VPC and subnets"
+n14: rectangle label:"Provision compute instances"
+n15: rectangle label:"Configure load balancers"
+n16: rectangle label:"Set up security groups"
+n17: diamond label:"All resources healthy?"
+n18: rectangle label:"Output resource IDs"
+n19: rectangle label:"Rollback failed resources"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left) [label="Yes"]
+n17.handle(bottom) -> n19.handle(top) [label="No"]
+n18.handle(top) -> DevOps.n4.handle(bottom) [label="Complete"]
+n19.handle(top) -> Terraform.n12.handle(bottom) [label="Retry"]
+}

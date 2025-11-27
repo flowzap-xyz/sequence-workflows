@@ -1,0 +1,16 @@
+{
+  "workflow_id": "batch-processing",
+  "domain": "patterns",
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "batch-processing",
+    "scheduled-jobs",
+    "bulk-operations",
+    "etl",
+    "chunk-processing",
+    "job-scheduler"
+  ],
+  "description": "Batch processing pattern with job scheduling, chunk-based processing, checkpoint/restart capability, error handling, and completion reporting."
+}

@@ -1,0 +1,53 @@
+Stripe { # Stripe Webhooks
+n1: circle label:"Start"
+n2: rectangle label:"Receive webhook event"
+n3: diamond label:"Event type?"
+n4: rectangle label:"Handle subscription.created"
+n5: rectangle label:"Handle invoice.paid"
+n6: rectangle label:"Handle subscription.canceled"
+n7: rectangle label:"Handle invoice.payment_failed"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left) [label="created"]
+n3.handle(bottom) -> n5.handle(top) [label="paid"]
+n3.handle(left) -> n6.handle(top) [label="canceled"]
+n3.handle(top) -> n7.handle(top) [label="failed"]
+n4.handle(bottom) -> Provisioning.n8.handle(top) [label="Provision"]
+n5.handle(bottom) -> Provisioning.n12.handle(top) [label="Extend"]
+n6.handle(bottom) -> Provisioning.n14.handle(top) [label="Revoke"]
+n7.handle(bottom) -> Dunning.n17.handle(top) [label="Retry"]
+}
+Provisioning { # Account Provisioning
+n8: rectangle label:"Create user account"
+n9: rectangle label:"Assign plan features"
+n10: rectangle label:"Send welcome email"
+n11: circle label:"End"
+n12: rectangle label:"Update billing period"
+n13: rectangle label:"Send receipt email"
+n14: rectangle label:"Disable premium features"
+n15: rectangle label:"Archive user data"
+n16: rectangle label:"Send cancellation email"
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left)
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n11.handle(top)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n11.handle(top)
+}
+Dunning { # Dunning Management
+n17: rectangle label:"Log payment failure"
+n18: diamond label:"Retry count?"
+n19: rectangle label:"Schedule retry charge"
+n20: rectangle label:"Send payment reminder"
+n21: rectangle label:"Suspend account"
+n22: rectangle label:"Send final notice"
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left) [label="< 3"]
+n18.handle(bottom) -> n21.handle(top) [label=">= 3"]
+n19.handle(right) -> n20.handle(left)
+n20.handle(top) -> Provisioning.n11.handle(bottom) [label="Wait"]
+n21.handle(right) -> n22.handle(left)
+n22.handle(top) -> Provisioning.n11.handle(bottom) [label="Suspended"]
+}

@@ -1,0 +1,14 @@
+{
+  "workflow_id": "content-enricher",
+  "domain": "patterns",
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "content",
+    "enricher",
+    "patterns",
+    "decision"
+  ],
+  "description": "This workflow models adding extra data from other sources."
+}

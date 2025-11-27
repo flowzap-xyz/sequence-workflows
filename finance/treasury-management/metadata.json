@@ -1,0 +1,16 @@
+{
+  "workflow_id": "treasury-management",
+  "domain": "finance",
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "treasury-management",
+    "cash-pooling",
+    "fx-hedging",
+    "investment-portfolio",
+    "bank-relationships",
+    "liquidity"
+  ],
+  "description": "Corporate treasury management workflow with cash pooling, FX exposure hedging, short-term investment decisions, and bank relationship management."
+}

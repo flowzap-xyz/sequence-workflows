@@ -1,0 +1,41 @@
+n8nTrigger { # n8n Schedule Trigger
+  n1: circle label:"Start"
+  n2: rectangle label:"Trigger weekly SEO audit"
+  n3: rectangle label:"Fetch sitemap URLs"
+  n4: rectangle label:"Generate SEO report"
+  n5: circle label:"End"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(bottom) -> Crawler.n6.handle(top) [label="Crawl"]
+  n4.handle(right) -> n5.handle(left)
+}
+Crawler { # n8n HTTP Request
+  n6: rectangle label:"Crawl each page"
+  n7: rectangle label:"Extract meta tags"
+  n8: rectangle label:"Check page speed"
+  n9: diamond label:"Issues found?"
+  n10: rectangle label:"Log SEO issues"
+  n11: rectangle label:"Mark page healthy"
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(right) -> n9.handle(left)
+  n9.handle(right) -> n10.handle(left) [label="Yes"]
+  n9.handle(bottom) -> n11.handle(top) [label="No"]
+  n10.handle(bottom) -> Analysis.n12.handle(top) [label="Analyze"]
+  n11.handle(bottom) -> Analysis.n12.handle(top) [label="Analyze"]
+}
+Analysis { # n8n Function Node
+  n12: rectangle label:"Calculate SEO score"
+  n13: rectangle label:"Compare to competitors"
+  n14: diamond label:"Score improved?"
+  n15: rectangle label:"Generate recommendations"
+  n16: rectangle label:"Flag regression"
+  n17: rectangle label:"Send Slack notification"
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(right) -> n14.handle(left)
+  n14.handle(right) -> n15.handle(left) [label="Yes"]
+  n14.handle(bottom) -> n16.handle(top) [label="No"]
+  n15.handle(right) -> n17.handle(left)
+  n16.handle(right) -> n17.handle(top)
+  n17.handle(top) -> n8nTrigger.n4.handle(bottom) [label="Complete"]
+}

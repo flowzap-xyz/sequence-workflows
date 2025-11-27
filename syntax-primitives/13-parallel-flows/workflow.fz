@@ -1,0 +1,22 @@
+laneA { # Lane A
+  n1: circle label:"Start 13 Parallel Flows"
+  n3: rectangle label:"13 Parallel Flows step 3"
+  n5: rectangle label:"13 Parallel Flows step 5"
+  n7: circle label:"End 13 Parallel Flows"
+  n1.handle(right) -> n3.handle(left)
+  n3.handle(right) -> n7.handle(left)
+  n1.handle(right) -> laneB.n4.handle(left)
+  n1.handle(right) -> n5.handle(left)
+  n5.handle(right) -> n7.handle(left)
+  n1.handle(right) -> laneB.n6.handle(left)
+  n1.handle(bottom) -> laneB.n2.handle(top)
+}
+
+laneB { # Lane B
+  n2: rectangle label:"13 Parallel Flows step 2"
+  n4: rectangle label:"13 Parallel Flows step 4"
+  n6: rectangle label:"13 Parallel Flows step 6"
+  n2.handle(right) -> laneA.n7.handle(left)
+  n6.handle(right) -> laneA.n7.handle(bottom)
+  n4.handle(right) -> laneA.n7.handle(bottom)
+}

@@ -1,0 +1,16 @@
+{
+  "workflow_id": "two-factor-setup",
+  "domain": "business-operations",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "two-factor-auth",
+    "mfa",
+    "totp",
+    "authenticator-app",
+    "security",
+    "account-protection"
+  ],
+  "description": "Two-factor authentication setup workflow with method selection (TOTP/SMS), QR code generation, backup codes, and verification confirmation."
+}

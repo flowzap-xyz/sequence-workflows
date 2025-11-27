@@ -1,0 +1,17 @@
+{
+  "workflow_id": "saga-pattern",
+  "domain": "patterns",
+  "complexity": 5,
+  "num_nodes": 20,
+  "num_lanes": 4,
+  "tags": [
+    "saga-pattern",
+    "distributed-transactions",
+    "microservices",
+    "compensation",
+    "orchestration",
+    "eventual-consistency",
+    "rollback"
+  ],
+  "description": "Saga orchestration pattern for distributed transactions across Order, Payment, and Shipping services with automatic compensation rollback on failures."
+}

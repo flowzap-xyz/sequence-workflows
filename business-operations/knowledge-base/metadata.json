@@ -1,0 +1,16 @@
+{
+  "workflow_id": "knowledge-base",
+  "domain": "business-operations",
+  "complexity": 3,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "knowledge-base",
+    "help-center",
+    "documentation",
+    "self-service",
+    "article-management",
+    "zendesk"
+  ],
+  "description": "Knowledge base management workflow with article creation, review approval, SEO optimization, version control, and search analytics tracking."
+}

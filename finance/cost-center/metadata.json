@@ -1,0 +1,14 @@
+{
+  "workflow_id": "cost-center",
+  "domain": "finance",
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "cost",
+    "center",
+    "finance",
+    "decision"
+  ],
+  "description": "This workflow models managing cost center budgets."
+}
