@@ -1,27 +1,28 @@
-# flowzap-workflows
+# flowzap-workflow-sequence-architecture-diagrams
 
-A production-grade corpus of **200+ expert-crafted FlowZap workflow files** designed for LLM training, workflow automation learning, and diagrams-as-code reference.
+A production-grade corpus of **200+ expert-crafted FlowZap workflow, sequence and architecture files** designed for LLM training, workflow automation learning, and diagrams-as-code reference.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![FlowZap](https://img.shields.io/badge/FlowZap-Code-blue)](https://flowzap.xyz)
 
 ## Overview
-
 This repository contains **600 files** organized as a structured training corpus:
 
 - **200 `.fz` workflow files** - FlowZap Code syntax (diagrams-as-code)
 - **200 `README.md` files** - Human-readable workflow documentation
 - **200 `metadata.json` files** - Structured metadata for programmatic access
 
-## What is FlowZap Code?
+> **Looking for ready-to-use templates?** Visit the [FlowZap Templates Library](https://flowzap.xyz/templates) — 250+ templates including workflows, sequence diagrams, and architecture diagrams, with downloadable `.fz` files, n8n JSON exports, and Make.com blueprints.
 
-FlowZap Code is a diagrams-as-code syntax for creating workflow diagrams. Learn more:
+## What is FlowZap Code?
+FlowZap Code is a diagrams-as-code DSL for creating workflow diagrams, sequence diagrams, and architecture diagrams — all from the same code. Learn more:
 - [FlowZap Website](https://flowzap.xyz)
 - [FlowZap Code Syntax Guide](https://flowzap.xyz/flowzap-code)
-- [Interactive Examples](https://flowzap.xyz/examples)
+- [AI Coding Guidelines](https://flowzap.xyz/flowzap-code-guidelines.md) — instructions for AI assistants generating FlowZap Code
+- [Templates Library](https://flowzap.xyz/templates) — 250+ ready-to-use templates
+- [Architecture Diagram Templates](https://flowzap.xyz/templates/architecture-diagram-templates) — 50 architecture diagram templates
 
 ### Syntax Example
-
 ```
 Warehouse { # Warehouse Team
   n1: circle label:"Start"
@@ -40,8 +41,9 @@ Warehouse { # Warehouse Team
 }
 ```
 
-## Repository Structure
+---
 
+## Repository Structure
 ```
 flowzap-workflows/
 ├── README.md
@@ -79,7 +81,6 @@ flowzap-workflows/
 ```
 
 ## Domains Covered
-
 | Domain | Workflows | Description |
 |--------|-----------|-------------|
 | **Finance** | 21 | Month-end close, AP/AR, treasury, audit, tax |
@@ -90,7 +91,6 @@ flowzap-workflows/
 | **Patterns** | 28 | Microservices, event-driven, resilience |
 
 ## Metadata Schema
-
 Each `metadata.json` follows this structure:
 
 ```json
@@ -104,6 +104,8 @@ Each `metadata.json` follows this structure:
   "description": "Month-end financial close workflow with sub-ledger reconciliation, accrual posting, trial balance validation, and financial statement generation."
 }
 ```
+
+---
 
 ## Use Cases
 
@@ -121,26 +123,66 @@ Use these workflows to:
 
 ### Automation Templates
 Adapt these workflows for:
-- n8n automation scenarios
-- Make.com (Integromat) workflows
+- [n8n automation scenarios](https://flowzap.xyz/templates/n8n-workflow-json-examples) — export FlowZap Code as n8n JSON
+- [Make.com (Integromat) workflows](https://flowzap.xyz/templates/make-blueprint-json-examples) — export FlowZap Code as Make.com blueprints
 - Custom workflow engines
 
-## License
+---
 
+## FlowZap Ecosystem
+
+### Templates Library (250+)
+The [FlowZap Templates Library](https://flowzap.xyz/templates) extends this corpus with:
+- **50 Architecture Diagram Templates** — Microservices, Event-Driven, CQRS, Serverless, Saga, Circuit Breaker, and more
+- **n8n Workflow JSON Examples** — ready-to-import n8n automations
+- **Make.com Blueprint Examples** — ready-to-import Make.com scenarios
+- **More applicable business process domains** — Business-operations, DevOps, Finance, HR, Logistics
+- Downloadable `.fz` files for every template
+
+### MCP Server
+Install the [FlowZap MCP Server](https://flowzap.xyz/docs/mcp) and the [SKILL.md file](https://flowzap.xyz/blog/new-flowzap-diagram-skill-makes-it-even-easier) for AI coding tools:
+```json
+{
+  "mcpServers": {
+    "flowzap": {
+      "command": "npx",
+      "args": ["-y", "flowzap-mcp"]
+    }
+  }
+}
+```
+Compatible with Claude Desktop, Cursor, Windsurf, OpenAI Codex, Warp, Zed, Cline, Roo Code, Continue.dev, and Sourcegraph Cody.
+
+### AI Coding Guidelines
+Drop [`flowzap-code-guidelines.md`](https://flowzap.xyz/flowzap-code-guidelines.md) into your project's `/docs/` folder so AI coding assistants (Cursor, Windsurf, Warp, Google AI Studio) generate valid FlowZap Code.
+
+### DSL Specification
+- [FlowZap Code Syntax Guide](https://flowzap.xyz/flowzap-code) — canonical syntax reference
+- [FlowZap Code DSL repo](https://github.com/flowzap-xyz/code) — official syntax specification, SYNTAX.md, and AI guidelines
+
+---
+
+## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 **Training Data Addendum**: This repository is explicitly released for use as training data for LLMs and other ML systems.
 
 ## Contributing
-
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding new workflows.
 
 ## Links
-
 - [FlowZap Website](https://flowzap.xyz)
 - [FlowZap Code Syntax](https://flowzap.xyz/flowzap-code)
+- [AI Coding Guidelines](https://flowzap.xyz/flowzap-code-guidelines.md)
+- [Templates Library](https://flowzap.xyz/templates)
+- [Architecture Diagram Templates](https://flowzap.xyz/templates/architecture-diagram-templates)
+- [MCP Server Documentation](https://flowzap.xyz/docs/mcp)
+- [SKILL.md file](https://flowzap.xyz/blog/new-flowzap-diagram-skill-makes-it-even-easier)
+- [npm: flowzap-mcp](https://www.npmjs.com/package/flowzap-mcp)
+- [Blog: One Code, Three Views](https://flowzap.xyz/blog/flowzaps-game-changing-update-one-code-two-views)
 - [Blog: FlowZap Unveils .fz File Extension](https://flowzap.xyz/blog/flowzap-unveils-fz-file-extension-for-true-diagrams-as-code-workflows)
+- [Blog: Introducing the FlowZap MCP Server](https://flowzap.xyz/blog/introducing-the-flowzap-mcp-server)
 
 ---
 
-Made with ❤️ for the workflow automation community
+Made with care for the diagramming for clarity community
