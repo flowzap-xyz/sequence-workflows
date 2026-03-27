@@ -1,0 +1,27 @@
+{
+  "template_id": "mcp-circuit-breaker",
+  "workflow_id": "mcp-circuit-breaker",
+  "title": "MCP Circuit Breaker Architecture",
+  "kind": "architecture",
+  "source_domain": "DevOps",
+  "primary_use_case": "mcp",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "mcp"
+  ],
+  "complexity": 3,
+  "num_nodes": 9,
+  "num_lanes": 3,
+  "tags": [
+    "mcp",
+    "circuit-breaker",
+    "resilience",
+    "fault-tolerance",
+    "health-check",
+    "architecture-diagram",
+    "production-grade"
+  ],
+  "description": "A resilience pattern that wraps MCP calls with health-aware gates using three states: Closed (normal), Open (failures detected, fast-fail), and Half-Open (testing recovery). Prevents cascading failures when tools become unresponsive. Essential for production-grade reliability.",
+  "source_path": "",
+  "repo_path": "mcp/devops/mcp-circuit-breaker"
+}

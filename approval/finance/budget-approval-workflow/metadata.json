@@ -1,0 +1,27 @@
+{
+  "template_id": "budget-approval-workflow",
+  "workflow_id": "budget-approval",
+  "title": "Budget Approval Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "approval"
+  ],
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 3,
+  "tags": [
+    "budget-approval",
+    "financial-planning",
+    "tiered-approval",
+    "cfo-approval",
+    "ceo-approval",
+    "board-approval",
+    "fund-allocation"
+  ],
+  "description": "Corporate budget approval workflow with tiered approval routing based on amount thresholds (CFO < $100K, CEO $100K-$1M, Board > $1M), prior year comparison, and fund allocation.",
+  "source_path": "finance/budget-approval",
+  "repo_path": "approval/finance/budget-approval-workflow"
+}

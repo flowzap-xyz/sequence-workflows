@@ -1,0 +1,55 @@
+TrafficManager { # Global Traffic Manager
+n1: circle label:"User Request"
+n2: rectangle label:"DNS-Based Routing"
+n3: diamond label:"Primary Cloud Healthy?"
+n4: rectangle label:"Route to Primary (AWS)"
+n5: rectangle label:"Failover to Secondary (Azure)"
+n20: rectangle label:"Receive Cloud Response"
+n21: circle label:"Return to User"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left) [label="Healthy"]
+n3.handle(bottom) -> n5.handle(top) [label="Unhealthy"]
+n4.handle(bottom) -> AWS.n6.handle(top) [label="Forward"]
+n5.handle(bottom) -> Azure.n13.handle(top) [label="Forward"]
+n20.handle(right) -> n21.handle(left)
+}
+AWS { # AWS Region
+n6: rectangle label:"API Gateway"
+n7: rectangle label:"Lambda Functions"
+n8: rectangle label:"DynamoDB"
+n9: rectangle label:"S3 Storage"
+n10: rectangle label:"CloudWatch Monitoring"
+n11: rectangle label:"Prepare Response"
+n12: rectangle label:"Return to TrafficManager"
+n6.handle(right) -> n7.handle(left) [label="Invoke"]
+n7.handle(right) -> n8.handle(left) [label="Read/Write"]
+n7.handle(bottom) -> n9.handle(top) [label="Store"]
+n8.handle(right) -> n10.handle(left) [label="Monitor"]
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left)
+n12.handle(top) -> TrafficManager.n20.handle(bottom) [label="AWS Response"]
+}
+Azure { # Azure Region
+n13: rectangle label:"Azure API Management"
+n14: rectangle label:"Azure Functions"
+n15: rectangle label:"Cosmos DB"
+n16: rectangle label:"Blob Storage"
+n17: rectangle label:"Azure Monitor"
+n18: rectangle label:"Prepare Response"
+n19: rectangle label:"Return to TrafficManager"
+n13.handle(right) -> n14.handle(left) [label="Invoke"]
+n14.handle(right) -> n15.handle(left) [label="Read/Write"]
+n14.handle(bottom) -> n16.handle(top) [label="Store"]
+n15.handle(right) -> n17.handle(left) [label="Monitor"]
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left)
+n19.handle(top) -> TrafficManager.n20.handle(bottom) [label="Azure Response"]
+}
+DataSync { # Cross-Cloud Sync
+n22: rectangle label:"Event Bridge"
+n23: rectangle label:"Bi-Directional Replication"
+n24: rectangle label:"Conflict Resolution"
+n22.handle(right) -> n23.handle(left) [label="CDC Events"]
+n23.handle(right) -> n24.handle(left) [label="Last-Write-Wins"]
+}

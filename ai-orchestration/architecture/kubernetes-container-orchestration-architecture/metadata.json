@@ -1,0 +1,28 @@
+{
+  "template_id": "kubernetes-container-orchestration-architecture",
+  "workflow_id": "kubernetes-container-orchestration-architecture",
+  "title": "Kubernetes Container Orchestration Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "ai-orchestration",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "ai-orchestration"
+  ],
+  "complexity": 4,
+  "num_nodes": 18,
+  "num_lanes": 4,
+  "tags": [
+    "kubernetes",
+    "container-orchestration",
+    "k8s",
+    "control-plane",
+    "worker-node",
+    "ingress",
+    "persistent-storage",
+    "architecture-diagram"
+  ],
+  "description": "A Kubernetes container orchestration architecture diagram showing the control plane (API Server, etcd, Scheduler, Controller Manager), worker nodes (Kubelet, container runtime, kube-proxy, pods), networking layer (Ingress, Network Policy, Service Mesh), and persistent storage with CSI drivers. This template provides a comprehensive view of the Kubernetes architecture stack from control plane to storage layer. Foundational reference for DevOps engineers and platform teams managing Kubernetes clusters.",
+  "source_path": "",
+  "repo_path": "ai-orchestration/architecture/kubernetes-container-orchestration-architecture"
+}

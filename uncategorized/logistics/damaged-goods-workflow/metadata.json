@@ -1,0 +1,24 @@
+{
+  "template_id": "damaged-goods-workflow",
+  "workflow_id": "damaged-goods",
+  "title": "Damaged Goods Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "damaged-goods",
+    "damage-claim",
+    "inventory-write-off",
+    "carrier-claim",
+    "disposition",
+    "loss-prevention"
+  ],
+  "description": "Damaged goods processing workflow with damage documentation, carrier claim filing, disposition decision (salvage/dispose), inventory adjustment, and loss tracking.",
+  "source_path": "logistics/damaged-goods",
+  "repo_path": "uncategorized/logistics/damaged-goods-workflow"
+}

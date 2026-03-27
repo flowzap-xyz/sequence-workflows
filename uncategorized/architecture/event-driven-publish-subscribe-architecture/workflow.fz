@@ -1,0 +1,37 @@
+Producer { # Event Producer
+n1: circle label:"Business Action"
+n2: rectangle label:"Create Domain Event"
+n3: rectangle label:"Serialize Event"
+n4: rectangle label:"Publish to Topic"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left) [label="OrderCreated"]
+n3.handle(right) -> n4.handle(left) [label="Avro/JSON"]
+n4.handle(bottom) -> Broker.n5.handle(top) [label="Produce"]
+}
+Broker { # Message Broker (Kafka/RabbitMQ)
+n5: rectangle label:"Receive Event"
+n6: rectangle label:"Partition by Key"
+n7: rectangle label:"Persist to Log"
+n8: rectangle label:"Fan-Out to Subscribers"
+n5.handle(right) -> n6.handle(left)
+n6.handle(right) -> n7.handle(left) [label="Append"]
+n7.handle(right) -> n8.handle(left) [label="Notify"]
+n8.handle(bottom) -> Consumers.n9.handle(top) [label="Deliver"]
+}
+Consumers { # Event Consumers
+n9: rectangle label:"Inventory Consumer"
+n10: diamond label:"Processing OK?"
+n11: rectangle label:"Update Stock Level"
+n12: rectangle label:"Send to Dead Letter Queue"
+n13: rectangle label:"Notification Consumer"
+n14: rectangle label:"Send Order Email"
+n15: rectangle label:"Analytics Consumer"
+n16: rectangle label:"Update Dashboard"
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left) [label="Yes"]
+n10.handle(bottom) -> n12.handle(top) [label="No"]
+n11.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left) [label="Email"]
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left) [label="Aggregate"]
+}

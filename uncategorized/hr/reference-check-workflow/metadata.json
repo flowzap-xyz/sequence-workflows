@@ -1,0 +1,24 @@
+{
+  "template_id": "reference-check-workflow",
+  "workflow_id": "reference-check",
+  "title": "Reference Check Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "reference-check",
+    "employment-verification",
+    "professional-references",
+    "hiring-decision",
+    "candidate-vetting",
+    "feedback-collection"
+  ],
+  "description": "Professional reference check workflow with reference collection, outreach scheduling, structured interview questions, feedback documentation, and hiring recommendation.",
+  "source_path": "hr/reference-check",
+  "repo_path": "uncategorized/hr/reference-check-workflow"
+}

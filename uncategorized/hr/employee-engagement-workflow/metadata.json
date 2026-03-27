@@ -1,0 +1,22 @@
+{
+  "template_id": "employee-engagement-workflow",
+  "workflow_id": "employee-engagement",
+  "title": "Employee Engagement Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "employee",
+    "engagement",
+    "hr",
+    "parallel"
+  ],
+  "description": "This workflow models measuring and improving engagement.",
+  "source_path": "hr/employee-engagement",
+  "repo_path": "uncategorized/hr/employee-engagement-workflow"
+}

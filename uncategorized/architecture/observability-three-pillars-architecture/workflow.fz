@@ -1,0 +1,44 @@
+Application { # Application Services
+n1: rectangle label:"Service A"
+n2: rectangle label:"Service B"
+n3: rectangle label:"Service C"
+n4: rectangle label:"OpenTelemetry SDK"
+n1.handle(bottom) -> n4.handle(top) [label="Instrument"]
+n2.handle(bottom) -> n4.handle(top) [label="Instrument"]
+n3.handle(bottom) -> n4.handle(top) [label="Instrument"]
+n4.handle(bottom) -> Collector.n5.handle(top) [label="OTLP Export"]
+}
+Collector { # OpenTelemetry Collector
+n5: rectangle label:"Receive Telemetry"
+n6: rectangle label:"Process and Batch"
+n7: rectangle label:"Export Metrics"
+n8: rectangle label:"Export Traces"
+n9: rectangle label:"Export Logs"
+n5.handle(right) -> n6.handle(left) [label="Pipeline"]
+n6.handle(right) -> n7.handle(left) [label="Metrics"]
+n6.handle(bottom) -> n8.handle(top) [label="Traces"]
+n6.handle(bottom) -> n9.handle(top) [label="Logs"]
+n7.handle(bottom) -> Backends.n10.handle(top) [label="Prometheus"]
+n8.handle(bottom) -> Backends.n11.handle(top) [label="Jaeger"]
+n9.handle(bottom) -> Backends.n12.handle(top) [label="Loki"]
+}
+Backends { # Observability Backends
+n10: rectangle label:"Prometheus (Metrics)"
+n11: rectangle label:"Jaeger (Distributed Traces)"
+n12: rectangle label:"Loki (Log Aggregation)"
+n13: rectangle label:"Alertmanager"
+n10.handle(right) -> n13.handle(left) [label="Alert Rules"]
+n10.handle(bottom) -> Visualization.n14.handle(top) [label="PromQL"]
+n11.handle(bottom) -> Visualization.n14.handle(top) [label="Trace ID"]
+n12.handle(bottom) -> Visualization.n14.handle(top) [label="LogQL"]
+}
+Visualization { # Visualization & Alerting
+n14: rectangle label:"Grafana Dashboard"
+n15: rectangle label:"SLO/SLI Tracking"
+n16: rectangle label:"Incident Response"
+n17: rectangle label:"PagerDuty / Slack"
+n14.handle(right) -> n15.handle(left) [label="SLO Burn Rate"]
+n15.handle(right) -> n16.handle(left) [label="SLO Breach"]
+n16.handle(right) -> n17.handle(left) [label="Alert"]
+n13.handle(bottom) -> Visualization.n17.handle(top) [label="Fire Alert"]
+}

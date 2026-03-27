@@ -1,0 +1,27 @@
+{
+  "template_id": "certificate-renewal-workflow",
+  "workflow_id": "certificate-renewal",
+  "title": "Certificate Renewal Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "security",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "security"
+  ],
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 3,
+  "tags": [
+    "ssl-certificate",
+    "tls-renewal",
+    "lets-encrypt",
+    "certificate-authority",
+    "domain-validation",
+    "load-balancer",
+    "health-check"
+  ],
+  "description": "SSL/TLS certificate renewal workflow with expiration monitoring, certificate request by type (DV/OV/EV), domain validation, deployment to load balancers, and health check verification with rollback.",
+  "source_path": "devops/certificate-renewal",
+  "repo_path": "security/devops/certificate-renewal-workflow"
+}

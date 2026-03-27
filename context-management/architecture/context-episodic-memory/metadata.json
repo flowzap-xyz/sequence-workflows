@@ -1,0 +1,25 @@
+{
+  "template_id": "context-episodic-memory",
+  "workflow_id": "context-episodic-memory",
+  "title": "Context Management - Episodic Memory",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "context-management",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "context-management"
+  ],
+  "complexity": 3,
+  "num_nodes": 11,
+  "num_lanes": 4,
+  "tags": [
+    "context-management",
+    "episodic-memory",
+    "learning",
+    "experience",
+    "architecture-diagram"
+  ],
+  "description": "Learning-from-experience pattern where every task run becomes an episode with input, actions, and outcome. Before tackling a new task, the agent fetches similar episodes and uses them as hints. Over time, the agent feels like it's learning instead of repeating the same failed plans.",
+  "source_path": "",
+  "repo_path": "context-management/architecture/context-episodic-memory"
+}

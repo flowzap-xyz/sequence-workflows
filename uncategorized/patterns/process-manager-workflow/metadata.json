@@ -1,0 +1,21 @@
+{
+  "template_id": "process-manager-workflow",
+  "workflow_id": "process-manager",
+  "title": "Process Manager Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "process",
+    "manager",
+    "patterns"
+  ],
+  "description": "This workflow models orchestrating multiple services to complete a process.",
+  "source_path": "patterns/process-manager",
+  "repo_path": "uncategorized/patterns/process-manager-workflow"
+}

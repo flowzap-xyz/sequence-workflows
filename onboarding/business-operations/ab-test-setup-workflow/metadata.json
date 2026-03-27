@@ -1,0 +1,26 @@
+{
+  "template_id": "ab-test-setup-workflow",
+  "workflow_id": "ab-test-setup",
+  "title": "Ab Test Setup Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "onboarding",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "onboarding"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "ab-testing",
+    "experimentation",
+    "split-testing",
+    "statistical-significance",
+    "conversion-optimization",
+    "optimizely"
+  ],
+  "description": "A/B test setup workflow with hypothesis definition, variant creation, traffic allocation, statistical analysis, and winner deployment.",
+  "source_path": "business-operations/ab-test-setup",
+  "repo_path": "onboarding/business-operations/ab-test-setup-workflow"
+}

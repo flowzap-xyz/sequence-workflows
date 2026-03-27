@@ -1,0 +1,26 @@
+{
+  "template_id": "mcp-direct-connect",
+  "workflow_id": "mcp-direct-connect",
+  "title": "MCP Direct Connect Architecture",
+  "kind": "architecture",
+  "source_domain": "DevOps",
+  "primary_use_case": "mcp",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "mcp"
+  ],
+  "complexity": 1,
+  "num_nodes": 6,
+  "num_lanes": 2,
+  "tags": [
+    "mcp",
+    "direct-connect",
+    "stdio",
+    "http",
+    "architecture-diagram",
+    "production-grade"
+  ],
+  "description": "The simplest MCP pattern — direct connection between host application and MCP server over stdio or HTTP. No extra hops, lowest latency, easiest debugging. Perfect for MVPs, hackathons, and single-team setups where security governance is not yet a concern.",
+  "source_path": "",
+  "repo_path": "mcp/devops/mcp-direct-connect"
+}

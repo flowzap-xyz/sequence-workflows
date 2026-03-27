@@ -1,0 +1,31 @@
+{
+  "template_id": "serverless-step-functions-orchestration-architecture",
+  "workflow_id": "serverless-step-functions-orchestration-architecture",
+  "title": "Serverless Step Functions Orchestration Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "incident",
+  "secondary_use_cases": [
+    "ai-orchestration"
+  ],
+  "use_cases": [
+    "incident",
+    "ai-orchestration"
+  ],
+  "complexity": 4,
+  "num_nodes": 17,
+  "num_lanes": 3,
+  "tags": [
+    "step-functions",
+    "serverless-orchestration",
+    "state-machine",
+    "workflow-automation",
+    "callback-pattern",
+    "compensation",
+    "aws",
+    "architecture-diagram"
+  ],
+  "description": "An AWS Step Functions orchestration architecture diagram with state machine workflows including choice states, parallel processing, wait-for-callback patterns, and compensation rollback for failed steps. This template models serverless workflow orchestration where complex multi-step processes are defined as state machines with built-in error handling and retry logic. Critical for teams building reliable serverless workflows that require human approval or long-running processes.",
+  "source_path": "",
+  "repo_path": "incident/architecture/serverless-step-functions-orchestration-architecture"
+}

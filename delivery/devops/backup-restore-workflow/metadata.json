@@ -1,0 +1,26 @@
+{
+  "template_id": "backup-restore-workflow",
+  "workflow_id": "backup-restore",
+  "title": "Backup Restore Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "delivery"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "backup-restore",
+    "disaster-recovery",
+    "rpo-rto",
+    "snapshot",
+    "data-protection",
+    "recovery-testing"
+  ],
+  "description": "Backup and restore workflow with scheduled backups, offsite replication, retention policy enforcement, restore testing, and RTO/RPO validation.",
+  "source_path": "devops/backup-restore",
+  "repo_path": "delivery/devops/backup-restore-workflow"
+}

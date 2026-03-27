@@ -1,0 +1,25 @@
+{
+  "template_id": "personalization-engine-workflow",
+  "workflow_id": "personalization-engine",
+  "title": "Personalization Engine Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 20,
+  "num_lanes": 3,
+  "tags": [
+    "make-com",
+    "personalization",
+    "segment",
+    "braze",
+    "ml-recommendations",
+    "content-delivery",
+    "marketing-automation"
+  ],
+  "description": "Make.com automation scenario for real-time personalization using Segment events, ML recommendation API, and Braze campaign delivery across email and push channels.",
+  "source_path": "business-operations/personalization-engine",
+  "repo_path": "uncategorized/business-operations/personalization-engine-workflow"
+}

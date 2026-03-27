@@ -1,0 +1,29 @@
+{
+  "template_id": "plan-downgrade-workflow",
+  "workflow_id": "plan-downgrade",
+  "title": "Plan Downgrade Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "billing",
+  "secondary_use_cases": [
+    "delivery"
+  ],
+  "use_cases": [
+    "billing",
+    "delivery"
+  ],
+  "complexity": 3,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "plan-downgrade",
+    "retention",
+    "feature-restriction",
+    "data-migration",
+    "churn-prevention",
+    "billing"
+  ],
+  "description": "Subscription plan downgrade workflow with retention offer, feature restriction warning, data migration handling, and end-of-period scheduling.",
+  "source_path": "business-operations/plan-downgrade",
+  "repo_path": "billing/business-operations/plan-downgrade-workflow"
+}

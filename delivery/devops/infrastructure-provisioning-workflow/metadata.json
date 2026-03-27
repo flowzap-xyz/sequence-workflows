@@ -1,0 +1,26 @@
+{
+  "template_id": "infrastructure-provisioning-workflow",
+  "workflow_id": "infrastructure-provisioning",
+  "title": "Infrastructure Provisioning Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "delivery"
+  ],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "infrastructure-provisioning",
+    "terraform",
+    "iac",
+    "cloud-resources",
+    "gitops",
+    "state-management"
+  ],
+  "description": "Infrastructure as Code provisioning workflow with Terraform plan, approval gates, state management, resource creation, and drift detection.",
+  "source_path": "devops/infrastructure-provisioning",
+  "repo_path": "delivery/devops/infrastructure-provisioning-workflow"
+}

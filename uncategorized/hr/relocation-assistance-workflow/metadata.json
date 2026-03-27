@@ -1,0 +1,22 @@
+{
+  "template_id": "relocation-assistance-workflow",
+  "workflow_id": "relocation-assistance",
+  "title": "Relocation Assistance Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "relocation",
+    "assistance",
+    "hr",
+    "decision"
+  ],
+  "description": "This workflow models helping employees relocate.",
+  "source_path": "hr/relocation-assistance",
+  "repo_path": "uncategorized/hr/relocation-assistance-workflow"
+}

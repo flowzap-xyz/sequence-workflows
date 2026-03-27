@@ -1,0 +1,24 @@
+{
+  "template_id": "packing-process-workflow",
+  "workflow_id": "packing-process",
+  "title": "Packing Process Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "order-packing",
+    "box-selection",
+    "packing-slip",
+    "weight-verification",
+    "cartonization",
+    "fulfillment"
+  ],
+  "description": "Order packing workflow with carton selection, item verification, packing slip insertion, weight check, and package sealing for shipment.",
+  "source_path": "logistics/packing-process",
+  "repo_path": "uncategorized/logistics/packing-process-workflow"
+}

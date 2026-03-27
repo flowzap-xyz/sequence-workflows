@@ -1,0 +1,50 @@
+Client { # Client Application
+n1: circle label:"User Action"
+n2: diamond label:"Read or Write?"
+n19: rectangle label:"Display Query Result"
+n20: rectangle label:"Confirm Write Success"
+n21: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> WritePath.n3.handle(top) [label="Command"]
+n2.handle(right) -> ReadPath.n9.handle(left) [label="Query"]
+n19.handle(right) -> n21.handle(left)
+n20.handle(right) -> n21.handle(left)
+}
+WritePath { # Write Path (Command)
+n3: rectangle label:"Command Validator"
+n4: rectangle label:"Domain Aggregate"
+n5: rectangle label:"Write Database (PostgreSQL)"
+n6: rectangle label:"Publish Change Event"
+n7: rectangle label:"Send Write Confirmation"
+n8: rectangle label:"Forward ACK"
+n3.handle(right) -> n4.handle(left) [label="Validated"]
+n4.handle(right) -> n5.handle(left) [label="Persist"]
+n5.handle(right) -> n6.handle(left) [label="Committed"]
+n6.handle(bottom) -> Sync.n15.handle(top) [label="DomainEvent"]
+n5.handle(bottom) -> n7.handle(top) [label="ACK"]
+n7.handle(right) -> n8.handle(left)
+n8.handle(top) -> Client.n20.handle(bottom) [label="Write OK"]
+}
+ReadPath { # Read Path (Query)
+n9: rectangle label:"Query Router"
+n10: rectangle label:"Read Database (Redis/Elastic)"
+n11: rectangle label:"Transform to DTO"
+n12: rectangle label:"Return Response"
+n13: rectangle label:"Send Query Result"
+n14: rectangle label:"Forward Result"
+n9.handle(right) -> n10.handle(left) [label="Optimized Query"]
+n10.handle(right) -> n11.handle(left) [label="Denormalized"]
+n11.handle(right) -> n12.handle(left)
+n12.handle(right) -> n13.handle(left)
+n13.handle(right) -> n14.handle(left)
+n14.handle(top) -> Client.n19.handle(bottom) [label="JSON"]
+}
+Sync { # Synchronization Layer
+n15: rectangle label:"Event Consumer"
+n16: rectangle label:"Transform for Read Model"
+n17: rectangle label:"Update Read Database"
+n18: rectangle label:"Sync Complete"
+n15.handle(right) -> n16.handle(left) [label="Consume"]
+n16.handle(right) -> n17.handle(left) [label="Upsert"]
+n17.handle(right) -> n18.handle(left) [label="Updated"]
+}

@@ -1,0 +1,24 @@
+{
+  "template_id": "in-app-message-workflow",
+  "workflow_id": "in-app-message",
+  "title": "In App Message Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "in-app-message",
+    "product-tours",
+    "tooltips",
+    "announcements",
+    "user-engagement",
+    "intercom"
+  ],
+  "description": "In-app messaging workflow with trigger conditions, audience targeting, message display, user interaction tracking, and conversion measurement.",
+  "source_path": "business-operations/in-app-message",
+  "repo_path": "uncategorized/business-operations/in-app-message-workflow"
+}

@@ -1,0 +1,41 @@
+Ingestion { # Data Ingestion
+n1: rectangle label:"Kinesis Data Stream"
+n2: rectangle label:"API Gateway Endpoint"
+n3: rectangle label:"IoT Core MQTT"
+n4: rectangle label:"Kinesis Firehose"
+n1.handle(right) -> n4.handle(left) [label="Stream"]
+n2.handle(right) -> n4.handle(left) [label="Batch"]
+n3.handle(right) -> n4.handle(left) [label="Device Data"]
+n4.handle(bottom) -> Transform.n5.handle(top) [label="Buffer + Deliver"]
+}
+Transform { # Serverless Transform
+n5: rectangle label:"Lambda Transform Function"
+n6: rectangle label:"Validate Schema"
+n7: diamond label:"Valid Record?"
+n8: rectangle label:"Enrich with Reference Data"
+n9: rectangle label:"Route to Error Bucket"
+n10: rectangle label:"Partition by Date"
+n5.handle(right) -> n6.handle(left)
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="Valid"]
+n7.handle(bottom) -> n9.handle(top) [label="Invalid"]
+n8.handle(right) -> n10.handle(left) [label="Enriched"]
+n10.handle(bottom) -> Storage.n11.handle(top) [label="Partitioned"]
+}
+Storage { # Data Lake Storage
+n11: rectangle label:"S3 Raw Zone"
+n12: rectangle label:"S3 Curated Zone"
+n13: rectangle label:"Glue Catalog"
+n14: rectangle label:"Athena Query Engine"
+n11.handle(right) -> n12.handle(left) [label="Glue ETL Job"]
+n12.handle(right) -> n13.handle(left) [label="Register Schema"]
+n13.handle(right) -> n14.handle(left) [label="Queryable"]
+}
+Analytics { # Analytics Layer
+n15: rectangle label:"QuickSight Dashboard"
+n16: rectangle label:"SageMaker ML Model"
+n17: rectangle label:"Redshift Data Warehouse"
+n14.handle(bottom) -> Analytics.n15.handle(top) [label="Visualize"]
+n14.handle(bottom) -> Analytics.n16.handle(top) [label="Train Model"]
+n14.handle(bottom) -> Analytics.n17.handle(top) [label="COPY INTO"]
+}

@@ -1,0 +1,54 @@
+Client { # Client
+n1: circle label:"API Request"
+n2: rectangle label:"Attach API Key"
+n22: rectangle label:"Receive Response"
+n23: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> RateLimiter.n3.handle(top) [label="Request"]
+n22.handle(right) -> n23.handle(left)
+}
+RateLimiter { # Rate Limiter (Token Bucket)
+n3: rectangle label:"Extract Client Identity"
+n4: rectangle label:"Lookup Rate Limit Config"
+n5: rectangle label:"Check Token Bucket"
+n9: rectangle label:"Receive Bucket Status"
+n10: diamond label:"Tokens Available?"
+n11: rectangle label:"Consume Token"
+n12: rectangle label:"Return 429 Too Many Requests"
+n13: rectangle label:"Add Rate Limit Headers"
+n14: rectangle label:"Forward to Backend"
+n19: rectangle label:"Receive Backend Response"
+n20: rectangle label:"Forward Response to Client"
+n21: rectangle label:"Send to Client"
+n3.handle(right) -> n4.handle(left) [label="API Key / IP"]
+n4.handle(right) -> n5.handle(left) [label="100 req/min"]
+n5.handle(bottom) -> Store.n6.handle(top) [label="INCR + EXPIRE"]
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left) [label="Yes"]
+n10.handle(bottom) -> n12.handle(top) [label="No"]
+n11.handle(right) -> n13.handle(left) [label="Decrement"]
+n13.handle(right) -> n14.handle(left) [label="X-RateLimit-Remaining"]
+n12.handle(top) -> Client.n22.handle(bottom) [label="429"]
+n14.handle(bottom) -> Backend.n15.handle(top) [label="Allowed"]
+n19.handle(right) -> n20.handle(left)
+n20.handle(right) -> n21.handle(left)
+n21.handle(top) -> Client.n22.handle(bottom) [label="200"]
+}
+Backend { # Backend Service
+n15: rectangle label:"Process Request"
+n16: rectangle label:"Return Response"
+n17: rectangle label:"Send to RateLimiter"
+n18: rectangle label:"Forward Response"
+n15.handle(right) -> n16.handle(left) [label="Execute"]
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left)
+n18.handle(top) -> RateLimiter.n19.handle(bottom) [label="Backend Response"]
+}
+Store { # Rate Limit Store (Redis)
+n6: rectangle label:"Redis Counter"
+n7: rectangle label:"Sliding Window Log"
+n8: rectangle label:"Return Bucket Status"
+n6.handle(right) -> n7.handle(left) [label="Window Check"]
+n7.handle(right) -> n8.handle(left)
+n8.handle(top) -> RateLimiter.n9.handle(bottom) [label="Bucket Status"]
+}

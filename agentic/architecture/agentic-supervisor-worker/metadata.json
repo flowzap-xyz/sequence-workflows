@@ -1,0 +1,26 @@
+{
+  "template_id": "agentic-supervisor-worker",
+  "workflow_id": "agentic-supervisor-worker",
+  "title": "Agentic Supervisor-Worker Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "agentic",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "agentic"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 4,
+  "tags": [
+    "agentic",
+    "supervisor-worker",
+    "multi-agent",
+    "orchestrator",
+    "architecture-diagram",
+    "ai-team"
+  ],
+  "description": "A supervisor-worker multi-agent architecture where an orchestrator agent receives a high-level goal, breaks it into subtasks, delegates each to specialist worker agents (researcher, writer, QA), monitors execution, handles failures, and synthesizes results. The orchestrator manages but does not execute tasks itself.",
+  "source_path": "",
+  "repo_path": "agentic/architecture/agentic-supervisor-worker"
+}

@@ -1,0 +1,29 @@
+{
+  "template_id": "ai-native-generator-critic-architecture",
+  "workflow_id": "ai-native-generator-critic-architecture",
+  "title": "AI-Native Generator-Critic Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "agentic",
+  "secondary_use_cases": [
+    "ai-orchestration"
+  ],
+  "use_cases": [
+    "agentic",
+    "ai-orchestration"
+  ],
+  "complexity": 3,
+  "num_nodes": 9,
+  "num_lanes": 3,
+  "tags": [
+    "ai-native",
+    "generator-critic",
+    "agentic-ai",
+    "tournament-mode",
+    "multi-agent",
+    "architecture-diagram"
+  ],
+  "description": "A competitive / generator-critic architecture where multiple generators produce independent answers, then an evaluator agent scores and selects the best output. This approach improves quality and reduces single-model brittleness. It's costlier (multiple LLM calls) but pays off when correctness or creativity matters more than latency.",
+  "source_path": "",
+  "repo_path": "agentic/architecture/ai-native-generator-critic-architecture"
+}

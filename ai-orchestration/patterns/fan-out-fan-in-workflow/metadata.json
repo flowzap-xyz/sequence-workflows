@@ -1,0 +1,26 @@
+{
+  "template_id": "fan-out-fan-in-workflow",
+  "workflow_id": "fan-out-fan-in",
+  "title": "Fan Out Fan In Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "ai-orchestration",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "ai-orchestration"
+  ],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "fan-out-fan-in",
+    "scatter-gather",
+    "parallel-processing",
+    "aggregation",
+    "map-reduce",
+    "concurrency"
+  ],
+  "description": "Fan-out/fan-in pattern with work distribution to parallel workers, concurrent execution, result aggregation, and error handling for partial failures.",
+  "source_path": "patterns/fan-out-fan-in",
+  "repo_path": "ai-orchestration/patterns/fan-out-fan-in-workflow"
+}

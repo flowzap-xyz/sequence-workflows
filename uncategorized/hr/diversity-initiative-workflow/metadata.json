@@ -1,0 +1,21 @@
+{
+  "template_id": "diversity-initiative-workflow",
+  "workflow_id": "diversity-initiative",
+  "title": "Diversity Initiative Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "diversity",
+    "initiative",
+    "hr"
+  ],
+  "description": "This workflow models promoting workplace diversity.",
+  "source_path": "hr/diversity-initiative",
+  "repo_path": "uncategorized/hr/diversity-initiative-workflow"
+}

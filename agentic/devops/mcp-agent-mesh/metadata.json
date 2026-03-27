@@ -1,0 +1,30 @@
+{
+  "template_id": "mcp-agent-mesh",
+  "workflow_id": "mcp-agent-mesh",
+  "title": "MCP Agent Mesh Architecture",
+  "kind": "architecture",
+  "source_domain": "DevOps",
+  "primary_use_case": "agentic",
+  "secondary_use_cases": [
+    "mcp"
+  ],
+  "use_cases": [
+    "agentic",
+    "mcp"
+  ],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 4,
+  "tags": [
+    "mcp",
+    "agent-mesh",
+    "shared-context",
+    "multi-agent",
+    "broker",
+    "architecture-diagram",
+    "production-grade"
+  ],
+  "description": "A multi-agent mesh pattern where agents communicate through a shared context broker backed by MCP. Enables coordinated tool access and state synchronization across multiple specialized agents (planner, coder, reviewer, operator). Supports both orchestrated and choreographed interaction patterns.",
+  "source_path": "",
+  "repo_path": "agentic/devops/mcp-agent-mesh"
+}

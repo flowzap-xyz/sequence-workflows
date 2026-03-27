@@ -1,0 +1,30 @@
+{
+  "template_id": "purchase-order-workflow",
+  "workflow_id": "purchase-order",
+  "title": "Purchase Order Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [
+    "ai-orchestration"
+  ],
+  "use_cases": [
+    "approval",
+    "ai-orchestration"
+  ],
+  "complexity": 4,
+  "num_nodes": 22,
+  "num_lanes": 3,
+  "tags": [
+    "purchase-order",
+    "procurement",
+    "requisition",
+    "vendor-sourcing",
+    "competitive-bidding",
+    "tiered-approval",
+    "budget-validation"
+  ],
+  "description": "Procurement purchase order workflow with requisition creation, budget validation, vendor sourcing, competitive bidding, and tiered approval routing based on amount thresholds.",
+  "source_path": "finance/purchase-order",
+  "repo_path": "approval/finance/purchase-order-workflow"
+}

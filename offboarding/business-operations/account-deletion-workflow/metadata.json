@@ -1,0 +1,29 @@
+{
+  "template_id": "account-deletion-workflow",
+  "workflow_id": "account-deletion",
+  "title": "Account Deletion Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "offboarding",
+  "secondary_use_cases": [
+    "billing"
+  ],
+  "use_cases": [
+    "offboarding",
+    "billing"
+  ],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "account-deletion",
+    "user-offboarding",
+    "data-cleanup",
+    "subscription-cancel",
+    "retention-offer",
+    "exit-survey"
+  ],
+  "description": "Account deletion workflow with cancellation reason capture, retention offer, subscription termination, data cleanup, and confirmation email.",
+  "source_path": "business-operations/account-deletion",
+  "repo_path": "offboarding/business-operations/account-deletion-workflow"
+}

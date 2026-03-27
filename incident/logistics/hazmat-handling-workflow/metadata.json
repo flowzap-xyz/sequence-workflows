@@ -1,0 +1,29 @@
+{
+  "template_id": "hazmat-handling-workflow",
+  "workflow_id": "hazmat-handling",
+  "title": "Hazmat Handling Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "incident",
+  "secondary_use_cases": [
+    "compliance"
+  ],
+  "use_cases": [
+    "incident",
+    "compliance"
+  ],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "hazmat-handling",
+    "dangerous-goods",
+    "un-classification",
+    "sds-documentation",
+    "dot-compliance",
+    "emergency-response"
+  ],
+  "description": "Hazardous materials handling workflow with UN classification, SDS documentation, proper labeling, certified handler assignment, and emergency response procedures.",
+  "source_path": "logistics/hazmat-handling",
+  "repo_path": "incident/logistics/hazmat-handling-workflow"
+}

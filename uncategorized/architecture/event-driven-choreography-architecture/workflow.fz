@@ -1,0 +1,47 @@
+OrderService { # Order Service
+n1: circle label:"New Order Received"
+n2: rectangle label:"Validate Order"
+n3: rectangle label:"Emit OrderCreated Event"
+n17: rectangle label:"Receive Payment Confirmation"
+n18: rectangle label:"Update Order Status"
+n19: circle label:"Order Complete"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left) [label="Valid"]
+n3.handle(bottom) -> EventBus.n4.handle(top) [label="Publish"]
+n17.handle(right) -> n18.handle(left) [label="Confirmed"]
+n18.handle(right) -> n19.handle(left)
+}
+EventBus { # Event Bus
+n4: rectangle label:"OrderCreated Topic"
+n8: rectangle label:"PaymentConfirmed Topic"
+n12: rectangle label:"InventoryReserved Topic"
+n16: rectangle label:"ShipmentScheduled Topic"
+n4.handle(bottom) -> PaymentService.n5.handle(top) [label="Subscribe"]
+n8.handle(top) -> OrderService.n17.handle(bottom) [label="Notify"]
+n8.handle(bottom) -> InventoryService.n9.handle(top) [label="Subscribe"]
+n12.handle(bottom) -> ShippingService.n13.handle(top) [label="Subscribe"]
+}
+PaymentService { # Payment Service
+n5: rectangle label:"Receive OrderCreated"
+n6: rectangle label:"Process Payment"
+n7: rectangle label:"Emit PaymentConfirmed"
+n5.handle(right) -> n6.handle(left) [label="Charge"]
+n6.handle(right) -> n7.handle(left) [label="Success"]
+n7.handle(top) -> EventBus.n8.handle(bottom) [label="Publish"]
+}
+InventoryService { # Inventory Service
+n9: rectangle label:"Receive PaymentConfirmed"
+n10: rectangle label:"Reserve Stock"
+n11: rectangle label:"Emit InventoryReserved"
+n9.handle(right) -> n10.handle(left) [label="Allocate"]
+n10.handle(right) -> n11.handle(left) [label="Reserved"]
+n11.handle(top) -> EventBus.n12.handle(bottom) [label="Publish"]
+}
+ShippingService { # Shipping Service
+n13: rectangle label:"Receive InventoryReserved"
+n14: rectangle label:"Schedule Shipment"
+n15: rectangle label:"Emit ShipmentScheduled"
+n13.handle(right) -> n14.handle(left) [label="Plan Route"]
+n14.handle(right) -> n15.handle(left) [label="Scheduled"]
+n15.handle(top) -> EventBus.n16.handle(bottom) [label="Publish"]
+}

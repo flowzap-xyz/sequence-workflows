@@ -1,0 +1,30 @@
+{
+  "template_id": "invoice-processing-workflow",
+  "workflow_id": "invoice-processing",
+  "title": "Invoice Processing Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [
+    "billing"
+  ],
+  "use_cases": [
+    "approval",
+    "billing"
+  ],
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 4,
+  "tags": [
+    "accounts-payable",
+    "invoice-automation",
+    "ocr",
+    "po-matching",
+    "approval-workflow",
+    "payment-processing",
+    "three-way-match"
+  ],
+  "description": "Accounts payable invoice automation with OCR data extraction, three-way PO matching, tiered approval workflow, and automated payment processing with GL updates.",
+  "source_path": "finance/invoice-processing",
+  "repo_path": "approval/finance/invoice-processing-workflow"
+}

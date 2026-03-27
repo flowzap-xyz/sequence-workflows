@@ -1,0 +1,26 @@
+{
+  "template_id": "load-testing-workflow",
+  "workflow_id": "load-testing",
+  "title": "Load Testing Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "delivery"
+  ],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "load-testing",
+    "performance-testing",
+    "stress-testing",
+    "k6",
+    "jmeter",
+    "capacity-planning"
+  ],
+  "description": "Load testing workflow with test scenario design, gradual ramp-up, performance metrics collection, bottleneck identification, and capacity recommendations.",
+  "source_path": "devops/load-testing",
+  "repo_path": "delivery/devops/load-testing-workflow"
+}

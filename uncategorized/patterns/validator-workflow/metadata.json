@@ -1,0 +1,21 @@
+{
+  "template_id": "validator-workflow",
+  "workflow_id": "validator",
+  "title": "Validator Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "validator",
+    "patterns",
+    "parallel"
+  ],
+  "description": "This workflow models checking that incoming data is valid.",
+  "source_path": "patterns/validator",
+  "repo_path": "uncategorized/patterns/validator-workflow"
+}

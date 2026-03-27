@@ -1,0 +1,24 @@
+{
+  "template_id": "last-mile-delivery-workflow",
+  "workflow_id": "last-mile-delivery",
+  "title": "Last Mile Delivery Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "last-mile-delivery",
+    "route-optimization",
+    "proof-of-delivery",
+    "delivery-exception",
+    "customer-notification",
+    "gps-tracking"
+  ],
+  "description": "Last mile delivery workflow with route optimization, real-time GPS tracking, delivery attempt handling, proof of delivery capture, and customer notification.",
+  "source_path": "logistics/last-mile-delivery",
+  "repo_path": "uncategorized/logistics/last-mile-delivery-workflow"
+}

@@ -1,0 +1,26 @@
+{
+  "template_id": "context-hybrid-retrieval-memory",
+  "workflow_id": "context-hybrid-retrieval-memory",
+  "title": "Context Management - Hybrid Retrieval Memory",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "context-management",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "context-management"
+  ],
+  "complexity": 4,
+  "num_nodes": 11,
+  "num_lanes": 5,
+  "tags": [
+    "context-management",
+    "hybrid-retrieval",
+    "semantic",
+    "keyword",
+    "recency",
+    "architecture-diagram"
+  ],
+  "description": "Multi-modal retrieval pattern combining semantic search, exact/keyword search, and recency search in parallel. Results are merged and reranked into a single context set. Much higher recall because the agent can find both fuzzy references and exact entities. Essential for comprehensive knowledge retrieval.",
+  "source_path": "",
+  "repo_path": "context-management/architecture/context-hybrid-retrieval-memory"
+}

@@ -1,0 +1,26 @@
+{
+  "template_id": "fleet-maintenance-workflow",
+  "workflow_id": "fleet-maintenance",
+  "title": "Fleet Maintenance Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "compliance",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "compliance"
+  ],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "fleet-maintenance",
+    "preventive-maintenance",
+    "vehicle-inspection",
+    "work-order",
+    "dot-compliance",
+    "telematics"
+  ],
+  "description": "Fleet maintenance workflow with preventive maintenance scheduling, vehicle inspection, work order creation, parts ordering, and DOT compliance tracking.",
+  "source_path": "logistics/fleet-maintenance",
+  "repo_path": "compliance/logistics/fleet-maintenance-workflow"
+}

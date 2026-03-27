@@ -1,0 +1,26 @@
+{
+  "template_id": "event-sourcing-workflow",
+  "workflow_id": "event-sourcing",
+  "title": "Event Sourcing Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "compliance",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "compliance"
+  ],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "event-sourcing",
+    "event-store",
+    "aggregate",
+    "replay",
+    "audit-log",
+    "temporal-query"
+  ],
+  "description": "Event sourcing pattern with event capture, event store persistence, aggregate reconstruction, snapshot optimization, and temporal state queries.",
+  "source_path": "patterns/event-sourcing",
+  "repo_path": "compliance/patterns/event-sourcing-workflow"
+}

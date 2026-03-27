@@ -1,0 +1,61 @@
+OrderService { # Order Service
+n1: circle label:"Place Order"
+n2: rectangle label:"Create Pending Order"
+n3: rectangle label:"Emit OrderCreated"
+n19: rectangle label:"Receive Saga Result"
+n20: diamond label:"Saga Outcome?"
+n21: rectangle label:"Confirm Order"
+n22: rectangle label:"Cancel Order"
+n23: rectangle label:"Acknowledge to EventBus"
+n25: rectangle label:"Send Saga Ack"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left) [label="Pending"]
+n3.handle(bottom) -> EventBus.n4.handle(top) [label="Publish"]
+n19.handle(right) -> n20.handle(left)
+n20.handle(right) -> n21.handle(left) [label="Success"]
+n20.handle(bottom) -> n22.handle(top) [label="Failure"]
+n21.handle(right) -> n23.handle(left)
+n22.handle(right) -> n25.handle(left)
+n23.handle(bottom) -> EventBus.n26.handle(top) [label="Success Ack"]
+n25.handle(bottom) -> EventBus.n26.handle(top) [label="Failure Ack"]
+}
+EventBus { # Event Bus
+n4: rectangle label:"OrderCreated Topic"
+n10: rectangle label:"PaymentProcessed Topic"
+n14: rectangle label:"PaymentFailed Topic"
+n18: rectangle label:"InventoryReserved Topic"
+n24: rectangle label:"Compensation Ack Received"
+n26: rectangle label:"Saga Ack Received"
+n4.handle(bottom) -> PaymentService.n5.handle(top) [label="Subscribe"]
+n10.handle(bottom) -> InventoryService.n11.handle(top) [label="Subscribe"]
+n14.handle(bottom) -> InventoryService.n15.handle(top) [label="Subscribe"]
+n18.handle(top) -> OrderService.n19.handle(bottom) [label="Notify Success"]
+n24.handle(right) -> n26.handle(left)
+}
+PaymentService { # Payment Service
+n5: rectangle label:"Process Payment"
+n6: diamond label:"Payment OK?"
+n7: rectangle label:"Emit PaymentProcessed"
+n8: rectangle label:"Emit PaymentFailed"
+n9: rectangle label:"Publish Result"
+n5.handle(right) -> n6.handle(left)
+n6.handle(right) -> n7.handle(left) [label="Success"]
+n6.handle(bottom) -> n8.handle(top) [label="Declined"]
+n7.handle(right) -> n9.handle(left)
+n9.handle(top) -> EventBus.n10.handle(bottom) [label="Publish"]
+n8.handle(top) -> EventBus.n14.handle(bottom) [label="Publish"]
+}
+InventoryService { # Inventory Service
+n11: rectangle label:"Reserve Inventory"
+n12: rectangle label:"Emit InventoryReserved"
+n13: rectangle label:"Publish Reserved"
+n15: rectangle label:"Compensate: Release Stock"
+n16: rectangle label:"Stock Released"
+n17: rectangle label:"Compensation Complete"
+n11.handle(right) -> n12.handle(left) [label="Reserved"]
+n12.handle(right) -> n13.handle(left)
+n13.handle(top) -> EventBus.n18.handle(bottom) [label="Publish"]
+n15.handle(right) -> n16.handle(left) [label="Released"]
+n16.handle(right) -> n17.handle(left)
+n17.handle(top) -> EventBus.n24.handle(bottom) [label="Compensation Ack"]
+}

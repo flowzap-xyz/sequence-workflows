@@ -1,0 +1,23 @@
+{
+  "template_id": "compensation-transaction-workflow",
+  "workflow_id": "compensation-transaction",
+  "title": "Compensation Transaction Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "compensation",
+    "transaction",
+    "patterns",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models rolling back work when a later step fails.",
+  "source_path": "patterns/compensation-transaction",
+  "repo_path": "uncategorized/patterns/compensation-transaction-workflow"
+}

@@ -1,0 +1,24 @@
+{
+  "template_id": "reverse-logistics-workflow",
+  "workflow_id": "reverse-logistics",
+  "title": "Reverse Logistics Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "reverse-logistics",
+    "product-returns",
+    "refurbishment",
+    "recycling",
+    "disposition",
+    "sustainability"
+  ],
+  "description": "Reverse logistics workflow with return authorization, product grading, refurbishment decision, recycling coordination, and secondary market disposition.",
+  "source_path": "logistics/reverse-logistics",
+  "repo_path": "uncategorized/logistics/reverse-logistics-workflow"
+}

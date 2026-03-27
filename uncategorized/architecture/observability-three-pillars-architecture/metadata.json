@@ -1,0 +1,27 @@
+{
+  "template_id": "observability-three-pillars-architecture",
+  "workflow_id": "observability-three-pillars-architecture",
+  "title": "Observability Three Pillars Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 17,
+  "num_lanes": 4,
+  "tags": [
+    "observability",
+    "three-pillars",
+    "opentelemetry",
+    "prometheus",
+    "jaeger",
+    "loki",
+    "grafana",
+    "slo-sli",
+    "architecture-diagram"
+  ],
+  "description": "An observability architecture diagram implementing the three pillars (metrics, traces, logs) with OpenTelemetry SDK instrumentation, OTLP collector pipeline, Prometheus, Jaeger, and Loki backends, Grafana dashboards, SLO/SLI tracking, and PagerDuty alerting integration. This template provides a complete observability stack reference showing how telemetry data flows from application instrumentation through collection, storage, visualization, and incident response. Essential for SRE teams building production monitoring infrastructure.",
+  "source_path": "",
+  "repo_path": "uncategorized/architecture/observability-three-pillars-architecture"
+}

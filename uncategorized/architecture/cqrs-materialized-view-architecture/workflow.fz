@@ -1,0 +1,43 @@
+WriteModel { # Write Model
+n1: circle label:"Incoming Command"
+n2: rectangle label:"Command Handler"
+n3: rectangle label:"Validate Against Aggregate"
+n4: rectangle label:"Persist to Write Store"
+n5: rectangle label:"Emit Domain Event"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left) [label="Normalized"]
+n4.handle(right) -> n5.handle(left) [label="After Commit"]
+n5.handle(bottom) -> EventBus.n6.handle(top) [label="Publish"]
+}
+EventBus { # Event Bus
+n6: rectangle label:"Route Event"
+n7: rectangle label:"Guarantee Ordering"
+n8: rectangle label:"Deliver to Projectors"
+n6.handle(right) -> n7.handle(left) [label="Partition Key"]
+n7.handle(right) -> n8.handle(left)
+n8.handle(bottom) -> Projectors.n9.handle(top) [label="Fan-Out"]
+}
+Projectors { # View Projectors
+n9: rectangle label:"Order Summary Projector"
+n10: rectangle label:"Customer Dashboard Projector"
+n11: rectangle label:"Analytics Projector"
+n12: rectangle label:"Search Index Projector"
+n9.handle(bottom) -> Views.n13.handle(top) [label="Build View"]
+n10.handle(bottom) -> Views.n14.handle(top) [label="Build View"]
+n11.handle(bottom) -> Views.n15.handle(top) [label="Build View"]
+n12.handle(bottom) -> Views.n16.handle(top) [label="Build View"]
+}
+Views { # Materialized Views
+n13: rectangle label:"Order Summary Table"
+n14: rectangle label:"Customer Dashboard Cache"
+n15: rectangle label:"Analytics Cube"
+n16: rectangle label:"Elasticsearch Index"
+n17: rectangle label:"Query API"
+n18: circle label:"Fast Read Response"
+n13.handle(right) -> n17.handle(left)
+n14.handle(right) -> n17.handle(left)
+n15.handle(right) -> n17.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(right) -> n18.handle(left) [label="Sub-ms Latency"]
+}

@@ -1,0 +1,26 @@
+{
+  "template_id": "financial-reporting-workflow",
+  "workflow_id": "financial-reporting",
+  "title": "Financial Reporting Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "compliance",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "compliance"
+  ],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "financial-reporting",
+    "gaap-compliance",
+    "income-statement",
+    "balance-sheet",
+    "cash-flow-statement",
+    "sec-filing"
+  ],
+  "description": "Financial reporting workflow with GAAP-compliant statement preparation, management review, audit committee approval, and SEC filing for public companies.",
+  "source_path": "finance/financial-reporting",
+  "repo_path": "compliance/finance/financial-reporting-workflow"
+}

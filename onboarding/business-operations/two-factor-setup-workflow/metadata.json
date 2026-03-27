@@ -1,0 +1,29 @@
+{
+  "template_id": "two-factor-setup-workflow",
+  "workflow_id": "two-factor-setup",
+  "title": "Two Factor Setup Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "onboarding",
+  "secondary_use_cases": [
+    "security"
+  ],
+  "use_cases": [
+    "onboarding",
+    "security"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "two-factor-auth",
+    "mfa",
+    "totp",
+    "authenticator-app",
+    "security",
+    "account-protection"
+  ],
+  "description": "Two-factor authentication setup workflow with method selection (TOTP/SMS), QR code generation, backup codes, and verification confirmation.",
+  "source_path": "business-operations/two-factor-setup",
+  "repo_path": "onboarding/business-operations/two-factor-setup-workflow"
+}

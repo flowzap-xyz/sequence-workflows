@@ -1,0 +1,27 @@
+{
+  "template_id": "incident-response-workflow",
+  "workflow_id": "incident-response",
+  "title": "Incident Response Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "incident",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "incident"
+  ],
+  "complexity": 5,
+  "num_nodes": 23,
+  "num_lanes": 4,
+  "tags": [
+    "incident-management",
+    "on-call",
+    "pagerduty",
+    "war-room",
+    "severity-levels",
+    "postmortem",
+    "sre"
+  ],
+  "description": "Production incident response workflow with severity-based routing, war room coordination, incident commander assignment, customer communication, root cause analysis, and postmortem scheduling.",
+  "source_path": "devops/incident-response",
+  "repo_path": "incident/devops/incident-response-workflow"
+}

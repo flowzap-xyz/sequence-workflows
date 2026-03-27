@@ -1,0 +1,44 @@
+Command { # Command Side
+n1: circle label:"User Command"
+n2: rectangle label:"Validate Command"
+n3: rectangle label:"Load Aggregate"
+n4: rectangle label:"Apply Business Rules"
+n5: rectangle label:"Emit Domain Events"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left) [label="Valid"]
+n3.handle(right) -> n4.handle(left) [label="Current State"]
+n4.handle(right) -> n5.handle(left) [label="State Change"]
+n5.handle(bottom) -> EventStore.n6.handle(top) [label="Append"]
+}
+EventStore { # Event Store
+n6: rectangle label:"Append Event to Stream"
+n7: rectangle label:"Assign Sequence Number"
+n8: rectangle label:"Persist Immutable Event"
+n9: rectangle label:"Publish to Projections"
+n10: rectangle label:"Snapshot Manager"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="Write-Ahead Log"]
+n8.handle(right) -> n9.handle(left) [label="Notify"]
+n8.handle(bottom) -> n10.handle(top) [label="Checkpoint"]
+n9.handle(bottom) -> Projections.n11.handle(top) [label="Event Stream"]
+}
+Projections { # Read Projections
+n11: rectangle label:"Event Handler"
+n12: rectangle label:"Build Read Model"
+n13: rectangle label:"Update Materialized View"
+n14: rectangle label:"Serve Query"
+n15: circle label:"Query Response"
+n11.handle(right) -> n12.handle(left) [label="Transform"]
+n12.handle(right) -> n13.handle(left) [label="Upsert"]
+n13.handle(right) -> n14.handle(left) [label="Ready"]
+n14.handle(right) -> n15.handle(left)
+}
+Replay { # Event Replay
+n16: rectangle label:"Replay from Offset"
+n17: rectangle label:"Rebuild Projection"
+n18: rectangle label:"Verify Consistency"
+n19: rectangle label:"Projection Rebuilt"
+n16.handle(right) -> n17.handle(left) [label="Historical Events"]
+n17.handle(right) -> n18.handle(left) [label="Rebuilt"]
+n18.handle(right) -> n19.handle(left) [label="Consistent"]
+}

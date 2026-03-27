@@ -1,0 +1,26 @@
+{
+  "template_id": "blue-green-deploy-workflow",
+  "workflow_id": "blue-green-deploy",
+  "title": "Blue Green Deploy Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "delivery"
+  ],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "blue-green-deployment",
+    "zero-downtime",
+    "traffic-switching",
+    "rollback",
+    "load-balancer",
+    "release-management"
+  ],
+  "description": "Blue-green deployment pattern with parallel environment setup, smoke testing, load balancer traffic switch, and instant rollback capability.",
+  "source_path": "patterns/blue-green-deploy",
+  "repo_path": "delivery/patterns/blue-green-deploy-workflow"
+}

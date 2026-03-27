@@ -1,0 +1,59 @@
+LoadBalancer { # Load Balancer
+n1: circle label:"Health Check Timer"
+n2: rectangle label:"Send Health Probe"
+n17: rectangle label:"Evaluate Response"
+n18: diamond label:"Instance Healthy?"
+n19: rectangle label:"Keep in Rotation"
+n20: rectangle label:"Remove from Rotation"
+n21: rectangle label:"Update Routing Table"
+n1.handle(right) -> n2.handle(left) [label="Every 10s"]
+n2.handle(bottom) -> ServiceA.n3.handle(top) [label="GET /health"]
+n2.handle(bottom) -> ServiceB.n10.handle(top) [label="GET /health"]
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left) [label="200 OK"]
+n18.handle(bottom) -> n20.handle(top) [label="Timeout/5xx"]
+n19.handle(right) -> n21.handle(left)
+n20.handle(right) -> n21.handle(left)
+n21.handle(bottom) -> Alerting.n22.handle(top) [label="Status Change"]
+}
+ServiceA { # Service A
+n3: rectangle label:"Check Database Connection"
+n4: rectangle label:"Check Redis Connection"
+n5: rectangle label:"Check Disk Space"
+n6: rectangle label:"Return Health Status"
+n7: rectangle label:"Send Status to LB"
+n8: rectangle label:"Forward Service A Status"
+n9: rectangle label:"Deliver A Result"
+n3.handle(right) -> n4.handle(left) [label="DB OK"]
+n4.handle(right) -> n5.handle(left) [label="Cache OK"]
+n5.handle(right) -> n6.handle(left) [label="Disk OK"]
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(top) -> LoadBalancer.n17.handle(bottom) [label="Status JSON"]
+}
+ServiceB { # Service B
+n10: rectangle label:"Check API Dependencies"
+n11: rectangle label:"Check Message Queue"
+n12: rectangle label:"Check Memory Usage"
+n13: rectangle label:"Return Health Status"
+n14: rectangle label:"Send Status to LB"
+n15: rectangle label:"Forward Service B Status"
+n16: rectangle label:"Deliver B Result"
+n10.handle(right) -> n11.handle(left) [label="APIs OK"]
+n11.handle(right) -> n12.handle(left) [label="Queue OK"]
+n12.handle(right) -> n13.handle(left) [label="Disk OK"]
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(top) -> LoadBalancer.n17.handle(bottom) [label="Status JSON"]
+}
+Alerting { # Alerting System
+n22: rectangle label:"Monitor Health Trends"
+n23: diamond label:"Consecutive Failures?"
+n24: rectangle label:"Send PagerDuty Alert"
+n25: rectangle label:"Log Health Metric"
+n22.handle(right) -> n23.handle(left)
+n23.handle(right) -> n24.handle(left) [label="3+ Failures"]
+n23.handle(bottom) -> n25.handle(top) [label="Below Threshold"]
+}

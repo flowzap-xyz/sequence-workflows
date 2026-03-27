@@ -1,0 +1,26 @@
+{
+  "template_id": "salary-increase-workflow",
+  "workflow_id": "salary-increase",
+  "title": "Salary Increase Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "approval"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "salary-increase",
+    "compensation",
+    "merit-raise",
+    "market-adjustment",
+    "budget-approval",
+    "comp-ratio"
+  ],
+  "description": "Salary increase workflow with market analysis, comp ratio review, budget validation, tiered approval based on increase percentage, and payroll system update.",
+  "source_path": "hr/salary-increase",
+  "repo_path": "approval/hr/salary-increase-workflow"
+}

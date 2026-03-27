@@ -1,0 +1,28 @@
+{
+  "template_id": "api-composition-pattern-architecture",
+  "workflow_id": "api-composition-pattern-architecture",
+  "title": "API Composition Pattern Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "incident",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "incident"
+  ],
+  "complexity": 3,
+  "num_nodes": 16,
+  "num_lanes": 3,
+  "tags": [
+    "api-composition",
+    "response-aggregation",
+    "fan-out",
+    "parallel-requests",
+    "timeout-handling",
+    "partial-response",
+    "microservices",
+    "architecture-diagram"
+  ],
+  "description": "An API composition architecture diagram with a composer service that fans out parallel requests to multiple microservices, collects responses with timeout handling, and merges results into a single unified response with partial fallback support. This template models the API composition pattern used when a single client query requires data from multiple services, avoiding the need for direct service-to-service calls. Useful for teams building aggregation layers in microservices architectures.",
+  "source_path": "",
+  "repo_path": "incident/architecture/api-composition-pattern-architecture"
+}

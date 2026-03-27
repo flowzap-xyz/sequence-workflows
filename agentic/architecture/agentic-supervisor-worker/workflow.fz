@@ -1,0 +1,29 @@
+orchestrator_agent {# Orchestrator Agent
+  n1: rectangle label="Decompose & Manage Subtasks"
+  n5: diamond label="All Passed QA?"
+  n6: rectangle label="Synthesize Final Result"
+
+  n1.handle(bottom) -> researcher_agent.n2.handle(top) [label="Task: Gather Sources"]
+  n1.handle(bottom) -> writer_agent.n3.handle(top) [label="Task: Draft"]
+  n1.handle(bottom) -> qa_agent.n4.handle(top) [label="Task: Review"]
+
+  n5.handle(right) -> n6.handle(left) [label="Yes"]
+  n5.handle(top) -> writer_agent.n3.handle(top) [label="No (Fix Draft)"]
+}
+
+researcher_agent {# Research Agent
+  n2: rectangle label="Retrieve Information (Web/RAG)"
+  n2.handle(right) -> orchestrator_agent.n1.handle(right) [label="Summary"]
+}
+
+writer_agent {# Writer Agent
+  n3: rectangle label="Generate Text"
+  n3.handle(right) -> orchestrator_agent.n1.handle(right) [label="Draft"]
+}
+
+qa_agent {# QA Agent
+  n4: rectangle label="Review Output"
+  n4.handle(right) -> orchestrator_agent.n5.handle(left) [label="Flags"]
+}
+
+loop [retry loop] writer_agent.n3 qa_agent.n4 orchestrator_agent.n5

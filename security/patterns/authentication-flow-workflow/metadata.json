@@ -1,0 +1,26 @@
+{
+  "template_id": "authentication-flow-workflow",
+  "workflow_id": "authentication-flow",
+  "title": "Authentication Flow Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "security",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "security"
+  ],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "authentication",
+    "login",
+    "jwt",
+    "oauth",
+    "mfa",
+    "session-management"
+  ],
+  "description": "User authentication workflow with credential validation, MFA challenge, JWT token generation, session creation, and failed attempt tracking.",
+  "source_path": "patterns/authentication-flow",
+  "repo_path": "security/patterns/authentication-flow-workflow"
+}

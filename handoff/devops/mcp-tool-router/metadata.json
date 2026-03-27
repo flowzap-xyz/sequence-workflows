@@ -1,0 +1,30 @@
+{
+  "template_id": "mcp-tool-router",
+  "workflow_id": "mcp-tool-router",
+  "title": "MCP Tool Router Architecture",
+  "kind": "architecture",
+  "source_domain": "DevOps",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [
+    "mcp"
+  ],
+  "use_cases": [
+    "handoff",
+    "mcp"
+  ],
+  "complexity": 3,
+  "num_nodes": 8,
+  "num_lanes": 4,
+  "tags": [
+    "mcp",
+    "tool-router",
+    "semantic-routing",
+    "embeddings",
+    "token-optimization",
+    "architecture-diagram",
+    "production-grade"
+  ],
+  "description": "A routing pattern that puts a semantic router in front of MCP tools so the LLM only sees the subset it needs. Uses vector embeddings and cosine similarity to match user intent to tools dynamically. Achieves up to 96% reduction in input tokens when dealing with large tool catalogs.",
+  "source_path": "",
+  "repo_path": "handoff/devops/mcp-tool-router"
+}

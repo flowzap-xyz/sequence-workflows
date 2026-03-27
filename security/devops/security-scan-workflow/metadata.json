@@ -1,0 +1,26 @@
+{
+  "template_id": "security-scan-workflow",
+  "workflow_id": "security-scan",
+  "title": "Security Scan Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "security",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "security"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "security-scanning",
+    "sast",
+    "dast",
+    "dependency-check",
+    "snyk",
+    "devsecops"
+  ],
+  "description": "Security scanning workflow with SAST, DAST, dependency vulnerability scanning, finding triage, and remediation tracking in CI/CD pipeline.",
+  "source_path": "devops/security-scan",
+  "repo_path": "security/devops/security-scan-workflow"
+}

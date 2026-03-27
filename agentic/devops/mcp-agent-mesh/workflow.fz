@@ -1,0 +1,41 @@
+Orchestrator { # Orchestrator Agent
+  n1: circle label="Complex task received"
+  n2: rectangle label="Decompose into subtasks"
+  n3: rectangle label="Assign subtask to Agent B"
+  n4: rectangle label="Receive subtask result"
+  n5: rectangle label="Request shared context"
+  n6: rectangle label="Compile final response"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(bottom) -> Worker.n7.handle(top) [label="Subtask assignment"]
+  n4.handle(right) -> n5.handle(left)
+  n5.handle(bottom) -> Broker.n11.handle(top) [label="Context request"]
+  n6.handle(left) -> n2.handle(bottom) [label="Next iteration"]
+}
+
+Worker { # Worker Agent
+  n7: rectangle label="Receive subtask"
+  n8: rectangle label="Fetch shared context"
+  n9: rectangle label="Call MCP tool"
+  n10: rectangle label="Return result to orchestrator"
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(bottom) -> Broker.n11.handle(left) [label="Context request"]
+  n8.handle(right) -> n9.handle(left)
+  n9.handle(bottom) -> MCPServer.n13.handle(top) [label="MCP tool call"]
+  n10.handle(top) -> Orchestrator.n4.handle(bottom) [label="Subtask result"]
+}
+
+Broker { # Shared Context Broker
+  n11: rectangle label="Resolve context request"
+  n12: rectangle label="Return shared state"
+  n11.handle(right) -> n12.handle(left)
+  n12.handle(top) -> Orchestrator.n6.handle(bottom) [label="Context to orchestrator"]
+  n12.handle(left) -> Worker.n9.handle(top) [label="Context to worker"]
+}
+
+MCPServer { # MCP Server
+  n13: rectangle label="Execute tool"
+  n14: rectangle label="Return tool output"
+  n13.handle(right) -> n14.handle(left)
+  n14.handle(top) -> Worker.n10.handle(bottom) [label="Tool output"]
+}

@@ -1,0 +1,26 @@
+{
+  "template_id": "training-enrollment-workflow",
+  "workflow_id": "training-enrollment",
+  "title": "Training Enrollment Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "compliance",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "compliance"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "training-enrollment",
+    "learning-management",
+    "lms",
+    "professional-development",
+    "compliance-training",
+    "certification"
+  ],
+  "description": "Training enrollment workflow with course catalog browsing, manager approval, LMS registration, completion tracking, and certification management.",
+  "source_path": "hr/training-enrollment",
+  "repo_path": "compliance/hr/training-enrollment-workflow"
+}

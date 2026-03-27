@@ -1,0 +1,22 @@
+{
+  "template_id": "polling-pattern-workflow",
+  "workflow_id": "polling-pattern",
+  "title": "Polling Pattern Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "polling",
+    "pattern",
+    "patterns",
+    "loop"
+  ],
+  "description": "This workflow models periodically checking status until work is done.",
+  "source_path": "patterns/polling-pattern",
+  "repo_path": "uncategorized/patterns/polling-pattern-workflow"
+}

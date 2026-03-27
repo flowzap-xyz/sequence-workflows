@@ -1,0 +1,30 @@
+{
+  "template_id": "ai-native-sequential-pipeline-architecture",
+  "workflow_id": "ai-native-sequential-pipeline-architecture",
+  "title": "AI-Native Sequential Pipeline Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [
+    "agentic",
+    "ai-orchestration"
+  ],
+  "use_cases": [
+    "delivery",
+    "agentic",
+    "ai-orchestration"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "ai-native",
+    "sequential-pipeline",
+    "agentic-ai",
+    "llm-microservices",
+    "architecture-diagram"
+  ],
+  "description": "A sequential pipeline architecture chaining multiple agents in a fixed order (parse → enrich → analyze → format), which is a common 'LLM microservices' setup when each step can be isolated. This structure is often used in document processing and ETL-like workflows because each step is testable and predictable.",
+  "source_path": "",
+  "repo_path": "delivery/architecture/ai-native-sequential-pipeline-architecture"
+}

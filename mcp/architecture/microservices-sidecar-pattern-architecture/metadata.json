@@ -1,0 +1,28 @@
+{
+  "template_id": "microservices-sidecar-pattern-architecture",
+  "workflow_id": "microservices-sidecar-pattern-architecture",
+  "title": "Microservices Sidecar Pattern Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "mcp",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "mcp"
+  ],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 3,
+  "tags": [
+    "sidecar-pattern",
+    "envoy-proxy",
+    "kubernetes",
+    "container-pattern",
+    "observability",
+    "control-plane",
+    "cloud-native",
+    "architecture-diagram"
+  ],
+  "description": "A sidecar pattern architecture diagram showing Envoy proxy, log collector, and config watcher sidecars running alongside application containers in a Kubernetes pod, with a control plane managing configuration. This template demonstrates how auxiliary concerns like logging, monitoring, and configuration are deployed as co-located containers. Foundational for teams adopting cloud-native container orchestration patterns.",
+  "source_path": "",
+  "repo_path": "mcp/architecture/microservices-sidecar-pattern-architecture"
+}

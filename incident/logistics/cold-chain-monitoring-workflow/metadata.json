@@ -1,0 +1,26 @@
+{
+  "template_id": "cold-chain-monitoring-workflow",
+  "workflow_id": "cold-chain-monitoring",
+  "title": "Cold Chain Monitoring Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "incident",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "incident"
+  ],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "cold-chain",
+    "temperature-monitoring",
+    "iot-sensors",
+    "excursion-alert",
+    "pharmaceutical",
+    "perishables"
+  ],
+  "description": "Cold chain monitoring workflow with IoT temperature sensors, real-time alerts, excursion documentation, corrective action triggers, and compliance reporting.",
+  "source_path": "logistics/cold-chain-monitoring",
+  "repo_path": "incident/logistics/cold-chain-monitoring-workflow"
+}

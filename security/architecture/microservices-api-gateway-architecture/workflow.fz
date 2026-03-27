@@ -1,0 +1,52 @@
+Client { # Client Application
+n1: circle label:"Incoming Request"
+n2: rectangle label:"Load Balancer"
+n21: rectangle label:"Receive API Response"
+n22: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Gateway.n3.handle(top) [label="Route Request"]
+n21.handle(right) -> n22.handle(left)
+}
+Gateway { # API Gateway
+n3: rectangle label:"Authenticate JWT Token"
+n4: diamond label:"Token Valid?"
+n5: rectangle label:"Apply Rate Limiting"
+n6: rectangle label:"Return 401 Unauthorized"
+n7: diamond label:"Rate Limit OK?"
+n8: rectangle label:"Route to Microservice"
+n9: rectangle label:"Return 429 Throttled"
+n18: rectangle label:"Aggregate Responses"
+n19: rectangle label:"Format Response"
+n20: rectangle label:"Send to Client"
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left) [label="Yes"]
+n4.handle(bottom) -> n6.handle(top) [label="No"]
+n5.handle(right) -> n7.handle(left)
+n6.handle(top) -> Client.n21.handle(bottom) [label="401"]
+n7.handle(right) -> n8.handle(left) [label="Yes"]
+n7.handle(bottom) -> n9.handle(top) [label="No"]
+n8.handle(bottom) -> Services.n10.handle(top) [label="Forward"]
+n9.handle(top) -> Client.n21.handle(bottom) [label="429"]
+n18.handle(right) -> n19.handle(left)
+n19.handle(right) -> n20.handle(left)
+n20.handle(top) -> Client.n21.handle(bottom) [label="Response"]
+}
+Services { # Microservices Cluster
+n10: rectangle label:"Service Discovery Lookup"
+n11: rectangle label:"User Service"
+n12: rectangle label:"Order Service"
+n13: rectangle label:"Inventory Service"
+n14: rectangle label:"Compose Response"
+n15: rectangle label:"Prepare Aggregated Data"
+n16: rectangle label:"Forward Aggregated Data"
+n17: rectangle label:"Send to Gateway"
+n10.handle(right) -> n11.handle(left) [label="Users"]
+n10.handle(bottom) -> n12.handle(top) [label="Orders"]
+n11.handle(right) -> n14.handle(left)
+n12.handle(right) -> n13.handle(left) [label="Check Stock"]
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(top) -> Gateway.n18.handle(bottom) [label="Aggregated"]
+}

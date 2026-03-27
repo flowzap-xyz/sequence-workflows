@@ -1,0 +1,26 @@
+{
+  "template_id": "event-driven-event-sourcing-architecture",
+  "workflow_id": "event-driven-event-sourcing-architecture",
+  "title": "Event-Driven Event Sourcing Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 18,
+  "num_lanes": 4,
+  "tags": [
+    "event-sourcing",
+    "immutable-events",
+    "event-store",
+    "projections",
+    "snapshot",
+    "aggregate",
+    "temporal-query",
+    "architecture-diagram"
+  ],
+  "description": "An event sourcing architecture diagram where all state changes are stored as an immutable sequence of domain events, with read projections built from the event stream and snapshot optimization for fast aggregate loading. This template shows how event sourcing eliminates data loss by preserving the complete history of every state transition. Critical for systems requiring full audit trails, temporal queries, and event replay capabilities.",
+  "source_path": "",
+  "repo_path": "uncategorized/architecture/event-driven-event-sourcing-architecture"
+}

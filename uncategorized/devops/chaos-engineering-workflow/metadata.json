@@ -1,0 +1,24 @@
+{
+  "template_id": "chaos-engineering-workflow",
+  "workflow_id": "chaos-engineering",
+  "title": "Chaos Engineering Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "chaos-engineering",
+    "fault-injection",
+    "resilience-testing",
+    "game-day",
+    "blast-radius",
+    "steady-state"
+  ],
+  "description": "Chaos engineering workflow with hypothesis definition, steady-state monitoring, controlled fault injection, blast radius limitation, and resilience validation.",
+  "source_path": "devops/chaos-engineering",
+  "repo_path": "uncategorized/devops/chaos-engineering-workflow"
+}

@@ -1,0 +1,48 @@
+Sources { # Event Sources
+n1: rectangle label:"Order Service Event"
+n2: rectangle label:"User Service Event"
+n3: rectangle label:"Payment Service Event"
+n4: rectangle label:"System Alert Event"
+n1.handle(bottom) -> Hub.n5.handle(top) [label="OrderShipped"]
+n2.handle(bottom) -> Hub.n5.handle(top) [label="AccountCreated"]
+n3.handle(bottom) -> Hub.n5.handle(top) [label="PaymentFailed"]
+n4.handle(bottom) -> Hub.n5.handle(top) [label="SystemDown"]
+}
+Hub { # Notification Hub
+n5: rectangle label:"Receive Event"
+n6: rectangle label:"Resolve Notification Template"
+n7: rectangle label:"Check User Preferences"
+n8: diamond label:"Channel Preference?"
+n9: rectangle label:"Route to Email Channel"
+n10: rectangle label:"Route to Push Channel"
+n11: rectangle label:"Route to SMS Channel"
+n12: rectangle label:"Route to Slack Channel"
+n5.handle(right) -> n6.handle(left) [label="Match Template"]
+n6.handle(right) -> n7.handle(left) [label="Render"]
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Email"]
+n8.handle(bottom) -> n10.handle(top) [label="Push"]
+n8.handle(left) -> n11.handle(right) [label="SMS"]
+n8.handle(bottom) -> n12.handle(top) [label="Slack"]
+n9.handle(bottom) -> Delivery.n13.handle(top) [label="Send"]
+n10.handle(bottom) -> Delivery.n14.handle(top) [label="Send"]
+n11.handle(bottom) -> Delivery.n15.handle(top) [label="Send"]
+n12.handle(bottom) -> Delivery.n16.handle(top) [label="Send"]
+}
+Delivery { # Delivery Providers
+n13: rectangle label:"SendGrid / SES"
+n14: rectangle label:"Firebase Cloud Messaging"
+n15: rectangle label:"Twilio SMS"
+n16: rectangle label:"Slack Webhook"
+n17: rectangle label:"Delivery Status Tracker"
+n18: diamond label:"Delivered?"
+n19: rectangle label:"Log Success"
+n20: rectangle label:"Retry or DLQ"
+n13.handle(right) -> n17.handle(left) [label="Callback"]
+n14.handle(right) -> n17.handle(left) [label="Callback"]
+n15.handle(right) -> n17.handle(left) [label="Callback"]
+n16.handle(right) -> n17.handle(left) [label="Callback"]
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left) [label="Yes"]
+n18.handle(bottom) -> n20.handle(top) [label="No"]
+}

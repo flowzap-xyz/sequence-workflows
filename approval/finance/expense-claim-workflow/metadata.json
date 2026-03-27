@@ -1,0 +1,26 @@
+{
+  "template_id": "expense-claim-workflow",
+  "workflow_id": "expense-claim",
+  "title": "Expense Claim Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "approval"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "expense-reimbursement",
+    "employee-expenses",
+    "receipt-upload",
+    "manager-approval",
+    "finance-review",
+    "direct-deposit"
+  ],
+  "description": "Employee expense reimbursement workflow with receipt submission, manager approval, finance review, policy compliance check, and direct deposit payment.",
+  "source_path": "finance/expense-claim",
+  "repo_path": "approval/finance/expense-claim-workflow"
+}

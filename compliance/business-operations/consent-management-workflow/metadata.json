@@ -1,0 +1,26 @@
+{
+  "template_id": "consent-management-workflow",
+  "workflow_id": "consent-management",
+  "title": "Consent Management Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "compliance",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "compliance"
+  ],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "consent-management",
+    "gdpr",
+    "cookie-consent",
+    "privacy-preferences",
+    "opt-in-opt-out",
+    "compliance"
+  ],
+  "description": "User consent management workflow with cookie banner, preference center, consent recording, downstream system sync, and audit trail.",
+  "source_path": "business-operations/consent-management",
+  "repo_path": "compliance/business-operations/consent-management-workflow"
+}

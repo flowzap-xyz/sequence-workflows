@@ -1,0 +1,28 @@
+{
+  "template_id": "saga-distributed-transaction-architecture",
+  "workflow_id": "saga-distributed-transaction-architecture",
+  "title": "Saga Distributed Transaction Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "ai-orchestration",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "ai-orchestration"
+  ],
+  "complexity": 4,
+  "num_nodes": 17,
+  "num_lanes": 4,
+  "tags": [
+    "distributed-transaction",
+    "two-phase-commit",
+    "2pc",
+    "transaction-coordinator",
+    "consensus",
+    "strong-consistency",
+    "prepare-commit",
+    "architecture-diagram"
+  ],
+  "description": "A distributed transaction architecture diagram implementing the two-phase commit protocol with a transaction coordinator sending prepare and commit messages to participating services, with global abort on any vote failure. This template visualizes the classic 2PC protocol used when strong consistency is required across multiple services, showing the prepare, vote, and commit/abort phases. Important for understanding distributed consensus trade-offs in microservices architectures.",
+  "source_path": "",
+  "repo_path": "ai-orchestration/architecture/saga-distributed-transaction-architecture"
+}

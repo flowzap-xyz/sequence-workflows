@@ -1,0 +1,27 @@
+{
+  "template_id": "secret-rotation-workflow",
+  "workflow_id": "secret-rotation",
+  "title": "Secret Rotation Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "security",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "security"
+  ],
+  "complexity": 4,
+  "num_nodes": 18,
+  "num_lanes": 3,
+  "tags": [
+    "secret-rotation",
+    "vault",
+    "kubernetes-secrets",
+    "api-keys",
+    "database-passwords",
+    "certificates",
+    "security"
+  ],
+  "description": "Automated secret rotation workflow with HashiCorp Vault for API keys, database passwords, and certificates including Kubernetes secret updates and rolling service restarts.",
+  "source_path": "devops/secret-rotation",
+  "repo_path": "security/devops/secret-rotation-workflow"
+}

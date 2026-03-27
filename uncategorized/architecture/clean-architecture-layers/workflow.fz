@@ -1,0 +1,41 @@
+External { # External Layer (Frameworks & Drivers)
+n1: rectangle label:"Express/Fastify Web Server"
+n2: rectangle label:"PostgreSQL Driver"
+n3: rectangle label:"Redis Client"
+n4: rectangle label:"AWS SDK"
+n17: rectangle label:"Return View Model"
+n1.handle(bottom) -> Interface.n5.handle(top) [label="HTTP Request"]
+n2.handle(bottom) -> Interface.n7.handle(top) [label="DB Connection"]
+n3.handle(bottom) -> Interface.n7.handle(top) [label="Cache"]
+n4.handle(bottom) -> Interface.n7.handle(top) [label="Cloud Storage"]
+}
+Interface { # Interface Adapters Layer
+n5: rectangle label:"Controller"
+n6: rectangle label:"DTO Mapper"
+n7: rectangle label:"Repository Implementation"
+n16: rectangle label:"Presenter"
+n5.handle(right) -> n6.handle(left) [label="Map Input"]
+n6.handle(bottom) -> UseCase.n8.handle(top) [label="Request Model"]
+n7.handle(bottom) -> UseCase.n11.handle(top) [label="Implements"]
+n16.handle(top) -> External.n17.handle(bottom) [label="View Model"]
+}
+UseCase { # Use Cases Layer (Application)
+n8: rectangle label:"Create Order Use Case"
+n9: rectangle label:"Get Order Use Case"
+n10: rectangle label:"Cancel Order Use Case"
+n11: rectangle label:"Order Repository Interface"
+n8.handle(bottom) -> Entity.n12.handle(top) [label="Call Domain"]
+n9.handle(bottom) -> Entity.n12.handle(top) [label="Query"]
+n10.handle(bottom) -> Entity.n13.handle(top) [label="Cancel"]
+n8.handle(right) -> n11.handle(left) [label="Persist"]
+n9.handle(top) -> Interface.n16.handle(bottom) [label="Output"]
+}
+Entity { # Entities Layer (Domain)
+n12: rectangle label:"Order Aggregate Root"
+n13: rectangle label:"Order Item Entity"
+n14: rectangle label:"Money Value Object"
+n15: rectangle label:"Order Status Enum"
+n12.handle(right) -> n13.handle(left) [label="Contains"]
+n13.handle(right) -> n14.handle(left) [label="Uses"]
+n12.handle(bottom) -> n15.handle(top) [label="State"]
+}

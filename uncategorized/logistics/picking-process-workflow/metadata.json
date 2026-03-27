@@ -1,0 +1,24 @@
+{
+  "template_id": "picking-process-workflow",
+  "workflow_id": "picking-process",
+  "title": "Picking Process Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "order-picking",
+    "warehouse-management",
+    "pick-list",
+    "batch-picking",
+    "wave-picking",
+    "wms"
+  ],
+  "description": "Warehouse order picking workflow with pick list generation, zone routing, batch picking optimization, barcode scanning verification, and pick completion confirmation.",
+  "source_path": "logistics/picking-process",
+  "repo_path": "uncategorized/logistics/picking-process-workflow"
+}

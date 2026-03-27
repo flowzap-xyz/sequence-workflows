@@ -1,0 +1,26 @@
+{
+  "template_id": "authorization-flow-workflow",
+  "workflow_id": "authorization-flow",
+  "title": "Authorization Flow Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [
+    "security"
+  ],
+  "use_cases": [
+    "approval",
+    "security"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "authorization",
+    "flow",
+    "patterns"
+  ],
+  "description": "This workflow models checking user permissions before actions run.",
+  "source_path": "patterns/authorization-flow",
+  "repo_path": "approval/patterns/authorization-flow-workflow"
+}

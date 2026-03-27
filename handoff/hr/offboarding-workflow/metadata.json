@@ -1,0 +1,29 @@
+{
+  "template_id": "offboarding-workflow",
+  "workflow_id": "offboarding",
+  "title": "Offboarding Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [
+    "offboarding"
+  ],
+  "use_cases": [
+    "handoff",
+    "offboarding"
+  ],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "employee-offboarding",
+    "exit-interview",
+    "access-revocation",
+    "asset-return",
+    "knowledge-transfer",
+    "final-paycheck"
+  ],
+  "description": "Employee offboarding workflow with exit interview, knowledge transfer, asset collection, access revocation, final pay processing, and benefits continuation.",
+  "source_path": "hr/offboarding",
+  "repo_path": "handoff/hr/offboarding-workflow"
+}

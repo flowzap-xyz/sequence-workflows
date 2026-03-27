@@ -1,0 +1,25 @@
+{
+  "template_id": "customs-clearance-workflow",
+  "workflow_id": "customs-clearance",
+  "title": "Customs Clearance Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 3,
+  "tags": [
+    "customs-clearance",
+    "international-trade",
+    "customs-broker",
+    "hs-codes",
+    "import-export",
+    "duties-taxes",
+    "inspection"
+  ],
+  "description": "International customs clearance workflow with importer documentation, customs broker HS code classification, duty calculation, customs authority inspection, and clearance certificate issuance.",
+  "source_path": "logistics/customs-clearance",
+  "repo_path": "uncategorized/logistics/customs-clearance-workflow"
+}

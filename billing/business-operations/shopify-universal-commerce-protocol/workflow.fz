@@ -1,0 +1,107 @@
+HumanShopper { # Human Shopper
+  n1: circle label:"Start: open ChatGPT"
+  n2: rectangle label:"Ask for a product"
+  n14: rectangle label:"Review recommendations"
+  n15: rectangle label:"Choose a product"
+  n24: rectangle label:"Provide address & prefs"
+  n33: rectangle label:"Confirm payment"
+  n47: circle label:"Order confirmed"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> ChatGPTAssistant.n3.handle(left) [label="Product request"]
+  n14.handle(right) -> n15.handle(left)
+  n15.handle(right) -> ChatGPTAssistant.n16.handle(left) [label="Selected product"]
+  n24.handle(right) -> ChatGPTAssistant.n25.handle(left) [label="Address & prefs"]
+  n33.handle(right) -> ChatGPTAssistant.n34.handle(left) [label="Payment confirmed"]
+}
+
+ChatGPTAssistant { # ChatGPT AI Assistant
+  n3: rectangle label:"Receive request & interpret intent"
+  n4: rectangle label:"Build structured search query"
+  n5: rectangle label:"Search via UCP gateway"
+  n11: rectangle label:"Receive UCP offers"
+  n12: rectangle label:"Rank & present recommendations"
+  n13: rectangle label:"Send recommendations to shopper"
+  n16: rectangle label:"Receive product selection"
+  n17: rectangle label:"Create checkout session via UCP"
+  n21: rectangle label:"Receive required checkout fields"
+  n22: rectangle label:"Ask shopper for missing info"
+  n23: rectangle label:"(wait for shopper)"
+  n25: rectangle label:"Receive shopper info"
+  n26: rectangle label:"Submit buyer details via UCP"
+  n30: rectangle label:"Receive final order summary"
+  n31: rectangle label:"Ask shopper to confirm payment"
+  n32: rectangle label:"(wait for confirmation)"
+  n34: rectangle label:"Receive payment confirmation"
+  n35: rectangle label:"Send payment intent via UCP"
+  n44: rectangle label:"Receive final order status"
+  n45: rectangle label:"Display confirmation"
+  n46: rectangle label:"(notify shopper)"
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(right) -> n5.handle(left)
+  n5.handle(right) -> ShopifyUCPGateway.n6.handle(left) [label="Catalog search"]
+  n11.handle(right) -> n12.handle(left)
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(left) -> HumanShopper.n14.handle(right) [label="Recommendations"]
+  n16.handle(right) -> n17.handle(left)
+  n17.handle(right) -> ShopifyUCPGateway.n18.handle(left) [label="Create checkout"]
+  n21.handle(right) -> n22.handle(left)
+  n22.handle(right) -> n23.handle(left)
+  n23.handle(left) -> HumanShopper.n24.handle(right) [label="Request address & prefs"]
+  n25.handle(right) -> n26.handle(left)
+  n26.handle(right) -> ShopifyUCPGateway.n27.handle(left) [label="Buyer details"]
+  n30.handle(right) -> n31.handle(left)
+  n31.handle(right) -> n32.handle(left)
+  n32.handle(left) -> HumanShopper.n33.handle(right) [label="Confirm payment?"]
+  n34.handle(right) -> n35.handle(left)
+  n35.handle(right) -> ShopifyUCPGateway.n36.handle(left) [label="Payment intent"]
+  n44.handle(right) -> n45.handle(left)
+  n45.handle(right) -> n46.handle(left)
+  n46.handle(left) -> HumanShopper.n47.handle(right) [label="Order confirmed"]
+}
+
+ShopifyUCPGateway { # Shopify UCP Gateway
+  n6: rectangle label:"Normalize search request"
+  n7: rectangle label:"Query Shopify Store catalog"
+  n10: rectangle label:"Assemble & return UCP offers"
+  n18: rectangle label:"Create checkout session"
+  n19: rectangle label:"Initialize checkout with Store"
+  n20: rectangle label:"Return required fields"
+  n27: rectangle label:"Update checkout with buyer data"
+  n28: rectangle label:"Recalculate totals via Store"
+  n29: rectangle label:"Return order summary"
+  n36: rectangle label:"Forward payment authorization"
+  n38: rectangle label:"Receive payment result"
+  n39: rectangle label:"Create order in Store"
+  n42: rectangle label:"Receive order confirmation"
+  n43: rectangle label:"Return final order status"
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(right) -> ShopifyStoreCatalog.n8.handle(left) [label="Catalog query"]
+  n10.handle(left) -> ChatGPTAssistant.n11.handle(right) [label="UCP offers"]
+  n18.handle(right) -> n19.handle(left)
+  n19.handle(right) -> n20.handle(left)
+  n20.handle(left) -> ChatGPTAssistant.n21.handle(right) [label="Required fields"]
+  n27.handle(right) -> n28.handle(left)
+  n28.handle(right) -> n29.handle(left)
+  n29.handle(left) -> ChatGPTAssistant.n30.handle(right) [label="Order summary"]
+  n36.handle(right) -> PaymentProcessor.n37.handle(left) [label="Authorize/capture"]
+  n38.handle(right) -> n39.handle(left)
+  n39.handle(right) -> ShopifyStoreCatalog.n40.handle(left) [label="Create order"]
+  n42.handle(right) -> n43.handle(left)
+  n43.handle(left) -> ChatGPTAssistant.n44.handle(right) [label="Order status"]
+}
+
+ShopifyStoreCatalog { # Shopify Store & Catalog
+  n8: rectangle label:"Search catalog for products"
+  n9: rectangle label:"Return matching products"
+  n40: rectangle label:"Persist order"
+  n41: rectangle label:"Return order confirmation"
+  n8.handle(bottom) -> n9.handle(top)
+  n9.handle(left) -> ShopifyUCPGateway.n10.handle(right) [label="Matching products"]
+  n40.handle(bottom) -> n41.handle(top)
+  n41.handle(left) -> ShopifyUCPGateway.n42.handle(right) [label="Order confirmation"]
+}
+
+PaymentProcessor { # Payment Processor
+  n37: rectangle label:"Authorize & capture payment"
+  n37.handle(left) -> ShopifyUCPGateway.n38.handle(right) [label="Payment result"]
+}

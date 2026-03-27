@@ -1,0 +1,26 @@
+{
+  "template_id": "data-export-workflow",
+  "workflow_id": "data-export",
+  "title": "Data Export Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "compliance",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "compliance"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "data-export",
+    "data-portability",
+    "gdpr",
+    "bulk-export",
+    "async-job",
+    "download-link"
+  ],
+  "description": "User data export workflow with export request, async job processing, data aggregation, secure file generation, and download link delivery.",
+  "source_path": "business-operations/data-export",
+  "repo_path": "compliance/business-operations/data-export-workflow"
+}

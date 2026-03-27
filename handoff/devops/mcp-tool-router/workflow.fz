@@ -1,0 +1,41 @@
+Host {
+  n1: circle label="User sends prompt"
+  n2: rectangle label="Agent extracts intent"
+  n3: rectangle label="Send intent to router"
+  n4: rectangle label="Receive routed result"
+  n5: rectangle label="Agent responds to user"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(bottom) -> Router.n6.handle(top) [label="Intent + tool request"]
+  n4.handle(right) -> n5.handle(left)
+}
+
+Router {
+  n6: rectangle label="Receive intent"
+  n7: rectangle label="Semantic match via embeddings"
+  n8: diamond label="Which MCP server?"
+  n9: rectangle label="Forward to Server A"
+  n10: rectangle label="Forward to Server B"
+  n11: rectangle label="Normalize and return result"
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(bottom) -> n9.handle(top) [label="Route A"]
+  n8.handle(right) -> n10.handle(left) [label="Route B"]
+  n9.handle(bottom) -> ServerA.n12.handle(top) [label="Call Server A"]
+  n10.handle(bottom) -> ServerB.n14.handle(top) [label="Call Server B"]
+  n11.handle(top) -> Host.n4.handle(bottom) [label="Final result"]
+}
+
+ServerA {
+  n12: rectangle label="Execute tool A"
+  n13: rectangle label="Return A result"
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(top) -> Router.n11.handle(bottom) [label="Result A"]
+}
+
+ServerB {
+  n14: rectangle label="Execute tool B"
+  n15: rectangle label="Return B result"
+  n14.handle(right) -> n15.handle(left)
+  n15.handle(top) -> Router.n11.handle(left) [label="Result B"]
+}

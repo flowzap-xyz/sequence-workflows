@@ -1,0 +1,26 @@
+{
+  "template_id": "webinar-registration-workflow",
+  "workflow_id": "webinar-registration",
+  "title": "Webinar Registration Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "onboarding",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "onboarding"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "webinar",
+    "event-registration",
+    "zoom",
+    "calendar-invite",
+    "reminder-sequence",
+    "lead-capture"
+  ],
+  "description": "Webinar registration workflow with signup form, calendar invite, reminder email sequence, attendance tracking, and post-event follow-up.",
+  "source_path": "business-operations/webinar-registration",
+  "repo_path": "onboarding/business-operations/webinar-registration-workflow"
+}

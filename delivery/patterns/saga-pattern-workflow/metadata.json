@@ -1,0 +1,30 @@
+{
+  "template_id": "saga-pattern-workflow",
+  "workflow_id": "saga-pattern",
+  "title": "Saga Pattern Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [
+    "ai-orchestration"
+  ],
+  "use_cases": [
+    "delivery",
+    "ai-orchestration"
+  ],
+  "complexity": 5,
+  "num_nodes": 20,
+  "num_lanes": 4,
+  "tags": [
+    "saga-pattern",
+    "distributed-transactions",
+    "microservices",
+    "compensation",
+    "orchestration",
+    "eventual-consistency",
+    "rollback"
+  ],
+  "description": "Saga orchestration pattern for distributed transactions across Order, Payment, and Shipping services with automatic compensation rollback on failures.",
+  "source_path": "patterns/saga-pattern",
+  "repo_path": "delivery/patterns/saga-pattern-workflow"
+}

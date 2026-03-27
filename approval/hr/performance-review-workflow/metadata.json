@@ -1,0 +1,26 @@
+{
+  "template_id": "performance-review-workflow",
+  "workflow_id": "performance-review",
+  "title": "Performance Review Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "approval"
+  ],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "performance-review",
+    "annual-evaluation",
+    "goal-setting",
+    "360-feedback",
+    "calibration",
+    "merit-increase"
+  ],
+  "description": "Annual performance review workflow with self-assessment, manager evaluation, 360 feedback collection, calibration sessions, and merit increase recommendations.",
+  "source_path": "hr/performance-review",
+  "repo_path": "approval/hr/performance-review-workflow"
+}

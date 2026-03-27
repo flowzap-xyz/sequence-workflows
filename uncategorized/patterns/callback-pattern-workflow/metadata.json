@@ -1,0 +1,23 @@
+{
+  "template_id": "callback-pattern-workflow",
+  "workflow_id": "callback-pattern",
+  "title": "Callback Pattern Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "callback",
+    "pattern",
+    "patterns",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models an async operation that notifies a callback when done.",
+  "source_path": "patterns/callback-pattern",
+  "repo_path": "uncategorized/patterns/callback-pattern-workflow"
+}

@@ -1,0 +1,24 @@
+{
+  "template_id": "cross-docking-workflow",
+  "workflow_id": "cross-docking",
+  "title": "Cross Docking Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "cross-docking",
+    "flow-through",
+    "dock-scheduling",
+    "sortation",
+    "consolidation",
+    "just-in-time"
+  ],
+  "description": "Cross-docking workflow with inbound scheduling, sortation by destination, outbound consolidation, and direct transfer without storage for just-in-time delivery.",
+  "source_path": "logistics/cross-docking",
+  "repo_path": "uncategorized/logistics/cross-docking-workflow"
+}

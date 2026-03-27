@@ -1,0 +1,28 @@
+{
+  "template_id": "gitops-deployment-architecture",
+  "workflow_id": "gitops-deployment-architecture",
+  "title": "GitOps Deployment Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "delivery"
+  ],
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 4,
+  "tags": [
+    "gitops",
+    "argocd",
+    "flux",
+    "kubernetes-deployment",
+    "declarative-infrastructure",
+    "drift-detection",
+    "rolling-update",
+    "architecture-diagram"
+  ],
+  "description": "A GitOps deployment architecture diagram with developer Git workflow, CI/CD pipeline building and pushing container images, ArgoCD or Flux detecting Git manifest changes, drift detection, automatic cluster synchronization, and rolling update deployment to Kubernetes. This template models the GitOps paradigm where Git is the single source of truth for both application code and infrastructure state, enabling declarative, auditable, and reproducible deployments. Critical for teams adopting GitOps practices for Kubernetes deployments.",
+  "source_path": "",
+  "repo_path": "delivery/architecture/gitops-deployment-architecture"
+}

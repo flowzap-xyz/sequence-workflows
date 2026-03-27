@@ -1,0 +1,31 @@
+{
+  "template_id": "ai-native-parallel-fan-out-architecture",
+  "workflow_id": "ai-native-parallel-fan-out-architecture",
+  "title": "AI-Native Parallel Fan-Out Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [
+    "agentic",
+    "ai-orchestration"
+  ],
+  "use_cases": [
+    "delivery",
+    "agentic",
+    "ai-orchestration"
+  ],
+  "complexity": 3,
+  "num_nodes": 11,
+  "num_lanes": 2,
+  "tags": [
+    "ai-native",
+    "parallel-fan-out",
+    "agentic-ai",
+    "map-reduce",
+    "ci-cd",
+    "architecture-diagram"
+  ],
+  "description": "A parallel fan-out architecture that runs multiple agents simultaneously on independent checks (style, security, performance) and then merges results. This is a standard multi-agent design approach for throughput, mapping cleanly to CI/CD, incident response, and research. Fan-in reconciliation becomes the subtle part.",
+  "source_path": "",
+  "repo_path": "delivery/architecture/ai-native-parallel-fan-out-architecture"
+}

@@ -1,0 +1,24 @@
+{
+  "template_id": "background-check-workflow",
+  "workflow_id": "background-check",
+  "title": "Background Check Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "background-check",
+    "pre-employment",
+    "criminal-history",
+    "employment-verification",
+    "education-verification",
+    "drug-screening"
+  ],
+  "description": "Pre-employment background check workflow with criminal history search, employment verification, education verification, and drug screening coordination.",
+  "source_path": "hr/background-check",
+  "repo_path": "uncategorized/hr/background-check-workflow"
+}

@@ -1,0 +1,28 @@
+{
+  "template_id": "graphql-federation-architecture",
+  "workflow_id": "graphql-federation-architecture",
+  "title": "GraphQL Federation Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "mcp",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "mcp"
+  ],
+  "complexity": 3,
+  "num_nodes": 15,
+  "num_lanes": 3,
+  "tags": [
+    "graphql-federation",
+    "apollo-gateway",
+    "subgraph",
+    "schema-stitching",
+    "query-plan",
+    "federated-api",
+    "graphql",
+    "architecture-diagram"
+  ],
+  "description": "A GraphQL federation architecture diagram with an Apollo Gateway building query plans and fanning out to User, Product, and Review subgraphs, each owning its schema and database, with response stitching into a unified GraphQL result. This template models the federated GraphQL approach where multiple teams independently develop and deploy their subgraphs while clients see a single unified API. Ideal for organizations scaling GraphQL across multiple teams and services.",
+  "source_path": "",
+  "repo_path": "mcp/architecture/graphql-federation-architecture"
+}

@@ -1,0 +1,31 @@
+{
+  "template_id": "agentic-sequential-pipeline",
+  "workflow_id": "agentic-sequential-pipeline",
+  "title": "Agentic Sequential Pipeline Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [
+    "agentic",
+    "ai-orchestration"
+  ],
+  "use_cases": [
+    "delivery",
+    "agentic",
+    "ai-orchestration"
+  ],
+  "complexity": 2,
+  "num_nodes": 5,
+  "num_lanes": 5,
+  "tags": [
+    "agentic",
+    "sequential-pipeline",
+    "multi-agent",
+    "assembly-line",
+    "architecture-diagram",
+    "ai-team"
+  ],
+  "description": "A sequential pipeline multi-agent architecture where agents are arranged in a strict sequence. Each agent transforms or enriches the output of the previous one, then passes it forward. No central orchestrator — the flow is deterministic like an assembly line.",
+  "source_path": "",
+  "repo_path": "delivery/architecture/agentic-sequential-pipeline"
+}

@@ -1,0 +1,41 @@
+InboundAdapters { # Inbound Adapters (Driving)
+n1: rectangle label:"REST Controller"
+n2: rectangle label:"GraphQL Resolver"
+n3: rectangle label:"CLI Command Handler"
+n4: rectangle label:"Message Consumer"
+n1.handle(bottom) -> Ports.n5.handle(top) [label="Port: CreateOrder"]
+n2.handle(bottom) -> Ports.n5.handle(top) [label="Port: CreateOrder"]
+n3.handle(bottom) -> Ports.n6.handle(top) [label="Port: RunReport"]
+n4.handle(bottom) -> Ports.n6.handle(top) [label="Port: ProcessEvent"]
+}
+Ports { # Ports (Interfaces)
+n5: rectangle label:"Inbound Port: OrderUseCase"
+n6: rectangle label:"Inbound Port: ReportUseCase"
+n5.handle(bottom) -> Core.n7.handle(top) [label="Implement"]
+n6.handle(bottom) -> Core.n8.handle(top) [label="Implement"]
+}
+Core { # Domain Core (Hexagon)
+n7: rectangle label:"Order Service"
+n8: rectangle label:"Report Service"
+n9: rectangle label:"Domain Model (Entities)"
+n10: rectangle label:"Business Rules (Value Objects)"
+n7.handle(right) -> n9.handle(left) [label="Use"]
+n8.handle(right) -> n9.handle(left) [label="Use"]
+n9.handle(right) -> n10.handle(left) [label="Enforce"]
+n7.handle(bottom) -> OutboundPorts.n11.handle(top) [label="Call Port"]
+n8.handle(bottom) -> OutboundPorts.n12.handle(top) [label="Call Port"]
+}
+OutboundPorts { # Outbound Ports
+n11: rectangle label:"Outbound Port: OrderRepository"
+n12: rectangle label:"Outbound Port: PaymentGateway"
+n11.handle(bottom) -> OutboundAdapters.n13.handle(top) [label="Implements"]
+n12.handle(bottom) -> OutboundAdapters.n14.handle(top) [label="Implements"]
+}
+OutboundAdapters { # Outbound Adapters (Driven)
+n13: rectangle label:"PostgreSQL Repository"
+n14: rectangle label:"Stripe Payment Adapter"
+n15: rectangle label:"Email Notification Adapter"
+n16: rectangle label:"Redis Cache Adapter"
+n13.handle(right) -> n15.handle(left)
+n14.handle(right) -> n16.handle(left)
+}

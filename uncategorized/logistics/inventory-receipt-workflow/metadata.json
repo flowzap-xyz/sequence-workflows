@@ -1,0 +1,24 @@
+{
+  "template_id": "inventory-receipt-workflow",
+  "workflow_id": "inventory-receipt",
+  "title": "Inventory Receipt Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "inventory-receipt",
+    "goods-receiving",
+    "po-matching",
+    "asn-verification",
+    "dock-scheduling",
+    "wms"
+  ],
+  "description": "Inventory receiving workflow with ASN verification, PO matching, quantity count, damage inspection, and WMS inventory update.",
+  "source_path": "logistics/inventory-receipt",
+  "repo_path": "uncategorized/logistics/inventory-receipt-workflow"
+}

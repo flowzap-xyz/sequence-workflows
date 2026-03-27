@@ -1,0 +1,23 @@
+{
+  "template_id": "materialized-view-workflow",
+  "workflow_id": "materialized-view",
+  "title": "Materialized View Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "materialized",
+    "view",
+    "patterns",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models serving queries from a precomputed view.",
+  "source_path": "patterns/materialized-view",
+  "repo_path": "uncategorized/patterns/materialized-view-workflow"
+}

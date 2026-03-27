@@ -1,0 +1,24 @@
+{
+  "template_id": "quality-inspection-workflow",
+  "workflow_id": "quality-inspection",
+  "title": "Quality Inspection Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "quality-inspection",
+    "incoming-inspection",
+    "aql-sampling",
+    "defect-tracking",
+    "supplier-quality",
+    "hold-release"
+  ],
+  "description": "Incoming quality inspection workflow with AQL sampling, defect classification, hold/release decision, supplier notification, and quality metrics tracking.",
+  "source_path": "logistics/quality-inspection",
+  "repo_path": "uncategorized/logistics/quality-inspection-workflow"
+}

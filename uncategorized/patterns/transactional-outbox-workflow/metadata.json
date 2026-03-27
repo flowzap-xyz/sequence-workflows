@@ -1,0 +1,22 @@
+{
+  "template_id": "transactional-outbox-workflow",
+  "workflow_id": "transactional-outbox",
+  "title": "Transactional Outbox Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "transactional",
+    "outbox",
+    "patterns",
+    "parallel"
+  ],
+  "description": "This workflow models writing data and publishing messages in one transaction.",
+  "source_path": "patterns/transactional-outbox",
+  "repo_path": "uncategorized/patterns/transactional-outbox-workflow"
+}

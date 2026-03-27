@@ -1,0 +1,32 @@
+Host { # Host Application
+  n1: circle label="User sends prompt"
+  n2: rectangle label="Agent requests context"
+  n3: rectangle label="Receive context"
+  n4: rectangle label="Agent responds to user"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> Proxy.n5.handle(top) [label="Context request"]
+  n3.handle(right) -> n4.handle(left)
+}
+
+Proxy { # Context Proxy
+  n5: rectangle label="Receive context request"
+  n6: rectangle label="Check cache with TTL"
+  n7: diamond label="Cache hit?"
+  n8: rectangle label="Return cached context"
+  n9: rectangle label="Fetch fresh from MCP server"
+  n10: rectangle label="Compress and cache response"
+  n5.handle(right) -> n6.handle(left)
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(right) -> n8.handle(left) [label="Hit"]
+  n7.handle(bottom) -> n9.handle(top) [label="Miss"]
+  n8.handle(top) -> Host.n3.handle(bottom) [label="Cached context"]
+  n9.handle(bottom) -> MCPServer.n11.handle(top) [label="Fetch request"]
+  n10.handle(top) -> Host.n3.handle(left) [label="Fresh context"]
+}
+
+MCPServer { # MCP Server
+  n11: rectangle label="Fetch full context"
+  n12: rectangle label="Return fresh data"
+  n11.handle(right) -> n12.handle(left)
+  n12.handle(top) -> Proxy.n10.handle(bottom) [label="Fresh data"]
+}

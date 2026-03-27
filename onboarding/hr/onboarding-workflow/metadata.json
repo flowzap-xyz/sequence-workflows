@@ -1,0 +1,29 @@
+{
+  "template_id": "onboarding-workflow",
+  "workflow_id": "onboarding",
+  "title": "Onboarding Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "onboarding",
+  "secondary_use_cases": [
+    "delivery"
+  ],
+  "use_cases": [
+    "onboarding",
+    "delivery"
+  ],
+  "complexity": 4,
+  "num_nodes": 20,
+  "num_lanes": 3,
+  "tags": [
+    "employee-onboarding",
+    "new-hire",
+    "hr-workflow",
+    "background-check",
+    "it-provisioning",
+    "benefits-enrollment"
+  ],
+  "description": "Complete employee onboarding workflow covering offer acceptance, HR record creation, benefits enrollment, background check verification, IT account provisioning, equipment setup, and first day orientation.",
+  "source_path": "hr/onboarding",
+  "repo_path": "onboarding/hr/onboarding-workflow"
+}

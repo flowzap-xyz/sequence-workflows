@@ -1,0 +1,24 @@
+{
+  "template_id": "push-notification-workflow",
+  "workflow_id": "push-notification",
+  "title": "Push Notification Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "push-notification",
+    "mobile-engagement",
+    "firebase-fcm",
+    "apns",
+    "segmentation",
+    "deep-linking"
+  ],
+  "description": "Mobile push notification workflow with audience targeting, platform routing (iOS/Android), delivery tracking, and engagement analytics.",
+  "source_path": "business-operations/push-notification",
+  "repo_path": "uncategorized/business-operations/push-notification-workflow"
+}

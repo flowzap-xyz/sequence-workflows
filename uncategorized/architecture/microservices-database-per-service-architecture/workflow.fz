@@ -1,0 +1,39 @@
+Gateway { # API Gateway
+n1: circle label:"Client Request"
+n2: rectangle label:"Route to Service"
+n15: rectangle label:"Aggregate Responses"
+n16: circle label:"Return to Client"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> UserService.n3.handle(top) [label="User Data"]
+n2.handle(bottom) -> OrderService.n7.handle(top) [label="Order Data"]
+n15.handle(right) -> n16.handle(left)
+}
+UserService { # User Service
+n3: rectangle label:"Handle User Request"
+n4: rectangle label:"Query User DB"
+n5: rectangle label:"User PostgreSQL"
+n6: rectangle label:"Return User Data"
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left) [label="SELECT"]
+n5.handle(right) -> n6.handle(left) [label="Result"]
+n6.handle(top) -> Gateway.n15.handle(bottom) [label="User JSON"]
+}
+OrderService { # Order Service
+n7: rectangle label:"Handle Order Request"
+n8: rectangle label:"Query Order DB"
+n9: rectangle label:"Order MongoDB"
+n10: rectangle label:"Return Order Data"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="find()"]
+n9.handle(right) -> n10.handle(left) [label="Documents"]
+n10.handle(top) -> Gateway.n15.handle(bottom) [label="Order JSON"]
+}
+EventBus { # Event Bus (Kafka)
+n11: rectangle label:"Publish Domain Event"
+n12: rectangle label:"Event Topic"
+n13: rectangle label:"Consume Event"
+n14: rectangle label:"Sync Read Model"
+n11.handle(right) -> n12.handle(left) [label="UserUpdated"]
+n12.handle(right) -> n13.handle(left) [label="Subscribe"]
+n13.handle(right) -> n14.handle(left) [label="Update Denormalized"]
+}

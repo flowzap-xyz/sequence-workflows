@@ -1,0 +1,29 @@
+{
+  "template_id": "oauth-flow-workflow",
+  "workflow_id": "oauth-flow",
+  "title": "Oauth Flow Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [
+    "security"
+  ],
+  "use_cases": [
+    "approval",
+    "security"
+  ],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "oauth-flow",
+    "oauth2",
+    "authorization-code",
+    "token-exchange",
+    "sso",
+    "third-party-auth"
+  ],
+  "description": "OAuth 2.0 authorization code flow with redirect handling, code exchange, token storage, refresh token rotation, and scope management.",
+  "source_path": "business-operations/oauth-flow",
+  "repo_path": "approval/business-operations/oauth-flow-workflow"
+}

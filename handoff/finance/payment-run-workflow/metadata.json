@@ -1,0 +1,32 @@
+{
+  "template_id": "payment-run-workflow",
+  "workflow_id": "payment-run",
+  "title": "Payment Run Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [
+    "approval",
+    "billing"
+  ],
+  "use_cases": [
+    "handoff",
+    "approval",
+    "billing"
+  ],
+  "complexity": 4,
+  "num_nodes": 18,
+  "num_lanes": 3,
+  "tags": [
+    "payment-run",
+    "accounts-payable",
+    "ach-payments",
+    "check-run",
+    "dual-approval",
+    "bank-transfer",
+    "vendor-payments"
+  ],
+  "description": "Accounts payable payment run workflow with batch creation, tiered approval (single/dual based on amount), ACH file generation, check printing, and vendor record updates.",
+  "source_path": "finance/payment-run",
+  "repo_path": "handoff/finance/payment-run-workflow"
+}

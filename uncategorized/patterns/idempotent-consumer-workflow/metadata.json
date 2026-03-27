@@ -1,0 +1,21 @@
+{
+  "template_id": "idempotent-consumer-workflow",
+  "workflow_id": "idempotent-consumer",
+  "title": "Idempotent Consumer Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "idempotent",
+    "consumer",
+    "patterns"
+  ],
+  "description": "This workflow models processing each message safely only once.",
+  "source_path": "patterns/idempotent-consumer",
+  "repo_path": "uncategorized/patterns/idempotent-consumer-workflow"
+}

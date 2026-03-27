@@ -1,0 +1,26 @@
+{
+  "template_id": "cycle-counting-workflow",
+  "workflow_id": "cycle-counting",
+  "title": "Cycle Counting Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "compliance",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "compliance"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "cycle-counting",
+    "inventory-accuracy",
+    "abc-analysis",
+    "variance-investigation",
+    "perpetual-inventory",
+    "audit"
+  ],
+  "description": "Inventory cycle counting workflow with ABC classification, count scheduling, variance investigation, adjustment approval, and inventory accuracy tracking.",
+  "source_path": "logistics/cycle-counting",
+  "repo_path": "compliance/logistics/cycle-counting-workflow"
+}

@@ -1,0 +1,22 @@
+{
+  "template_id": "error-retry-loop-workflow",
+  "workflow_id": "error-retry-loop",
+  "title": "Error Retry Loop Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "error",
+    "retry",
+    "loop",
+    "patterns"
+  ],
+  "description": "This workflow models a failed operation that retries with backoff.",
+  "source_path": "patterns/error-retry-loop",
+  "repo_path": "uncategorized/patterns/error-retry-loop-workflow"
+}

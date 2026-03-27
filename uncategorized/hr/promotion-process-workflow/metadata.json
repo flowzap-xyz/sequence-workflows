@@ -1,0 +1,24 @@
+{
+  "template_id": "promotion-process-workflow",
+  "workflow_id": "promotion-process",
+  "title": "Promotion Process Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "promotion-process",
+    "career-advancement",
+    "job-leveling",
+    "title-change",
+    "compensation-adjustment",
+    "succession-planning"
+  ],
+  "description": "Employee promotion workflow with performance validation, job level assessment, compensation adjustment, title change, and announcement coordination.",
+  "source_path": "hr/promotion-process",
+  "repo_path": "uncategorized/hr/promotion-process-workflow"
+}

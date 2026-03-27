@@ -1,0 +1,26 @@
+{
+  "template_id": "yearly-audit-workflow",
+  "workflow_id": "yearly-audit",
+  "title": "Yearly Audit Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "compliance",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "compliance"
+  ],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "annual-audit",
+    "external-auditors",
+    "sox-compliance",
+    "financial-statements",
+    "audit-findings",
+    "management-letter"
+  ],
+  "description": "Annual financial audit workflow with external auditor engagement, document preparation, fieldwork coordination, findings remediation, and management letter response.",
+  "source_path": "finance/yearly-audit",
+  "repo_path": "compliance/finance/yearly-audit-workflow"
+}

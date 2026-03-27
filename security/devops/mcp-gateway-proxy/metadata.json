@@ -1,0 +1,33 @@
+{
+  "template_id": "mcp-gateway-proxy",
+  "workflow_id": "mcp-gateway-proxy",
+  "title": "MCP Gateway Proxy Architecture",
+  "kind": "architecture",
+  "source_domain": "DevOps",
+  "primary_use_case": "security",
+  "secondary_use_cases": [
+    "compliance",
+    "mcp"
+  ],
+  "use_cases": [
+    "security",
+    "compliance",
+    "mcp"
+  ],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 3,
+  "tags": [
+    "mcp",
+    "gateway",
+    "proxy",
+    "oauth",
+    "rate-limiting",
+    "audit",
+    "architecture-diagram",
+    "production-grade"
+  ],
+  "description": "An API gateway pattern that sits between agents and MCP servers to handle authentication, rate limits, and auditing. The gateway enforces OAuth 2.0, SAML, SSO, tool-level rate limiting, and team-based quotas. Essential for multi-team or multi-tenant MCP deployments.",
+  "source_path": "",
+  "repo_path": "security/devops/mcp-gateway-proxy"
+}

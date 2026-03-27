@@ -1,0 +1,24 @@
+{
+  "template_id": "fixed-assets-workflow",
+  "workflow_id": "fixed-assets",
+  "title": "Fixed Assets Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "fixed-assets",
+    "asset-tracking",
+    "depreciation",
+    "capitalization",
+    "asset-disposal",
+    "physical-inventory"
+  ],
+  "description": "Fixed asset management workflow with asset capitalization, depreciation scheduling, physical inventory verification, and asset disposal/retirement processing.",
+  "source_path": "finance/fixed-assets",
+  "repo_path": "uncategorized/finance/fixed-assets-workflow"
+}

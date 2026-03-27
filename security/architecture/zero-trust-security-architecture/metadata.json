@@ -1,0 +1,28 @@
+{
+  "template_id": "zero-trust-security-architecture",
+  "workflow_id": "zero-trust-security-architecture",
+  "title": "Zero Trust Security Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "security",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "security"
+  ],
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 4,
+  "tags": [
+    "zero-trust",
+    "security-architecture",
+    "mfa",
+    "micro-segmentation",
+    "mtls",
+    "least-privilege",
+    "continuous-verification",
+    "architecture-diagram"
+  ],
+  "description": "A zero trust security architecture diagram with device posture checks, MFA identity verification, risk-based policy decisions, short-lived JWT tokens, micro-segmentation, mTLS encryption, least-privilege access enforcement, and continuous monitoring. This template models the 'never trust, always verify' security paradigm where every request is authenticated and authorized regardless of network location. Essential for security architects implementing modern zero-trust frameworks in cloud-native environments.",
+  "source_path": "",
+  "repo_path": "security/architecture/zero-trust-security-architecture"
+}

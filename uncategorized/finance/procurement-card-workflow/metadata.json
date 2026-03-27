@@ -1,0 +1,21 @@
+{
+  "template_id": "procurement-card-workflow",
+  "workflow_id": "procurement-card",
+  "title": "Procurement Card Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "procurement",
+    "card",
+    "finance"
+  ],
+  "description": "This workflow models managing company credit cards.",
+  "source_path": "finance/procurement-card",
+  "repo_path": "uncategorized/finance/procurement-card-workflow"
+}

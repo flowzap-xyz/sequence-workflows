@@ -1,0 +1,32 @@
+{
+  "template_id": "ai-native-event-driven-kafka-architecture",
+  "workflow_id": "ai-native-event-driven-kafka-architecture",
+  "title": "AI-Native Event-Driven Kafka Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "agentic",
+  "secondary_use_cases": [
+    "ai-orchestration",
+    "mcp"
+  ],
+  "use_cases": [
+    "agentic",
+    "ai-orchestration",
+    "mcp"
+  ],
+  "complexity": 3,
+  "num_nodes": 12,
+  "num_lanes": 5,
+  "tags": [
+    "ai-native",
+    "event-driven",
+    "agentic-ai",
+    "kafka",
+    "pub-sub",
+    "agent-mesh",
+    "architecture-diagram"
+  ],
+  "description": "An event-driven agentic AI architecture that replaces the central orchestrator with Kafka/PubSub topics: agents subscribe, react, and publish new events. This aligns multi-agent systems with proven microservices choreography and is ideal for real-time, high-throughput systems and 'agent mesh' setups.",
+  "source_path": "",
+  "repo_path": "agentic/architecture/ai-native-event-driven-kafka-architecture"
+}

@@ -1,0 +1,27 @@
+{
+  "template_id": "tax-filing-workflow",
+  "workflow_id": "tax-filing",
+  "title": "Tax Filing Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "compliance",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "compliance"
+  ],
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 3,
+  "tags": [
+    "tax-filing",
+    "corporate-tax",
+    "tax-calculation",
+    "irs-efile",
+    "tax-credits",
+    "deductions",
+    "compliance"
+  ],
+  "description": "Corporate tax filing workflow with taxable income calculation, deductions, tax credits, variance review, and electronic or paper filing to IRS with receipt confirmation.",
+  "source_path": "finance/tax-filing",
+  "repo_path": "compliance/finance/tax-filing-workflow"
+}

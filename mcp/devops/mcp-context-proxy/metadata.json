@@ -1,0 +1,27 @@
+{
+  "template_id": "mcp-context-proxy",
+  "workflow_id": "mcp-context-proxy",
+  "title": "MCP Context Proxy Architecture",
+  "kind": "architecture",
+  "source_domain": "DevOps",
+  "primary_use_case": "mcp",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "mcp"
+  ],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 3,
+  "tags": [
+    "mcp",
+    "context-proxy",
+    "caching",
+    "compression",
+    "token-optimization",
+    "architecture-diagram",
+    "production-grade"
+  ],
+  "description": "A caching and compression layer that sits between agents and MCP servers, intercepting redundant context requests before they hit the wire. Uses TTL-based cache invalidation, Brotli compression, and semantic caching. Can achieve up to 95%+ token reduction and significantly lower LLM bills.",
+  "source_path": "",
+  "repo_path": "mcp/devops/mcp-context-proxy"
+}

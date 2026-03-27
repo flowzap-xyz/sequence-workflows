@@ -1,0 +1,29 @@
+{
+  "template_id": "api-key-rotation-workflow",
+  "workflow_id": "api-key-rotation",
+  "title": "Api Key Rotation Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "security",
+  "secondary_use_cases": [
+    "compliance"
+  ],
+  "use_cases": [
+    "security",
+    "compliance"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "api-key-rotation",
+    "security",
+    "credential-management",
+    "zero-downtime",
+    "secrets-manager",
+    "compliance"
+  ],
+  "description": "API key rotation workflow with new key generation, dual-key transition period, client notification, old key deprecation, and audit logging.",
+  "source_path": "business-operations/api-key-rotation",
+  "repo_path": "security/business-operations/api-key-rotation-workflow"
+}

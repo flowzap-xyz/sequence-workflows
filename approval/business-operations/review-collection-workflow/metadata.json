@@ -1,0 +1,26 @@
+{
+  "template_id": "review-collection-workflow",
+  "workflow_id": "review-collection",
+  "title": "Review Collection Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "approval"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "review-collection",
+    "customer-feedback",
+    "nps",
+    "ratings",
+    "social-proof",
+    "testimonials"
+  ],
+  "description": "Customer review collection workflow with post-purchase trigger, review request email, rating submission, moderation, and public display.",
+  "source_path": "business-operations/review-collection",
+  "repo_path": "approval/business-operations/review-collection-workflow"
+}

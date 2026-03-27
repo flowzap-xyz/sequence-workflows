@@ -1,0 +1,24 @@
+{
+  "template_id": "referral-program-workflow",
+  "workflow_id": "referral-program",
+  "title": "Referral Program Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "referral-program",
+    "viral-growth",
+    "referral-tracking",
+    "reward-fulfillment",
+    "affiliate",
+    "word-of-mouth"
+  ],
+  "description": "Customer referral program workflow with unique link generation, referral tracking, conversion validation, and dual-sided reward fulfillment.",
+  "source_path": "business-operations/referral-program",
+  "repo_path": "uncategorized/business-operations/referral-program-workflow"
+}

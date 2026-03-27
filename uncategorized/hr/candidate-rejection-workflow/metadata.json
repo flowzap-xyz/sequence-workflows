@@ -1,0 +1,24 @@
+{
+  "template_id": "candidate-rejection-workflow",
+  "workflow_id": "candidate-rejection",
+  "title": "Candidate Rejection Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "candidate-rejection",
+    "hiring-decision",
+    "rejection-letter",
+    "talent-pool",
+    "candidate-experience",
+    "ats-update"
+  ],
+  "description": "Candidate rejection workflow with stage-appropriate messaging, personalized rejection letters, talent pool consideration, ATS status update, and candidate experience feedback.",
+  "source_path": "hr/candidate-rejection",
+  "repo_path": "uncategorized/hr/candidate-rejection-workflow"
+}

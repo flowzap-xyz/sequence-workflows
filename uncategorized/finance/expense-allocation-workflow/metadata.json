@@ -1,0 +1,21 @@
+{
+  "template_id": "expense-allocation-workflow",
+  "workflow_id": "expense-allocation",
+  "title": "Expense Allocation Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "expense",
+    "allocation",
+    "finance"
+  ],
+  "description": "This workflow models allocating costs to departments.",
+  "source_path": "finance/expense-allocation",
+  "repo_path": "uncategorized/finance/expense-allocation-workflow"
+}

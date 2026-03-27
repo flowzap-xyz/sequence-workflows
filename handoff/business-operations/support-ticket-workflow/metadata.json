@@ -1,0 +1,29 @@
+{
+  "template_id": "support-ticket-workflow",
+  "workflow_id": "support-ticket",
+  "title": "Support Ticket Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [
+    "support"
+  ],
+  "use_cases": [
+    "handoff",
+    "support"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "support-ticket",
+    "helpdesk",
+    "zendesk",
+    "sla",
+    "ticket-routing",
+    "customer-service"
+  ],
+  "description": "Customer support ticket workflow with auto-categorization, SLA tracking, agent assignment, escalation rules, and satisfaction survey.",
+  "source_path": "business-operations/support-ticket",
+  "repo_path": "handoff/business-operations/support-ticket-workflow"
+}

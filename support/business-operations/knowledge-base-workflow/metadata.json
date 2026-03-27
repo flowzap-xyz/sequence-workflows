@@ -1,0 +1,26 @@
+{
+  "template_id": "knowledge-base-workflow",
+  "workflow_id": "knowledge-base",
+  "title": "Knowledge Base Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "support",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "support"
+  ],
+  "complexity": 3,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "knowledge-base",
+    "help-center",
+    "documentation",
+    "self-service",
+    "article-management",
+    "zendesk"
+  ],
+  "description": "Knowledge base management workflow with article creation, review approval, SEO optimization, version control, and search analytics tracking.",
+  "source_path": "business-operations/knowledge-base",
+  "repo_path": "support/business-operations/knowledge-base-workflow"
+}

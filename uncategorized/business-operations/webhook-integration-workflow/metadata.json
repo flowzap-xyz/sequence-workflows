@@ -1,0 +1,24 @@
+{
+  "template_id": "webhook-integration-workflow",
+  "workflow_id": "webhook-integration",
+  "title": "Webhook Integration Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "webhook",
+    "event-driven",
+    "http-callback",
+    "integration",
+    "retry-logic",
+    "payload-signing"
+  ],
+  "description": "Webhook integration workflow with endpoint registration, payload signing, delivery attempt, retry with backoff, and delivery status tracking.",
+  "source_path": "business-operations/webhook-integration",
+  "repo_path": "uncategorized/business-operations/webhook-integration-workflow"
+}

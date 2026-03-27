@@ -1,0 +1,24 @@
+{
+  "template_id": "put-away-process-workflow",
+  "workflow_id": "put-away-process",
+  "title": "Put Away Process Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "put-away",
+    "warehouse-storage",
+    "location-assignment",
+    "slotting",
+    "wms",
+    "inventory-placement"
+  ],
+  "description": "Warehouse put-away workflow with location assignment, slotting optimization, forklift routing, barcode confirmation, and WMS location update.",
+  "source_path": "logistics/put-away-process",
+  "repo_path": "uncategorized/logistics/put-away-process-workflow"
+}

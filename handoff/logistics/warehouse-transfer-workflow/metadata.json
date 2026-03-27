@@ -1,0 +1,26 @@
+{
+  "template_id": "warehouse-transfer-workflow",
+  "workflow_id": "warehouse-transfer",
+  "title": "Warehouse Transfer Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "handoff"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "warehouse-transfer",
+    "inter-facility",
+    "transfer-order",
+    "in-transit-inventory",
+    "network-optimization",
+    "distribution"
+  ],
+  "description": "Inter-warehouse transfer workflow with transfer order creation, shipping from source DC, in-transit tracking, and receiving at destination warehouse.",
+  "source_path": "logistics/warehouse-transfer",
+  "repo_path": "handoff/logistics/warehouse-transfer-workflow"
+}

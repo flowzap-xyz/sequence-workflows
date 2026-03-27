@@ -1,0 +1,27 @@
+{
+  "template_id": "microservices-strangler-fig-migration",
+  "workflow_id": "microservices-strangler-fig-migration",
+  "title": "Microservices Strangler Fig Migration Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "delivery"
+  ],
+  "complexity": 4,
+  "num_nodes": 16,
+  "num_lanes": 4,
+  "tags": [
+    "strangler-fig",
+    "legacy-migration",
+    "monolith-decomposition",
+    "anti-corruption-layer",
+    "incremental-migration",
+    "modernization",
+    "architecture-diagram"
+  ],
+  "description": "A strangler fig migration architecture diagram showing the incremental replacement of a legacy monolith with new microservices, using a routing layer to split traffic between old and new systems. This template models the proven migration strategy where new features are built as microservices while legacy endpoints are gradually retired. Essential for teams modernizing legacy systems without risky big-bang rewrites.",
+  "source_path": "",
+  "repo_path": "delivery/architecture/microservices-strangler-fig-migration"
+}

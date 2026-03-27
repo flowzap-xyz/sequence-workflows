@@ -1,0 +1,38 @@
+User {
+  n1: circle label="1. Submit task"
+  n2: rectangle label="12. See result"
+  n1.handle(right) -> Agent.n3.handle(left)
+  Agent.n9.handle(right) -> n2.handle(left)
+}
+
+Agent {
+  n3: rectangle label="1. Receive task"
+  n4: rectangle label="2. Search similar episodes"
+  n5: rectangle label="4. Past lessons"
+  n6: rectangle label="5. Execute plan"
+  n7: rectangle label="6. Capture outcome"
+  n8: rectangle label="7. Send episode for scoring"
+  n9: rectangle label="11. Return result"
+  n3.handle(right) -> n4.handle(left)
+  n5.handle(right) -> n6.handle(left)
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(right) -> Evaluator.n13.handle(left) [label="8. Outcome"]
+  EpisodeStore.n12.handle(right) -> n9.handle(left) [label="11.b Outcome"]
+}
+
+EpisodeStore {
+  n10: rectangle label="3. Episode search"
+  n11: rectangle label="3.2 Search similar episodes"
+  n12: rectangle label="10. Episode + lesson"
+  Agent.n4.handle(right) -> n10.handle(left) [label="2. Search similar episodes"]
+  n10.handle(right) -> n11.handle(left) [label="3. Episode search"]
+  n11.handle(right) -> Agent.n5.handle(left) [label="4. Past lessons"]
+  Evaluator.n14.handle(right) -> n12.handle(left) [label="10. Episode + lesson"]
+}
+
+Evaluator {
+  n13: rectangle label="9. Score outcome"
+  n14: rectangle label="9. Extract lesson"
+  n13.handle(right) -> n14.handle(left)
+}

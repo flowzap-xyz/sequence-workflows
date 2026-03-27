@@ -1,0 +1,25 @@
+{
+  "template_id": "audit-trail-workflow",
+  "workflow_id": "audit-trail",
+  "title": "Audit Trail Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "compliance",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "compliance"
+  ],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "audit",
+    "trail",
+    "patterns",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models logging all important actions for compliance.",
+  "source_path": "patterns/audit-trail",
+  "repo_path": "compliance/patterns/audit-trail-workflow"
+}

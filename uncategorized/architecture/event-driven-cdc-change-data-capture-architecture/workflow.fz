@@ -1,0 +1,41 @@
+SourceDB { # Source Database
+n1: circle label:"Data Write Operation"
+n2: rectangle label:"Transaction Log (WAL)"
+n3: rectangle label:"Commit to Database"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left) [label="Persist"]
+n2.handle(bottom) -> CDC.n4.handle(top) [label="Log Tail"]
+}
+CDC { # CDC Engine (Debezium)
+n4: rectangle label:"Read Transaction Log"
+n5: rectangle label:"Detect Change Event"
+n6: rectangle label:"Serialize to Avro/JSON"
+n7: diamond label:"Schema Changed?"
+n8: rectangle label:"Update Schema Registry"
+n9: rectangle label:"Publish Change Event"
+n4.handle(right) -> n5.handle(left) [label="INSERT/UPDATE/DELETE"]
+n5.handle(right) -> n6.handle(left) [label="Before + After"]
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n9.handle(left) [label="No"]
+n7.handle(bottom) -> n8.handle(top) [label="Yes"]
+n8.handle(right) -> n9.handle(left) [label="Registered"]
+n9.handle(bottom) -> Consumers.n10.handle(top) [label="Kafka Topic"]
+}
+Consumers { # Downstream Consumers
+n10: rectangle label:"Search Index Updater"
+n11: rectangle label:"Cache Invalidator"
+n12: rectangle label:"Data Warehouse Loader"
+n13: rectangle label:"Audit Log Writer"
+n10.handle(right) -> n11.handle(left) [label="Elasticsearch"]
+n12.handle(right) -> n13.handle(left) [label="Snowflake"]
+}
+TargetDB { # Target Systems
+n14: rectangle label:"Elasticsearch Index"
+n15: rectangle label:"Redis Cache"
+n16: rectangle label:"Data Warehouse"
+n17: rectangle label:"Audit Database"
+n10.handle(bottom) -> TargetDB.n14.handle(top) [label="Upsert Doc"]
+n11.handle(bottom) -> TargetDB.n15.handle(top) [label="Invalidate"]
+n12.handle(bottom) -> TargetDB.n16.handle(top) [label="Load"]
+n13.handle(bottom) -> TargetDB.n17.handle(top) [label="Append"]
+}

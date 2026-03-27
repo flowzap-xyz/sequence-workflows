@@ -1,0 +1,24 @@
+{
+  "template_id": "bonus-allocation-workflow",
+  "workflow_id": "bonus-allocation",
+  "title": "Bonus Allocation Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "bonus-allocation",
+    "annual-bonus",
+    "performance-bonus",
+    "budget-pool",
+    "calibration",
+    "payout"
+  ],
+  "description": "Annual bonus allocation workflow with budget pool distribution, performance-based calculation, manager calibration, executive approval, and payroll processing.",
+  "source_path": "hr/bonus-allocation",
+  "repo_path": "uncategorized/hr/bonus-allocation-workflow"
+}

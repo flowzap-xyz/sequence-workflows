@@ -1,0 +1,26 @@
+{
+  "template_id": "subscription-lifecycle-workflow",
+  "workflow_id": "subscription-lifecycle",
+  "title": "Subscription Lifecycle Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "billing",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "billing"
+  ],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "subscription-lifecycle",
+    "saas",
+    "trial-conversion",
+    "renewal",
+    "churn-prevention",
+    "stripe"
+  ],
+  "description": "SaaS subscription lifecycle workflow with trial signup, conversion nurturing, payment processing, renewal management, and churn prevention campaigns.",
+  "source_path": "business-operations/subscription-lifecycle",
+  "repo_path": "billing/business-operations/subscription-lifecycle-workflow"
+}

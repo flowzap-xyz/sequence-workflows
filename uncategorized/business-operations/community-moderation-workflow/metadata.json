@@ -1,0 +1,24 @@
+{
+  "template_id": "community-moderation-workflow",
+  "workflow_id": "community-moderation",
+  "title": "Community Moderation Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "community-moderation",
+    "content-moderation",
+    "user-reports",
+    "trust-safety",
+    "ai-moderation",
+    "appeals"
+  ],
+  "description": "Community content moderation workflow with AI auto-flagging, user reports, human review queue, action enforcement, and appeals handling.",
+  "source_path": "business-operations/community-moderation",
+  "repo_path": "uncategorized/business-operations/community-moderation-workflow"
+}

@@ -1,0 +1,29 @@
+{
+  "template_id": "expense-approval-workflow",
+  "workflow_id": "expense-approval",
+  "title": "Expense Approval Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [
+    "compliance"
+  ],
+  "use_cases": [
+    "approval",
+    "compliance"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "expense-approval",
+    "travel-expenses",
+    "receipt-validation",
+    "policy-compliance",
+    "tiered-approval",
+    "reimbursement"
+  ],
+  "description": "Employee expense approval workflow with receipt validation, policy compliance check, tiered approval based on amount, and reimbursement processing.",
+  "source_path": "hr/expense-approval",
+  "repo_path": "approval/hr/expense-approval-workflow"
+}

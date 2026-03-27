@@ -1,0 +1,24 @@
+{
+  "template_id": "search-optimization-workflow",
+  "workflow_id": "search-optimization",
+  "title": "Search Optimization Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "search-optimization",
+    "elasticsearch",
+    "relevance-tuning",
+    "query-analysis",
+    "algolia",
+    "search-analytics"
+  ],
+  "description": "Search optimization workflow with query analysis, relevance tuning, synonym management, click-through tracking, and A/B testing of ranking algorithms.",
+  "source_path": "business-operations/search-optimization",
+  "repo_path": "uncategorized/business-operations/search-optimization-workflow"
+}

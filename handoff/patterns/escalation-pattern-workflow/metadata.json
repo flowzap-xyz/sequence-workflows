@@ -1,0 +1,23 @@
+{
+  "template_id": "escalation-pattern-workflow",
+  "workflow_id": "escalation-pattern",
+  "title": "Escalation Pattern Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "handoff"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "escalation",
+    "pattern",
+    "patterns"
+  ],
+  "description": "This workflow models escalating issues to higher authority when needed.",
+  "source_path": "patterns/escalation-pattern",
+  "repo_path": "handoff/patterns/escalation-pattern-workflow"
+}

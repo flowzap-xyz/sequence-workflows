@@ -1,0 +1,26 @@
+{
+  "template_id": "monitoring-alert-workflow",
+  "workflow_id": "monitoring-alert",
+  "title": "Monitoring Alert Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "incident",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "incident"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "monitoring-alerting",
+    "prometheus",
+    "pagerduty",
+    "threshold-alerts",
+    "anomaly-detection",
+    "on-call"
+  ],
+  "description": "Monitoring and alerting workflow with metric collection, threshold evaluation, alert routing, escalation policies, and incident creation.",
+  "source_path": "devops/monitoring-alert",
+  "repo_path": "incident/devops/monitoring-alert-workflow"
+}

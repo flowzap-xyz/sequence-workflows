@@ -1,0 +1,21 @@
+{
+  "template_id": "internship-program-workflow",
+  "workflow_id": "internship-program",
+  "title": "Internship Program Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "internship",
+    "program",
+    "hr"
+  ],
+  "description": "This workflow models managing an internship program.",
+  "source_path": "hr/internship-program",
+  "repo_path": "uncategorized/hr/internship-program-workflow"
+}

@@ -1,0 +1,26 @@
+{
+  "template_id": "user-onboarding-workflow",
+  "workflow_id": "user-onboarding",
+  "title": "User Onboarding Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "onboarding",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "onboarding"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "user-onboarding",
+    "activation",
+    "product-tour",
+    "welcome-email",
+    "first-time-user",
+    "time-to-value"
+  ],
+  "description": "New user onboarding workflow with welcome email, profile setup, product tour, first action prompt, and activation milestone tracking.",
+  "source_path": "business-operations/user-onboarding",
+  "repo_path": "onboarding/business-operations/user-onboarding-workflow"
+}

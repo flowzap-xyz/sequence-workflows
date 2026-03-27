@@ -1,0 +1,28 @@
+{
+  "template_id": "event-driven-event-streaming-pipeline-architecture",
+  "workflow_id": "event-driven-event-streaming-pipeline-architecture",
+  "title": "Event-Driven Streaming Pipeline Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "delivery"
+  ],
+  "complexity": 4,
+  "num_nodes": 18,
+  "num_lanes": 4,
+  "tags": [
+    "event-streaming",
+    "kafka",
+    "apache-flink",
+    "stream-processing",
+    "real-time-analytics",
+    "iot",
+    "data-pipeline",
+    "architecture-diagram"
+  ],
+  "description": "A real-time event streaming pipeline architecture diagram with IoT sensors, application logs, and clickstream data flowing through Kafka into Apache Flink for window aggregation, anomaly detection, and multi-sink output to data lakes and dashboards. This template visualizes end-to-end stream processing from ingestion through transformation to storage and alerting. Essential for data engineers building real-time analytics and monitoring platforms.",
+  "source_path": "",
+  "repo_path": "delivery/architecture/event-driven-event-streaming-pipeline-architecture"
+}

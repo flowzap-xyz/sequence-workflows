@@ -1,0 +1,25 @@
+{
+  "template_id": "job-posting-workflow",
+  "workflow_id": "job-posting",
+  "title": "Job Posting Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 3,
+  "tags": [
+    "job-posting",
+    "job-requisition",
+    "ats",
+    "linkedin",
+    "indeed",
+    "ai-screening",
+    "talent-acquisition"
+  ],
+  "description": "Job posting workflow with requisition approval, job description drafting, multi-channel posting (LinkedIn, Indeed, career sites), AI resume screening, and ATS candidate tracking.",
+  "source_path": "hr/job-posting",
+  "repo_path": "uncategorized/hr/job-posting-workflow"
+}

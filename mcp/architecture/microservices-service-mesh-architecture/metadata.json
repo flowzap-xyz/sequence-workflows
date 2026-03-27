@@ -1,0 +1,28 @@
+{
+  "template_id": "microservices-service-mesh-architecture",
+  "workflow_id": "microservices-service-mesh-architecture",
+  "title": "Microservices Service Mesh Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "mcp",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "mcp"
+  ],
+  "complexity": 4,
+  "num_nodes": 18,
+  "num_lanes": 3,
+  "tags": [
+    "service-mesh",
+    "istio",
+    "linkerd",
+    "mtls",
+    "sidecar-proxy",
+    "distributed-tracing",
+    "traffic-management",
+    "architecture-diagram"
+  ],
+  "description": "A service mesh architecture diagram with Istio or Linkerd sidecar proxies handling mTLS encryption, traffic policies, circuit breaking, and distributed tracing across microservices. This template visualizes how a service mesh abstracts networking concerns away from application code, enabling zero-trust communication between services. Essential for teams adopting service mesh infrastructure to improve observability and security.",
+  "source_path": "",
+  "repo_path": "mcp/architecture/microservices-service-mesh-architecture"
+}

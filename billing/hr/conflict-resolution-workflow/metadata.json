@@ -1,0 +1,26 @@
+{
+  "template_id": "conflict-resolution-workflow",
+  "workflow_id": "conflict-resolution",
+  "title": "Conflict Resolution Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "billing",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "billing"
+  ],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "conflict-resolution",
+    "workplace-dispute",
+    "mediation",
+    "hr-investigation",
+    "employee-relations",
+    "grievance"
+  ],
+  "description": "Workplace conflict resolution workflow with complaint intake, HR investigation, mediation sessions, resolution documentation, and follow-up monitoring.",
+  "source_path": "hr/conflict-resolution",
+  "repo_path": "billing/hr/conflict-resolution-workflow"
+}

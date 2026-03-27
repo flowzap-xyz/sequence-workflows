@@ -1,0 +1,45 @@
+Frontend { # Frontend BFF
+n1: circle label:"User Action"
+n2: rectangle label:"BFF Layer"
+n3: rectangle label:"Compose UI Response"
+n4: circle label:"Render UI"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Identity.n5.handle(top) [label="Auth Check"]
+n3.handle(right) -> n4.handle(left)
+}
+Identity { # Identity & Access
+n5: rectangle label:"Authenticate User"
+n6: diamond label:"Authorized?"
+n7: rectangle label:"Issue Access Token"
+n8: rectangle label:"Deny Access"
+n5.handle(right) -> n6.handle(left)
+n6.handle(right) -> n7.handle(left) [label="Yes"]
+n6.handle(bottom) -> n8.handle(top) [label="No"]
+n7.handle(bottom) -> Catalog.n9.handle(top) [label="Token"]
+n8.handle(top) -> Frontend.n3.handle(bottom) [label="403"]
+}
+Catalog { # Product Catalog
+n9: rectangle label:"Fetch Product Details"
+n10: rectangle label:"Product Database"
+n11: rectangle label:"Return Catalog Data"
+n9.handle(right) -> n10.handle(left) [label="Query"]
+n10.handle(right) -> n11.handle(left) [label="Products"]
+n11.handle(bottom) -> Pricing.n12.handle(top) [label="Product IDs"]
+n11.handle(top) -> Frontend.n3.handle(bottom) [label="Catalog JSON"]
+}
+Pricing { # Pricing & Promotions
+n12: rectangle label:"Calculate Price"
+n13: rectangle label:"Apply Promotions"
+n14: rectangle label:"Return Final Price"
+n12.handle(right) -> n13.handle(left) [label="Base Price"]
+n13.handle(right) -> n14.handle(left) [label="Discounted"]
+n14.handle(top) -> Frontend.n3.handle(bottom) [label="Price JSON"]
+}
+Fulfillment { # Order Fulfillment
+n15: rectangle label:"Reserve Inventory"
+n16: rectangle label:"Create Shipment"
+n17: rectangle label:"Update Order Status"
+n15.handle(right) -> n16.handle(left) [label="Reserved"]
+n16.handle(right) -> n17.handle(left) [label="Shipped"]
+n17.handle(top) -> Frontend.n3.handle(bottom) [label="Status Update"]
+}

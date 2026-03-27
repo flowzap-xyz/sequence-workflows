@@ -1,0 +1,26 @@
+{
+  "template_id": "hexagonal-ports-adapters-architecture",
+  "workflow_id": "hexagonal-ports-adapters-architecture",
+  "title": "Hexagonal (Ports and Adapters) Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 16,
+  "num_lanes": 4,
+  "tags": [
+    "hexagonal-architecture",
+    "ports-and-adapters",
+    "clean-architecture",
+    "dependency-inversion",
+    "domain-core",
+    "testability",
+    "technology-agnostic",
+    "architecture-diagram"
+  ],
+  "description": "A hexagonal architecture diagram showing the clean separation between domain core, inbound adapters (REST, GraphQL, CLI, message consumers), outbound adapters (PostgreSQL, Stripe, email, Redis), and the port interfaces that connect them. This template visualizes the ports and adapters pattern where the domain core has zero dependencies on infrastructure, making it fully testable and technology-agnostic. Foundational for teams adopting clean architecture principles in their codebase.",
+  "source_path": "",
+  "repo_path": "uncategorized/architecture/hexagonal-ports-adapters-architecture"
+}

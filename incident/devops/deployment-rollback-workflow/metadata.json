@@ -1,0 +1,29 @@
+{
+  "template_id": "deployment-rollback-workflow",
+  "workflow_id": "deployment-rollback",
+  "title": "Deployment Rollback Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "incident",
+  "secondary_use_cases": [
+    "delivery"
+  ],
+  "use_cases": [
+    "incident",
+    "delivery"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "deployment-rollback",
+    "version-revert",
+    "incident-response",
+    "kubernetes",
+    "helm-rollback",
+    "service-recovery"
+  ],
+  "description": "Deployment rollback workflow with issue detection, rollback decision, previous version restoration, health verification, and post-mortem documentation.",
+  "source_path": "devops/deployment-rollback",
+  "repo_path": "incident/devops/deployment-rollback-workflow"
+}

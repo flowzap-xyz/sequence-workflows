@@ -1,0 +1,26 @@
+{
+  "template_id": "pto-request-workflow",
+  "workflow_id": "pto-request",
+  "title": "Pto Request Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "approval"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "pto-request",
+    "time-off",
+    "vacation",
+    "leave-management",
+    "manager-approval",
+    "accrual-balance"
+  ],
+  "description": "PTO request workflow with balance verification, manager approval, calendar blocking, and team coverage check before approval.",
+  "source_path": "hr/pto-request",
+  "repo_path": "approval/hr/pto-request-workflow"
+}

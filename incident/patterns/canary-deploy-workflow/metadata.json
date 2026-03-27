@@ -1,0 +1,29 @@
+{
+  "template_id": "canary-deploy-workflow",
+  "workflow_id": "canary-deploy",
+  "title": "Canary Deploy Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "incident",
+  "secondary_use_cases": [
+    "delivery"
+  ],
+  "use_cases": [
+    "incident",
+    "delivery"
+  ],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "canary-deployment",
+    "progressive-rollout",
+    "traffic-splitting",
+    "metrics-monitoring",
+    "gradual-release",
+    "feature-flags"
+  ],
+  "description": "Canary deployment pattern with gradual traffic shifting, real-time metrics monitoring, automatic rollback triggers, and progressive rollout to full production.",
+  "source_path": "patterns/canary-deploy",
+  "repo_path": "incident/patterns/canary-deploy-workflow"
+}

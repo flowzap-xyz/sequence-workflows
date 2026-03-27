@@ -1,0 +1,21 @@
+{
+  "template_id": "timeout-pattern-workflow",
+  "workflow_id": "timeout-pattern",
+  "title": "Timeout Pattern Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "timeout",
+    "pattern",
+    "patterns"
+  ],
+  "description": "This workflow models an operation that times out after a delay.",
+  "source_path": "patterns/timeout-pattern",
+  "repo_path": "uncategorized/patterns/timeout-pattern-workflow"
+}

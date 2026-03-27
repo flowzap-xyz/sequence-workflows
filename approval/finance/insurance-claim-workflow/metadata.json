@@ -1,0 +1,26 @@
+{
+  "template_id": "insurance-claim-workflow",
+  "workflow_id": "insurance-claim",
+  "title": "Insurance Claim Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "approval"
+  ],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "insurance-claim",
+    "claim-filing",
+    "adjuster-review",
+    "settlement",
+    "property-damage",
+    "liability"
+  ],
+  "description": "Insurance claim processing workflow with incident documentation, claim filing, adjuster assignment, damage assessment, and settlement negotiation.",
+  "source_path": "finance/insurance-claim",
+  "repo_path": "approval/finance/insurance-claim-workflow"
+}

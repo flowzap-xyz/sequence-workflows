@@ -1,0 +1,23 @@
+{
+  "template_id": "nested-decisions-workflow",
+  "workflow_id": "nested-decisions",
+  "title": "Nested Decisions Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "nested",
+    "decisions",
+    "patterns",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models multiple layers of decisions before completion.",
+  "source_path": "patterns/nested-decisions",
+  "repo_path": "uncategorized/patterns/nested-decisions-workflow"
+}

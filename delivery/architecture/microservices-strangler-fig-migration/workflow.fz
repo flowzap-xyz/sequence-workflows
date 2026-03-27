@@ -1,0 +1,41 @@
+Client { # Client
+n1: circle label:"User Request"
+n2: rectangle label:"Anti-Corruption Layer"
+n3: rectangle label:"Receive Response"
+n4: circle label:"End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Router.n5.handle(top) [label="Translate"]
+n3.handle(right) -> n4.handle(left)
+}
+Router { # Strangler Fig Router
+n5: rectangle label:"Inspect Request Path"
+n6: diamond label:"Migrated Endpoint?"
+n7: rectangle label:"Route to New Service"
+n8: rectangle label:"Route to Legacy Monolith"
+n9: rectangle label:"Log Migration Metrics"
+n5.handle(right) -> n6.handle(left)
+n6.handle(right) -> n7.handle(left) [label="Yes"]
+n6.handle(bottom) -> n8.handle(top) [label="No"]
+n7.handle(bottom) -> NewServices.n10.handle(top) [label="Forward"]
+n8.handle(bottom) -> Legacy.n14.handle(top) [label="Forward"]
+n7.handle(right) -> n9.handle(left) [label="Track"]
+n8.handle(right) -> n9.handle(left) [label="Track"]
+}
+NewServices { # New Microservices
+n10: rectangle label:"Process in New Service"
+n11: rectangle label:"New Service Database"
+n12: rectangle label:"Publish Domain Event"
+n13: rectangle label:"Return Response"
+n10.handle(right) -> n11.handle(left) [label="Query"]
+n11.handle(right) -> n12.handle(left) [label="Write"]
+n12.handle(right) -> n13.handle(left)
+n13.handle(top) -> Client.n3.handle(bottom) [label="New Response"]
+}
+Legacy { # Legacy Monolith
+n14: rectangle label:"Process in Monolith"
+n15: rectangle label:"Legacy Database"
+n16: rectangle label:"Return Legacy Response"
+n14.handle(right) -> n15.handle(left) [label="SQL"]
+n15.handle(right) -> n16.handle(left) [label="Result"]
+n16.handle(top) -> Client.n3.handle(bottom) [label="Legacy Response"]
+}

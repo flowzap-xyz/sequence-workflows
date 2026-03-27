@@ -1,0 +1,31 @@
+{
+  "template_id": "on-call-rotation-workflow",
+  "workflow_id": "on-call-rotation",
+  "title": "On Call Rotation Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [
+    "incident",
+    "security"
+  ],
+  "use_cases": [
+    "handoff",
+    "incident",
+    "security"
+  ],
+  "complexity": 3,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "on-call-rotation",
+    "incident-management",
+    "pagerduty",
+    "escalation",
+    "schedule-management",
+    "handoff"
+  ],
+  "description": "On-call rotation workflow with schedule creation, shift handoffs, override management, escalation policies, and fair rotation distribution.",
+  "source_path": "devops/on-call-rotation",
+  "repo_path": "handoff/devops/on-call-rotation-workflow"
+}

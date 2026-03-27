@@ -1,0 +1,31 @@
+{
+  "template_id": "api-gateway-workflow",
+  "workflow_id": "api-gateway",
+  "title": "Api Gateway Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [
+    "security",
+    "mcp"
+  ],
+  "use_cases": [
+    "handoff",
+    "security",
+    "mcp"
+  ],
+  "complexity": 3,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "api-gateway",
+    "microservices",
+    "rate-limiting",
+    "request-routing",
+    "authentication",
+    "load-balancing"
+  ],
+  "description": "API Gateway pattern with request authentication, rate limiting, request routing to backend services, response aggregation, and error handling.",
+  "source_path": "patterns/api-gateway",
+  "repo_path": "handoff/patterns/api-gateway-workflow"
+}

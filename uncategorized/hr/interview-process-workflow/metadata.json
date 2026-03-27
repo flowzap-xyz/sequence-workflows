@@ -1,0 +1,25 @@
+{
+  "template_id": "interview-process-workflow",
+  "workflow_id": "interview-process",
+  "title": "Interview Process Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 22,
+  "num_lanes": 3,
+  "tags": [
+    "interview-process",
+    "hiring",
+    "phone-screen",
+    "technical-interview",
+    "onsite-panel",
+    "talent-acquisition",
+    "offer-management"
+  ],
+  "description": "Multi-stage interview process with resume screening, phone screen, technical interview, onsite panel, team consensus decision, and offer/rejection handling.",
+  "source_path": "hr/interview-process",
+  "repo_path": "uncategorized/hr/interview-process-workflow"
+}

@@ -1,0 +1,30 @@
+{
+  "template_id": "termination-process-workflow",
+  "workflow_id": "termination-process",
+  "title": "Termination Process Workflow",
+  "kind": "workflow",
+  "source_domain": "hr",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [
+    "offboarding"
+  ],
+  "use_cases": [
+    "approval",
+    "offboarding"
+  ],
+  "complexity": 4,
+  "num_nodes": 20,
+  "num_lanes": 3,
+  "tags": [
+    "employee-termination",
+    "offboarding",
+    "separation-agreement",
+    "final-pay",
+    "cobra",
+    "severance",
+    "legal-review"
+  ],
+  "description": "Employee termination workflow handling voluntary and involuntary separations with legal review, separation agreements, final pay calculation, COBRA notices, and severance processing.",
+  "source_path": "hr/termination-process",
+  "repo_path": "approval/hr/termination-process-workflow"
+}

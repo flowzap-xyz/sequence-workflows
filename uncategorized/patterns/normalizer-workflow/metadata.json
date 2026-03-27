@@ -1,0 +1,20 @@
+{
+  "template_id": "normalizer-workflow",
+  "workflow_id": "normalizer",
+  "title": "Normalizer Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "normalizer",
+    "patterns"
+  ],
+  "description": "This workflow models converting varied inputs to a standard format.",
+  "source_path": "patterns/normalizer",
+  "repo_path": "uncategorized/patterns/normalizer-workflow"
+}

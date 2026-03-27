@@ -1,0 +1,45 @@
+User { # User
+n1: circle label:"Start"
+n2: rectangle label:"Submit enterprise request"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Supervisor.n3.handle(top) [label="Goal"]
+}
+Supervisor { # Top-Level Supervisor
+n3: rectangle label:"Decompose goal"
+n4: rectangle label:"Delegate to team leads"
+n5: rectangle label:"Aggregate final output"
+n6: circle label:"Done"
+n3.handle(right) -> n4.handle(left)
+n4.handle(bottom) -> LeadA.n7.handle(top) [label="Sub-goal A"]
+n4.handle(bottom) -> LeadB.n10.handle(top) [label="Sub-goal B"]
+n5.handle(right) -> n6.handle(left)
+n5.handle(top) -> User.n2.handle(bottom) [label="Final report"]
+}
+LeadA { # Team Lead A
+n7: rectangle label:"Plan subtasks for A"
+n8: rectangle label:"Dispatch to workers"
+n9: rectangle label:"Consolidate A results"
+n7.handle(right) -> n8.handle(left)
+n8.handle(bottom) -> Workers.n13.handle(top) [label="Task A1"]
+n8.handle(bottom) -> Workers.n14.handle(top) [label="Task A2"]
+n9.handle(top) -> Supervisor.n5.handle(bottom) [label="Result A"]
+}
+LeadB { # Team Lead B
+n10: rectangle label:"Plan subtasks for B"
+n11: rectangle label:"Dispatch to workers"
+n12: rectangle label:"Consolidate B results"
+n10.handle(right) -> n11.handle(left)
+n11.handle(bottom) -> Workers.n15.handle(top) [label="Task B1"]
+n11.handle(bottom) -> Workers.n16.handle(top) [label="Task B2"]
+n12.handle(top) -> Supervisor.n5.handle(bottom) [label="Result B"]
+}
+Workers { # Worker Agents
+n13: rectangle label:"Worker A1 executes"
+n14: rectangle label:"Worker A2 executes"
+n15: rectangle label:"Worker B1 executes"
+n16: rectangle label:"Worker B2 executes"
+n13.handle(top) -> LeadA.n9.handle(bottom) [label="A1 done"]
+n14.handle(top) -> LeadA.n9.handle(bottom) [label="A2 done"]
+n15.handle(top) -> LeadB.n12.handle(bottom) [label="B1 done"]
+n16.handle(top) -> LeadB.n12.handle(bottom) [label="B2 done"]
+}

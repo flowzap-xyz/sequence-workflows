@@ -1,0 +1,32 @@
+{
+  "template_id": "vendor-onboarding-workflow",
+  "workflow_id": "vendor-onboarding",
+  "title": "Vendor Onboarding Workflow",
+  "kind": "workflow",
+  "source_domain": "finance",
+  "primary_use_case": "onboarding",
+  "secondary_use_cases": [
+    "billing",
+    "compliance"
+  ],
+  "use_cases": [
+    "onboarding",
+    "billing",
+    "compliance"
+  ],
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 3,
+  "tags": [
+    "vendor-onboarding",
+    "supplier-management",
+    "w9-verification",
+    "insurance-compliance",
+    "background-check",
+    "payment-terms",
+    "procurement"
+  ],
+  "description": "Vendor onboarding workflow with application review, W-9/W-8BEN verification, insurance certificate validation, background checks, and compliance approval before vendor activation.",
+  "source_path": "finance/vendor-onboarding",
+  "repo_path": "onboarding/finance/vendor-onboarding-workflow"
+}

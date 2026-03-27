@@ -1,0 +1,51 @@
+Client { # Client Application
+n1: circle label:"GraphQL Query"
+n2: rectangle label:"Send to Gateway"
+n21: rectangle label:"Receive Unified Response"
+n22: circle label:"Render UI"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Gateway.n3.handle(top) [label="POST /graphql"]
+n21.handle(right) -> n22.handle(left)
+}
+Gateway { # Apollo Federation Gateway
+n3: rectangle label:"Parse GraphQL Query"
+n4: rectangle label:"Build Query Plan"
+n5: rectangle label:"Fan-Out to Subgraphs"
+n18: rectangle label:"Merge Responses"
+n19: rectangle label:"Return Unified Result"
+n20: rectangle label:"Send to Client"
+n3.handle(right) -> n4.handle(left) [label="AST"]
+n4.handle(right) -> n5.handle(left) [label="Execution Plan"]
+n5.handle(bottom) -> Subgraphs.n6.handle(top) [label="User Fields"]
+n5.handle(bottom) -> Subgraphs.n8.handle(top) [label="Product Fields"]
+n5.handle(bottom) -> Subgraphs.n10.handle(top) [label="Review Fields"]
+n18.handle(right) -> n19.handle(left) [label="Stitched"]
+n19.handle(right) -> n20.handle(left)
+n20.handle(top) -> Client.n21.handle(bottom) [label="JSON"]
+}
+Subgraphs { # Federated Subgraphs
+n6: rectangle label:"User Subgraph"
+n7: rectangle label:"User Database"
+n8: rectangle label:"Product Subgraph"
+n9: rectangle label:"Product Database"
+n10: rectangle label:"Review Subgraph"
+n11: rectangle label:"Review Database"
+n12: rectangle label:"Collect User Data"
+n13: rectangle label:"Collect Product Data"
+n14: rectangle label:"Collect Review Data"
+n15: rectangle label:"Aggregate All Results"
+n16: rectangle label:"Prepare Response"
+n17: rectangle label:"Send Combined Data"
+n6.handle(right) -> n7.handle(left) [label="Query"]
+n8.handle(right) -> n9.handle(left) [label="Query"]
+n10.handle(right) -> n11.handle(left) [label="Query"]
+n7.handle(right) -> n12.handle(left)
+n9.handle(right) -> n13.handle(left)
+n11.handle(right) -> n14.handle(left)
+n12.handle(bottom) -> n15.handle(top) [label="User Data"]
+n13.handle(bottom) -> n15.handle(top) [label="Product Data"]
+n14.handle(right) -> n15.handle(left) [label="Review Data"]
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left)
+n17.handle(top) -> Gateway.n18.handle(bottom) [label="All Data"]
+}

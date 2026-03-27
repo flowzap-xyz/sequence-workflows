@@ -1,0 +1,37 @@
+Host { # Host Application
+  n1: circle label="User sends prompt"
+  n2: rectangle label="Agent prepares MCP call"
+  n3: rectangle label="Pass call to circuit breaker"
+  n4: rectangle label="Receive result or error"
+  n5: rectangle label="Agent responds to user"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(bottom) -> CB.n6.handle(top) [label="MCP tool call"]
+  n4.handle(right) -> n5.handle(left)
+}
+
+CB { # Circuit Breaker
+  n6: rectangle label="Check circuit state"
+  n7: diamond label="Circuit open?"
+  n8: rectangle label="Forward to MCP server"
+  n9: rectangle label="Fast-fail with error"
+  n10: diamond label="Call succeeded?"
+  n11: rectangle label="Record success"
+  n12: rectangle label="Record failure and check threshold"
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(right) -> n8.handle(left) [label="Closed"]
+  n7.handle(bottom) -> n9.handle(top) [label="Open"]
+  n8.handle(bottom) -> MCPServer.n13.handle(top) [label="Forward request"]
+  n9.handle(top) -> Host.n4.handle(bottom) [label="CircuitOpenError"]
+  n10.handle(right) -> n11.handle(left) [label="Yes"]
+  n10.handle(bottom) -> n12.handle(top) [label="No"]
+  n11.handle(top) -> Host.n4.handle(left) [label="Return result"]
+  n12.handle(top) -> Host.n4.handle(right) [label="Return error"]
+}
+
+MCPServer { # MCP Server
+  n13: rectangle label="Attempt tool execution"
+  n14: rectangle label="Return result or error"
+  n13.handle(right) -> n14.handle(left)
+  n14.handle(top) -> CB.n10.handle(bottom) [label="Execution outcome"]
+}

@@ -1,0 +1,24 @@
+{
+  "template_id": "cache-aside-workflow",
+  "workflow_id": "cache-aside",
+  "title": "Cache Aside Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "cache-aside",
+    "lazy-loading",
+    "cache-miss",
+    "cache-invalidation",
+    "redis",
+    "performance"
+  ],
+  "description": "Cache-aside pattern with cache lookup, database fallback on miss, cache population, TTL-based expiration, and write-through invalidation.",
+  "source_path": "patterns/cache-aside",
+  "repo_path": "uncategorized/patterns/cache-aside-workflow"
+}

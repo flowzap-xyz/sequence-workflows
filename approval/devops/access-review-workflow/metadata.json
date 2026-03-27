@@ -1,0 +1,30 @@
+{
+  "template_id": "access-review-workflow",
+  "workflow_id": "access-review",
+  "title": "Access Review Workflow",
+  "kind": "workflow",
+  "source_domain": "devops",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [
+    "compliance"
+  ],
+  "use_cases": [
+    "approval",
+    "compliance"
+  ],
+  "complexity": 4,
+  "num_nodes": 18,
+  "num_lanes": 3,
+  "tags": [
+    "access-review",
+    "user-access-certification",
+    "quarterly-review",
+    "manager-approval",
+    "compliance",
+    "sod-violations",
+    "audit"
+  ],
+  "description": "Quarterly user access review workflow with manager certification, separation of duties validation, remediation tracking, and compliance reporting for audit purposes.",
+  "source_path": "devops/access-review",
+  "repo_path": "approval/devops/access-review-workflow"
+}

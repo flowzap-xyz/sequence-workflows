@@ -1,0 +1,31 @@
+{
+  "template_id": "event-driven-dead-letter-queue-architecture",
+  "workflow_id": "event-driven-dead-letter-queue-architecture",
+  "title": "Event-Driven Dead Letter Queue Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "incident",
+  "secondary_use_cases": [
+    "compliance"
+  ],
+  "use_cases": [
+    "incident",
+    "compliance"
+  ],
+  "complexity": 3,
+  "num_nodes": 16,
+  "num_lanes": 3,
+  "tags": [
+    "dead-letter-queue",
+    "dlq",
+    "retry-policy",
+    "message-processing",
+    "error-handling",
+    "operations-alerting",
+    "message-reliability",
+    "architecture-diagram"
+  ],
+  "description": "A dead letter queue architecture diagram with retry policies, exponential backoff, max retry thresholds, DLQ routing for failed messages, operations alerting, and manual reprocessing workflows. This template models the critical error handling pattern for asynchronous messaging systems, ensuring no message is silently lost when processing fails. Essential for building reliable event-driven systems with proper failure recovery mechanisms.",
+  "source_path": "",
+  "repo_path": "incident/architecture/event-driven-dead-letter-queue-architecture"
+}

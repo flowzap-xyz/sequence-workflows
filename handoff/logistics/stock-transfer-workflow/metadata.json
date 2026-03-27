@@ -1,0 +1,26 @@
+{
+  "template_id": "stock-transfer-workflow",
+  "workflow_id": "stock-transfer",
+  "title": "Stock Transfer Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "handoff"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "stock-transfer",
+    "inventory-movement",
+    "location-transfer",
+    "bin-to-bin",
+    "wms",
+    "inventory-rebalancing"
+  ],
+  "description": "Internal stock transfer workflow with transfer request, source location pick, destination put-away, and inventory record updates across locations.",
+  "source_path": "logistics/stock-transfer",
+  "repo_path": "handoff/logistics/stock-transfer-workflow"
+}

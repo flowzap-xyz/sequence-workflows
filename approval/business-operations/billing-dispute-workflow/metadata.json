@@ -1,0 +1,29 @@
+{
+  "template_id": "billing-dispute-workflow",
+  "workflow_id": "billing-dispute",
+  "title": "Billing Dispute Workflow",
+  "kind": "workflow",
+  "source_domain": "business-operations",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [
+    "billing"
+  ],
+  "use_cases": [
+    "approval",
+    "billing"
+  ],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "billing-dispute",
+    "chargeback",
+    "refund-request",
+    "dispute-resolution",
+    "fraud-review",
+    "stripe"
+  ],
+  "description": "Billing dispute workflow with dispute intake, transaction review, fraud analysis, resolution decision, and chargeback response handling.",
+  "source_path": "business-operations/billing-dispute",
+  "repo_path": "approval/business-operations/billing-dispute-workflow"
+}

@@ -1,0 +1,24 @@
+{
+  "template_id": "delivery-confirmation-workflow",
+  "workflow_id": "delivery-confirmation",
+  "title": "Delivery Confirmation Workflow",
+  "kind": "workflow",
+  "source_domain": "logistics",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "delivery-confirmation",
+    "pod",
+    "signature-capture",
+    "order-completion",
+    "customer-notification",
+    "tracking-update"
+  ],
+  "description": "Delivery confirmation workflow with proof of delivery capture, signature collection, photo documentation, order status update, and customer notification.",
+  "source_path": "logistics/delivery-confirmation",
+  "repo_path": "uncategorized/logistics/delivery-confirmation-workflow"
+}

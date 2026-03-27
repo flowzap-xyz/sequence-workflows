@@ -1,0 +1,21 @@
+{
+  "template_id": "rate-limiter-workflow",
+  "workflow_id": "rate-limiter",
+  "title": "Rate Limiter Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "rate",
+    "limiter",
+    "patterns"
+  ],
+  "description": "This workflow models preventing too many requests from being processed.",
+  "source_path": "patterns/rate-limiter",
+  "repo_path": "uncategorized/patterns/rate-limiter-workflow"
+}
