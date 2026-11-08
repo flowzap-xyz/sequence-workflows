@@ -1,0 +1,23 @@
+sales { # Sales
+  n1: circle label:"Start"
+  n2: taskbox owner="Sales Rep" description="Record Sale Details" system="CRM"
+  n3: taskbox owner="Sales Rep" description="Generate Invoice Draft" system="Billing"
+  n4: taskbox owner="Sales Manager" description="Review Invoice" system="Billing"
+  n5: diamond label:"Approved?"
+  n6: taskbox owner="Sales Rep" description="Send Invoice to Client" system="Email"
+  n7: taskbox owner="Client" description="Receive Invoice" system="Email"
+  n8: taskbox owner="Client" description="Make Payment" system="Payment Gateway"
+  n9: taskbox owner="Finance" description="Record Payment" system="Accounting"
+  n10: circle label:"End"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(right) -> n5.handle(left)
+  n5.handle(right) -> n6.handle(left) [label="Yes"]
+  n5.handle(bottom) -> n3.handle(bottom) [label="No"]
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(right) -> n9.handle(left)
+  n9.handle(right) -> n10.handle(left)
+  loop [until approved] n3 n4 n5
+}

@@ -1,0 +1,28 @@
+{
+  "template_id": "agent-sandbox-containment-workflow",
+  "workflow_id": "agent-sandbox-containment",
+  "title": "Agent Sandbox Containment Workflow",
+  "kind": "workflow",
+  "source_domain": "Agentic Security",
+  "primary_use_case": "security",
+  "secondary_use_cases": [
+    "agentic"
+  ],
+  "use_cases": [
+    "security",
+    "agentic"
+  ],
+  "complexity": 2,
+  "num_nodes": 8,
+  "num_lanes": 2,
+  "tags": [
+    "agent-containment",
+    "sandbox",
+    "blast-radius",
+    "security",
+    "tool-call"
+  ],
+  "description": "Layer 1 of the agent containment stack: every tool call executes in an ephemeral container, and any path outside the workspace is denied and logged as a security event.",
+  "source_path": "",
+  "repo_path": "security/agentic-security/agent-sandbox-containment-workflow"
+}

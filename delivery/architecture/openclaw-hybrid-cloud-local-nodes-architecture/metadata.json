@@ -1,0 +1,31 @@
+{
+  "template_id": "openclaw-hybrid-cloud-local-nodes-architecture",
+  "workflow_id": "openclaw-hybrid-cloud-local-nodes-architecture",
+  "title": "OpenClaw Hybrid Cloud + Local Nodes Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [
+    "mcp"
+  ],
+  "use_cases": [
+    "delivery",
+    "mcp"
+  ],
+  "complexity": 4,
+  "num_nodes": 10,
+  "num_lanes": 4,
+  "tags": [
+    "OpenClaw",
+    "Hybrid Architecture",
+    "Cloud Gateway",
+    "Local Nodes",
+    "AI Agent Deployment",
+    "Remote AI Agent",
+    "WhatsApp",
+    "24/7 AI Agent"
+  ],
+  "description": "Hybrid OpenClaw architecture with a cloud gateway, local nodes for device actions, persistent agent state, and commercial LLM provider calls.",
+  "source_path": "",
+  "repo_path": "delivery/architecture/openclaw-hybrid-cloud-local-nodes-architecture"
+}

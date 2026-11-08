@@ -1,0 +1,25 @@
+{
+  "template_id": "reflection-loop-agent-self-improvement",
+  "workflow_id": "reflection-loop-agent-self-improvement",
+  "title": "Reflection Loop — Agent Self-Improvement",
+  "kind": "workflow",
+  "source_domain": "Agentic Architecture",
+  "primary_use_case": "agentic",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "agentic"
+  ],
+  "complexity": 3,
+  "num_nodes": 22,
+  "num_lanes": 4,
+  "tags": [
+    "reflexion",
+    "self-improvement",
+    "critic",
+    "orchestrator-worker",
+    "agent-frameworks"
+  ],
+  "description": "The reflection loop: a worker drafts, a critic reviews the draft against the brief and the orchestrator only approves once the revision closes every gap.",
+  "source_path": "",
+  "repo_path": "agentic/agentic-architecture/reflection-loop-agent-self-improvement"
+}

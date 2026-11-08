@@ -1,0 +1,49 @@
+sales { # Sales Team
+n1: circle label:"Start"
+n2: rectangle label:"Send Welcome Email & Contract"
+n3: rectangle label:"Receive Signed Contract"
+n4: rectangle label:"Create Internal Ticket"
+n5: circle label:"Handoff"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left)
+n5.handle(bottom) -> onboarding.n6.handle(top) [label="Ticket Created"]
+}
+
+onboarding { # Onboarding Specialist
+n6: rectangle label:"Review Client Info & Goals"
+n7: rectangle label:"Schedule Kickoff Call"
+n8: rectangle label:"Conduct Kickoff Meeting"
+n9: rectangle label:"Configure Account"
+n10: rectangle label:"Prepare Training Materials"
+n11: rectangle label:"Grant System Access"
+n12: circle label:"Complete"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left)
+n7.handle(bottom) -> customer.n13.handle(top) [label="Sends Invite"]
+n8.handle(bottom) -> customer.n14.handle(top) [label="Holds Meeting"]
+n11.handle(bottom) -> customer.n15.handle(top) [label="Sends Credentials"]
+}
+
+customer { # Customer
+n13: rectangle label:"Receive Meeting Invite"
+n14: rectangle label:"Attend Kickoff Meeting"
+n15: rectangle label:"Receive Login & Materials"
+n16: diamond label:"First Login Successful?"
+n17: rectangle label:"Complete Setup Tasks"
+n18: rectangle label:"Confirm Go-Live"
+n19: circle label:"Onboarded!"
+n13.handle(right) -> n14.handle(left)
+n14.handle(right) -> n15.handle(left)
+n15.handle(right) -> n16.handle(left)
+n16.handle(right) -> n17.handle(left) [label="Yes"]
+n17.handle(right) -> n18.handle(left)
+n18.handle(right) -> n19.handle(left)
+n16.handle(top) -> onboarding.n11.handle(bottom) [label="No - Needs help"]
+n18.handle(top) -> onboarding.n12.handle(bottom) [label="Notify Success"]
+}

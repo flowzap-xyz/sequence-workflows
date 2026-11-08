@@ -1,0 +1,42 @@
+client { # Client
+  n1: circle label:"Submit claim"
+  n2: rectangle label:"Receive decision"
+  n1.handle(right) -> agent.n3.handle(left) [label="Form + documents"]
+  agent.n7.handle(left) -> n2.handle(right) [label="Final decision"]
+}
+
+agent { # Processing Agent
+  n3: rectangle label:"Receive claim"
+  n4: rectangle label:"Analyze attachments"
+  n5: diamond label:"Automatic reimbursement?"
+  n6: rectangle label:"Prepare decision"
+  n7: rectangle label:"Transmit decision"
+  n8: rectangle label:"Handle detected anomaly"
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(right) -> n5.handle(left)
+  n5.handle(bottom) -> simulateur.n9.handle(top) [label="Request simulation"]
+  simulateur.n12.handle(top) -> n5.handle(bottom) [label="Simulation result"]
+  n5.handle(right) -> n6.handle(left) [label="Final decision"]
+  n6.handle(right) -> n7.handle(left)
+  n6.handle(bottom) -> reel.n13.handle(top) [label="If reimbursement approved"]
+  reel.n14.handle(top) -> n7.handle(bottom) [label="Payment confirmation"]
+  n5.handle(bottom) -> n8.handle(left) [label="If anomaly"]
+  n8.handle(top) -> simulateur.n9.handle(top)
+}
+
+simulateur { # Validation Simulator
+  n9: rectangle label:"Receive simulation request"
+  n10: rectangle label:"Verify amount and policy consistency"
+  n11: diamond label:"Anomaly detected?"
+  n12: rectangle label:"Return assessment + alerts"
+  n9.handle(right) -> n10.handle(left)
+  n10.handle(right) -> n11.handle(left)
+  n11.handle(right) -> n12.handle(left) [label="Yes"]
+  n11.handle(bottom) -> n12.handle(top) [label="No"]
+}
+
+reel { # Reimbursement System
+  n13: rectangle label:"Receive payment order"
+  n14: rectangle label:"Execute reimbursement"
+  n13.handle(right) -> n14.handle(left)
+}

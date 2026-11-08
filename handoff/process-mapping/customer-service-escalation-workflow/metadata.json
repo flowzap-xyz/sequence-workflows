@@ -1,0 +1,28 @@
+{
+  "template_id": "customer-service-escalation-workflow",
+  "workflow_id": "customer-service-escalation",
+  "title": "Customer Service Escalation Workflow",
+  "kind": "workflow",
+  "source_domain": "Process Mapping",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [
+    "support"
+  ],
+  "use_cases": [
+    "handoff",
+    "support"
+  ],
+  "complexity": 2,
+  "num_nodes": 11,
+  "num_lanes": 2,
+  "tags": [
+    "process-mapping",
+    "support",
+    "escalation",
+    "service",
+    "tier-2"
+  ],
+  "description": "Customer support workflow that applies the standard greeting and service protocol, then escalates to tier 2 when the standard path cannot resolve the request.",
+  "source_path": "",
+  "repo_path": "handoff/process-mapping/customer-service-escalation-workflow"
+}

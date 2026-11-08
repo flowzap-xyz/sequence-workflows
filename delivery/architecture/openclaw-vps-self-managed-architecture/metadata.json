@@ -1,0 +1,28 @@
+{
+  "template_id": "openclaw-vps-self-managed-architecture",
+  "workflow_id": "openclaw-vps-self-managed-architecture",
+  "title": "OpenClaw VPS Self-Managed Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "delivery"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 3,
+  "tags": [
+    "OpenClaw",
+    "VPS",
+    "Self-Managed VPS",
+    "Cloud Deployment",
+    "Hetzner",
+    "DigitalOcean",
+    "Remote Access",
+    "SSH Tunnel"
+  ],
+  "description": "Self-managed OpenClaw VPS deployment with gateway, workspace, firewall/auth layer, and commercial LLM provider access from any device.",
+  "source_path": "",
+  "repo_path": "delivery/architecture/openclaw-vps-self-managed-architecture"
+}

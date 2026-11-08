@@ -1,0 +1,21 @@
+{
+  "template_id": "json-in-label-workflow",
+  "workflow_id": "json-in-label",
+  "title": "Json In Label Workflow",
+  "kind": "workflow",
+  "source_domain": "edge-cases",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "json",
+    "in",
+    "label"
+  ],
+  "description": "This workflow models a label that contains JSON text.",
+  "source_path": "edge-cases/json-in-label",
+  "repo_path": "uncategorized/edge-cases/json-in-label-workflow"
+}

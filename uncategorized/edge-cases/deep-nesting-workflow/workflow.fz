@@ -1,0 +1,46 @@
+laneA { # Lane A
+  n1: circle label:"Start Deep Nesting"
+  n5: rectangle label:"Deep Nesting step 5"
+  n9: rectangle label:"Deep Nesting step 9"
+  n13: circle label:"End Deep Nesting"
+  n1.handle(bottom) -> laneB.n2.handle(top)
+  n1.handle(bottom) -> laneC.n3.handle(top)
+  n1.handle(bottom) -> laneD.n4.handle(top)
+  n1.handle(right) -> n5.handle(left)
+  n1.handle(bottom) -> laneB.n6.handle(top)
+  n1.handle(bottom) -> laneC.n7.handle(top)
+  n1.handle(bottom) -> laneD.n8.handle(top)
+  n1.handle(right) -> n9.handle(left)
+  n1.handle(bottom) -> laneB.n10.handle(top)
+  n1.handle(bottom) -> laneC.n11.handle(top)
+  n1.handle(bottom) -> laneD.n12.handle(top)
+  n5.handle(right) -> n13.handle(left)
+  n9.handle(right) -> n13.handle(left)
+}
+
+laneB { # Lane B
+  n2: rectangle label:"Deep Nesting step 2"
+  n6: diamond label:"Deep Nesting step 6"
+  n10: rectangle label:"Deep Nesting step 10"
+  n10.handle(right) -> laneA.n13.handle(bottom)
+  n6.handle(right) -> laneA.n13.handle(bottom)
+  n2.handle(right) -> laneA.n13.handle(bottom)
+}
+
+laneC { # Lane C
+  n3: rectangle label:"Deep Nesting step 3"
+  n7: rectangle label:"Deep Nesting step 7"
+  n11: rectangle label:"Deep Nesting step 11"
+  n11.handle(right) -> laneA.n13.handle(bottom)
+  n7.handle(right) -> laneA.n13.handle(bottom)
+  n3.handle(right) -> laneA.n13.handle(bottom)
+}
+
+laneD { # Lane D
+  n4: rectangle label:"Deep Nesting step 4"
+  n8: rectangle label:"Deep Nesting step 8"
+  n12: rectangle label:"Deep Nesting step 12"
+  n12.handle(right) -> laneA.n13.handle(bottom)
+  n8.handle(right) -> laneA.n13.handle(bottom)
+  n4.handle(right) -> laneA.n13.handle(bottom)
+}

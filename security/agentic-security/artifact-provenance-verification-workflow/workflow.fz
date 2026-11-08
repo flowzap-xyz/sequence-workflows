@@ -1,0 +1,24 @@
+build { # Build
+n1: circle label:"Start"
+n2: rectangle label:"Build from a hijacked repo"
+n3: rectangle label:"Publish artifact and attestation"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> provenance.n4.handle(top) [label="Artifact and attestation"]
+}
+
+provenance { # Provenance
+n4: rectangle label:"Compare source, build and binary"
+n5: diamond label:"Attestation matches"
+n6: rectangle label:"Promote to production"
+n7: circle label:"End"
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left) [label="yes"]
+n6.handle(right) -> n7.handle(left)
+n5.handle(bottom) -> registry.n8.handle(top) [label="no"]
+}
+
+registry { # Registry
+n8: rectangle label:"Quarantine and alert"
+n8.handle(bottom) -> build.n2.handle(bottom) [label="Back to build"]
+}

@@ -1,0 +1,20 @@
+{
+  "template_id": "label-escaping-workflow",
+  "workflow_id": "label-escaping",
+  "title": "Label Escaping Workflow",
+  "kind": "workflow",
+  "source_domain": "edge-cases",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 5,
+  "num_nodes": 16,
+  "num_lanes": 4,
+  "tags": [
+    "label",
+    "escaping"
+  ],
+  "description": "This workflow models labels containing quotes and special characters.",
+  "source_path": "edge-cases/label-escaping",
+  "repo_path": "uncategorized/edge-cases/label-escaping-workflow"
+}

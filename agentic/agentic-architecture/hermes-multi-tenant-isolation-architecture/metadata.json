@@ -1,0 +1,25 @@
+{
+  "template_id": "hermes-multi-tenant-isolation-architecture",
+  "workflow_id": "hermes-multi-tenant-isolation-architecture",
+  "title": "Hermes Multi-Tenant Isolation Architecture",
+  "kind": "workflow",
+  "source_domain": "Agentic Architecture",
+  "primary_use_case": "agentic",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "agentic"
+  ],
+  "complexity": 2,
+  "num_nodes": 12,
+  "num_lanes": 3,
+  "tags": [
+    "hermes",
+    "multi-tenant",
+    "isolation",
+    "profiles",
+    "sandboxing"
+  ],
+  "description": "Shared host, per-client profiles and tool boundaries: how external clients reach their own Hermes workspaces without seeing another tenant's tools or data.",
+  "source_path": "",
+  "repo_path": "agentic/agentic-architecture/hermes-multi-tenant-isolation-architecture"
+}

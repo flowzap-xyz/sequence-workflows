@@ -1,0 +1,33 @@
+{
+  "template_id": "risk-tiered-hitl",
+  "workflow_id": "risk-tiered-hitl",
+  "title": "Risk-Tiered Human-in-the-Loop",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [
+    "security",
+    "compliance"
+  ],
+  "use_cases": [
+    "approval",
+    "security",
+    "compliance"
+  ],
+  "complexity": 4,
+  "num_nodes": 14,
+  "num_lanes": 4,
+  "tags": [
+    "Human in the Loop",
+    "HITL",
+    "AI Agent Security",
+    "AI Governance",
+    "Risk Policy",
+    "Approval Workflow",
+    "Audit Log",
+    "Human Approval"
+  ],
+  "description": "Human-in-the-loop approval architecture that scores agent actions by risk, routes high-risk requests for review, and writes immutable audit records.",
+  "source_path": "",
+  "repo_path": "approval/architecture/risk-tiered-hitl"
+}

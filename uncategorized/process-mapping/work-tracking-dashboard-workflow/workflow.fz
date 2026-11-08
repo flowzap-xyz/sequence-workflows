@@ -1,0 +1,32 @@
+WorkInitiation { # WorkInitiation
+  n1: circle label:"Work Item Initiated"
+  n2: rectangle label:"Create Centralized Tracking Record"
+  n3: rectangle label:"Define Status Categories"
+  n4: rectangle label:"Update Progress Regularly"
+  n5: diamond label:"Milestone Achieved?"
+  n6: rectangle label:"Update Status Category"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(right) -> n4.handle(left)
+  n5.handle(top) -> n4.handle(top) [label="No - Continue work"]
+  n4.handle(right) -> n5.handle(left)
+  n5.handle(right) -> n6.handle(left) [label="Yes"]
+  n6.handle(bottom) -> n4.handle(bottom)
+  n6.handle(right) -> InformationAccess.n7.handle(left)
+}
+
+InformationAccess { # InformationAccess
+  n7: circle label:"Status Query Initiated"
+  n8: rectangle label:"Access Central Dashboard"
+  n9: diamond label:"Information Current?"
+  n10: rectangle label:"Request Status Update"
+  n11: rectangle label:"Provide Current Status"
+  n12: circle label:"Query Resolved"
+  n9.handle(right) -> n12.handle(left) [label="Yes"]
+  n9.handle(bottom) -> n10.handle(top) [label="No - Update Required"]
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(right) -> n9.handle(left)
+  n10.handle(right) -> n11.handle(left)
+  n12.handle(top) -> n4.handle(bottom) [label="Update dashboard"]
+  n11.handle(top) -> n12.handle(bottom)
+}

@@ -1,0 +1,36 @@
+detection { # Detection
+n1: circle label:"Start"
+n2: rectangle label:"Inventory the real exposure"
+n3: rectangle label:"Rank by observed exploitation"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> remediation.n4.handle(top) [label="Prioritised estate"]
+}
+
+remediation { # Remediation
+n4: rectangle label:"Deploy the patch"
+n5: diamond label:"Patch applies"
+n6: rectangle label:"Enable a temporary mitigation"
+n7: rectangle label:"Log outcome and due date"
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n7.handle(top) [label="yes"]
+n5.handle(bottom) -> n6.handle(top) [label="no"]
+n6.handle(right) -> n7.handle(bottom) [label="mitigation"]
+n7.handle(bottom) -> assurance.n8.handle(top) [label="Estate state"]
+}
+
+assurance { # Assurance
+n8: rectangle label:"Replay the validation probe"
+n9: diamond label:"Proof is machine-checkable"
+n10: rectangle label:"Close with proof"
+n11: circle label:"End"
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left) [label="yes"]
+n10.handle(right) -> n11.handle(left)
+n9.handle(bottom) -> human.n12.handle(top) [label="no"]
+}
+
+human { # Human
+n12: rectangle label:"Approve or refuse closure"
+n12.handle(top) -> assurance.n8.handle(bottom) [label="Recorded decision"]
+}

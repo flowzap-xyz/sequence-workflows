@@ -1,0 +1,30 @@
+ProcessAnalysis { # ProcessAnalysis
+  n1: circle label:"Technology Need Identified"
+  n2: rectangle label:"Map Current Process State"
+  n3: rectangle label:"Identify Process Bottlenecks"
+  n4: diamond label:"Is Process the Root Cause?"
+  n5: rectangle label:"Optimize Process First"
+  n6: circle label:"Ready for Technology Solution"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(top) -> n6.handle(top) [label="No - Tech required"]
+  n4.handle(right) -> n5.handle(left) [label="Yes"]
+  n5.handle(right) -> n6.handle(left)
+  n6.handle(right) -> ImplementationStrategy.n7.handle(left)
+}
+
+ImplementationStrategy { # ImplementationStrategy
+  n7: rectangle label:"Select Appropriate Technology"
+  n8: rectangle label:"Design Future State Process"
+  n9: rectangle label:"Deploy Technology Solution"
+  n10: diamond label:"Process Improvement Achieved?"
+  n11: rectangle label:"Adjust Process Design"
+  n12: circle label:"Successful Implementation"
+  n10.handle(right) -> n12.handle(left) [label="Yes"]
+  n10.handle(bottom) -> n11.handle(top) [label="No"]
+  n7.handle(right) -> n8.handle(left)
+  n9.handle(right) -> n10.handle(left)
+  n11.handle(left) -> n9.handle(bottom)
+  n8.handle(right) -> n9.handle(left)
+}

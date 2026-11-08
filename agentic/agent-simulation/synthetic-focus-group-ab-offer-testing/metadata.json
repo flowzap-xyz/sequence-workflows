@@ -1,0 +1,25 @@
+{
+  "template_id": "synthetic-focus-group-ab-offer-testing",
+  "workflow_id": "synthetic-focus-group-ab-offer-testing",
+  "title": "Synthetic Focus Group — A/B Offer Testing",
+  "kind": "workflow",
+  "source_domain": "Agent Simulation",
+  "primary_use_case": "agentic",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "agentic"
+  ],
+  "complexity": 2,
+  "num_nodes": 12,
+  "num_lanes": 2,
+  "tags": [
+    "mirofish",
+    "synthetic-research",
+    "ab-testing",
+    "offer-testing",
+    "agent-swarm"
+  ],
+  "description": "A/B offer testing with synthetic agents: variant A and variant B are evaluated for perceived value, aggregated separately and compared to pick the winner.",
+  "source_path": "",
+  "repo_path": "agentic/agent-simulation/synthetic-focus-group-ab-offer-testing"
+}

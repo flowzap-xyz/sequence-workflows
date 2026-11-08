@@ -1,0 +1,28 @@
+{
+  "template_id": "openclaw-docker-isolated-architecture",
+  "workflow_id": "openclaw-docker-isolated-architecture",
+  "title": "OpenClaw Docker Isolated Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "delivery"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 3,
+  "tags": [
+    "OpenClaw",
+    "Docker",
+    "Docker Container",
+    "OpenClaw Docker",
+    "AI Agent Deployment",
+    "Self-Hosted AI Agent",
+    "Volume Mount",
+    "Local AI Agent"
+  ],
+  "description": "OpenClaw Docker deployment with an isolated gateway runtime, mounted workspace and config volumes, and a commercial LLM API.",
+  "source_path": "",
+  "repo_path": "delivery/architecture/openclaw-docker-isolated-architecture"
+}

@@ -1,0 +1,21 @@
+{
+  "template_id": "13-parallel-flows-workflow",
+  "workflow_id": "13-parallel-flows",
+  "title": "13 Parallel Flows Workflow",
+  "kind": "workflow",
+  "source_domain": "syntax-primitives",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "13",
+    "parallel",
+    "flows"
+  ],
+  "description": "This workflow models one node splitting into three parallel tasks.",
+  "source_path": "syntax-primitives/13-parallel-flows",
+  "repo_path": "uncategorized/syntax-primitives/13-parallel-flows-workflow"
+}

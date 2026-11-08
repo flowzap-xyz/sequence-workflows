@@ -1,0 +1,29 @@
+executor { # Agent Executor (Legacy)
+  n1: rectangle label:"Generate payload v1"
+  n2: rectangle label:"Reflexion: learn from review"
+  n3: rectangle label:"Regenerate payload v2"
+
+  n1.handle(right) -> evaluator.n4.handle(left) [label="Payload (25 tokens)"]
+  evaluator.n6.handle(left) -> n2.handle(right) [label="REJECTED - score 2/10"]
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(right) -> evaluator.n4.handle(left) [label="Payload (9 tokens)"]
+  evaluator.n8.handle(left) -> n3.handle(right) [label="ACCEPTED - score 8/10"]
+}
+
+evaluator { # Agent Evaluator (LLM-as-Judge)
+  n4: rectangle label:"Analyze full trajectory"
+  n5: rectangle label:"Score 3 criteria"
+  n6: rectangle label:"Issue REJECTION"
+  n7: diamond label:"Meets taste threshold?"
+  n8: rectangle label:"Issue ACCEPTANCE"
+
+  n4.handle(right) -> n5.handle(left)
+  n5.handle(right) -> n7.handle(left)
+  n7.handle(bottom) -> n6.handle(top) [label="No"]
+  n7.handle(right) -> n8.handle(left) [label="Yes"]
+  n8.handle(right) -> consumer.n9.handle(left) [label="Forward validated"]
+}
+
+consumer { # Agent Consumer (Next-Gen)
+  n9: rectangle label:"Process without friction"
+}

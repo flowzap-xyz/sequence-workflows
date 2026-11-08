@@ -1,0 +1,21 @@
+{
+  "template_id": "bidirectional-loop-workflow",
+  "workflow_id": "bidirectional-loop",
+  "title": "Bidirectional Loop Workflow",
+  "kind": "workflow",
+  "source_domain": "edge-cases",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 5,
+  "num_nodes": 16,
+  "num_lanes": 4,
+  "tags": [
+    "bidirectional",
+    "loop",
+    "decision"
+  ],
+  "description": "This workflow models circular references between nodes in both directions.",
+  "source_path": "edge-cases/bidirectional-loop",
+  "repo_path": "uncategorized/edge-cases/bidirectional-loop-workflow"
+}

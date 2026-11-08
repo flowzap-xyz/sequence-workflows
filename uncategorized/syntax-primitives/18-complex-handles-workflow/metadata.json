@@ -1,0 +1,21 @@
+{
+  "template_id": "18-complex-handles-workflow",
+  "workflow_id": "18-complex-handles",
+  "title": "18 Complex Handles Workflow",
+  "kind": "workflow",
+  "source_domain": "syntax-primitives",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "18",
+    "complex",
+    "handles"
+  ],
+  "description": "This workflow models a workflow that uses every handle position in one diagram.",
+  "source_path": "syntax-primitives/18-complex-handles",
+  "repo_path": "uncategorized/syntax-primitives/18-complex-handles-workflow"
+}

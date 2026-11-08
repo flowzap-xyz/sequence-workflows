@@ -1,0 +1,25 @@
+{
+  "template_id": "ownership-assignment-escalation-workflow",
+  "workflow_id": "ownership-assignment-escalation",
+  "title": "Ownership Assignment & Escalation Workflow",
+  "kind": "workflow",
+  "source_domain": "Process Mapping",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "handoff"
+  ],
+  "complexity": 2,
+  "num_nodes": 12,
+  "num_lanes": 2,
+  "tags": [
+    "process-mapping",
+    "ownership",
+    "escalation",
+    "assignment",
+    "blockers"
+  ],
+  "description": "Work assignment workflow that names an accountable owner, checks for blockers, escalates to the manager and confirms the assignment with everyone involved.",
+  "source_path": "",
+  "repo_path": "handoff/process-mapping/ownership-assignment-escalation-workflow"
+}

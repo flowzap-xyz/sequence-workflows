@@ -1,0 +1,19 @@
+resilient { # Multi-Cloud Mesh Architecture
+  n1: rectangle label:"Traffic → Any Edge Proxy"
+  n2: rectangle label:"Mesh Control Plane (AWS/GCP/Metal)"
+  n3: rectangle label:"Route Discovery — No Single Cloud Dependency"
+  n4: rectangle label:"DB Quorum (AWS)"
+  n5: rectangle label:"DB Quorum (GCP)"
+  n6: rectangle label:"DB Quorum (Metal)"
+  n7: rectangle label:"Compute (AWS)"
+  n8: rectangle label:"Compute (GCP)"
+  n9: rectangle label:"Compute (Metal)"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n3.handle(right) -> n4.handle(left)
+  n3.handle(top) -> n5.handle(top)
+  n3.handle(bottom) -> n6.handle(bottom)
+  n4.handle(right) -> n7.handle(left)
+  n5.handle(top) -> n8.handle(top)
+  n6.handle(top) -> n9.handle(top)
+}

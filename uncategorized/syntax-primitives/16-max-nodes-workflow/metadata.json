@@ -1,0 +1,21 @@
+{
+  "template_id": "16-max-nodes-workflow",
+  "workflow_id": "16-max-nodes",
+  "title": "16 Max Nodes Workflow",
+  "kind": "workflow",
+  "source_domain": "syntax-primitives",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 50,
+  "num_lanes": 2,
+  "tags": [
+    "16",
+    "max",
+    "nodes"
+  ],
+  "description": "This workflow models 50 nodes in one lane as a stress test.",
+  "source_path": "syntax-primitives/16-max-nodes",
+  "repo_path": "uncategorized/syntax-primitives/16-max-nodes-workflow"
+}

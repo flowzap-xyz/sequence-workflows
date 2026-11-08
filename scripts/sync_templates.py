@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import re
 import shutil
 import urllib.request
@@ -10,7 +11,9 @@ from collections import Counter
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-FLOWZAP_APP_ROOT = REPO_ROOT.parent / 'FlowZap-App-v5'
+FLOWZAP_APP_ROOT = Path(
+    os.environ.get('FLOWZAP_APP_ROOT') or (REPO_ROOT.parent / 'FlowZap-App-v5')
+)
 TEMPLATES_INDEX_PATH = FLOWZAP_APP_ROOT / 'src' / 'templateLibrary' / 'templatesIndex.json'
 TEMPLATE_FILES_DIR = FLOWZAP_APP_ROOT / 'public' / 'template-files'
 SITEMAP_URL = 'https://flowzap.xyz/sitemap-templates.xml'
@@ -216,7 +219,7 @@ def write_root_docs(total_templates: int, counts: Counter) -> None:
     readme_lines = [
         '# sequence-workflows',
         '',
-        f'A synchronized FlowZap template corpus with **{total_templates} canonical templates** sourced from `https://flowzap.xyz/sitemap-templates.xml` and organized by **primary Use Case**.',
+        f'A synchronized FlowZap template corpus with **{total_templates} canonical templates**, mirrored from the FlowZap template library and organized by **primary Use Case**.',
         '',
         '## Organization Model',
         '',
@@ -241,9 +244,9 @@ def write_root_docs(total_templates: int, counts: Counter) -> None:
         '',
         '## Sync Source',
         '',
-        '- Canonical URL source: `https://flowzap.xyz/sitemap-templates.xml`',
-        '- Template metadata source: `FlowZap-App-v5/src/templateLibrary/templatesIndex.json`',
-        '- Template file source: `FlowZap-App-v5/public/template-files/*.fz`',
+        '- Template library (source of truth): `src/templateLibrary/templatesIndex.json` in the FlowZap app',
+        '- Template file source: `public/template-files/*.fz` in the FlowZap app',
+        '- Public listing check: `https://flowzap.xyz/sitemap-templates.xml` — a template missing from the sitemap is still mirrored, this list only reports the gap',
     ])
     (REPO_ROOT / 'README.md').write_text('\n'.join(readme_lines).strip() + '\n', encoding='utf-8')
 
@@ -276,17 +279,21 @@ def main() -> None:
     app_index = load_app_index()
     clean_repo_root()
 
+    # The app index is the source of truth: it holds every template the product
+    # ships. The sitemap only says which of them are publicly listed, so it can
+    # lag behind a release and must never shrink the corpus.
+    sitemap_slugs = set(canonical_slugs)
+    app_order = list(app_index.keys())
+    sitemap_only = [slug for slug in canonical_slugs if slug not in app_index]
+    missing_from_sitemap = [slug for slug in app_order if slug not in sitemap_slugs]
+
     templates_index: list[dict] = []
     use_case_index = {use_case['id']: {'label': use_case['labels']['en'], 'count': 0, 'templates': []} for use_case in USE_CASES}
     use_case_index['uncategorized'] = {'label': 'Uncategorized', 'count': 0, 'templates': []}
     counts: Counter = Counter()
-    skipped_slugs: list[str] = []
 
-    for slug in canonical_slugs:
-        entry = app_index.get(slug)
-        if entry is None:
-            skipped_slugs.append(slug)
-            continue
+    for slug in app_order:
+        entry = app_index[slug]
         template_file = TEMPLATE_FILES_DIR / f'{slug}.fz'
         if not template_file.exists():
             raise SystemExit(f'Missing template file: {template_file}')
@@ -372,9 +379,11 @@ def main() -> None:
             })
 
     write_root_docs(len(templates_index), counts)
-    if skipped_slugs:
-        print('Skipped sitemap entries without template metadata:', ', '.join(skipped_slugs))
     print(f'Synchronized {len(templates_index)} templates into {REPO_ROOT}')
+    if missing_from_sitemap:
+        print(f'Not yet in sitemap-templates.xml ({len(missing_from_sitemap)}): {", ".join(missing_from_sitemap[:15])}')
+    if sitemap_only:
+        print(f'Sitemap entries without template metadata, skipped ({len(sitemap_only)}): {", ".join(sitemap_only[:10])}')
 
 
 if __name__ == '__main__':

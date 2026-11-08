@@ -1,0 +1,28 @@
+{
+  "template_id": "handoff-readiness-checklist-workflow",
+  "workflow_id": "handoff-readiness-checklist",
+  "title": "Handoff Readiness Checklist Workflow",
+  "kind": "workflow",
+  "source_domain": "Process Mapping",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [
+    "approval"
+  ],
+  "use_cases": [
+    "handoff",
+    "approval"
+  ],
+  "complexity": 2,
+  "num_nodes": 10,
+  "num_lanes": 2,
+  "tags": [
+    "process-mapping",
+    "handoff",
+    "checklist",
+    "approval",
+    "transition"
+  ],
+  "description": "Handoff workflow with a completeness gate: the handoff checklist must be fully met before the receiving team approves and work moves forward.",
+  "source_path": "",
+  "repo_path": "handoff/process-mapping/handoff-readiness-checklist-workflow"
+}

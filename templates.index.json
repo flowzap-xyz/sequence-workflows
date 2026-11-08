@@ -1,6 +1,407 @@
 {
   "templates": [
     {
+      "slug": "01-basic-lane-workflow",
+      "title": "01 Basic Lane Workflow",
+      "description": "This workflow models two connected nodes in a single lane showing basic flow.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "01",
+        "basic",
+        "lane"
+      ],
+      "sourcePath": "syntax-primitives/01-basic-lane",
+      "repoPath": "uncategorized/syntax-primitives/01-basic-lane-workflow"
+    },
+    {
+      "slug": "02-handle-positions-workflow",
+      "title": "02 Handle Positions Workflow",
+      "description": "This workflow models nodes with explicit top, bottom, left, and right handle connections.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "02",
+        "handle",
+        "positions"
+      ],
+      "sourcePath": "syntax-primitives/02-handle-positions",
+      "repoPath": "uncategorized/syntax-primitives/02-handle-positions-workflow"
+    },
+    {
+      "slug": "03-all-shapes-workflow",
+      "title": "03 All Shapes Workflow",
+      "description": "This workflow models a workflow that demonstrates circle, rectangle, diamond, and taskbox shapes.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "03",
+        "all",
+        "shapes"
+      ],
+      "sourcePath": "syntax-primitives/03-all-shapes",
+      "repoPath": "uncategorized/syntax-primitives/03-all-shapes-workflow"
+    },
+    {
+      "slug": "04-labeled-arrows-workflow",
+      "title": "04 Labeled Arrows Workflow",
+      "description": "This workflow models connections with descriptive labels between nodes.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "04",
+        "labeled",
+        "arrows"
+      ],
+      "sourcePath": "syntax-primitives/04-labeled-arrows",
+      "repoPath": "uncategorized/syntax-primitives/04-labeled-arrows-workflow"
+    },
+    {
+      "slug": "05-multiple-lanes-workflow",
+      "title": "05 Multiple Lanes Workflow",
+      "description": "This workflow models three lanes with cross-lane communication.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 3,
+      "tags": [
+        "05",
+        "multiple",
+        "lanes"
+      ],
+      "sourcePath": "syntax-primitives/05-multiple-lanes",
+      "repoPath": "uncategorized/syntax-primitives/05-multiple-lanes-workflow"
+    },
+    {
+      "slug": "06-nested-lanes-workflow",
+      "title": "06 Nested Lanes Workflow",
+      "description": "This workflow models lanes that conceptually contain other lanes.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 3,
+      "tags": [
+        "06",
+        "nested",
+        "lanes"
+      ],
+      "sourcePath": "syntax-primitives/06-nested-lanes",
+      "repoPath": "uncategorized/syntax-primitives/06-nested-lanes-workflow"
+    },
+    {
+      "slug": "07-unicode-labels-workflow",
+      "title": "07 Unicode Labels Workflow",
+      "description": "This workflow models a workflow with emoji and international characters in labels.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "07",
+        "unicode",
+        "labels"
+      ],
+      "sourcePath": "syntax-primitives/07-unicode-labels",
+      "repoPath": "uncategorized/syntax-primitives/07-unicode-labels-workflow"
+    },
+    {
+      "slug": "08-empty-lane-workflow",
+      "title": "08 Empty Lane Workflow",
+      "description": "This workflow models a lane with no nodes to test empty-lane handling.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "08",
+        "empty",
+        "lane"
+      ],
+      "sourcePath": "syntax-primitives/08-empty-lane",
+      "repoPath": "uncategorized/syntax-primitives/08-empty-lane-workflow"
+    },
+    {
+      "slug": "09-cross-lane-circular-workflow",
+      "title": "09 Cross Lane Circular Workflow",
+      "description": "This workflow models an arrow that loops back across lanes in a circular fashion.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "09",
+        "cross",
+        "lane",
+        "circular"
+      ],
+      "sourcePath": "syntax-primitives/09-cross-lane-circular",
+      "repoPath": "uncategorized/syntax-primitives/09-cross-lane-circular-workflow"
+    },
+    {
+      "slug": "10-long-labels-workflow",
+      "title": "10 Long Labels Workflow",
+      "description": "This workflow models labels with extra-long descriptive text.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "10",
+        "long",
+        "labels"
+      ],
+      "sourcePath": "syntax-primitives/10-long-labels",
+      "repoPath": "uncategorized/syntax-primitives/10-long-labels-workflow"
+    },
+    {
+      "slug": "11-taskbox-complete-workflow",
+      "title": "11 Taskbox Complete Workflow",
+      "description": "This workflow models a taskbox with owner, description, and system parameters.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 2,
+      "tags": [
+        "11",
+        "taskbox",
+        "complete"
+      ],
+      "sourcePath": "syntax-primitives/11-taskbox-complete",
+      "repoPath": "uncategorized/syntax-primitives/11-taskbox-complete-workflow"
+    },
+    {
+      "slug": "12-bidirectional-arrows-workflow",
+      "title": "12 Bidirectional Arrows Workflow",
+      "description": "This workflow models two-way connections between the same pair of nodes.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 2,
+      "tags": [
+        "12",
+        "bidirectional",
+        "arrows"
+      ],
+      "sourcePath": "syntax-primitives/12-bidirectional-arrows",
+      "repoPath": "uncategorized/syntax-primitives/12-bidirectional-arrows-workflow"
+    },
+    {
+      "slug": "13-parallel-flows-workflow",
+      "title": "13 Parallel Flows Workflow",
+      "description": "This workflow models one node splitting into three parallel tasks.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 2,
+      "tags": [
+        "13",
+        "parallel",
+        "flows"
+      ],
+      "sourcePath": "syntax-primitives/13-parallel-flows",
+      "repoPath": "uncategorized/syntax-primitives/13-parallel-flows-workflow"
+    },
+    {
+      "slug": "14-error-handling-workflow",
+      "title": "14 Error Handling Workflow",
+      "description": "This workflow models a try and retry style pattern for handling errors.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 2,
+      "tags": [
+        "14",
+        "error",
+        "handling"
+      ],
+      "sourcePath": "syntax-primitives/14-error-handling",
+      "repoPath": "uncategorized/syntax-primitives/14-error-handling-workflow"
+    },
+    {
+      "slug": "15-optional-parameters-workflow",
+      "title": "15 Optional Parameters Workflow",
+      "description": "This workflow models a taskbox with some optional fields left out.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 2,
+      "tags": [
+        "15",
+        "optional",
+        "parameters"
+      ],
+      "sourcePath": "syntax-primitives/15-optional-parameters",
+      "repoPath": "uncategorized/syntax-primitives/15-optional-parameters-workflow"
+    },
+    {
+      "slug": "16-max-nodes-workflow",
+      "title": "16 Max Nodes Workflow",
+      "description": "This workflow models 50 nodes in one lane as a stress test.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 50,
+      "numLanes": 2,
+      "tags": [
+        "16",
+        "max",
+        "nodes"
+      ],
+      "sourcePath": "syntax-primitives/16-max-nodes",
+      "repoPath": "uncategorized/syntax-primitives/16-max-nodes-workflow"
+    },
+    {
+      "slug": "17-minimal-nodes-workflow",
+      "title": "17 Minimal Nodes Workflow",
+      "description": "This workflow models a workflow with a single start node only.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 1,
+      "numLanes": 1,
+      "tags": [
+        "17",
+        "minimal",
+        "nodes"
+      ],
+      "sourcePath": "syntax-primitives/17-minimal-nodes",
+      "repoPath": "uncategorized/syntax-primitives/17-minimal-nodes-workflow"
+    },
+    {
+      "slug": "18-complex-handles-workflow",
+      "title": "18 Complex Handles Workflow",
+      "description": "This workflow models a workflow that uses every handle position in one diagram.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 2,
+      "tags": [
+        "18",
+        "complex",
+        "handles"
+      ],
+      "sourcePath": "syntax-primitives/18-complex-handles",
+      "repoPath": "uncategorized/syntax-primitives/18-complex-handles-workflow"
+    },
+    {
+      "slug": "19-label-escaping-workflow",
+      "title": "19 Label Escaping Workflow",
+      "description": "This workflow models labels that include quotes and special characters.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 2,
+      "tags": [
+        "19",
+        "label",
+        "escaping"
+      ],
+      "sourcePath": "syntax-primitives/19-label-escaping",
+      "repoPath": "uncategorized/syntax-primitives/19-label-escaping-workflow"
+    },
+    {
+      "slug": "20-syntax-complete-workflow",
+      "title": "20 Syntax Complete Workflow",
+      "description": "This workflow models one workflow using most available language features.",
+      "kind": "workflow",
+      "sourceDomain": "syntax-primitives",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 3,
+      "tags": [
+        "20",
+        "syntax",
+        "complete"
+      ],
+      "sourcePath": "syntax-primitives/20-syntax-complete",
+      "repoPath": "uncategorized/syntax-primitives/20-syntax-complete-workflow"
+    },
+    {
       "slug": "a-b-testing-workflow",
       "title": "A B Testing Workflow",
       "description": "This workflow models comparing two versions to see which performs better.",
@@ -328,6 +729,26 @@
       ],
       "sourcePath": "patterns/batch-processing",
       "repoPath": "uncategorized/patterns/batch-processing-workflow"
+    },
+    {
+      "slug": "bidirectional-loop-workflow",
+      "title": "Bidirectional Loop Workflow",
+      "description": "This workflow models circular references between nodes in both directions.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 5,
+      "numNodes": 16,
+      "numLanes": 4,
+      "tags": [
+        "bidirectional",
+        "loop",
+        "decision"
+      ],
+      "sourcePath": "edge-cases/bidirectional-loop",
+      "repoPath": "uncategorized/edge-cases/bidirectional-loop-workflow"
     },
     {
       "slug": "billing-dispute-workflow",
@@ -744,6 +1165,26 @@
       "repoPath": "incident/logistics/cold-chain-monitoring-workflow"
     },
     {
+      "slug": "comment-like-labels-workflow",
+      "title": "Comment Like Labels Workflow",
+      "description": "This workflow models labels that look like code comments.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "comment",
+        "like",
+        "labels"
+      ],
+      "sourcePath": "edge-cases/comment-like-labels",
+      "repoPath": "uncategorized/edge-cases/comment-like-labels-workflow"
+    },
+    {
       "slug": "community-moderation-workflow",
       "title": "Community Moderation Workflow",
       "description": "Community content moderation workflow with AI auto-flagging, user reports, human review queue, action enforcement, and appeals handling.",
@@ -974,6 +1415,26 @@
       "repoPath": "uncategorized/logistics/cross-docking-workflow"
     },
     {
+      "slug": "cross-lane-circular-workflow",
+      "title": "Cross Lane Circular Workflow",
+      "description": "This workflow models arrows that loop across lanes.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 4,
+      "numNodes": 13,
+      "numLanes": 4,
+      "tags": [
+        "cross",
+        "lane",
+        "circular"
+      ],
+      "sourcePath": "edge-cases/cross-lane-circular",
+      "repoPath": "uncategorized/edge-cases/cross-lane-circular-workflow"
+    },
+    {
       "slug": "crud-user-browser-server-workflow",
       "title": "Crud User Browser Server Workflow",
       "description": "This workflow models user creates, reads, updates, and deletes data through a browser and server.",
@@ -1165,6 +1626,26 @@
       "repoPath": "uncategorized/patterns/decision-diamond-workflow"
     },
     {
+      "slug": "deep-nesting-workflow",
+      "title": "Deep Nesting Workflow",
+      "description": "This workflow models lanes that are conceptually nested within each other.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 4,
+      "numNodes": 13,
+      "numLanes": 4,
+      "tags": [
+        "deep",
+        "nesting",
+        "parallel"
+      ],
+      "sourcePath": "edge-cases/deep-nesting",
+      "repoPath": "uncategorized/edge-cases/deep-nesting-workflow"
+    },
+    {
       "slug": "delivery-confirmation-workflow",
       "title": "Delivery Confirmation Workflow",
       "description": "Delivery confirmation workflow with proof of delivery capture, signature collection, photo documentation, order status update, and customer notification.",
@@ -1216,6 +1697,27 @@
       "repoPath": "incident/devops/deployment-rollback-workflow"
     },
     {
+      "slug": "disconnected-lanes-workflow",
+      "title": "Disconnected Lanes Workflow",
+      "description": "This workflow models lanes that never connect to each other.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 2,
+      "tags": [
+        "disconnected",
+        "lanes",
+        "decision",
+        "loop"
+      ],
+      "sourcePath": "edge-cases/disconnected-lanes",
+      "repoPath": "uncategorized/edge-cases/disconnected-lanes-workflow"
+    },
+    {
       "slug": "diversity-initiative-workflow",
       "title": "Diversity Initiative Workflow",
       "description": "This workflow models promoting workplace diversity.",
@@ -1261,6 +1763,26 @@
       "repoPath": "billing/business-operations/dunning-flow-workflow"
     },
     {
+      "slug": "duplicate-node-ids-workflow",
+      "title": "Duplicate Node Ids Workflow",
+      "description": "This workflow models the same node IDs reused in different lanes.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 3,
+      "numNodes": 10,
+      "numLanes": 3,
+      "tags": [
+        "duplicate",
+        "node",
+        "ids"
+      ],
+      "sourcePath": "edge-cases/duplicate-node-ids",
+      "repoPath": "uncategorized/edge-cases/duplicate-node-ids-workflow"
+    },
+    {
       "slug": "email-campaign-workflow",
       "title": "Email Campaign Workflow",
       "description": "Email marketing campaign workflow with audience segmentation, A/B testing, send scheduling, deliverability monitoring, and engagement analytics.",
@@ -1303,6 +1825,25 @@
       ],
       "sourcePath": "hr/employee-engagement",
       "repoPath": "uncategorized/hr/employee-engagement-workflow"
+    },
+    {
+      "slug": "empty-lane-workflow",
+      "title": "Empty Lane Workflow",
+      "description": "This workflow models a lane with no nodes.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 3,
+      "numNodes": 10,
+      "numLanes": 3,
+      "tags": [
+        "empty",
+        "lane"
+      ],
+      "sourcePath": "edge-cases/empty-lane",
+      "repoPath": "uncategorized/edge-cases/empty-lane-workflow"
     },
     {
       "slug": "enricher-workflow",
@@ -1483,6 +2024,25 @@
       ],
       "sourcePath": "finance/expense-claim",
       "repoPath": "approval/finance/expense-claim-workflow"
+    },
+    {
+      "slug": "extra-whitespace-workflow",
+      "title": "Extra Whitespace Workflow",
+      "description": "This workflow models labels that include leading and trailing spaces.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 5,
+      "numNodes": 16,
+      "numLanes": 4,
+      "tags": [
+        "extra",
+        "whitespace"
+      ],
+      "sourcePath": "edge-cases/extra-whitespace",
+      "repoPath": "uncategorized/edge-cases/extra-whitespace-workflow"
     },
     {
       "slug": "fan-out-fan-in-workflow",
@@ -1944,6 +2504,26 @@
       "repoPath": "uncategorized/hr/job-posting-workflow"
     },
     {
+      "slug": "json-in-label-workflow",
+      "title": "Json In Label Workflow",
+      "description": "This workflow models a label that contains JSON text.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 4,
+      "numNodes": 13,
+      "numLanes": 4,
+      "tags": [
+        "json",
+        "in",
+        "label"
+      ],
+      "sourcePath": "edge-cases/json-in-label",
+      "repoPath": "uncategorized/edge-cases/json-in-label-workflow"
+    },
+    {
       "slug": "kitting-process-workflow",
       "title": "Kitting Process Workflow",
       "description": "Kit assembly workflow with BOM explosion, component picking, assembly verification, kit labeling, and inventory conversion from components to finished kit.",
@@ -1990,6 +2570,25 @@
       ],
       "sourcePath": "business-operations/knowledge-base",
       "repoPath": "support/business-operations/knowledge-base-workflow"
+    },
+    {
+      "slug": "label-escaping-workflow",
+      "title": "Label Escaping Workflow",
+      "description": "This workflow models labels containing quotes and special characters.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 5,
+      "numNodes": 16,
+      "numLanes": 4,
+      "tags": [
+        "label",
+        "escaping"
+      ],
+      "sourcePath": "edge-cases/label-escaping",
+      "repoPath": "uncategorized/edge-cases/label-escaping-workflow"
     },
     {
       "slug": "last-mile-delivery-workflow",
@@ -2040,6 +2639,26 @@
       "repoPath": "delivery/devops/load-testing-workflow"
     },
     {
+      "slug": "markdown-in-label-workflow",
+      "title": "Markdown In Label Workflow",
+      "description": "This workflow models a label that contains markdown formatting.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "markdown",
+        "in",
+        "label"
+      ],
+      "sourcePath": "edge-cases/markdown-in-label",
+      "repoPath": "uncategorized/edge-cases/markdown-in-label-workflow"
+    },
+    {
       "slug": "materialized-view-workflow",
       "title": "Materialized View Workflow",
       "description": "This workflow models serving queries from a precomputed view.",
@@ -2062,6 +2681,44 @@
       "repoPath": "uncategorized/patterns/materialized-view-workflow"
     },
     {
+      "slug": "max-lanes-workflow",
+      "title": "Max Lanes Workflow",
+      "description": "This workflow models 10 lanes with simple cross-lane arrows.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 3,
+      "numNodes": 10,
+      "numLanes": 10,
+      "tags": [
+        "max",
+        "lanes"
+      ],
+      "sourcePath": "edge-cases/max-lanes",
+      "repoPath": "uncategorized/edge-cases/max-lanes-workflow"
+    },
+    {
+      "slug": "max-nodes-workflow",
+      "title": "Max Nodes Workflow",
+      "description": "This workflow models 50 nodes in a single lane as a parser stress test.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 50,
+      "numLanes": 2,
+      "tags": [
+        "max",
+        "nodes"
+      ],
+      "sourcePath": "edge-cases/max-nodes",
+      "repoPath": "uncategorized/edge-cases/max-nodes-workflow"
+    },
+    {
       "slug": "message-queue-workflow",
       "title": "Message Queue Workflow",
       "description": "This workflow models asynchronous processing of work via a queue.",
@@ -2081,6 +2738,45 @@
       ],
       "sourcePath": "patterns/message-queue",
       "repoPath": "uncategorized/patterns/message-queue-workflow"
+    },
+    {
+      "slug": "minimal-workflow",
+      "title": "Minimal Workflow",
+      "description": "This workflow models a workflow with a single node only.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 1,
+      "numLanes": 2,
+      "tags": [
+        "minimal",
+        "workflow"
+      ],
+      "sourcePath": "edge-cases/minimal-workflow",
+      "repoPath": "uncategorized/edge-cases/minimal-workflow"
+    },
+    {
+      "slug": "missing-labels-workflow",
+      "title": "Missing Labels Workflow",
+      "description": "This workflow models nodes without label parameters.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 4,
+      "numNodes": 13,
+      "numLanes": 4,
+      "tags": [
+        "missing",
+        "labels",
+        "decision"
+      ],
+      "sourcePath": "edge-cases/missing-labels",
+      "repoPath": "uncategorized/edge-cases/missing-labels-workflow"
     },
     {
       "slug": "monitoring-alert-workflow",
@@ -2304,6 +3000,25 @@
       ],
       "sourcePath": "hr/onboarding",
       "repoPath": "onboarding/hr/onboarding-workflow"
+    },
+    {
+      "slug": "orphan-node-workflow",
+      "title": "Orphan Node Workflow",
+      "description": "This workflow models a node with no connections.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "orphan",
+        "node"
+      ],
+      "sourcePath": "edge-cases/orphan-node",
+      "repoPath": "uncategorized/edge-cases/orphan-node-workflow"
     },
     {
       "slug": "packing-process-workflow",
@@ -3253,6 +3968,26 @@
       "repoPath": "uncategorized/patterns/snapshot-pattern-workflow"
     },
     {
+      "slug": "sql-injection-label-workflow",
+      "title": "Sql Injection Label Workflow",
+      "description": "This workflow models a label that looks like an SQL injection attempt.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 2,
+      "tags": [
+        "sql",
+        "injection",
+        "label"
+      ],
+      "sourcePath": "edge-cases/sql-injection-label",
+      "repoPath": "uncategorized/edge-cases/sql-injection-label-workflow"
+    },
+    {
       "slug": "state-machine-workflow",
       "title": "State Machine Workflow",
       "description": "This workflow models tracking object state changes over time.",
@@ -3564,6 +4299,25 @@
       "repoPath": "onboarding/business-operations/two-factor-setup-workflow"
     },
     {
+      "slug": "unicode-labels-workflow",
+      "title": "Unicode Labels Workflow",
+      "description": "This workflow models emoji and international characters in labels.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "unicode",
+        "labels"
+      ],
+      "sourcePath": "edge-cases/unicode-labels",
+      "repoPath": "uncategorized/edge-cases/unicode-labels-workflow"
+    },
+    {
       "slug": "user-onboarding-workflow",
       "title": "User Onboarding Workflow",
       "description": "New user onboarding workflow with welcome email, profile setup, product tour, first action prompt, and activation milestone tracking.",
@@ -3661,6 +4415,28 @@
       ],
       "sourcePath": "finance/vendor-onboarding",
       "repoPath": "onboarding/finance/vendor-onboarding-workflow"
+    },
+    {
+      "slug": "very-long-label-workflow",
+      "title": "Very Long Label Workflow",
+      "description": "This workflow models labels with very long text.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 1,
+      "tags": [
+        "very",
+        "long",
+        "label",
+        "decision",
+        "loop"
+      ],
+      "sourcePath": "edge-cases/very-long-label",
+      "repoPath": "uncategorized/edge-cases/very-long-label-workflow"
     },
     {
       "slug": "vulnerability-patch-workflow",
@@ -3787,6 +4563,45 @@
       ],
       "sourcePath": "business-operations/webinar-registration",
       "repoPath": "onboarding/business-operations/webinar-registration-workflow"
+    },
+    {
+      "slug": "xml-in-label-workflow",
+      "title": "Xml In Label Workflow",
+      "description": "This workflow models a label that contains XML text.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 5,
+      "numNodes": 16,
+      "numLanes": 4,
+      "tags": [
+        "xml",
+        "in",
+        "label"
+      ],
+      "sourcePath": "edge-cases/xml-in-label",
+      "repoPath": "uncategorized/edge-cases/xml-in-label-workflow"
+    },
+    {
+      "slug": "xss-label-workflow",
+      "title": "Xss Label Workflow",
+      "description": "This workflow models a label that looks like an XSS script.",
+      "kind": "workflow",
+      "sourceDomain": "edge-cases",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 3,
+      "numNodes": 10,
+      "numLanes": 3,
+      "tags": [
+        "xss",
+        "label"
+      ],
+      "sourcePath": "edge-cases/xss-label",
+      "repoPath": "uncategorized/edge-cases/xss-label-workflow"
     },
     {
       "slug": "yearly-audit-workflow",
@@ -6045,6 +6860,1908 @@
       ],
       "sourcePath": "",
       "repoPath": "agentic/architecture/context-shared-memory"
+    },
+    {
+      "slug": "claw-code-harness-architecture",
+      "title": "Claw Code Harness Architecture",
+      "description": "Claw Code harness architecture diagram showing the user loop, Python orchestration layer, Rust runtime, and external systems such as the LLM provider, file system, and MCP server.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "ai-orchestration",
+      "secondaryUseCases": [
+        "mcp"
+      ],
+      "useCases": [
+        "ai-orchestration",
+        "mcp"
+      ],
+      "complexity": 4,
+      "numNodes": 17,
+      "numLanes": 4,
+      "tags": [
+        "Claw Code",
+        "Claude Code",
+        "Harness Engineering",
+        "AI Agent Architecture",
+        "MCP",
+        "Python Orchestration",
+        "Rust Runtime",
+        "LLM",
+        "Agent Runtime"
+      ],
+      "sourcePath": "",
+      "repoPath": "ai-orchestration/architecture/claw-code-harness-architecture"
+    },
+    {
+      "slug": "zero-trust-agent-identity-pipeline",
+      "title": "Zero Trust Agent Identity Pipeline",
+      "description": "Zero-trust AI agent identity architecture with JWT validation, scoped OBO token exchange, SPIFFE/SVID workload identity, and MCP tool authorization.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "delivery",
+        "mcp"
+      ],
+      "useCases": [
+        "security",
+        "delivery",
+        "mcp"
+      ],
+      "complexity": 3,
+      "numNodes": 12,
+      "numLanes": 3,
+      "tags": [
+        "AI Agent Security",
+        "Zero Trust",
+        "Agent Identity",
+        "Non-Human Identity",
+        "NHI",
+        "OAuth 2.0 Token Exchange",
+        "OBO Token",
+        "SPIFFE",
+        "MCP",
+        "JWT"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/architecture/zero-trust-agent-identity-pipeline"
+    },
+    {
+      "slug": "mcp-zero-trust-boundary",
+      "title": "MCP Zero-Trust Boundary",
+      "description": "MCP security gateway architecture that authenticates tool calls, routes execution into isolated sandboxes, sanitizes responses, and returns clean results to the AI agent.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "mcp"
+      ],
+      "useCases": [
+        "security",
+        "mcp"
+      ],
+      "complexity": 3,
+      "numNodes": 12,
+      "numLanes": 3,
+      "tags": [
+        "MCP",
+        "Model Context Protocol",
+        "AI Agent Security",
+        "Zero Trust",
+        "MCP Security",
+        "Tool Sandbox",
+        "Sandbox",
+        "Prompt Injection",
+        "Secure Tool Calling"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/architecture/mcp-zero-trust-boundary"
+    },
+    {
+      "slug": "runtime-permission-gating",
+      "title": "Runtime Permission Gating",
+      "description": "Least-privilege AI agent architecture with policy-engine evaluation, just-in-time access, short-lived credentials, and action-scoped grants before tool execution.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "compliance"
+      ],
+      "useCases": [
+        "security",
+        "compliance"
+      ],
+      "complexity": 3,
+      "numNodes": 11,
+      "numLanes": 3,
+      "tags": [
+        "AI Agent Security",
+        "Least Privilege",
+        "Permission Gating",
+        "AI Agent Permissions",
+        "JIT Access",
+        "Policy Engine",
+        "RBAC",
+        "ABAC",
+        "OPA",
+        "Cerbos"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/architecture/runtime-permission-gating"
+    },
+    {
+      "slug": "risk-tiered-hitl",
+      "title": "Risk-Tiered Human-in-the-Loop",
+      "description": "Human-in-the-loop approval architecture that scores agent actions by risk, routes high-risk requests for review, and writes immutable audit records.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "approval",
+      "secondaryUseCases": [
+        "security",
+        "compliance"
+      ],
+      "useCases": [
+        "approval",
+        "security",
+        "compliance"
+      ],
+      "complexity": 4,
+      "numNodes": 14,
+      "numLanes": 4,
+      "tags": [
+        "Human in the Loop",
+        "HITL",
+        "AI Agent Security",
+        "AI Governance",
+        "Risk Policy",
+        "Approval Workflow",
+        "Audit Log",
+        "Human Approval"
+      ],
+      "sourcePath": "",
+      "repoPath": "approval/architecture/risk-tiered-hitl"
+    },
+    {
+      "slug": "secure-multi-agent-communication",
+      "title": "Secure Multi-Agent Communication",
+      "description": "Multi-agent security architecture with scoped tokens, API gateway enforcement, mTLS-protected worker calls, and orchestrator-driven result aggregation.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "agentic",
+        "mcp"
+      ],
+      "useCases": [
+        "security",
+        "agentic",
+        "mcp"
+      ],
+      "complexity": 4,
+      "numNodes": 20,
+      "numLanes": 4,
+      "tags": [
+        "Multi-Agent",
+        "AI Agent Security",
+        "Secure Multi-Agent",
+        "mTLS",
+        "API Gateway",
+        "Scoped Tokens",
+        "Agent-to-Agent Communication",
+        "A2A",
+        "Orchestrator",
+        "Worker Agent"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/architecture/secure-multi-agent-communication"
+    },
+    {
+      "slug": "openclaw-native-install-architecture",
+      "title": "OpenClaw Native Install Architecture",
+      "description": "OpenClaw deployment on your everyday machine with the gateway, workspace, and commercial LLM API connected locally through the web UI.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "delivery",
+      "secondaryUseCases": [],
+      "useCases": [
+        "delivery"
+      ],
+      "complexity": 2,
+      "numNodes": 9,
+      "numLanes": 3,
+      "tags": [
+        "OpenClaw",
+        "AI Agent Deployment",
+        "Native Install",
+        "Local Install",
+        "Self-Hosted AI Agent",
+        "Web UI",
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "sourcePath": "",
+      "repoPath": "delivery/architecture/openclaw-native-install-architecture"
+    },
+    {
+      "slug": "openclaw-docker-isolated-architecture",
+      "title": "OpenClaw Docker Isolated Architecture",
+      "description": "OpenClaw Docker deployment with an isolated gateway runtime, mounted workspace and config volumes, and a commercial LLM API.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "delivery",
+      "secondaryUseCases": [],
+      "useCases": [
+        "delivery"
+      ],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 3,
+      "tags": [
+        "OpenClaw",
+        "Docker",
+        "Docker Container",
+        "OpenClaw Docker",
+        "AI Agent Deployment",
+        "Self-Hosted AI Agent",
+        "Volume Mount",
+        "Local AI Agent"
+      ],
+      "sourcePath": "",
+      "repoPath": "delivery/architecture/openclaw-docker-isolated-architecture"
+    },
+    {
+      "slug": "openclaw-dedicated-local-machine-architecture",
+      "title": "OpenClaw Dedicated Local Machine Architecture",
+      "description": "OpenClaw architecture for a dedicated Mac Mini or homelab server with persistent workspace, agent state, and remote messaging access.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 3,
+      "tags": [
+        "OpenClaw",
+        "Mac Mini",
+        "Homelab",
+        "Dedicated Machine",
+        "Self-Hosted AI Agent",
+        "24/7 AI Agent",
+        "Telegram",
+        "Local Server"
+      ],
+      "sourcePath": "",
+      "repoPath": "uncategorized/architecture/openclaw-dedicated-local-machine-architecture"
+    },
+    {
+      "slug": "openclaw-vps-self-managed-architecture",
+      "title": "OpenClaw VPS Self-Managed Architecture",
+      "description": "Self-managed OpenClaw VPS deployment with gateway, workspace, firewall/auth layer, and commercial LLM provider access from any device.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "delivery",
+      "secondaryUseCases": [],
+      "useCases": [
+        "delivery"
+      ],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 3,
+      "tags": [
+        "OpenClaw",
+        "VPS",
+        "Self-Managed VPS",
+        "Cloud Deployment",
+        "Hetzner",
+        "DigitalOcean",
+        "Remote Access",
+        "SSH Tunnel"
+      ],
+      "sourcePath": "",
+      "repoPath": "delivery/architecture/openclaw-vps-self-managed-architecture"
+    },
+    {
+      "slug": "openclaw-managed-cloud-architecture",
+      "title": "OpenClaw Managed Cloud Architecture",
+      "description": "Managed cloud OpenClaw deployment using platforms like Railway or Northflank with a hosted gateway, integrations, monitoring, and commercial LLM APIs.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "delivery",
+      "secondaryUseCases": [],
+      "useCases": [
+        "delivery"
+      ],
+      "complexity": 3,
+      "numNodes": 9,
+      "numLanes": 3,
+      "tags": [
+        "OpenClaw",
+        "Managed Cloud",
+        "Railway",
+        "Northflank",
+        "Cloud Deployment",
+        "AI Agent Hosting",
+        "One-Click Deploy",
+        "Hosted AI Agent"
+      ],
+      "sourcePath": "",
+      "repoPath": "delivery/architecture/openclaw-managed-cloud-architecture"
+    },
+    {
+      "slug": "openclaw-hybrid-cloud-local-nodes-architecture",
+      "title": "OpenClaw Hybrid Cloud + Local Nodes Architecture",
+      "description": "Hybrid OpenClaw architecture with a cloud gateway, local nodes for device actions, persistent agent state, and commercial LLM provider calls.",
+      "kind": "architecture",
+      "sourceDomain": "Architecture",
+      "primaryUseCase": "delivery",
+      "secondaryUseCases": [
+        "mcp"
+      ],
+      "useCases": [
+        "delivery",
+        "mcp"
+      ],
+      "complexity": 4,
+      "numNodes": 10,
+      "numLanes": 4,
+      "tags": [
+        "OpenClaw",
+        "Hybrid Architecture",
+        "Cloud Gateway",
+        "Local Nodes",
+        "AI Agent Deployment",
+        "Remote AI Agent",
+        "WhatsApp",
+        "24/7 AI Agent"
+      ],
+      "sourcePath": "",
+      "repoPath": "delivery/architecture/openclaw-hybrid-cloud-local-nodes-architecture"
+    },
+    {
+      "slug": "incident-root-cause-prevention-workflow",
+      "title": "Incident Root Cause & Prevention Workflow",
+      "description": "Incident response workflow that documents the current state, traces the root cause, validates controls and creates a prevention protocol before the case is closed.",
+      "kind": "workflow",
+      "sourceDomain": "Process Mapping",
+      "primaryUseCase": "incident",
+      "secondaryUseCases": [
+        "compliance"
+      ],
+      "useCases": [
+        "incident",
+        "compliance"
+      ],
+      "complexity": 2,
+      "numNodes": 10,
+      "numLanes": 2,
+      "tags": [
+        "process-mapping",
+        "incident",
+        "root-cause",
+        "prevention",
+        "controls"
+      ],
+      "sourcePath": "",
+      "repoPath": "incident/process-mapping/incident-root-cause-prevention-workflow"
+    },
+    {
+      "slug": "ownership-assignment-escalation-workflow",
+      "title": "Ownership Assignment & Escalation Workflow",
+      "description": "Work assignment workflow that names an accountable owner, checks for blockers, escalates to the manager and confirms the assignment with everyone involved.",
+      "kind": "workflow",
+      "sourceDomain": "Process Mapping",
+      "primaryUseCase": "handoff",
+      "secondaryUseCases": [],
+      "useCases": [
+        "handoff"
+      ],
+      "complexity": 2,
+      "numNodes": 12,
+      "numLanes": 2,
+      "tags": [
+        "process-mapping",
+        "ownership",
+        "escalation",
+        "assignment",
+        "blockers"
+      ],
+      "sourcePath": "",
+      "repoPath": "handoff/process-mapping/ownership-assignment-escalation-workflow"
+    },
+    {
+      "slug": "handoff-readiness-checklist-workflow",
+      "title": "Handoff Readiness Checklist Workflow",
+      "description": "Handoff workflow with a completeness gate: the handoff checklist must be fully met before the receiving team approves and work moves forward.",
+      "kind": "workflow",
+      "sourceDomain": "Process Mapping",
+      "primaryUseCase": "handoff",
+      "secondaryUseCases": [
+        "approval"
+      ],
+      "useCases": [
+        "handoff",
+        "approval"
+      ],
+      "complexity": 2,
+      "numNodes": 10,
+      "numLanes": 2,
+      "tags": [
+        "process-mapping",
+        "handoff",
+        "checklist",
+        "approval",
+        "transition"
+      ],
+      "sourcePath": "",
+      "repoPath": "handoff/process-mapping/handoff-readiness-checklist-workflow"
+    },
+    {
+      "slug": "customer-service-escalation-workflow",
+      "title": "Customer Service Escalation Workflow",
+      "description": "Customer support workflow that applies the standard greeting and service protocol, then escalates to tier 2 when the standard path cannot resolve the request.",
+      "kind": "workflow",
+      "sourceDomain": "Process Mapping",
+      "primaryUseCase": "handoff",
+      "secondaryUseCases": [
+        "support"
+      ],
+      "useCases": [
+        "handoff",
+        "support"
+      ],
+      "complexity": 2,
+      "numNodes": 11,
+      "numLanes": 2,
+      "tags": [
+        "process-mapping",
+        "support",
+        "escalation",
+        "service",
+        "tier-2"
+      ],
+      "sourcePath": "",
+      "repoPath": "handoff/process-mapping/customer-service-escalation-workflow"
+    },
+    {
+      "slug": "process-documentation-knowledge-capture-workflow",
+      "title": "Process Documentation & Knowledge Capture Workflow",
+      "description": "Knowledge capture workflow: document the current process steps, write the step-by-step guide, get it approved and track onboarding to completion.",
+      "kind": "workflow",
+      "sourceDomain": "Process Mapping",
+      "primaryUseCase": "onboarding",
+      "secondaryUseCases": [],
+      "useCases": [
+        "onboarding"
+      ],
+      "complexity": 3,
+      "numNodes": 13,
+      "numLanes": 2,
+      "tags": [
+        "process-mapping",
+        "documentation",
+        "knowledge",
+        "onboarding",
+        "sop"
+      ],
+      "sourcePath": "",
+      "repoPath": "onboarding/process-mapping/process-documentation-knowledge-capture-workflow"
+    },
+    {
+      "slug": "process-analysis-future-state-workflow",
+      "title": "Process Analysis & Future State Workflow",
+      "description": "Process redesign workflow that identifies bottlenecks, designs the future state, adjusts the design and deploys the technology solution on the new baseline.",
+      "kind": "workflow",
+      "sourceDomain": "Process Mapping",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 12,
+      "numLanes": 2,
+      "tags": [
+        "process-mapping",
+        "process-analysis",
+        "future-state",
+        "bottlenecks",
+        "redesign"
+      ],
+      "sourcePath": "",
+      "repoPath": "uncategorized/process-mapping/process-analysis-future-state-workflow"
+    },
+    {
+      "slug": "work-tracking-dashboard-workflow",
+      "title": "Work Tracking Dashboard Workflow",
+      "description": "Work visibility workflow: create the centralized tracking record, define status categories, keep the information current and publish it on a central dashboard.",
+      "kind": "workflow",
+      "sourceDomain": "Process Mapping",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 12,
+      "numLanes": 2,
+      "tags": [
+        "process-mapping",
+        "tracking",
+        "dashboard",
+        "status",
+        "visibility"
+      ],
+      "sourcePath": "",
+      "repoPath": "uncategorized/process-mapping/work-tracking-dashboard-workflow"
+    },
+    {
+      "slug": "cross-department-customer-onboarding-workflow",
+      "title": "Cross-Department Customer Onboarding Workflow",
+      "description": "Five-lane customer onboarding workflow spanning sales, legal, finance, onboarding and the customer, with acceptance gates and a 30-day check-in before activation.",
+      "kind": "workflow",
+      "sourceDomain": "Process Mapping",
+      "primaryUseCase": "onboarding",
+      "secondaryUseCases": [],
+      "useCases": [
+        "onboarding"
+      ],
+      "complexity": 3,
+      "numNodes": 32,
+      "numLanes": 5,
+      "tags": [
+        "process-mapping",
+        "customer-onboarding",
+        "cross-functional",
+        "sales",
+        "legal",
+        "finance"
+      ],
+      "sourcePath": "",
+      "repoPath": "onboarding/process-mapping/cross-department-customer-onboarding-workflow"
+    },
+    {
+      "slug": "customer-onboarding-sales-handoff-workflow",
+      "title": "Customer Onboarding & Sales Handoff Workflow",
+      "description": "Three-lane onboarding workflow where the sales team hands the closed deal to the onboarding specialist, who runs the kickoff and setup tasks with the customer.",
+      "kind": "workflow",
+      "sourceDomain": "Process Mapping",
+      "primaryUseCase": "handoff",
+      "secondaryUseCases": [
+        "onboarding"
+      ],
+      "useCases": [
+        "handoff",
+        "onboarding"
+      ],
+      "complexity": 3,
+      "numNodes": 19,
+      "numLanes": 3,
+      "tags": [
+        "process-mapping",
+        "customer-onboarding",
+        "handoff",
+        "sales",
+        "kickoff"
+      ],
+      "sourcePath": "",
+      "repoPath": "handoff/process-mapping/customer-onboarding-sales-handoff-workflow"
+    },
+    {
+      "slug": "task-box-invoice-approval-workflow",
+      "title": "Task Box Invoice Approval Workflow",
+      "description": "Task box diagram for invoice approval: owner, description and system on every step, from sale recording to payment, with a rejection loop back to the invoice draft.",
+      "kind": "workflow",
+      "sourceDomain": "Process Mapping",
+      "primaryUseCase": "approval",
+      "secondaryUseCases": [
+        "billing"
+      ],
+      "useCases": [
+        "approval",
+        "billing"
+      ],
+      "complexity": 2,
+      "numNodes": 10,
+      "numLanes": 1,
+      "tags": [
+        "process-mapping",
+        "task-boxes",
+        "invoice",
+        "approval",
+        "owner",
+        "system"
+      ],
+      "sourcePath": "",
+      "repoPath": "approval/process-mapping/task-box-invoice-approval-workflow"
+    },
+    {
+      "slug": "fz-file-sequence-diagram-example",
+      "title": "FZ File Sequence Diagram Example",
+      "description": "The reference example from the .fz file announcement: a text-first sequence diagram with two lanes, four nodes and one labeled message, stored as a portable .fz file.",
+      "kind": "workflow",
+      "sourceDomain": "Diagram Authoring",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [],
+      "useCases": [
+        "security"
+      ],
+      "complexity": 1,
+      "numNodes": 4,
+      "numLanes": 2,
+      "tags": [
+        "flowzap-code",
+        "fz-file",
+        "diagrams-as-code",
+        "sequence-diagram"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/diagram-authoring/fz-file-sequence-diagram-example"
+    },
+    {
+      "slug": "n8n-json-workflow-as-flowzap-code",
+      "title": "n8n JSON Workflow as FlowZap Code",
+      "description": "An n8n automation rendered as FlowZap Code: manual trigger, spreadsheet read, batch iteration, AI field mapping, PDF generation, email send, with success and error logging branches.",
+      "kind": "workflow",
+      "sourceDomain": "Diagram Authoring",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [],
+      "useCases": [
+        "security"
+      ],
+      "complexity": 2,
+      "numNodes": 11,
+      "numLanes": 1,
+      "tags": [
+        "n8n",
+        "flowzap-code",
+        "automation",
+        "json",
+        "conversion"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/diagram-authoring/n8n-json-workflow-as-flowzap-code"
+    },
+    {
+      "slug": "mcp-server-order-fulfillment-example",
+      "title": "MCP Server Order Fulfillment Example",
+      "description": "Compact order fulfillment diagram generated through the FlowZap MCP server, written with the shorthand syntax: sales validation with a validity gate, then fulfillment processing and shipping.",
+      "kind": "workflow",
+      "sourceDomain": "Diagram Authoring",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "mcp"
+      ],
+      "useCases": [
+        "security",
+        "mcp"
+      ],
+      "complexity": 2,
+      "numNodes": 6,
+      "numLanes": 2,
+      "tags": [
+        "mcp",
+        "flowzap-code",
+        "shorthand-syntax",
+        "order-fulfillment"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/diagram-authoring/mcp-server-order-fulfillment-example"
+    },
+    {
+      "slug": "ai-assisted-ecommerce-onboarding-workflow",
+      "title": "AI-Assisted E-Commerce Onboarding Workflow",
+      "description": "Vibe-coding example: a cart lane and an AI lane, where the assistant analyses the shopper profile, asks for missing details and adds the suggested products to the cart.",
+      "kind": "workflow",
+      "sourceDomain": "Diagram Authoring",
+      "primaryUseCase": "onboarding",
+      "secondaryUseCases": [
+        "security"
+      ],
+      "useCases": [
+        "onboarding",
+        "security"
+      ],
+      "complexity": 2,
+      "numNodes": 10,
+      "numLanes": 2,
+      "tags": [
+        "flowzap-code",
+        "vibe-coding",
+        "ecommerce",
+        "ai-assistant",
+        "cart"
+      ],
+      "sourcePath": "",
+      "repoPath": "onboarding/diagram-authoring/ai-assisted-ecommerce-onboarding-workflow"
+    },
+    {
+      "slug": "agent-sandbox-containment-workflow",
+      "title": "Agent Sandbox Containment Workflow",
+      "description": "Layer 1 of the agent containment stack: every tool call executes in an ephemeral container, and any path outside the workspace is denied and logged as a security event.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Security",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "agentic"
+      ],
+      "useCases": [
+        "security",
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 8,
+      "numLanes": 2,
+      "tags": [
+        "agent-containment",
+        "sandbox",
+        "blast-radius",
+        "security",
+        "tool-call"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/agentic-security/agent-sandbox-containment-workflow"
+    },
+    {
+      "slug": "permission-gate-containment-workflow",
+      "title": "Permission Gate Containment Workflow",
+      "description": "Layer 2 of the agent containment stack: a permission gate checks the whitelist and path scope before execution, and aborts the call with a logged denial when the scope does not match.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Security",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "agentic"
+      ],
+      "useCases": [
+        "security",
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 8,
+      "numLanes": 2,
+      "tags": [
+        "agent-containment",
+        "permissions",
+        "whitelist",
+        "security",
+        "blast-radius"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/agentic-security/permission-gate-containment-workflow"
+    },
+    {
+      "slug": "hitl-approval-containment-workflow",
+      "title": "HITL Approval Containment Workflow",
+      "description": "Layer 3 of the agent containment stack: dangerous tool calls are suspended and sent to a human reviewer, who approves or aborts the operation before anything executes.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Security",
+      "primaryUseCase": "approval",
+      "secondaryUseCases": [
+        "security",
+        "agentic"
+      ],
+      "useCases": [
+        "approval",
+        "security",
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 8,
+      "numLanes": 2,
+      "tags": [
+        "agent-containment",
+        "hitl",
+        "human-approval",
+        "security",
+        "dangerous-operations"
+      ],
+      "sourcePath": "",
+      "repoPath": "approval/agentic-security/hitl-approval-containment-workflow"
+    },
+    {
+      "slug": "audit-logging-siem-containment-workflow",
+      "title": "Audit Logging & SIEM Containment Workflow",
+      "description": "Layer 4 of the agent containment stack: arguments are sanitized, secrets stripped and the action trace written to the SIEM before execution continues.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Security",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "compliance",
+        "agentic"
+      ],
+      "useCases": [
+        "security",
+        "compliance",
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 6,
+      "numLanes": 2,
+      "tags": [
+        "agent-containment",
+        "audit",
+        "siem",
+        "logging",
+        "secrets"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/agentic-security/audit-logging-siem-containment-workflow"
+    },
+    {
+      "slug": "four-layer-agent-containment-stack",
+      "title": "Four-Layer Agent Containment Stack",
+      "description": "The full containment stack in one diagram: sandbox, permission gate, HITL approval and SIEM audit applied in sequence around a single dangerous tool call.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Security",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "compliance",
+        "agentic"
+      ],
+      "useCases": [
+        "security",
+        "compliance",
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 10,
+      "numLanes": 2,
+      "tags": [
+        "agent-containment",
+        "sandbox",
+        "permissions",
+        "hitl",
+        "audit",
+        "blast-radius"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/agentic-security/four-layer-agent-containment-stack"
+    },
+    {
+      "slug": "patch-closure-proof-workflow",
+      "title": "Patch Closure Proof Workflow",
+      "description": "Closing-proof workflow across detection, remediation and assurance: measure the fix rather than the reaction, rate the outage risk and refuse closure without evidence.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Security",
+      "primaryUseCase": "incident",
+      "secondaryUseCases": [
+        "security",
+        "agentic"
+      ],
+      "useCases": [
+        "incident",
+        "security",
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 12,
+      "numLanes": 4,
+      "tags": [
+        "patch-management",
+        "closing-proof",
+        "remediation",
+        "assurance",
+        "incident"
+      ],
+      "sourcePath": "",
+      "repoPath": "incident/agentic-security/patch-closure-proof-workflow"
+    },
+    {
+      "slug": "artifact-provenance-verification-workflow",
+      "title": "Artifact Provenance Verification Workflow",
+      "description": "Build, provenance and registry lanes: an artifact is only accepted when its attestation matches the build that produced it, and a hijacked repo sends it back to build.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Security",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "agentic"
+      ],
+      "useCases": [
+        "security",
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 8,
+      "numLanes": 3,
+      "tags": [
+        "provenance",
+        "supply-chain",
+        "attestation",
+        "build",
+        "registry"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/agentic-security/artifact-provenance-verification-workflow"
+    },
+    {
+      "slug": "independent-action-verification-workflow",
+      "title": "Independent Action Verification Workflow",
+      "description": "Rule 3 in practice: the agent that acts emits the action trace, a separate verification lane confirms the effect, and only a human closes the case.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Security",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "compliance",
+        "agentic"
+      ],
+      "useCases": [
+        "security",
+        "compliance",
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 8,
+      "numLanes": 3,
+      "tags": [
+        "closing-proof",
+        "verification",
+        "audit",
+        "agentic-security",
+        "hitl"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/agentic-security/independent-action-verification-workflow"
+    },
+    {
+      "slug": "agent-mandate-scope-enforcement-workflow",
+      "title": "Agent Mandate Scope Enforcement Workflow",
+      "description": "Consent is not a mandate: a third-party agent's requested scope is compared to the customer mandate before read-only access is granted, and every access event is audited.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Security",
+      "primaryUseCase": "security",
+      "secondaryUseCases": [
+        "compliance",
+        "agentic"
+      ],
+      "useCases": [
+        "security",
+        "compliance",
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 8,
+      "numLanes": 3,
+      "tags": [
+        "agent-identity",
+        "mandate",
+        "access-control",
+        "audit",
+        "consent"
+      ],
+      "sourcePath": "",
+      "repoPath": "security/agentic-security/agent-mandate-scope-enforcement-workflow"
+    },
+    {
+      "slug": "problem-mind-map-credit-decision",
+      "title": "Problem Mind Map — Credit Decision",
+      "description": "A problem mind map for an AI credit decision, mapping decisions, data, policies, actors, risks, constraints and open questions before any component is designed.",
+      "kind": "workflow",
+      "sourceDomain": "Mindmap",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [],
+      "useCases": [
+        "agentic"
+      ],
+      "complexity": 3,
+      "numNodes": 32,
+      "numLanes": 1,
+      "tags": [
+        "mind-map",
+        "problem-mind-map",
+        "credit-decision",
+        "problem-first",
+        "agentic-architecture"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/mindmap/problem-mind-map-credit-decision"
+    },
+    {
+      "slug": "agent-generated-mind-map-incident-root-cause",
+      "title": "Agent-Generated Mind Map — Incident Root Cause",
+      "description": "An AGMM example: an SRE agent outputs its API latency root-cause reasoning chain as an interactive mind map, reversing the Human-to-Machine explainability flow.",
+      "kind": "workflow",
+      "sourceDomain": "Mindmap",
+      "primaryUseCase": "incident",
+      "secondaryUseCases": [
+        "agentic"
+      ],
+      "useCases": [
+        "incident",
+        "agentic"
+      ],
+      "complexity": 3,
+      "numNodes": 13,
+      "numLanes": 1,
+      "tags": [
+        "mind-map",
+        "agmm",
+        "explainability",
+        "incident",
+        "sre",
+        "agentic-architecture"
+      ],
+      "sourcePath": "",
+      "repoPath": "incident/mindmap/agent-generated-mind-map-incident-root-cause"
+    },
+    {
+      "slug": "agentic-taste-evaluation-loop",
+      "title": "Agentic Taste Evaluation Loop",
+      "description": "Legacy executor, LLM-as-judge evaluator and next-gen consumer: an evaluator scores the full trajectory, rejects structural sloppiness and forwards only validated payloads.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Architecture",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [],
+      "useCases": [
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 9,
+      "numLanes": 3,
+      "tags": [
+        "agentic-taste",
+        "llm-as-judge",
+        "agent-evaluation",
+        "interoperability",
+        "trajectory"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agentic-architecture/agentic-taste-evaluation-loop"
+    },
+    {
+      "slug": "reflection-loop-agent-self-improvement",
+      "title": "Reflection Loop — Agent Self-Improvement",
+      "description": "The reflection loop: a worker drafts, a critic reviews the draft against the brief and the orchestrator only approves once the revision closes every gap.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Architecture",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [],
+      "useCases": [
+        "agentic"
+      ],
+      "complexity": 3,
+      "numNodes": 22,
+      "numLanes": 4,
+      "tags": [
+        "reflexion",
+        "self-improvement",
+        "critic",
+        "orchestrator-worker",
+        "agent-frameworks"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agentic-architecture/reflection-loop-agent-self-improvement"
+    },
+    {
+      "slug": "memory-loop-agent-self-improvement",
+      "title": "Memory Loop — Agent Self-Improvement",
+      "description": "The memory loop: before planning, the planner queries the memory store for similar past lessons, then writes the new lesson back once the task is closed.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Architecture",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [
+        "context-management"
+      ],
+      "useCases": [
+        "agentic",
+        "context-management"
+      ],
+      "complexity": 3,
+      "numNodes": 29,
+      "numLanes": 5,
+      "tags": [
+        "memory-management",
+        "self-improvement",
+        "planner",
+        "lessons-learned",
+        "agent-frameworks"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agentic-architecture/memory-loop-agent-self-improvement"
+    },
+    {
+      "slug": "evolution-loop-agent-self-improvement",
+      "title": "Evolution Loop — Agent Self-Improvement",
+      "description": "The evolution loop: an optimizer benchmarks candidate agents against the production baseline, keeps the best score and confirms persistence before promotion.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Architecture",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [],
+      "useCases": [
+        "agentic"
+      ],
+      "complexity": 3,
+      "numNodes": 24,
+      "numLanes": 5,
+      "tags": [
+        "evolution",
+        "benchmark",
+        "self-improvement",
+        "optimizer",
+        "agent-frameworks"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agentic-architecture/evolution-loop-agent-self-improvement"
+    },
+    {
+      "slug": "hermes-multi-tenant-isolation-architecture",
+      "title": "Hermes Multi-Tenant Isolation Architecture",
+      "description": "Shared host, per-client profiles and tool boundaries: how external clients reach their own Hermes workspaces without seeing another tenant's tools or data.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Architecture",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [],
+      "useCases": [
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 12,
+      "numLanes": 3,
+      "tags": [
+        "hermes",
+        "multi-tenant",
+        "isolation",
+        "profiles",
+        "sandboxing"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agentic-architecture/hermes-multi-tenant-isolation-architecture"
+    },
+    {
+      "slug": "hermes-single-client-single-department-architecture",
+      "title": "Hermes Single Client, Single Department Architecture",
+      "description": "Option 1 of the Hermes multi-tenant setup: one external actor, one gateway, one isolated workspace inside an execution sandbox, and a single client profile.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Architecture",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [
+        "mcp"
+      ],
+      "useCases": [
+        "agentic",
+        "mcp"
+      ],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 3,
+      "tags": [
+        "hermes",
+        "multi-tenant",
+        "single-tenant",
+        "gateway",
+        "sandboxing"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agentic-architecture/hermes-single-client-single-department-architecture"
+    },
+    {
+      "slug": "hermes-single-client-multi-department-routing-architecture",
+      "title": "Hermes Single Client, Multi-Department Routing Architecture",
+      "description": "Option 2: one client with several entry points, a prefix router that maps /eng or /support to a mode, and a single unified Hermes profile behind the gateway.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Architecture",
+      "primaryUseCase": "handoff",
+      "secondaryUseCases": [
+        "agentic",
+        "mcp"
+      ],
+      "useCases": [
+        "handoff",
+        "agentic",
+        "mcp"
+      ],
+      "complexity": 2,
+      "numNodes": 7,
+      "numLanes": 4,
+      "tags": [
+        "hermes",
+        "multi-tenant",
+        "routing",
+        "departments",
+        "gateway"
+      ],
+      "sourcePath": "",
+      "repoPath": "handoff/agentic-architecture/hermes-single-client-multi-department-routing-architecture"
+    },
+    {
+      "slug": "hermes-multi-client-isolated-profiles-architecture",
+      "title": "Hermes Multi-Client Isolated Profiles Architecture",
+      "description": "Option 3, the core multi-tenant setup: per-token entry points, one gateway per client, and isolated Hermes profiles running in separate containers.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Architecture",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [],
+      "useCases": [
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 8,
+      "numLanes": 4,
+      "tags": [
+        "hermes",
+        "multi-tenant",
+        "profiles",
+        "isolation",
+        "docker"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agentic-architecture/hermes-multi-client-isolated-profiles-architecture"
+    },
+    {
+      "slug": "hermes-full-multi-tenant-department-routing-architecture",
+      "title": "Hermes Full Multi-Tenant with Department Routing",
+      "description": "Option 4: external participants, per-client gateways and routers, department prefixes inside each tenant, and a sandbox per client.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Architecture",
+      "primaryUseCase": "handoff",
+      "secondaryUseCases": [
+        "agentic"
+      ],
+      "useCases": [
+        "handoff",
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 10,
+      "numLanes": 4,
+      "tags": [
+        "hermes",
+        "multi-tenant",
+        "routing",
+        "sandboxing",
+        "departments"
+      ],
+      "sourcePath": "",
+      "repoPath": "handoff/agentic-architecture/hermes-full-multi-tenant-department-routing-architecture"
+    },
+    {
+      "slug": "hermes-kanban-agent-coordination-workflow",
+      "title": "Hermes Kanban Agent Coordination Workflow",
+      "description": "A planner decomposes the request on a shared board, specialized workers claim tasks, and the orchestrator delivers once every card is closed.",
+      "kind": "workflow",
+      "sourceDomain": "Agentic Architecture",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [],
+      "useCases": [
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 6,
+      "numLanes": 4,
+      "tags": [
+        "hermes",
+        "kanban",
+        "multi-agent",
+        "orchestrator-worker",
+        "coordination"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agentic-architecture/hermes-kanban-agent-coordination-workflow"
+    },
+    {
+      "slug": "agent-to-agent-usdc-payment-workflow",
+      "title": "Agent-to-Agent USDC Payment Workflow",
+      "description": "Coinbase AgentKit flow: a human allocates a USDC budget, the agent authenticates its Base wallet, pays an x402 invoice and processes the supplier data, with no fiat in the path.",
+      "kind": "workflow",
+      "sourceDomain": "Commerce Automation",
+      "primaryUseCase": "billing",
+      "secondaryUseCases": [],
+      "useCases": [
+        "billing"
+      ],
+      "complexity": 2,
+      "numNodes": 9,
+      "numLanes": 3,
+      "tags": [
+        "coinbase",
+        "agentkit",
+        "usdc",
+        "x402",
+        "agent-payments",
+        "stablecoin"
+      ],
+      "sourcePath": "",
+      "repoPath": "billing/commerce-automation/agent-to-agent-usdc-payment-workflow"
+    },
+    {
+      "slug": "agent-mediated-fiat-payment-workflow",
+      "title": "Agent-Mediated Fiat Payment Workflow",
+      "description": "Stripe Agent Toolkit flow: the consumer approves an agent spend, the agent requests a scoped token, passes it to the merchant and the order completes in fiat.",
+      "kind": "workflow",
+      "sourceDomain": "Commerce Automation",
+      "primaryUseCase": "billing",
+      "secondaryUseCases": [],
+      "useCases": [
+        "billing"
+      ],
+      "complexity": 2,
+      "numNodes": 11,
+      "numLanes": 4,
+      "tags": [
+        "stripe",
+        "agent-toolkit",
+        "shared-payment-token",
+        "fiat",
+        "agent-payments"
+      ],
+      "sourcePath": "",
+      "repoPath": "billing/commerce-automation/agent-mediated-fiat-payment-workflow"
+    },
+    {
+      "slug": "coinbase-trust-flow-onchain-settlement",
+      "title": "Coinbase Trust Flow — On-Chain Settlement",
+      "description": "The trust layer behind agent-to-agent payments on Coinbase: the agent initiates the spend, the transaction is broadcast, the block confirms and the payment finalizes on-chain.",
+      "kind": "workflow",
+      "sourceDomain": "Commerce Automation",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 2,
+      "tags": [
+        "coinbase",
+        "trust-flow",
+        "onchain",
+        "settlement",
+        "base"
+      ],
+      "sourcePath": "",
+      "repoPath": "uncategorized/commerce-automation/coinbase-trust-flow-onchain-settlement"
+    },
+    {
+      "slug": "stripe-trust-flow-fiat-authorization",
+      "title": "Stripe Trust Flow — Fiat Authorization",
+      "description": "The trust layer behind agent-mediated payments at Stripe: the agent submits a shared payment token, the risk engine approves it and fiat clears through the banking rails.",
+      "kind": "workflow",
+      "sourceDomain": "Commerce Automation",
+      "primaryUseCase": "approval",
+      "secondaryUseCases": [
+        "security",
+        "compliance"
+      ],
+      "useCases": [
+        "approval",
+        "security",
+        "compliance"
+      ],
+      "complexity": 1,
+      "numNodes": 5,
+      "numLanes": 2,
+      "tags": [
+        "stripe",
+        "trust-flow",
+        "risk-engine",
+        "authorization",
+        "fiat"
+      ],
+      "sourcePath": "",
+      "repoPath": "approval/commerce-automation/stripe-trust-flow-fiat-authorization"
+    },
+    {
+      "slug": "agentic-commerce-checkout-architecture",
+      "title": "Agentic Commerce Checkout Architecture",
+      "description": "Five-lane architecture for agent-driven checkout: merchant edge, commerce services, payment stack, fulfillment and the approval gate before an order is authorized.",
+      "kind": "workflow",
+      "sourceDomain": "Commerce Automation",
+      "primaryUseCase": "billing",
+      "secondaryUseCases": [
+        "agentic"
+      ],
+      "useCases": [
+        "billing",
+        "agentic"
+      ],
+      "complexity": 3,
+      "numNodes": 21,
+      "numLanes": 5,
+      "tags": [
+        "agentic-commerce",
+        "chatgpt-commerce",
+        "checkout",
+        "merchant",
+        "payments"
+      ],
+      "sourcePath": "",
+      "repoPath": "billing/commerce-automation/agentic-commerce-checkout-architecture"
+    },
+    {
+      "slug": "multi-platform-ecommerce-integration-hub",
+      "title": "Multi-Platform eCommerce Integration Hub",
+      "description": "n8n as the central integration layer: one workflow decides whether an event is a product sync or an order, routes it to the right channel and closes the loop.",
+      "kind": "workflow",
+      "sourceDomain": "Commerce Automation",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 11,
+      "numLanes": 1,
+      "tags": [
+        "n8n",
+        "ecommerce",
+        "integration",
+        "multi-channel",
+        "shopify",
+        "woocommerce"
+      ],
+      "sourcePath": "",
+      "repoPath": "uncategorized/commerce-automation/multi-platform-ecommerce-integration-hub"
+    },
+    {
+      "slug": "ai-product-sync-pipeline-workflow",
+      "title": "AI Product Sync Pipeline Workflow",
+      "description": "Product sync between platforms with an AI agent in the middle: field extraction, category mapping and schema normalization before the write-back returns 200 OK.",
+      "kind": "workflow",
+      "sourceDomain": "Commerce Automation",
+      "primaryUseCase": "delivery",
+      "secondaryUseCases": [],
+      "useCases": [
+        "delivery"
+      ],
+      "complexity": 2,
+      "numNodes": 12,
+      "numLanes": 3,
+      "tags": [
+        "n8n",
+        "product-sync",
+        "ai-agents",
+        "schema-normalization",
+        "ecommerce"
+      ],
+      "sourcePath": "",
+      "repoPath": "delivery/commerce-automation/ai-product-sync-pipeline-workflow"
+    },
+    {
+      "slug": "ai-order-routing-workflow",
+      "title": "AI Order Routing Workflow",
+      "description": "Order routing where an AI decision engine classifies each order, auto-processes the clean ones and sends the rest to a backorder queue before operations completes it.",
+      "kind": "workflow",
+      "sourceDomain": "Commerce Automation",
+      "primaryUseCase": "handoff",
+      "secondaryUseCases": [],
+      "useCases": [
+        "handoff"
+      ],
+      "complexity": 3,
+      "numNodes": 14,
+      "numLanes": 3,
+      "tags": [
+        "n8n",
+        "order-routing",
+        "ai-decision",
+        "backorder",
+        "fulfillment"
+      ],
+      "sourcePath": "",
+      "repoPath": "handoff/commerce-automation/ai-order-routing-workflow"
+    },
+    {
+      "slug": "shopify-river-four-layer-agent-architecture",
+      "title": "Shopify River 4-Layer Agent Architecture",
+      "description": "Slack as interface, River as agent surface, Aquifer as foundation and a separate harness: the four layers behind an internal agent that treats a session as a durable entity.",
+      "kind": "workflow",
+      "sourceDomain": "Commerce Automation",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 3,
+      "numNodes": 13,
+      "numLanes": 4,
+      "tags": [
+        "shopify",
+        "river",
+        "internal-agents",
+        "architecture",
+        "slack",
+        "session"
+      ],
+      "sourcePath": "",
+      "repoPath": "uncategorized/commerce-automation/shopify-river-four-layer-agent-architecture"
+    },
+    {
+      "slug": "shopify-river-brain-hands-decoupling-architecture",
+      "title": "Shopify River Brain-Hands Decoupling Architecture",
+      "description": "Decoupling the brain from the hands: the harness calls the LLM and emits tool intents, while the sandbox executes them, so a new agent is a profile and not a platform.",
+      "kind": "workflow",
+      "sourceDomain": "Commerce Automation",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 12,
+      "numLanes": 3,
+      "tags": [
+        "shopify",
+        "river",
+        "harness",
+        "sandbox",
+        "agent-architecture"
+      ],
+      "sourcePath": "",
+      "repoPath": "uncategorized/commerce-automation/shopify-river-brain-hands-decoupling-architecture"
+    },
+    {
+      "slug": "shopify-river-session-modes-workflow",
+      "title": "Shopify River Session Modes Workflow",
+      "description": "Three session modes in one agent: interactive in Slack, automated review in the pull request, and ephemeral batch runs triggered by CI — cattle, not pets.",
+      "kind": "workflow",
+      "sourceDomain": "Commerce Automation",
+      "primaryUseCase": "approval",
+      "secondaryUseCases": [],
+      "useCases": [
+        "approval"
+      ],
+      "complexity": 2,
+      "numNodes": 9,
+      "numLanes": 4,
+      "tags": [
+        "shopify",
+        "river",
+        "session-modes",
+        "ci",
+        "code-review",
+        "automation"
+      ],
+      "sourcePath": "",
+      "repoPath": "approval/commerce-automation/shopify-river-session-modes-workflow"
+    },
+    {
+      "slug": "llm-model-router-cost-aware-routing",
+      "title": "LLM Model Router — Cost-Aware Routing",
+      "description": "An LLM gateway that reads the token budget, extracts intent and length, then routes the call to the cheap model or the premium one before delivering the response.",
+      "kind": "workflow",
+      "sourceDomain": "LLM Operations",
+      "primaryUseCase": "handoff",
+      "secondaryUseCases": [
+        "mcp"
+      ],
+      "useCases": [
+        "handoff",
+        "mcp"
+      ],
+      "complexity": 2,
+      "numNodes": 10,
+      "numLanes": 3,
+      "tags": [
+        "token-optimization",
+        "model-routing",
+        "llm-gateway",
+        "cost",
+        "llmops"
+      ],
+      "sourcePath": "",
+      "repoPath": "handoff/llm-operations/llm-model-router-cost-aware-routing"
+    },
+    {
+      "slug": "context-compaction-gateway-workflow",
+      "title": "Context Compaction Gateway Workflow",
+      "description": "A context gateway that assembles raw context from the vector store and logs, compacts 100k tokens down to 15k and only then builds the final prompt.",
+      "kind": "workflow",
+      "sourceDomain": "LLM Operations",
+      "primaryUseCase": "mcp",
+      "secondaryUseCases": [
+        "context-management"
+      ],
+      "useCases": [
+        "mcp",
+        "context-management"
+      ],
+      "complexity": 2,
+      "numNodes": 12,
+      "numLanes": 4,
+      "tags": [
+        "token-optimization",
+        "context-management",
+        "compaction",
+        "rag",
+        "llmops"
+      ],
+      "sourcePath": "",
+      "repoPath": "mcp/llm-operations/context-compaction-gateway-workflow"
+    },
+    {
+      "slug": "prompt-caching-static-prefix-workflow",
+      "title": "Prompt Caching with Static Prefix Workflow",
+      "description": "Static system prompt assembled once and cached by the provider, then only the volatile user input is appended — a cache hit reads 50k tokens from the KV cache.",
+      "kind": "workflow",
+      "sourceDomain": "LLM Operations",
+      "primaryUseCase": "context-management",
+      "secondaryUseCases": [],
+      "useCases": [
+        "context-management"
+      ],
+      "complexity": 3,
+      "numNodes": 14,
+      "numLanes": 2,
+      "tags": [
+        "token-optimization",
+        "prompt-caching",
+        "kv-cache",
+        "context-management",
+        "llmops"
+      ],
+      "sourcePath": "",
+      "repoPath": "context-management/llm-operations/prompt-caching-static-prefix-workflow"
+    },
+    {
+      "slug": "dynamic-tool-schema-selection-workflow",
+      "title": "Dynamic Tool Schema Selection Workflow",
+      "description": "Instead of loading all 50 tool schemas into every request, the agent analyses the step, queries the MCP tool registry and injects only the two schemas it needs.",
+      "kind": "workflow",
+      "sourceDomain": "LLM Operations",
+      "primaryUseCase": "handoff",
+      "secondaryUseCases": [
+        "mcp"
+      ],
+      "useCases": [
+        "handoff",
+        "mcp"
+      ],
+      "complexity": 2,
+      "numNodes": 8,
+      "numLanes": 3,
+      "tags": [
+        "token-optimization",
+        "mcp",
+        "tool-schemas",
+        "tool-routing",
+        "llmops"
+      ],
+      "sourcePath": "",
+      "repoPath": "handoff/llm-operations/dynamic-tool-schema-selection-workflow"
+    },
+    {
+      "slug": "structured-output-validation-workflow",
+      "title": "Structured Output Validation Workflow",
+      "description": "Output on a leash: the model generates against an output schema, the orchestrator validates that it parses as JSON or a diff, and regenerates or formats when it does not.",
+      "kind": "workflow",
+      "sourceDomain": "LLM Operations",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 8,
+      "numLanes": 2,
+      "tags": [
+        "token-optimization",
+        "structured-output",
+        "validation",
+        "json-schema",
+        "llmops"
+      ],
+      "sourcePath": "",
+      "repoPath": "uncategorized/llm-operations/structured-output-validation-workflow"
+    },
+    {
+      "slug": "agent-world-model-simulation-loop",
+      "title": "Agent-World Model Simulation Loop",
+      "description": "The agent analyses the request, the world model simulates the action, the simulated outcome returns a confirmation and the agent executes — with an adjustment loop on divergence.",
+      "kind": "workflow",
+      "sourceDomain": "Agent Simulation",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 12,
+      "numLanes": 3,
+      "tags": [
+        "qwen",
+        "agentworld",
+        "world-model",
+        "simulation",
+        "agent-testing"
+      ],
+      "sourcePath": "",
+      "repoPath": "uncategorized/agent-simulation/agent-world-model-simulation-loop"
+    },
+    {
+      "slug": "validation-simulator-inside-agent-workflow",
+      "title": "Validation Simulator Inside the Agent Workflow",
+      "description": "The validation simulator sits inside the workflow, not after it: the agent analyses the claim attachments, detects the anomaly and simulates the reimbursement before executing it.",
+      "kind": "workflow",
+      "sourceDomain": "Agent Simulation",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 3,
+      "numNodes": 14,
+      "numLanes": 4,
+      "tags": [
+        "qwen",
+        "agentworld",
+        "validation",
+        "insurance",
+        "simulation"
+      ],
+      "sourcePath": "",
+      "repoPath": "uncategorized/agent-simulation/validation-simulator-inside-agent-workflow"
+    },
+    {
+      "slug": "agentworld-testing-pipeline-workflow",
+      "title": "AgentWorld Testing Pipeline Workflow",
+      "description": "A QA pipeline with a simulator in the loop: configure perturbations, add scenarios, run the agent under test and analyse the robustness report before release.",
+      "kind": "workflow",
+      "sourceDomain": "Agent Simulation",
+      "primaryUseCase": "delivery",
+      "secondaryUseCases": [],
+      "useCases": [
+        "delivery"
+      ],
+      "complexity": 3,
+      "numNodes": 14,
+      "numLanes": 3,
+      "tags": [
+        "qwen",
+        "agentworld",
+        "qa",
+        "test-pipeline",
+        "robustness"
+      ],
+      "sourcePath": "",
+      "repoPath": "delivery/agent-simulation/agentworld-testing-pipeline-workflow"
+    },
+    {
+      "slug": "mirofish-synthetic-focus-group-architecture",
+      "title": "MiroFish Synthetic Focus Group Architecture",
+      "description": "Browser to MiroFish stack to LLM API: the seed document is distributed to each agent, agents produce outputs and the logs are aggregated into a report.",
+      "kind": "workflow",
+      "sourceDomain": "Agent Simulation",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [],
+      "useCases": [
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 11,
+      "numLanes": 3,
+      "tags": [
+        "mirofish",
+        "synthetic-research",
+        "focus-group",
+        "multi-agent",
+        "llm"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agent-simulation/mirofish-synthetic-focus-group-architecture"
+    },
+    {
+      "slug": "synthetic-focus-group-copy-validation",
+      "title": "Synthetic Focus Group — Copy Validation",
+      "description": "Pre-launch copy validation: a builder spawns 50 LLM agents with a persona config, collects and ranks top objections, then builds the report.",
+      "kind": "workflow",
+      "sourceDomain": "Agent Simulation",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [],
+      "useCases": [
+        "agentic"
+      ],
+      "complexity": 3,
+      "numNodes": 13,
+      "numLanes": 3,
+      "tags": [
+        "mirofish",
+        "synthetic-research",
+        "copy-validation",
+        "agent-swarm",
+        "personas"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agent-simulation/synthetic-focus-group-copy-validation"
+    },
+    {
+      "slug": "synthetic-focus-group-crisis-injection",
+      "title": "Synthetic Focus Group — Crisis Injection",
+      "description": "Mid-simulation crisis injection: the baseline is captured, a market event is injected, agents absorb the crisis context and the post-crisis logs are aggregated for comparison.",
+      "kind": "workflow",
+      "sourceDomain": "Agent Simulation",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [],
+      "useCases": [
+        "agentic"
+      ],
+      "complexity": 3,
+      "numNodes": 16,
+      "numLanes": 3,
+      "tags": [
+        "mirofish",
+        "synthetic-research",
+        "crisis-injection",
+        "market-event",
+        "agent-swarm"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agent-simulation/synthetic-focus-group-crisis-injection"
+    },
+    {
+      "slug": "synthetic-focus-group-ab-offer-testing",
+      "title": "Synthetic Focus Group — A/B Offer Testing",
+      "description": "A/B offer testing with synthetic agents: variant A and variant B are evaluated for perceived value, aggregated separately and compared to pick the winner.",
+      "kind": "workflow",
+      "sourceDomain": "Agent Simulation",
+      "primaryUseCase": "agentic",
+      "secondaryUseCases": [],
+      "useCases": [
+        "agentic"
+      ],
+      "complexity": 2,
+      "numNodes": 12,
+      "numLanes": 2,
+      "tags": [
+        "mirofish",
+        "synthetic-research",
+        "ab-testing",
+        "offer-testing",
+        "agent-swarm"
+      ],
+      "sourcePath": "",
+      "repoPath": "agentic/agent-simulation/synthetic-focus-group-ab-offer-testing"
+    },
+    {
+      "slug": "gcp-account-suspension-outage-cascade",
+      "title": "GCP Account Suspension Outage Cascade",
+      "description": "How a single account suspension cascades into an 8-hour platform outage: control plane offline, API down, caches expiring, workloads returning 404 and OAuth throttled.",
+      "kind": "workflow",
+      "sourceDomain": "Platform Reliability",
+      "primaryUseCase": "incident",
+      "secondaryUseCases": [],
+      "useCases": [
+        "incident"
+      ],
+      "complexity": 2,
+      "numNodes": 8,
+      "numLanes": 1,
+      "tags": [
+        "multi-cloud",
+        "outage",
+        "cascade",
+        "resilience",
+        "gcp"
+      ],
+      "sourcePath": "",
+      "repoPath": "incident/platform-reliability/gcp-account-suspension-outage-cascade"
+    },
+    {
+      "slug": "multi-cloud-mesh-resilience-architecture",
+      "title": "Multi-Cloud Mesh Resilience Architecture",
+      "description": "Traffic through any edge proxy to a mesh control plane spread over AWS, GCP and metal, with quorum databases and no single-cloud dependency in the routing path.",
+      "kind": "workflow",
+      "sourceDomain": "Platform Reliability",
+      "primaryUseCase": "uncategorized",
+      "secondaryUseCases": [],
+      "useCases": [],
+      "complexity": 2,
+      "numNodes": 9,
+      "numLanes": 1,
+      "tags": [
+        "multi-cloud",
+        "resilience",
+        "mesh",
+        "quorum",
+        "architecture"
+      ],
+      "sourcePath": "",
+      "repoPath": "uncategorized/platform-reliability/multi-cloud-mesh-resilience-architecture"
+    },
+    {
+      "slug": "cross-cloud-failover-deployment-pipeline",
+      "title": "Cross-Cloud Failover Deployment Pipeline",
+      "description": "CI builds the container, pushes it to a cross-cloud registry, deploys to AWS, GCP and metal, health-checks every endpoint and updates mesh routing only when all are healthy.",
+      "kind": "workflow",
+      "sourceDomain": "Platform Reliability",
+      "primaryUseCase": "delivery",
+      "secondaryUseCases": [],
+      "useCases": [
+        "delivery"
+      ],
+      "complexity": 2,
+      "numNodes": 11,
+      "numLanes": 5,
+      "tags": [
+        "multi-cloud",
+        "deployment",
+        "failover",
+        "ci-cd",
+        "health-check"
+      ],
+      "sourcePath": "",
+      "repoPath": "delivery/platform-reliability/cross-cloud-failover-deployment-pipeline"
     }
   ]
 }

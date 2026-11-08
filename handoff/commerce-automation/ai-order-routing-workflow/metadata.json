@@ -1,0 +1,25 @@
+{
+  "template_id": "ai-order-routing-workflow",
+  "workflow_id": "ai-order-routing",
+  "title": "AI Order Routing Workflow",
+  "kind": "workflow",
+  "source_domain": "Commerce Automation",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "handoff"
+  ],
+  "complexity": 3,
+  "num_nodes": 14,
+  "num_lanes": 3,
+  "tags": [
+    "n8n",
+    "order-routing",
+    "ai-decision",
+    "backorder",
+    "fulfillment"
+  ],
+  "description": "Order routing where an AI decision engine classifies each order, auto-processes the clean ones and sends the rest to a backorder queue before operations completes it.",
+  "source_path": "",
+  "repo_path": "handoff/commerce-automation/ai-order-routing-workflow"
+}

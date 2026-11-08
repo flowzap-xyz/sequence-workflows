@@ -1,0 +1,50 @@
+laneA { # Lanea
+  n1: circle label:"Start Max Lanes"
+
+  n1.handle(bottom) -> laneB.n2.handle(top) [label="Success"]
+}
+laneB { # Laneb
+  n2: rectangle label:"Max Lanes step 2"
+
+  n2.handle(bottom) -> laneC.n3.handle(top)
+}
+laneC { # Lanec
+  n3: diamond label:"Max Lanes step 3"
+
+  n3.handle(bottom) -> laneD.n4.handle(top)
+  n3.handle(right) -> laneB.n2.handle(right) [label="Retry/Rejected"]
+}
+laneD { # Laned
+  n4: rectangle label:"Max Lanes step 4"
+
+  n4.handle(bottom) -> laneE.n5.handle(top) [label="Valid"]
+}
+laneE { # Lanee
+  n5: rectangle label:"Max Lanes step 5"
+
+  n5.handle(bottom) -> laneF.n6.handle(top)
+}
+laneF { # Lanef
+  n6: rectangle label:"Max Lanes step 6"
+
+  n6.handle(bottom) -> laneG.n7.handle(top)
+}
+laneG { # Laneg
+  n7: rectangle label:"Max Lanes step 7"
+
+  n7.handle(bottom) -> laneH.n8.handle(top) [label="Next"]
+}
+laneH { # Laneh
+  n8: rectangle label:"Max Lanes step 8"
+
+  n8.handle(bottom) -> laneI.n9.handle(top)
+}
+laneI { # Lanei
+  n9: rectangle label:"Max Lanes step 9"
+
+  n9.handle(bottom) -> laneJ.n10.handle(top)
+}
+laneJ { # Lanej
+  n10: circle label:"End Max Lanes"
+
+}

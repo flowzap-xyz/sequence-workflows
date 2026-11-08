@@ -1,0 +1,23 @@
+{
+  "template_id": "agent-world-model-simulation-loop",
+  "workflow_id": "agent-world-model-simulation-loop",
+  "title": "Agent-World Model Simulation Loop",
+  "kind": "workflow",
+  "source_domain": "Agent Simulation",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 12,
+  "num_lanes": 3,
+  "tags": [
+    "qwen",
+    "agentworld",
+    "world-model",
+    "simulation",
+    "agent-testing"
+  ],
+  "description": "The agent analyses the request, the world model simulates the action, the simulated outcome returns a confirmation and the agent executes — with an adjustment loop on divergence.",
+  "source_path": "",
+  "repo_path": "uncategorized/agent-simulation/agent-world-model-simulation-loop"
+}

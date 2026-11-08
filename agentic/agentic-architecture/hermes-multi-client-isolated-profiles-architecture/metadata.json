@@ -1,0 +1,25 @@
+{
+  "template_id": "hermes-multi-client-isolated-profiles-architecture",
+  "workflow_id": "hermes-multi-client-isolated-profiles-architecture",
+  "title": "Hermes Multi-Client Isolated Profiles Architecture",
+  "kind": "workflow",
+  "source_domain": "Agentic Architecture",
+  "primary_use_case": "agentic",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "agentic"
+  ],
+  "complexity": 2,
+  "num_nodes": 8,
+  "num_lanes": 4,
+  "tags": [
+    "hermes",
+    "multi-tenant",
+    "profiles",
+    "isolation",
+    "docker"
+  ],
+  "description": "Option 3, the core multi-tenant setup: per-token entry points, one gateway per client, and isolated Hermes profiles running in separate containers.",
+  "source_path": "",
+  "repo_path": "agentic/agentic-architecture/hermes-multi-client-isolated-profiles-architecture"
+}

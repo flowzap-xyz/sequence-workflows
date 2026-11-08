@@ -1,0 +1,29 @@
+User { # User
+n1: circle label:"Start"
+n2: rectangle label:"Send command via WhatsApp"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> CloudGW.n3.handle(top) [label="Internet"]
+}
+CloudGW { # Cloud Gateway (VPS)
+n3: rectangle label:"OpenClaw Gateway"
+n4: rectangle label:"Agent Memory + State"
+n5: diamond label:"Local task needed?"
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left)
+n5.handle(bottom) -> LocalNode.n6.handle(top) [label="Yes - Dispatch"]
+n5.handle(right) -> n8.handle(left) [label="No - API only"]
+n3.handle(bottom) -> LLM.n9.handle(top) [label="API Request"]
+}
+LocalNode { # Local Node (Mac / iPhone)
+n6: rectangle label:"Screen + Camera + System"
+n7: rectangle label:"Execute local action"
+n6.handle(right) -> n7.handle(left)
+n7.handle(top) -> CloudGW.n3.handle(bottom) [label="Result"]
+}
+LLM { # LLM Provider
+n8: rectangle label:"Direct cloud task"
+n9: rectangle label:"Claude Opus 4.5"
+n10: rectangle label:"Generate response"
+n9.handle(right) -> n10.handle(left)
+n10.handle(top) -> CloudGW.n3.handle(bottom) [label="Response"]
+}

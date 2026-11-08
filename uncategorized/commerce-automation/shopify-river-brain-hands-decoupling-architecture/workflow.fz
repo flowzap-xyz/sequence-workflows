@@ -1,0 +1,32 @@
+dev { # Dev - Slack
+n1: circle label:"@River mention"
+n2: rectangle label:"Agent request"
+n12: rectangle label:"Receives response"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> harness.n3.handle(top) [label="Prompt"]
+}
+
+harness { # Harness - Brain
+n3: rectangle label:"Loads history"
+n4: rectangle label:"Calls LLM"
+n5: rectangle label:"Emits tool intents"
+n11: rectangle label:"Responds to dev"
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left)
+n5.handle(bottom) -> sandbox.n6.handle(top) [label="bash, edit"]
+sandbox.n10.handle(top) -> n11.handle(bottom) [label="Result"]
+n11.handle(top) -> dev.n12.handle(bottom) [label="Response"]
+}
+
+sandbox { # Sandbox - Hands
+n6: rectangle label:"Sets up environment"
+n7: rectangle label:"Runs commands"
+n8: diamond label:"OK?"
+n9: rectangle label:"Raw output"
+n10: rectangle label:"Returns output"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left) [label="Yes"]
+n8.handle(bottom) -> n6.handle(top) [label="No - retry"]
+n9.handle(right) -> n10.handle(left)
+}

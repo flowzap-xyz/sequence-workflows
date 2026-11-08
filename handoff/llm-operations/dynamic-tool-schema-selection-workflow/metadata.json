@@ -1,0 +1,28 @@
+{
+  "template_id": "dynamic-tool-schema-selection-workflow",
+  "workflow_id": "dynamic-tool-schema-selection",
+  "title": "Dynamic Tool Schema Selection Workflow",
+  "kind": "workflow",
+  "source_domain": "LLM Operations",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [
+    "mcp"
+  ],
+  "use_cases": [
+    "handoff",
+    "mcp"
+  ],
+  "complexity": 2,
+  "num_nodes": 8,
+  "num_lanes": 3,
+  "tags": [
+    "token-optimization",
+    "mcp",
+    "tool-schemas",
+    "tool-routing",
+    "llmops"
+  ],
+  "description": "Instead of loading all 50 tool schemas into every request, the agent analyses the step, queries the MCP tool registry and injects only the two schemas it needs.",
+  "source_path": "",
+  "repo_path": "handoff/llm-operations/dynamic-tool-schema-selection-workflow"
+}

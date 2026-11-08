@@ -1,0 +1,20 @@
+{
+  "template_id": "minimal-workflow",
+  "workflow_id": "minimal",
+  "title": "Minimal Workflow",
+  "kind": "workflow",
+  "source_domain": "edge-cases",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 2,
+  "num_nodes": 1,
+  "num_lanes": 2,
+  "tags": [
+    "minimal",
+    "workflow"
+  ],
+  "description": "This workflow models a workflow with a single node only.",
+  "source_path": "edge-cases/minimal-workflow",
+  "repo_path": "uncategorized/edge-cases/minimal-workflow"
+}

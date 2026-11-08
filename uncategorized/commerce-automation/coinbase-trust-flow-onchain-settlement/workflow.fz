@@ -1,0 +1,16 @@
+agent_env { # Agent & Wallet
+  n1: circle label:"Agent Initiates Spend"
+  n2: rectangle label:"Wallet Enforces Policy"
+  n5: circle label:"Payment Finalized"
+  
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> base_ledger.n3.handle(top) [label="Broadcast Tx"]
+}
+
+base_ledger { # Base Blockchain
+  n3: rectangle label:"Process USDC Transfer"
+  n4: rectangle label:"Update Ledger State"
+  
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(top) -> agent_env.n5.handle(bottom) [label="Block Confirmed"]
+}

@@ -1,0 +1,38 @@
+slack { # Slack - Interface
+n1: circle label:"@River in Slack"
+n2: rectangle label:"Public channel question"
+n11: rectangle label:"Response received"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> river.n3.handle(top) [label="1. Request"]
+}
+
+river { # River - Agent Surface
+n3: rectangle label:"Analyzes request"
+n4: rectangle label:"Delegates to Aquifer"
+n10: rectangle label:"Formats response"
+n3.handle(right) -> n4.handle(left)
+n4.handle(bottom) -> aquifer.n5.handle(top) [label="2. Session"]
+aquifer.n9.handle(top) -> n10.handle(bottom) [label="5. Result"]
+n10.handle(top) -> slack.n11.handle(bottom) [label="6. Response"]
+}
+
+aquifer { # Aquifer - Foundation
+n5: rectangle label:"Harness plans"
+n6: rectangle label:"Sandbox executes"
+n7: diamond label:"Done?"
+n8: rectangle label:"Consolidates"
+n9: rectangle label:"Returns result"
+n5.handle(right) -> n6.handle(left)
+n6.handle(bottom) -> world.n12.handle(top) [label="3. Read/write"]
+n6.handle(right) -> n7.handle(left)
+n7.handle(top) -> n5.handle(bottom) [label="No"]
+n7.handle(bottom) -> n8.handle(top) [label="Yes"]
+n8.handle(right) -> n9.handle(left)
+}
+
+world { # World - Monorepo
+n12: rectangle label:"Executes on repo"
+n13: rectangle label:"Runs tests - opens PR"
+n12.handle(right) -> n13.handle(left)
+n13.handle(top) -> aquifer.n7.handle(bottom) [label="4. Output"]
+}

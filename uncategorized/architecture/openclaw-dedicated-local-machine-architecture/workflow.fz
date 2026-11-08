@@ -1,0 +1,20 @@
+User { # User (Phone / Laptop)
+n1: circle label:"Start"
+n2: rectangle label:"Send Telegram message"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> MacMini.n3.handle(top) [label="LAN / Tailscale"]
+}
+MacMini { # Dedicated Mac Mini
+n3: rectangle label:"OpenClaw Gateway"
+n4: rectangle label:"Workspace"
+n5: rectangle label:"Agent Memory + State"
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left)
+n3.handle(bottom) -> LLM.n6.handle(top) [label="API Request"]
+}
+LLM { # Commercial LLM API
+n6: rectangle label:"Claude Opus 4.5"
+n7: rectangle label:"Generate response"
+n6.handle(right) -> n7.handle(left)
+n7.handle(top) -> MacMini.n3.handle(bottom) [label="Response"]
+}

@@ -1,0 +1,32 @@
+client { # Application
+n1: circle label:"Start Run 1"
+n2: rectangle label:"Assemble static system prompt"
+n3: rectangle label:"Append volatile user input"
+n7: rectangle label:"Receive Answer 1"
+n8: circle label:"Start Run 2"
+n9: rectangle label:"Reuse static system prompt"
+n10: rectangle label:"Append new volatile user input"
+n13: rectangle label:"Receive Answer 2"
+n14: circle label:"Session done"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> provider.n4.handle(top) [label="Send 51k tokens"]
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(bottom) -> provider.n11.handle(top) [label="Send 51k tokens"]
+n13.handle(right) -> n14.handle(left)
+}
+
+provider { # Model Provider
+n4: rectangle label:"Cache Miss: compute full attention"
+n5: rectangle label:"Write KV cache for 50k prefix"
+n6: rectangle label:"Compute 1k delta & generate"
+n11: rectangle label:"Cache Hit: read 50k from KV cache"
+n12: rectangle label:"Compute 1k delta & generate"
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left)
+n6.handle(top) -> client.n7.handle(bottom) [label="Cost: $1.00"]
+n11.handle(right) -> n12.handle(left)
+n12.handle(top) -> client.n13.handle(bottom) [label="Cost: $0.10"]
+}

@@ -1,0 +1,25 @@
+{
+  "template_id": "process-documentation-knowledge-capture-workflow",
+  "workflow_id": "process-documentation-knowledge-capture",
+  "title": "Process Documentation & Knowledge Capture Workflow",
+  "kind": "workflow",
+  "source_domain": "Process Mapping",
+  "primary_use_case": "onboarding",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "onboarding"
+  ],
+  "complexity": 3,
+  "num_nodes": 13,
+  "num_lanes": 2,
+  "tags": [
+    "process-mapping",
+    "documentation",
+    "knowledge",
+    "onboarding",
+    "sop"
+  ],
+  "description": "Knowledge capture workflow: document the current process steps, write the step-by-step guide, get it approved and track onboarding to completion.",
+  "source_path": "",
+  "repo_path": "onboarding/process-mapping/process-documentation-knowledge-capture-workflow"
+}

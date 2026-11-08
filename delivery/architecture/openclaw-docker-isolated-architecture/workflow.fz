@@ -1,0 +1,20 @@
+User { # User
+n1: circle label:"Start"
+n2: rectangle label:"Send message via Web UI"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Docker.n3.handle(top) [label="localhost"]
+}
+Docker { # Docker Container
+n3: rectangle label:"OpenClaw Gateway"
+n4: rectangle label:"Mounted Workspace Volume"
+n5: rectangle label:"Mounted Config Volume"
+n3.handle(right) -> n4.handle(left)
+n3.handle(bottom) -> n5.handle(top)
+n3.handle(bottom) -> LLM.n6.handle(top) [label="API Request"]
+}
+LLM { # Commercial LLM API
+n6: rectangle label:"Claude / GPT / Gemini"
+n7: rectangle label:"Generate response"
+n6.handle(right) -> n7.handle(left)
+n7.handle(top) -> Docker.n3.handle(bottom) [label="Response"]
+}

@@ -1,0 +1,29 @@
+{
+  "template_id": "task-box-invoice-approval-workflow",
+  "workflow_id": "task-box-invoice-approval",
+  "title": "Task Box Invoice Approval Workflow",
+  "kind": "workflow",
+  "source_domain": "Process Mapping",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [
+    "billing"
+  ],
+  "use_cases": [
+    "approval",
+    "billing"
+  ],
+  "complexity": 2,
+  "num_nodes": 10,
+  "num_lanes": 1,
+  "tags": [
+    "process-mapping",
+    "task-boxes",
+    "invoice",
+    "approval",
+    "owner",
+    "system"
+  ],
+  "description": "Task box diagram for invoice approval: owner, description and system on every step, from sale recording to payment, with a rejection loop back to the invoice draft.",
+  "source_path": "",
+  "repo_path": "approval/process-mapping/task-box-invoice-approval-workflow"
+}

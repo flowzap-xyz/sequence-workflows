@@ -1,0 +1,21 @@
+{
+  "template_id": "02-handle-positions-workflow",
+  "workflow_id": "02-handle-positions",
+  "title": "02 Handle Positions Workflow",
+  "kind": "workflow",
+  "source_domain": "syntax-primitives",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "02",
+    "handle",
+    "positions"
+  ],
+  "description": "This workflow models nodes with explicit top, bottom, left, and right handle connections.",
+  "source_path": "syntax-primitives/02-handle-positions",
+  "repo_path": "uncategorized/syntax-primitives/02-handle-positions-workflow"
+}

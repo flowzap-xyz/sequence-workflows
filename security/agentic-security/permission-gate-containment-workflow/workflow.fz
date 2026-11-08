@@ -1,0 +1,21 @@
+agent { # Agent
+n1: circle label:"Tool Call Initiated"
+n2: rectangle label:"Request File Write"
+n5: diamond label:"Permission Granted?"
+n6: rectangle label:"Write File to Disk"
+n7: rectangle label:"Abort - Log Denial"
+n8: circle label:"Done"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> permgate.n3.handle(top) [label="check permission"]
+}
+
+permgate { # Permission Gate
+n3: rectangle label:"Check Whitelist and Path Scope"
+n4: rectangle label:"Return Decision"
+n3.handle(right) -> n4.handle(left)
+n4.handle(top) -> agent.n5.handle(bottom) [label="decision"]
+n5.handle(right) -> n6.handle(left) [label="granted"]
+n5.handle(bottom) -> n7.handle(top) [label="denied"]
+n6.handle(right) -> n8.handle(left)
+n7.handle(right) -> n8.handle(left)
+}

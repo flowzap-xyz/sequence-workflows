@@ -1,0 +1,25 @@
+{
+  "template_id": "hermes-kanban-agent-coordination-workflow",
+  "workflow_id": "hermes-kanban-agent-coordination",
+  "title": "Hermes Kanban Agent Coordination Workflow",
+  "kind": "workflow",
+  "source_domain": "Agentic Architecture",
+  "primary_use_case": "agentic",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "agentic"
+  ],
+  "complexity": 2,
+  "num_nodes": 6,
+  "num_lanes": 4,
+  "tags": [
+    "hermes",
+    "kanban",
+    "multi-agent",
+    "orchestrator-worker",
+    "coordination"
+  ],
+  "description": "A planner decomposes the request on a shared board, specialized workers claim tasks, and the orchestrator delivers once every card is closed.",
+  "source_path": "",
+  "repo_path": "agentic/agentic-architecture/hermes-kanban-agent-coordination-workflow"
+}

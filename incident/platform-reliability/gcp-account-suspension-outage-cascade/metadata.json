@@ -1,0 +1,25 @@
+{
+  "template_id": "gcp-account-suspension-outage-cascade",
+  "workflow_id": "gcp-account-suspension-outage-cascade",
+  "title": "GCP Account Suspension Outage Cascade",
+  "kind": "workflow",
+  "source_domain": "Platform Reliability",
+  "primary_use_case": "incident",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "incident"
+  ],
+  "complexity": 2,
+  "num_nodes": 8,
+  "num_lanes": 1,
+  "tags": [
+    "multi-cloud",
+    "outage",
+    "cascade",
+    "resilience",
+    "gcp"
+  ],
+  "description": "How a single account suspension cascades into an 8-hour platform outage: control plane offline, API down, caches expiring, workloads returning 404 and OAuth throttled.",
+  "source_path": "",
+  "repo_path": "incident/platform-reliability/gcp-account-suspension-outage-cascade"
+}

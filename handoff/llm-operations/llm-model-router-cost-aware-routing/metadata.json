@@ -1,0 +1,28 @@
+{
+  "template_id": "llm-model-router-cost-aware-routing",
+  "workflow_id": "llm-model-router-cost-aware-routing",
+  "title": "LLM Model Router — Cost-Aware Routing",
+  "kind": "workflow",
+  "source_domain": "LLM Operations",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [
+    "mcp"
+  ],
+  "use_cases": [
+    "handoff",
+    "mcp"
+  ],
+  "complexity": 2,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "token-optimization",
+    "model-routing",
+    "llm-gateway",
+    "cost",
+    "llmops"
+  ],
+  "description": "An LLM gateway that reads the token budget, extracts intent and length, then routes the call to the cheap model or the premium one before delivering the response.",
+  "source_path": "",
+  "repo_path": "handoff/llm-operations/llm-model-router-cost-aware-routing"
+}

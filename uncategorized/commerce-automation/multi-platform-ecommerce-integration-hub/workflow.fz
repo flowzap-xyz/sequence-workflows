@@ -1,0 +1,25 @@
+main { # Multi-Platform Integration Layer
+  n1: circle label:"Start"
+  n2: diamond label:"Channel?"
+  n3: rectangle label:"n8n Webhook Receiver"
+  n4: rectangle label:"AI Agent: Parse & Validate"
+  n5: diamond label:"Event Type?"
+  n6: rectangle label:"Product Sync Pipeline"
+  n7: rectangle label:"Order Orchestrator"
+  n8: rectangle label:"Inventory Update"
+  n9: rectangle label:"Unified DB Write"
+  n10: rectangle label:"Fulfillment Trigger"
+  n11: circle label:"Done"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left) [label="Shopify"]
+  n3.handle(right) -> n4.handle(left)
+  n4.handle(right) -> n5.handle(left)
+  n5.handle(right) -> n6.handle(left) [label="product"]
+  n6.handle(right) -> n9.handle(left)
+  n7.handle(right) -> n8.handle(left)
+  n8.handle(right) -> n9.handle(left)
+  n9.handle(right) -> n10.handle(left)
+  n10.handle(right) -> n11.handle(left)
+  n2.handle(top) -> n3.handle(top) [label="WooCommerce"]
+  n5.handle(bottom) -> n7.handle(bottom) [label="Order"]
+}

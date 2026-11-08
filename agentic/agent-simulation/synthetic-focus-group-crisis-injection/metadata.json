@@ -1,0 +1,25 @@
+{
+  "template_id": "synthetic-focus-group-crisis-injection",
+  "workflow_id": "synthetic-focus-group-crisis-injection",
+  "title": "Synthetic Focus Group — Crisis Injection",
+  "kind": "workflow",
+  "source_domain": "Agent Simulation",
+  "primary_use_case": "agentic",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "agentic"
+  ],
+  "complexity": 3,
+  "num_nodes": 16,
+  "num_lanes": 3,
+  "tags": [
+    "mirofish",
+    "synthetic-research",
+    "crisis-injection",
+    "market-event",
+    "agent-swarm"
+  ],
+  "description": "Mid-simulation crisis injection: the baseline is captured, a market event is injected, agents absorb the crisis context and the post-crisis logs are aggregated for comparison.",
+  "source_path": "",
+  "repo_path": "agentic/agent-simulation/synthetic-focus-group-crisis-injection"
+}

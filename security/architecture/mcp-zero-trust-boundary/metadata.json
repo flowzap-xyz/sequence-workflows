@@ -1,0 +1,32 @@
+{
+  "template_id": "mcp-zero-trust-boundary",
+  "workflow_id": "mcp-zero-trust-boundary",
+  "title": "MCP Zero-Trust Boundary",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "security",
+  "secondary_use_cases": [
+    "mcp"
+  ],
+  "use_cases": [
+    "security",
+    "mcp"
+  ],
+  "complexity": 3,
+  "num_nodes": 12,
+  "num_lanes": 3,
+  "tags": [
+    "MCP",
+    "Model Context Protocol",
+    "AI Agent Security",
+    "Zero Trust",
+    "MCP Security",
+    "Tool Sandbox",
+    "Sandbox",
+    "Prompt Injection",
+    "Secure Tool Calling"
+  ],
+  "description": "MCP security gateway architecture that authenticates tool calls, routes execution into isolated sandboxes, sanitizes responses, and returns clean results to the AI agent.",
+  "source_path": "",
+  "repo_path": "security/architecture/mcp-zero-trust-boundary"
+}

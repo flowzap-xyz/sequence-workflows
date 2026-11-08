@@ -1,0 +1,28 @@
+river { # Interactive Mode
+n1: circle label:"@River Slack"
+n2: rectangle label:"Public session"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> aquifer.n7.handle(top) [label="via Aquifer"]
+}
+
+review { # Automation Mode
+n3: circle label:"PR Webhook"
+n4: rectangle label:"Automated review"
+n3.handle(right) -> n4.handle(left)
+n4.handle(bottom) -> aquifer.n8.handle(top) [label="via Aquifer"]
+}
+
+ci { # Batch Mode
+n5: circle label:"CI Trigger"
+n6: rectangle label:"Ephemeral batch"
+n5.handle(right) -> n6.handle(left)
+n6.handle(bottom) -> aquifer.n9.handle(top) [label="via Aquifer"]
+}
+
+aquifer { # Aquifer - Shared Foundation
+n7: rectangle label:"Session model"
+n8: rectangle label:"Sandbox plane"
+n9: rectangle label:"Gateway"
+n7.handle(right) -> n8.handle(left)
+n8.handle(right) -> n9.handle(left)
+}

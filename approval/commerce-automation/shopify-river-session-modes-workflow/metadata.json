@@ -1,0 +1,26 @@
+{
+  "template_id": "shopify-river-session-modes-workflow",
+  "workflow_id": "shopify-river-session-modes",
+  "title": "Shopify River Session Modes Workflow",
+  "kind": "workflow",
+  "source_domain": "Commerce Automation",
+  "primary_use_case": "approval",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "approval"
+  ],
+  "complexity": 2,
+  "num_nodes": 9,
+  "num_lanes": 4,
+  "tags": [
+    "shopify",
+    "river",
+    "session-modes",
+    "ci",
+    "code-review",
+    "automation"
+  ],
+  "description": "Three session modes in one agent: interactive in Slack, automated review in the pull request, and ephemeral batch runs triggered by CI — cattle, not pets.",
+  "source_path": "",
+  "repo_path": "approval/commerce-automation/shopify-river-session-modes-workflow"
+}

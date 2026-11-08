@@ -1,0 +1,28 @@
+{
+  "template_id": "customer-onboarding-sales-handoff-workflow",
+  "workflow_id": "customer-onboarding-sales-handoff",
+  "title": "Customer Onboarding & Sales Handoff Workflow",
+  "kind": "workflow",
+  "source_domain": "Process Mapping",
+  "primary_use_case": "handoff",
+  "secondary_use_cases": [
+    "onboarding"
+  ],
+  "use_cases": [
+    "handoff",
+    "onboarding"
+  ],
+  "complexity": 3,
+  "num_nodes": 19,
+  "num_lanes": 3,
+  "tags": [
+    "process-mapping",
+    "customer-onboarding",
+    "handoff",
+    "sales",
+    "kickoff"
+  ],
+  "description": "Three-lane onboarding workflow where the sales team hands the closed deal to the onboarding specialist, who runs the kickoff and setup tasks with the customer.",
+  "source_path": "",
+  "repo_path": "handoff/process-mapping/customer-onboarding-sales-handoff-workflow"
+}

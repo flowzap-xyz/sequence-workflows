@@ -1,0 +1,28 @@
+{
+  "template_id": "openclaw-managed-cloud-architecture",
+  "workflow_id": "openclaw-managed-cloud-architecture",
+  "title": "OpenClaw Managed Cloud Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "delivery",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "delivery"
+  ],
+  "complexity": 3,
+  "num_nodes": 9,
+  "num_lanes": 3,
+  "tags": [
+    "OpenClaw",
+    "Managed Cloud",
+    "Railway",
+    "Northflank",
+    "Cloud Deployment",
+    "AI Agent Hosting",
+    "One-Click Deploy",
+    "Hosted AI Agent"
+  ],
+  "description": "Managed cloud OpenClaw deployment using platforms like Railway or Northflank with a hosted gateway, integrations, monitoring, and commercial LLM APIs.",
+  "source_path": "",
+  "repo_path": "delivery/architecture/openclaw-managed-cloud-architecture"
+}

@@ -1,0 +1,29 @@
+laneA { # Lanea
+  n1: circle label:"Start Duplicate Node Ids"
+  n2: rectangle label:"Duplicate Node Ids step 2"
+  n3: rectangle label:"Duplicate Node Ids step 3"
+  n4: circle label:"End Duplicate Node Ids"
+
+  n1.handle(bottom) -> laneB.n5.handle(top) [label="Success"]
+  n2.handle(bottom) -> laneB.n6.handle(top) [label="Valid"]
+  n3.handle(bottom) -> laneB.n5.handle(top) [label="Next"]
+}
+laneB { # Laneb
+  n5: rectangle label:"Duplicate Node Ids step 5"
+  n6: rectangle label:"Duplicate Node Ids step 6"
+  n7: diamond label:"Duplicate Node Ids step 7"
+
+  n5.handle(bottom) -> laneC.n8.handle(top)
+  n6.handle(bottom) -> laneC.n9.handle(top)
+  n7.handle(bottom) -> laneC.n8.handle(top)
+  n7.handle(right) -> laneA.n1.handle(right) [label="Retry/Rejected"]
+}
+laneC { # Lanec
+  n8: rectangle label:"Duplicate Node Ids step 8"
+  n9: rectangle label:"Duplicate Node Ids step 9"
+  n10: rectangle label:"Duplicate Node Ids step 10"
+
+  n8.handle(bottom) -> laneA.n2.handle(top)
+  n9.handle(bottom) -> laneA.n3.handle(top)
+  n10.handle(right) -> laneA.n4.handle(bottom)
+}

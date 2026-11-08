@@ -1,0 +1,21 @@
+{
+  "template_id": "comment-like-labels-workflow",
+  "workflow_id": "comment-like-labels",
+  "title": "Comment Like Labels Workflow",
+  "kind": "workflow",
+  "source_domain": "edge-cases",
+  "primary_use_case": "uncategorized",
+  "secondary_use_cases": [],
+  "use_cases": [],
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "comment",
+    "like",
+    "labels"
+  ],
+  "description": "This workflow models labels that look like code comments.",
+  "source_path": "edge-cases/comment-like-labels",
+  "repo_path": "uncategorized/edge-cases/comment-like-labels-workflow"
+}

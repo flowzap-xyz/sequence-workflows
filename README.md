@@ -1,6 +1,6 @@
 # sequence-workflows
 
-A synchronized FlowZap template corpus with **242 canonical templates** sourced from `https://flowzap.xyz/sitemap-templates.xml` and organized by **primary Use Case**.
+A synchronized FlowZap template corpus with **356 canonical templates**, mirrored from the FlowZap template library and organized by **primary Use Case**.
 
 ## Organization Model
 
@@ -11,21 +11,21 @@ A synchronized FlowZap template corpus with **242 canonical templates** sourced 
 
 ## Top-Level Folders
 
-- `handoff/` — Handoff (15)
-- `approval/` — Approval (17)
-- `incident/` — Incident (10)
-- `onboarding/` — Onboarding (6)
+- `handoff/` — Handoff (24)
+- `approval/` — Approval (22)
+- `incident/` — Incident (14)
+- `onboarding/` — Onboarding (9)
 - `offboarding/` — Offboarding (1)
-- `billing/` — Billing & Payments (8)
-- `security/` — Security & Access (13)
+- `billing/` — Billing & Payments (11)
+- `security/` — Security & Access (27)
 - `compliance/` — Compliance (13)
-- `delivery/` — Delivery & DevOps (15)
+- `delivery/` — Delivery & DevOps (23)
 - `support/` — Support (1)
-- `agentic/` — Agentic Teams (15)
-- `ai-orchestration/` — AI Orchestration (6)
-- `mcp/` — MCP Architecture (10)
-- `context-management/` — Context Management (6)
-- `uncategorized/` — Unmatched canonical templates (106)
+- `agentic/` — Agentic Teams (28)
+- `ai-orchestration/` — AI Orchestration (7)
+- `mcp/` — MCP Architecture (11)
+- `context-management/` — Context Management (7)
+- `uncategorized/` — Unmatched canonical templates (158)
 
 ## Generated Indexes
 
@@ -35,6 +35,6 @@ A synchronized FlowZap template corpus with **242 canonical templates** sourced 
 
 ## Sync Source
 
-- Canonical URL source: `https://flowzap.xyz/sitemap-templates.xml`
-- Template metadata source: `FlowZap-App-v5/src/templateLibrary/templatesIndex.json`
-- Template file source: `FlowZap-App-v5/public/template-files/*.fz`
+- Template library (source of truth): `src/templateLibrary/templatesIndex.json` in the FlowZap app
+- Template file source: `public/template-files/*.fz` in the FlowZap app
+- Public listing check: `https://flowzap.xyz/sitemap-templates.xml` — a template missing from the sitemap is still mirrored, this list only reports the gap

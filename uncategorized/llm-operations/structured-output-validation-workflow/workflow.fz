@@ -1,0 +1,21 @@
+app { # Orchestrator
+n1: circle label:"Task initiated"
+n2: rectangle label:"Apply output schema (JSON, Diff)"
+n3: rectangle label:"Set max_tokens=500"
+n6: diamond label:"Parses correctly?"
+n7: rectangle label:"Tighten system prompt"
+n8: circle label:"Proceed to next step"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> provider.n4.handle(top) [label="Strict constraints"]
+n6.handle(right) -> n8.handle(left) [label="Yes"]
+n6.handle(bottom) -> n7.handle(top) [label="No"]
+n7.handle(left) -> n2.handle(bottom) [label="Retry with penalties"]
+}
+
+provider { # LLM API
+n4: rectangle label:"Process request"
+n5: rectangle label:"Generate formatted output"
+n4.handle(right) -> n5.handle(left)
+n5.handle(top) -> app.n6.handle(bottom) [label="Returns exact shape"]
+}
