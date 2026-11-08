@@ -6,7 +6,7 @@ A travel booking saga architecture diagram orchestrating flight, hotel, and car 
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** ai-orchestration  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture, patterns  
 **Complexity:** 4/5  
 **Nodes:** 17  
 **Lanes:** 5  

@@ -6,7 +6,7 @@ Legacy executor, LLM-as-judge evaluator and next-gen consumer: an evaluator scor
 **Kind:** workflow  
 **Source domain:** Agentic Architecture  
 **Primary use case:** agentic  
-**Secondary use cases:** None  
+**Secondary use cases:** agentic-architecture  
 **Complexity:** 2/5  
 **Nodes:** 9  
 **Lanes:** 3  

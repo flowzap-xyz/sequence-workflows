@@ -1,0 +1,32 @@
+buyer { # Consumer
+n1: circle label:"Start Checkout"
+n2: rectangle label:"Approve Agent Spend"
+n11: circle label:"Purchase Complete"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> agent.n3.handle(top) [label="Authorize"]
+}
+
+agent { # AI Assistant
+n3: rectangle label:"Request Scoped Token"
+n6: rectangle label:"Pass Token to Merchant"
+n10: rectangle label:"Confirm Order"
+n3.handle(bottom) -> stripe.n4.handle(top) [label="Get SPT"]
+n6.handle(bottom) -> merchant.n7.handle(top) [label="Send Token"]
+n10.handle(top) -> buyer.n11.handle(bottom) [label="Done"]
+}
+
+stripe { # Stripe Core
+n4: rectangle label:"Create Shared Payment Token"
+n5: rectangle label:"Run Radar Fraud Checks"
+n9: rectangle label:"Approve Fiat Payment"
+n4.handle(top) -> agent.n6.handle(bottom) [label="Return SPT"]
+n5.handle(right) -> n9.handle(left)
+n9.handle(top) -> merchant.n8.handle(bottom) [label="Success"]
+}
+
+merchant { # E-commerce Store
+n7: rectangle label:"Create PaymentIntent"
+n8: rectangle label:"Complete Fiat Order"
+n7.handle(bottom) -> stripe.n5.handle(top) [label="Validate SPT"]
+n8.handle(top) -> agent.n10.handle(bottom) [label="Order Success"]
+}

@@ -6,7 +6,7 @@ Vibe-coding example: a cart lane and an AI lane, where the assistant analyses th
 **Kind:** workflow  
 **Source domain:** Diagram Authoring  
 **Primary use case:** onboarding  
-**Secondary use cases:** security  
+**Secondary use cases:** security, commerce-automation, diagram-authoring  
 **Complexity:** 2/5  
 **Nodes:** 10  
 **Lanes:** 2  

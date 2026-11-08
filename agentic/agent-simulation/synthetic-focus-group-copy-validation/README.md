@@ -6,7 +6,7 @@ Pre-launch copy validation: a builder spawns 50 LLM agents with a persona config
 **Kind:** workflow  
 **Source domain:** Agent Simulation  
 **Primary use case:** agentic  
-**Secondary use cases:** None  
+**Secondary use cases:** agent-simulation  
 **Complexity:** 3/5  
 **Nodes:** 13  
 **Lanes:** 3  

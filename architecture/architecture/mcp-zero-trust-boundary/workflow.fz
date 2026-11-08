@@ -1,0 +1,31 @@
+Agent { # AI Agent
+n1: circle label:"Start"
+n2: rectangle label:"Request tool invocation"
+n3: rectangle label:"Receive clean response"
+n4: circle label:"Done"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> MCPGateway.n5.handle(top) [label="Tool call + OBO token"]
+n3.handle(right) -> n4.handle(left)
+}
+
+MCPGateway { # MCP Security Gateway
+n5: rectangle label:"Authenticate + check registry"
+n6: rectangle label:"Route to sandbox"
+n7: rectangle label:"Receive sandbox result"
+n8: rectangle label:"Forward clean response"
+n5.handle(right) -> n6.handle(left)
+n6.handle(bottom) -> ToolSandbox.n9.handle(top) [label="Sandbox request"]
+n7.handle(right) -> n8.handle(left)
+n8.handle(top) -> Agent.n3.handle(bottom) [label="Sanitized response"]
+}
+
+ToolSandbox { # Tool Sandbox
+n9: rectangle label:"Execute in isolated container"
+n10: rectangle label:"Validate response"
+n11: rectangle label:"Strip injection payloads"
+n12: rectangle label:"Return clean result"
+n9.handle(right) -> n10.handle(left)
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left)
+n12.handle(top) -> MCPGateway.n7.handle(bottom) [label="Clean result"]
+}

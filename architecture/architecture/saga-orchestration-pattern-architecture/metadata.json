@@ -1,0 +1,35 @@
+{
+  "template_id": "saga-orchestration-pattern-architecture",
+  "workflow_id": "saga-orchestration-pattern-architecture",
+  "title": "Saga Orchestration Pattern Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "delivery",
+    "ai-orchestration",
+    "patterns"
+  ],
+  "use_cases": [
+    "architecture",
+    "delivery",
+    "ai-orchestration",
+    "patterns"
+  ],
+  "complexity": 4,
+  "num_nodes": 19,
+  "num_lanes": 5,
+  "tags": [
+    "saga-pattern",
+    "orchestration",
+    "distributed-transaction",
+    "compensation",
+    "microservices",
+    "rollback",
+    "consistency",
+    "architecture-diagram"
+  ],
+  "description": "A saga orchestration architecture diagram with a central orchestrator coordinating multi-step distributed transactions across Order, Inventory, and Payment services, with a dedicated compensation chain for rollback on failure. This template models the orchestration-based saga pattern where a single coordinator manages the transaction lifecycle and triggers compensating actions when any step fails. Essential for architects implementing reliable distributed transactions without two-phase commit.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/saga-orchestration-pattern-architecture"
+}

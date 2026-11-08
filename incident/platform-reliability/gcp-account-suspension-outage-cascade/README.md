@@ -6,7 +6,7 @@ How a single account suspension cascades into an 8-hour platform outage: control
 **Kind:** workflow  
 **Source domain:** Platform Reliability  
 **Primary use case:** incident  
-**Secondary use cases:** None  
+**Secondary use cases:** platform-reliability  
 **Complexity:** 2/5  
 **Nodes:** 8  
 **Lanes:** 1  

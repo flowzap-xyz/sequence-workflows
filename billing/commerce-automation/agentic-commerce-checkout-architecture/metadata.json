@@ -6,11 +6,13 @@
   "source_domain": "Commerce Automation",
   "primary_use_case": "billing",
   "secondary_use_cases": [
-    "agentic"
+    "agentic",
+    "commerce-automation"
   ],
   "use_cases": [
     "billing",
-    "agentic"
+    "agentic",
+    "commerce-automation"
   ],
   "complexity": 3,
   "num_nodes": 21,

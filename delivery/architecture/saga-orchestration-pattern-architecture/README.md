@@ -6,7 +6,7 @@ A saga orchestration architecture diagram with a central orchestrator coordinati
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** delivery  
-**Secondary use cases:** ai-orchestration  
+**Secondary use cases:** ai-orchestration, architecture, patterns  
 **Complexity:** 4/5  
 **Nodes:** 19  
 **Lanes:** 5  

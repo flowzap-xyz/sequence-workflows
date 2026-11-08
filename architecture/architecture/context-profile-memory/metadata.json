@@ -1,0 +1,28 @@
+{
+  "template_id": "context-profile-memory",
+  "workflow_id": "context-profile-memory",
+  "title": "Context Management - Profile Memory",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "context-management"
+  ],
+  "use_cases": [
+    "architecture",
+    "context-management"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 3,
+  "tags": [
+    "context-management",
+    "profile-memory",
+    "identity",
+    "user-profile",
+    "architecture-diagram"
+  ],
+  "description": "Identity-style memory pattern where profile data is loaded at session start. Each prompt combines system persona, user profile, and current message. New facts can be written back to profile memory. Small predictable overhead with big UX lift — the agent remembers your name, stack, tone, and constraints.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/context-profile-memory"
+}

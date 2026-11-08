@@ -6,7 +6,7 @@ Work assignment workflow that names an accountable owner, checks for blockers, e
 **Kind:** workflow  
 **Source domain:** Process Mapping  
 **Primary use case:** handoff  
-**Secondary use cases:** None  
+**Secondary use cases:** process-mapping  
 **Complexity:** 2/5  
 **Nodes:** 12  
 **Lanes:** 2  

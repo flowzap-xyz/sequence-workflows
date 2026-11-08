@@ -5,9 +5,14 @@
   "kind": "architecture",
   "source_domain": "Architecture",
   "primary_use_case": "handoff",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "platform-reliability",
+    "architecture"
+  ],
   "use_cases": [
-    "handoff"
+    "handoff",
+    "platform-reliability",
+    "architecture"
   ],
   "complexity": 4,
   "num_nodes": 18,

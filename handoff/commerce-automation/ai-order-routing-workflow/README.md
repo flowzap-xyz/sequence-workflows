@@ -6,7 +6,7 @@ Order routing where an AI decision engine classifies each order, auto-processes 
 **Kind:** workflow  
 **Source domain:** Commerce Automation  
 **Primary use case:** handoff  
-**Secondary use cases:** None  
+**Secondary use cases:** commerce-automation  
 **Complexity:** 3/5  
 **Nodes:** 14  
 **Lanes:** 3  

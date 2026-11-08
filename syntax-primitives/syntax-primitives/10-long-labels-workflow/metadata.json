@@ -1,0 +1,23 @@
+{
+  "template_id": "10-long-labels-workflow",
+  "workflow_id": "10-long-labels",
+  "title": "10 Long Labels Workflow",
+  "kind": "workflow",
+  "source_domain": "syntax-primitives",
+  "primary_use_case": "syntax-primitives",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "syntax-primitives"
+  ],
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "10",
+    "long",
+    "labels"
+  ],
+  "description": "This workflow models labels with extra-long descriptive text.",
+  "source_path": "syntax-primitives/10-long-labels",
+  "repo_path": "syntax-primitives/syntax-primitives/10-long-labels-workflow"
+}

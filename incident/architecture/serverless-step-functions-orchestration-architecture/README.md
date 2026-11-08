@@ -6,7 +6,7 @@ An AWS Step Functions orchestration architecture diagram with state machine work
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** incident  
-**Secondary use cases:** ai-orchestration  
+**Secondary use cases:** ai-orchestration, architecture, patterns  
 **Complexity:** 4/5  
 **Nodes:** 17  
 **Lanes:** 3  

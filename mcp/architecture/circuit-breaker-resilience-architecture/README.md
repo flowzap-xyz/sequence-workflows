@@ -6,7 +6,7 @@ A circuit breaker resilience architecture diagram showing the complete state mac
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** mcp  
-**Secondary use cases:** None  
+**Secondary use cases:** patterns  
 **Complexity:** 4/5  
 **Nodes:** 18  
 **Lanes:** 3  

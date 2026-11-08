@@ -6,7 +6,7 @@ A problem mind map for an AI credit decision, mapping decisions, data, policies,
 **Kind:** workflow  
 **Source domain:** Mindmap  
 **Primary use case:** agentic  
-**Secondary use cases:** None  
+**Secondary use cases:** agentic-architecture, mindmap  
 **Complexity:** 3/5  
 **Nodes:** 32  
 **Lanes:** 1  

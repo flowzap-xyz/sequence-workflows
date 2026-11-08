@@ -1,0 +1,32 @@
+{
+  "template_id": "ai-native-single-agent-architecture",
+  "workflow_id": "ai-native-single-agent-architecture",
+  "title": "AI-Native Single Agent Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "agentic",
+    "ai-orchestration",
+    "mcp"
+  ],
+  "use_cases": [
+    "architecture",
+    "agentic",
+    "ai-orchestration",
+    "mcp"
+  ],
+  "complexity": 2,
+  "num_nodes": 11,
+  "num_lanes": 3,
+  "tags": [
+    "ai-native",
+    "single-agent",
+    "agentic-ai",
+    "mcp",
+    "architecture-diagram"
+  ],
+  "description": "A single-agent AI architecture where one agent handles everything: parsing requests, reasoning, calling tools via MCP, and generating responses. This is the default architecture for prototypes and simple automations—easy to debug but hits context-window limits quickly and is hard to parallelize. Ideal for MVPs and solo builders shipping fast.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/ai-native-single-agent-architecture"
+}

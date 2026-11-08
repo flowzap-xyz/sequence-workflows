@@ -1,0 +1,26 @@
+InitialIncident { # InitialIncident
+  n1: circle label:"Incident Detected"
+  n2: rectangle label:"Document Current State"
+  n3: diamond label:"Root Cause Identified?"
+  n4: rectangle label:"Conduct Root Cause Analysis"
+  n5: rectangle label:"Create Prevention Protocol"
+  n6: rectangle label:"Monitor Implementation"
+  n3.handle(right) -> n5.handle(left) [label="Yes - Proceed"]
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(right) -> n3.handle(left)
+  n5.handle(right) -> n6.handle(left)
+  n6.handle(right) -> PreventionImplementation.n7.handle(left)
+  n3.handle(top) -> n4.handle(left) [label="No - Investigate"]
+  n4.handle(bottom) -> n5.handle(top)
+}
+
+PreventionImplementation { # PreventionImplementation
+  n7: rectangle label:"Update Standard Procedures"
+  n8: rectangle label:"Train Affected Staff"
+  n9: diamond label:"Controls Effective?"
+  n10: circle label:"Incident Prevented"
+  n9.handle(right) -> n10.handle(left) [label="Yes"]
+  n7.handle(right) -> n8.handle(left)
+  n9.handle(bottom) -> n7.handle(bottom) [label="No - Revise"]
+  n8.handle(right) -> n9.handle(left)
+}

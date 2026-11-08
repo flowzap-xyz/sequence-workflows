@@ -6,7 +6,7 @@ Shared host, per-client profiles and tool boundaries: how external clients reach
 **Kind:** workflow  
 **Source domain:** Agentic Architecture  
 **Primary use case:** agentic  
-**Secondary use cases:** None  
+**Secondary use cases:** agentic-architecture, agentic-security  
 **Complexity:** 2/5  
 **Nodes:** 12  
 **Lanes:** 3  

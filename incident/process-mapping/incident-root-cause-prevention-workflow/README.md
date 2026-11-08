@@ -6,7 +6,7 @@ Incident response workflow that documents the current state, traces the root cau
 **Kind:** workflow  
 **Source domain:** Process Mapping  
 **Primary use case:** incident  
-**Secondary use cases:** compliance  
+**Secondary use cases:** compliance, process-mapping  
 **Complexity:** 2/5  
 **Nodes:** 10  
 **Lanes:** 2  

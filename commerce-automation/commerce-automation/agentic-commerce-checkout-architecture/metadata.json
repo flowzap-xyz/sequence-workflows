@@ -1,0 +1,30 @@
+{
+  "template_id": "agentic-commerce-checkout-architecture",
+  "workflow_id": "agentic-commerce-checkout-architecture",
+  "title": "Agentic Commerce Checkout Architecture",
+  "kind": "workflow",
+  "source_domain": "Commerce Automation",
+  "primary_use_case": "commerce-automation",
+  "secondary_use_cases": [
+    "billing",
+    "agentic"
+  ],
+  "use_cases": [
+    "commerce-automation",
+    "billing",
+    "agentic"
+  ],
+  "complexity": 3,
+  "num_nodes": 21,
+  "num_lanes": 5,
+  "tags": [
+    "agentic-commerce",
+    "chatgpt-commerce",
+    "checkout",
+    "merchant",
+    "payments"
+  ],
+  "description": "Five-lane architecture for agent-driven checkout: merchant edge, commerce services, payment stack, fulfillment and the approval gate before an order is authorized.",
+  "source_path": "",
+  "repo_path": "commerce-automation/commerce-automation/agentic-commerce-checkout-architecture"
+}

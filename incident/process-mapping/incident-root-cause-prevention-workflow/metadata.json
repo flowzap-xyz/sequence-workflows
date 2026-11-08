@@ -6,11 +6,13 @@
   "source_domain": "Process Mapping",
   "primary_use_case": "incident",
   "secondary_use_cases": [
-    "compliance"
+    "compliance",
+    "process-mapping"
   ],
   "use_cases": [
     "incident",
-    "compliance"
+    "compliance",
+    "process-mapping"
   ],
   "complexity": 2,
   "num_nodes": 10,

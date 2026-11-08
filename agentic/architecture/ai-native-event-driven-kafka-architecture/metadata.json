@@ -7,12 +7,16 @@
   "primary_use_case": "agentic",
   "secondary_use_cases": [
     "ai-orchestration",
-    "mcp"
+    "mcp",
+    "architecture",
+    "patterns"
   ],
   "use_cases": [
     "agentic",
     "ai-orchestration",
-    "mcp"
+    "mcp",
+    "architecture",
+    "patterns"
   ],
   "complexity": 3,
   "num_nodes": 12,

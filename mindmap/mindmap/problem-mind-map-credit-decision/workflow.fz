@@ -1,0 +1,66 @@
+credit_decision { # Credit decision
+  n1: circle label:"Decide whether to grant credit"
+  n2: rectangle label:"Decisions"
+  n3: rectangle label:"Data"
+  n4: rectangle label:"Policies"
+  n5: rectangle label:"Actors"
+  n6: rectangle label:"Risks"
+  n7: rectangle label:"Constraints"
+  n8: rectangle label:"Open questions"
+  n9: rectangle label:"Approve / decline"
+  n10: rectangle label:"Amount & rate"
+  n11: rectangle label:"Human review"
+  n12: rectangle label:"Client history"
+  n13: rectangle label:"Income & contracts"
+  n14: rectangle label:"External score"
+  n15: rectangle label:"Thresholds"
+  n16: rectangle label:"Exceptions"
+  n17: rectangle label:"Regulations"
+  n18: rectangle label:"Who has authority?"
+  n19: rectangle label:"Customer"
+  n20: rectangle label:"Credit officer"
+  n21: rectangle label:"Supervisor"
+  n22: rectangle label:"Compliance"
+  n23: rectangle label:"Hallucination"
+  n24: rectangle label:"Bias"
+  n25: rectangle label:"Privacy"
+  n26: rectangle label:"Liability"
+  n27: rectangle label:"Audit trail"
+  n28: rectangle label:"Explainability"
+  n29: rectangle label:"GDPR"
+  n30: rectangle label:"Where do thresholds live?"
+  n31: rectangle label:"Dispute: who answers?"
+  n32: rectangle label:"Review margin?"
+
+  n1.handle(right) -> n2.handle(left)
+  n1.handle(bottom) -> n3.handle(top)
+  n1.handle(top) -> n4.handle(bottom)
+  n1.handle(left) -> n5.handle(right)
+  n1.handle(right) -> n6.handle(top)
+  n1.handle(bottom) -> n7.handle(left)
+  n1.handle(top) -> n8.handle(right)
+  n2.handle(right) -> n9.handle(left)
+  n2.handle(bottom) -> n10.handle(top)
+  n2.handle(top) -> n11.handle(bottom)
+  n3.handle(right) -> n12.handle(left)
+  n3.handle(bottom) -> n13.handle(top)
+  n3.handle(top) -> n14.handle(bottom)
+  n4.handle(right) -> n15.handle(left)
+  n4.handle(bottom) -> n16.handle(top)
+  n4.handle(top) -> n17.handle(bottom)
+  n4.handle(left) -> n18.handle(right)
+  n5.handle(right) -> n19.handle(left)
+  n5.handle(bottom) -> n20.handle(top)
+  n5.handle(top) -> n21.handle(bottom)
+  n5.handle(left) -> n22.handle(right)
+  n6.handle(right) -> n23.handle(left)
+  n6.handle(bottom) -> n24.handle(top)
+  n6.handle(top) -> n25.handle(bottom)
+  n6.handle(left) -> n26.handle(right)
+  n7.handle(right) -> n27.handle(left)
+  n7.handle(bottom) -> n28.handle(top)
+  n7.handle(top) -> n29.handle(bottom)
+  n8.handle(right) -> n30.handle(left)
+  n8.handle(bottom) -> n31.handle(top)
+  n8.handle(top) -> n32.handle(bottom)
+}

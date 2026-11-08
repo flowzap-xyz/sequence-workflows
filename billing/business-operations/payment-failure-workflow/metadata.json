@@ -5,9 +5,14 @@
   "kind": "workflow",
   "source_domain": "business-operations",
   "primary_use_case": "billing",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "commerce-automation",
+    "patterns"
+  ],
   "use_cases": [
-    "billing"
+    "billing",
+    "commerce-automation",
+    "patterns"
   ],
   "complexity": 3,
   "num_nodes": 7,

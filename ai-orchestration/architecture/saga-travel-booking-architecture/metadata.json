@@ -5,9 +5,14 @@
   "kind": "architecture",
   "source_domain": "Architecture",
   "primary_use_case": "ai-orchestration",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "architecture",
+    "patterns"
+  ],
   "use_cases": [
-    "ai-orchestration"
+    "ai-orchestration",
+    "architecture",
+    "patterns"
   ],
   "complexity": 4,
   "num_nodes": 17,

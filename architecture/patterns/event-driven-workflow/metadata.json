@@ -1,0 +1,26 @@
+{
+  "template_id": "event-driven-workflow",
+  "workflow_id": "event-driven",
+  "title": "Event Driven Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "patterns"
+  ],
+  "use_cases": [
+    "architecture",
+    "patterns"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 3,
+  "tags": [
+    "event",
+    "driven",
+    "patterns"
+  ],
+  "description": "This workflow models reacting to incoming business events.",
+  "source_path": "patterns/event-driven",
+  "repo_path": "architecture/patterns/event-driven-workflow"
+}

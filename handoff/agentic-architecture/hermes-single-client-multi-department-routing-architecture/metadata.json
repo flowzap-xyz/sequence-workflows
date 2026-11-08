@@ -7,12 +7,14 @@
   "primary_use_case": "handoff",
   "secondary_use_cases": [
     "agentic",
-    "mcp"
+    "mcp",
+    "agentic-architecture"
   ],
   "use_cases": [
     "handoff",
     "agentic",
-    "mcp"
+    "mcp",
+    "agentic-architecture"
   ],
   "complexity": 2,
   "num_nodes": 7,

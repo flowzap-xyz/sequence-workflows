@@ -1,0 +1,28 @@
+{
+  "template_id": "microservices-database-per-service-architecture",
+  "workflow_id": "microservices-database-per-service-architecture",
+  "title": "Microservices Database-Per-Service Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "architecture"
+  ],
+  "complexity": 4,
+  "num_nodes": 16,
+  "num_lanes": 4,
+  "tags": [
+    "database-per-service",
+    "polyglot-persistence",
+    "microservices",
+    "kafka",
+    "event-driven",
+    "data-isolation",
+    "eventual-consistency",
+    "architecture-diagram"
+  ],
+  "description": "A database-per-service architecture diagram where each microservice owns its dedicated data store, with event-driven synchronization via Kafka for cross-service data consistency. This template demonstrates the core microservices data isolation principle, showing how PostgreSQL and MongoDB coexist in a polyglot persistence strategy. Critical for architects enforcing service autonomy while maintaining eventual consistency.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/microservices-database-per-service-architecture"
+}

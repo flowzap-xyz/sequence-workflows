@@ -1,0 +1,35 @@
+{
+  "template_id": "health-check-pattern-architecture",
+  "workflow_id": "health-check-pattern-architecture",
+  "title": "Health Check Pattern Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "incident",
+    "security",
+    "patterns"
+  ],
+  "use_cases": [
+    "architecture",
+    "incident",
+    "security",
+    "patterns"
+  ],
+  "complexity": 3,
+  "num_nodes": 19,
+  "num_lanes": 4,
+  "tags": [
+    "health-check",
+    "load-balancer",
+    "self-healing",
+    "monitoring",
+    "pagerduty",
+    "instance-rotation",
+    "deep-health-check",
+    "architecture-diagram"
+  ],
+  "description": "A health check pattern architecture diagram with load balancer probes, deep health checks verifying database, cache, disk, and dependency status, automatic instance rotation, and alerting integration with PagerDuty for consecutive failures. This template models the health monitoring infrastructure that enables self-healing systems, where unhealthy instances are automatically removed from rotation and operations teams are alerted. Key for building production-ready services with proper observability.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/health-check-pattern-architecture"
+}

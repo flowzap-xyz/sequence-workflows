@@ -1,0 +1,23 @@
+research_agent {# Research Agent
+  n1: rectangle label="Summarize Sources (RAG)"
+  n1.handle(right) -> outline_agent.n2.handle(left) [label="Raw Sources"]
+}
+
+outline_agent {# Outline Agent
+  n2: rectangle label="Structure Headings"
+  n2.handle(right) -> writer_agent.n3.handle(left) [label="Document Outline"]
+}
+
+writer_agent {# Writer Agent
+  n3: rectangle label="Draft Full Text"
+  n3.handle(right) -> editor_agent.n4.handle(left) [label="First Draft"]
+}
+
+editor_agent {# Editor Agent
+  n4: rectangle label="Refine Tone & Grammar"
+  n4.handle(right) -> seo_agent.n5.handle(left) [label="Refined Text"]
+}
+
+seo_agent {# SEO Agent
+  n5: rectangle label="Add Keywords & Meta"
+}

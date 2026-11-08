@@ -1,0 +1,45 @@
+Developer { # Developer
+n1: circle label:"Code Change"
+n2: rectangle label:"Git Push to Main"
+n3: rectangle label:"Open Pull Request"
+n4: rectangle label:"Merge After Review"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left) [label="Feature Branch"]
+n3.handle(right) -> n4.handle(left) [label="Approved"]
+n4.handle(bottom) -> CICD.n5.handle(top) [label="Trigger"]
+}
+CICD { # CI/CD Pipeline
+n5: rectangle label:"Run Tests and Lint"
+n6: rectangle label:"Build Container Image"
+n7: rectangle label:"Push to Registry"
+n8: rectangle label:"Update Manifest in Git"
+n5.handle(right) -> n6.handle(left) [label="Tests Pass"]
+n6.handle(right) -> n7.handle(left) [label="Tag: sha-abc123"]
+n7.handle(right) -> n8.handle(left) [label="Update Image Tag"]
+n8.handle(bottom) -> GitOps.n9.handle(top) [label="Commit Manifest"]
+}
+GitOps { # GitOps Controller (ArgoCD/Flux)
+n9: rectangle label:"Detect Git Diff"
+n10: rectangle label:"Compare Desired vs Live"
+n11: diamond label:"Drift Detected?"
+n12: rectangle label:"Sync to Cluster"
+n13: rectangle label:"State Already Synced"
+n14: rectangle label:"Health Check"
+n9.handle(right) -> n10.handle(left) [label="Poll/Webhook"]
+n10.handle(right) -> n11.handle(left)
+n11.handle(right) -> n12.handle(left) [label="Yes"]
+n11.handle(bottom) -> n13.handle(top) [label="No"]
+n12.handle(right) -> n14.handle(left) [label="Apply"]
+n14.handle(bottom) -> Cluster.n15.handle(top) [label="Deploy"]
+}
+Cluster { # Kubernetes Cluster
+n15: rectangle label:"Rolling Update Deployment"
+n16: rectangle label:"New Pods Created"
+n17: rectangle label:"Old Pods Terminated"
+n18: rectangle label:"Service Routes Traffic"
+n19: circle label:"Deployment Complete"
+n15.handle(right) -> n16.handle(left) [label="Scale Up"]
+n16.handle(right) -> n17.handle(left) [label="Healthy"]
+n17.handle(right) -> n18.handle(left) [label="Cutover"]
+n18.handle(right) -> n19.handle(left)
+}

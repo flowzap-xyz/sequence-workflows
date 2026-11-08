@@ -6,11 +6,15 @@
   "source_domain": "patterns",
   "primary_use_case": "delivery",
   "secondary_use_cases": [
-    "ai-orchestration"
+    "ai-orchestration",
+    "architecture",
+    "patterns"
   ],
   "use_cases": [
     "delivery",
-    "ai-orchestration"
+    "ai-orchestration",
+    "architecture",
+    "patterns"
   ],
   "complexity": 5,
   "num_nodes": 20,

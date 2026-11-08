@@ -1,0 +1,30 @@
+{
+  "template_id": "incident-root-cause-prevention-workflow",
+  "workflow_id": "incident-root-cause-prevention",
+  "title": "Incident Root Cause & Prevention Workflow",
+  "kind": "workflow",
+  "source_domain": "Process Mapping",
+  "primary_use_case": "process-mapping",
+  "secondary_use_cases": [
+    "incident",
+    "compliance"
+  ],
+  "use_cases": [
+    "process-mapping",
+    "incident",
+    "compliance"
+  ],
+  "complexity": 2,
+  "num_nodes": 10,
+  "num_lanes": 2,
+  "tags": [
+    "process-mapping",
+    "incident",
+    "root-cause",
+    "prevention",
+    "controls"
+  ],
+  "description": "Incident response workflow that documents the current state, traces the root cause, validates controls and creates a prevention protocol before the case is closed.",
+  "source_path": "",
+  "repo_path": "process-mapping/process-mapping/incident-root-cause-prevention-workflow"
+}

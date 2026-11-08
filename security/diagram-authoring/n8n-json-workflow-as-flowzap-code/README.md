@@ -6,7 +6,7 @@ An n8n automation rendered as FlowZap Code: manual trigger, spreadsheet read, ba
 **Kind:** workflow  
 **Source domain:** Diagram Authoring  
 **Primary use case:** security  
-**Secondary use cases:** None  
+**Secondary use cases:** diagram-authoring  
 **Complexity:** 2/5  
 **Nodes:** 11  
 **Lanes:** 1  

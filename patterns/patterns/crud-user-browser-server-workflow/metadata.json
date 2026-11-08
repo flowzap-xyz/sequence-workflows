@@ -1,0 +1,25 @@
+{
+  "template_id": "crud-user-browser-server-workflow",
+  "workflow_id": "crud-user-browser-server",
+  "title": "Crud User Browser Server Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "patterns",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "patterns"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "crud",
+    "user",
+    "browser",
+    "server",
+    "patterns"
+  ],
+  "description": "This workflow models user creates, reads, updates, and deletes data through a browser and server.",
+  "source_path": "patterns/crud-user-browser-server",
+  "repo_path": "patterns/patterns/crud-user-browser-server-workflow"
+}

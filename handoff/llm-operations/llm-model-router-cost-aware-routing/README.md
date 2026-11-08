@@ -6,7 +6,7 @@ An LLM gateway that reads the token budget, extracts intent and length, then rou
 **Kind:** workflow  
 **Source domain:** LLM Operations  
 **Primary use case:** handoff  
-**Secondary use cases:** mcp  
+**Secondary use cases:** mcp, llm-operations  
 **Complexity:** 2/5  
 **Nodes:** 10  
 **Lanes:** 3  

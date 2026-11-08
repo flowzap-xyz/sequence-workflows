@@ -1,0 +1,12 @@
+user { # User
+  n1: circle label:"Start"
+  n2: rectangle label:"Submit"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> app.n3.handle(top) [label="Send"]
+}
+
+app { # App
+  n3: rectangle label:"Process"
+  n4: circle label:"Done"
+  n3.handle(right) -> n4.handle(left)
+}

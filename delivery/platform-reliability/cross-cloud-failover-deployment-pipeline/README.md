@@ -6,7 +6,7 @@ CI builds the container, pushes it to a cross-cloud registry, deploys to AWS, GC
 **Kind:** workflow  
 **Source domain:** Platform Reliability  
 **Primary use case:** delivery  
-**Secondary use cases:** None  
+**Secondary use cases:** platform-reliability  
 **Complexity:** 2/5  
 **Nodes:** 11  
 **Lanes:** 5  

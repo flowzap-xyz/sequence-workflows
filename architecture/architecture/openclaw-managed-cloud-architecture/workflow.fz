@@ -1,0 +1,24 @@
+User { # User
+n1: circle label:"Start"
+n2: rectangle label:"Click Deploy on Railway"
+n3: rectangle label:"Configure API key in wizard"
+n4: rectangle label:"Chat via Telegram / Discord"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(right) -> n4.handle(left)
+n4.handle(bottom) -> Cloud.n5.handle(top) [label="Internet"]
+}
+Cloud { # Managed Cloud Platform
+n5: rectangle label:"OpenClaw Gateway (managed)"
+n6: rectangle label:"Auto-updates + Monitoring"
+n7: rectangle label:"Pre-configured Integrations"
+n5.handle(right) -> n6.handle(left)
+n6.handle(right) -> n7.handle(left)
+n5.handle(bottom) -> LLM.n8.handle(top) [label="API Request"]
+}
+LLM { # Commercial LLM API
+n8: rectangle label:"Claude / GPT / Gemini"
+n9: rectangle label:"Generate response"
+n8.handle(right) -> n9.handle(left)
+n9.handle(top) -> Cloud.n5.handle(bottom) [label="Response"]
+}

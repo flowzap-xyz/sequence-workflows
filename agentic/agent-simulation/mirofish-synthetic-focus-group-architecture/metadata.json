@@ -5,9 +5,12 @@
   "kind": "workflow",
   "source_domain": "Agent Simulation",
   "primary_use_case": "agentic",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "agent-simulation"
+  ],
   "use_cases": [
-    "agentic"
+    "agentic",
+    "agent-simulation"
   ],
   "complexity": 2,
   "num_nodes": 11,

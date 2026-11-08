@@ -1,0 +1,38 @@
+pipeline { # Cross-Cloud Failover Deployment
+n1: circle label:"Push to Git"
+n2: rectangle label:"CI builds container"
+n3: rectangle label:"Push image to cross-cloud registry"
+n4: rectangle label:"Health check all endpoints"
+n5: diamond label:"All healthy?"
+n6: rectangle label:"Update mesh routing table"
+n7: circle label:"Live — Multi-Cloud Active"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> aws.n9.handle(top)
+n3.handle(bottom) -> gcp.n10.handle(top)
+n3.handle(bottom) -> metal.n11.handle(top)
+aws.n9.handle(bottom) -> n4.handle(top)
+gcp.n10.handle(bottom) -> n4.handle(top)
+metal.n11.handle(bottom) -> n4.handle(top)
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left) [label="Yes"]
+n5.handle(bottom) -> rollback.n8.handle(top) [label="No"]
+n6.handle(right) -> n7.handle(left)
+}
+
+aws { # AWS
+n9: rectangle label:"Deploy to AWS (primary)"
+}
+
+gcp { # GCP
+n10: rectangle label:"Deploy to GCP (secondary)"
+}
+
+metal { # Metal
+n11: rectangle label:"Deploy to Metal (tertiary)"
+}
+
+rollback { # Rollback
+n8: rectangle label:"Alert + rollback failed cloud"
+n8.handle(right) -> pipeline.n4.handle(bottom) [label="retry"]
+}

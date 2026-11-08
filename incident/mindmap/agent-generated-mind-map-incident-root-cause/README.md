@@ -6,7 +6,7 @@ An AGMM example: an SRE agent outputs its API latency root-cause reasoning chain
 **Kind:** workflow  
 **Source domain:** Mindmap  
 **Primary use case:** incident  
-**Secondary use cases:** agentic  
+**Secondary use cases:** agentic, agentic-architecture, mindmap  
 **Complexity:** 3/5  
 **Nodes:** 13  
 **Lanes:** 1  

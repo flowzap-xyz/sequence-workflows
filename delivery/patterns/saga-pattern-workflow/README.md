@@ -6,7 +6,7 @@ Saga orchestration pattern for distributed transactions across Order, Payment, a
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** delivery  
-**Secondary use cases:** ai-orchestration  
+**Secondary use cases:** ai-orchestration, architecture, patterns  
 **Complexity:** 5/5  
 **Nodes:** 20  
 **Lanes:** 4  

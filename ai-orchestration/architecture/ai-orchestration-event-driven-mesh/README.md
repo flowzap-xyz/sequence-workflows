@@ -6,7 +6,7 @@ An event-driven agent mesh architecture using a Kafka-style event broker. Multip
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** ai-orchestration  
-**Secondary use cases:** mcp  
+**Secondary use cases:** mcp, architecture, patterns  
 **Complexity:** 3/5  
 **Nodes:** 13  
 **Lanes:** 5  

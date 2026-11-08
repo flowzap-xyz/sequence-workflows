@@ -6,7 +6,7 @@ A domain events architecture diagram showing how aggregate roots raise domain ev
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** security  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture  
 **Complexity:** 4/5  
 **Nodes:** 17  
 **Lanes:** 4  

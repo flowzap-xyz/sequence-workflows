@@ -6,7 +6,7 @@ Option 1 of the Hermes multi-tenant setup: one external actor, one gateway, one 
 **Kind:** workflow  
 **Source domain:** Agentic Architecture  
 **Primary use case:** agentic  
-**Secondary use cases:** mcp  
+**Secondary use cases:** mcp, agentic-architecture, agentic-security  
 **Complexity:** 1/5  
 **Nodes:** 5  
 **Lanes:** 3  

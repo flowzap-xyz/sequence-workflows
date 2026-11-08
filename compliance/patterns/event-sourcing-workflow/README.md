@@ -6,7 +6,7 @@ Event sourcing pattern with event capture, event store persistence, aggregate re
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** compliance  
-**Secondary use cases:** None  
+**Secondary use cases:** patterns  
 **Complexity:** 4/5  
 **Nodes:** 10  
 **Lanes:** 3  

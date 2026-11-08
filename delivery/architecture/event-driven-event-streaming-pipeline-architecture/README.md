@@ -6,7 +6,7 @@ A real-time event streaming pipeline architecture diagram with IoT sensors, appl
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** delivery  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture  
 **Complexity:** 4/5  
 **Nodes:** 18  
 **Lanes:** 4  

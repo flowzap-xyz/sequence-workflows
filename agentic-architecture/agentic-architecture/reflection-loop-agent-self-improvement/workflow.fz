@@ -1,0 +1,55 @@
+user { # User
+  n1: circle label:"Start request"
+  n2: rectangle label:"Send task"
+  n4: rectangle label:"Receive acknowledgement"
+  n22: rectangle label:"Receive final answer"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> orchestrator.n3.handle(top) [label="Task"]
+  n4.handle(right) -> n22.handle(left)
+}
+
+orchestrator { # Orchestrator
+  n3: rectangle label:"Acknowledge task"
+  n5: rectangle label:"Dispatch drafting job"
+  n8: rectangle label:"Receive draft"
+  n9: rectangle label:"Send for review"
+  n12: rectangle label:"Receive critique"
+  n13: rectangle label:"Request revision"
+  n16: rectangle label:"Receive revised draft"
+  n17: rectangle label:"Request final review"
+  n20: rectangle label:"Receive approval"
+  n21: rectangle label:"Send final answer"
+  n3.handle(top) -> user.n4.handle(bottom) [label="Ack"]
+  n3.handle(right) -> n5.handle(left)
+  n5.handle(bottom) -> worker.n6.handle(top) [label="Draft task"]
+  n8.handle(right) -> n9.handle(left)
+  n9.handle(bottom) -> critic.n10.handle(top) [label="Review draft"]
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(bottom) -> worker.n14.handle(top) [label="Revise"]
+  n16.handle(right) -> n17.handle(left)
+  n17.handle(bottom) -> critic.n18.handle(top) [label="Review again"]
+  n20.handle(right) -> n21.handle(left)
+  n21.handle(top) -> user.n22.handle(bottom) [label="Final"]
+}
+
+worker { # Worker Agent
+  n6: rectangle label:"Generate draft"
+  n7: rectangle label:"Return draft"
+  n14: rectangle label:"Revise draft"
+  n15: rectangle label:"Return revision"
+  n6.handle(right) -> n7.handle(left)
+  n7.handle(top) -> orchestrator.n8.handle(bottom) [label="Draft ready"]
+  n14.handle(right) -> n15.handle(left)
+  n15.handle(top) -> orchestrator.n16.handle(bottom) [label="Revision ready"]
+}
+
+critic { # Critic Agent
+  n10: rectangle label:"Review draft"
+  n11: rectangle label:"Return critique"
+  n18: rectangle label:"Approve revision"
+  n19: rectangle label:"Return approval"
+  n10.handle(right) -> n11.handle(left)
+  n11.handle(top) -> orchestrator.n12.handle(bottom) [label="Critique"]
+  n18.handle(right) -> n19.handle(left)
+  n19.handle(top) -> orchestrator.n20.handle(bottom) [label="Approved"]
+}

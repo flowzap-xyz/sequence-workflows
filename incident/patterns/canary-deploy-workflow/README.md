@@ -6,7 +6,7 @@ Canary deployment pattern with gradual traffic shifting, real-time metrics monit
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** incident  
-**Secondary use cases:** delivery  
+**Secondary use cases:** delivery, patterns  
 **Complexity:** 3/5  
 **Nodes:** 7  
 **Lanes:** 2  

@@ -6,11 +6,13 @@
   "source_domain": "Architecture",
   "primary_use_case": "security",
   "secondary_use_cases": [
-    "mcp"
+    "mcp",
+    "agentic-security"
   ],
   "use_cases": [
     "security",
-    "mcp"
+    "mcp",
+    "agentic-security"
   ],
   "complexity": 3,
   "num_nodes": 12,

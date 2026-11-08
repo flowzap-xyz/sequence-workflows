@@ -6,11 +6,15 @@
   "source_domain": "Mindmap",
   "primary_use_case": "incident",
   "secondary_use_cases": [
-    "agentic"
+    "agentic",
+    "agentic-architecture",
+    "mindmap"
   ],
   "use_cases": [
     "incident",
-    "agentic"
+    "agentic",
+    "agentic-architecture",
+    "mindmap"
   ],
   "complexity": 3,
   "num_nodes": 13,

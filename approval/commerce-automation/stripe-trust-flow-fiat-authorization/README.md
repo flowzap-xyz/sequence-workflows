@@ -6,7 +6,7 @@ The trust layer behind agent-mediated payments at Stripe: the agent submits a sh
 **Kind:** workflow  
 **Source domain:** Commerce Automation  
 **Primary use case:** approval  
-**Secondary use cases:** security, compliance  
+**Secondary use cases:** security, compliance, commerce-automation  
 **Complexity:** 1/5  
 **Nodes:** 5  
 **Lanes:** 2  

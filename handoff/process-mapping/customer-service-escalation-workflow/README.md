@@ -6,7 +6,7 @@ Customer support workflow that applies the standard greeting and service protoco
 **Kind:** workflow  
 **Source domain:** Process Mapping  
 **Primary use case:** handoff  
-**Secondary use cases:** support  
+**Secondary use cases:** support, process-mapping  
 **Complexity:** 2/5  
 **Nodes:** 11  
 **Lanes:** 2  

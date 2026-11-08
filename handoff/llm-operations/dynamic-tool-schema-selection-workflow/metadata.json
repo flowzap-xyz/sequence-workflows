@@ -6,11 +6,13 @@
   "source_domain": "LLM Operations",
   "primary_use_case": "handoff",
   "secondary_use_cases": [
-    "mcp"
+    "mcp",
+    "llm-operations"
   ],
   "use_cases": [
     "handoff",
-    "mcp"
+    "mcp",
+    "llm-operations"
   ],
   "complexity": 2,
   "num_nodes": 8,

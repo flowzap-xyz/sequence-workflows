@@ -1,0 +1,30 @@
+{
+  "template_id": "agentic-swarm",
+  "workflow_id": "agentic-swarm",
+  "title": "Agentic Swarm Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "agentic"
+  ],
+  "use_cases": [
+    "architecture",
+    "agentic"
+  ],
+  "complexity": 3,
+  "num_nodes": 6,
+  "num_lanes": 5,
+  "tags": [
+    "agentic",
+    "swarm",
+    "multi-agent",
+    "parallel",
+    "aggregator",
+    "architecture-diagram",
+    "ai-team"
+  ],
+  "description": "A swarm multi-agent architecture where multiple agents work on the same or related tasks simultaneously, with no central coordinator. Their outputs are then aggregated, voted on, or merged by a dedicated aggregator node. Agents may compete — the best output wins.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/agentic-swarm"
+}

@@ -5,9 +5,12 @@
   "kind": "workflow",
   "source_domain": "LLM Operations",
   "primary_use_case": "context-management",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "llm-operations"
+  ],
   "use_cases": [
-    "context-management"
+    "context-management",
+    "llm-operations"
   ],
   "complexity": 3,
   "num_nodes": 14,

@@ -5,9 +5,12 @@
   "kind": "workflow",
   "source_domain": "Platform Reliability",
   "primary_use_case": "incident",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "platform-reliability"
+  ],
   "use_cases": [
-    "incident"
+    "incident",
+    "platform-reliability"
   ],
   "complexity": 2,
   "num_nodes": 8,

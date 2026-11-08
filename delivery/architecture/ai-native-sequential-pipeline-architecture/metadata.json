@@ -7,12 +7,14 @@
   "primary_use_case": "delivery",
   "secondary_use_cases": [
     "agentic",
-    "ai-orchestration"
+    "ai-orchestration",
+    "architecture"
   ],
   "use_cases": [
     "delivery",
     "agentic",
-    "ai-orchestration"
+    "ai-orchestration",
+    "architecture"
   ],
   "complexity": 2,
   "num_nodes": 7,

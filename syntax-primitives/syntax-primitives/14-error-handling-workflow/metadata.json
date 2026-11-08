@@ -1,0 +1,23 @@
+{
+  "template_id": "14-error-handling-workflow",
+  "workflow_id": "14-error-handling",
+  "title": "14 Error Handling Workflow",
+  "kind": "workflow",
+  "source_domain": "syntax-primitives",
+  "primary_use_case": "syntax-primitives",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "syntax-primitives"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "14",
+    "error",
+    "handling"
+  ],
+  "description": "This workflow models a try and retry style pattern for handling errors.",
+  "source_path": "syntax-primitives/14-error-handling",
+  "repo_path": "syntax-primitives/syntax-primitives/14-error-handling-workflow"
+}

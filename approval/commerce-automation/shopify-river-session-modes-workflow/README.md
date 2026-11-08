@@ -6,7 +6,7 @@ Three session modes in one agent: interactive in Slack, automated review in the 
 **Kind:** workflow  
 **Source domain:** Commerce Automation  
 **Primary use case:** approval  
-**Secondary use cases:** None  
+**Secondary use cases:** commerce-automation  
 **Complexity:** 2/5  
 **Nodes:** 9  
 **Lanes:** 4  

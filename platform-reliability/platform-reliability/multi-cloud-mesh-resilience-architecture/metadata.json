@@ -1,0 +1,25 @@
+{
+  "template_id": "multi-cloud-mesh-resilience-architecture",
+  "workflow_id": "multi-cloud-mesh-resilience-architecture",
+  "title": "Multi-Cloud Mesh Resilience Architecture",
+  "kind": "workflow",
+  "source_domain": "Platform Reliability",
+  "primary_use_case": "platform-reliability",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "platform-reliability"
+  ],
+  "complexity": 2,
+  "num_nodes": 9,
+  "num_lanes": 1,
+  "tags": [
+    "multi-cloud",
+    "resilience",
+    "mesh",
+    "quorum",
+    "architecture"
+  ],
+  "description": "Traffic through any edge proxy to a mesh control plane spread over AWS, GCP and metal, with quorum databases and no single-cloud dependency in the routing path.",
+  "source_path": "",
+  "repo_path": "platform-reliability/platform-reliability/multi-cloud-mesh-resilience-architecture"
+}

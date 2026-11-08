@@ -5,9 +5,12 @@
   "kind": "workflow",
   "source_domain": "Diagram Authoring",
   "primary_use_case": "security",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "diagram-authoring"
+  ],
   "use_cases": [
-    "security"
+    "security",
+    "diagram-authoring"
   ],
   "complexity": 2,
   "num_nodes": 11,

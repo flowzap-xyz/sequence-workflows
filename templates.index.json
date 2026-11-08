@@ -6,9 +6,11 @@
       "description": "This workflow models two connected nodes in a single lane showing basic flow.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -18,7 +20,7 @@
         "lane"
       ],
       "sourcePath": "syntax-primitives/01-basic-lane",
-      "repoPath": "uncategorized/syntax-primitives/01-basic-lane-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/01-basic-lane-workflow"
     },
     {
       "slug": "02-handle-positions-workflow",
@@ -26,9 +28,11 @@
       "description": "This workflow models nodes with explicit top, bottom, left, and right handle connections.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -38,7 +42,7 @@
         "positions"
       ],
       "sourcePath": "syntax-primitives/02-handle-positions",
-      "repoPath": "uncategorized/syntax-primitives/02-handle-positions-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/02-handle-positions-workflow"
     },
     {
       "slug": "03-all-shapes-workflow",
@@ -46,9 +50,11 @@
       "description": "This workflow models a workflow that demonstrates circle, rectangle, diamond, and taskbox shapes.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -58,7 +64,7 @@
         "shapes"
       ],
       "sourcePath": "syntax-primitives/03-all-shapes",
-      "repoPath": "uncategorized/syntax-primitives/03-all-shapes-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/03-all-shapes-workflow"
     },
     {
       "slug": "04-labeled-arrows-workflow",
@@ -66,9 +72,11 @@
       "description": "This workflow models connections with descriptive labels between nodes.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -78,7 +86,7 @@
         "arrows"
       ],
       "sourcePath": "syntax-primitives/04-labeled-arrows",
-      "repoPath": "uncategorized/syntax-primitives/04-labeled-arrows-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/04-labeled-arrows-workflow"
     },
     {
       "slug": "05-multiple-lanes-workflow",
@@ -86,9 +94,11 @@
       "description": "This workflow models three lanes with cross-lane communication.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 3,
@@ -98,7 +108,7 @@
         "lanes"
       ],
       "sourcePath": "syntax-primitives/05-multiple-lanes",
-      "repoPath": "uncategorized/syntax-primitives/05-multiple-lanes-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/05-multiple-lanes-workflow"
     },
     {
       "slug": "06-nested-lanes-workflow",
@@ -106,9 +116,11 @@
       "description": "This workflow models lanes that conceptually contain other lanes.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 3,
@@ -118,7 +130,7 @@
         "lanes"
       ],
       "sourcePath": "syntax-primitives/06-nested-lanes",
-      "repoPath": "uncategorized/syntax-primitives/06-nested-lanes-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/06-nested-lanes-workflow"
     },
     {
       "slug": "07-unicode-labels-workflow",
@@ -126,9 +138,11 @@
       "description": "This workflow models a workflow with emoji and international characters in labels.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -138,7 +152,7 @@
         "labels"
       ],
       "sourcePath": "syntax-primitives/07-unicode-labels",
-      "repoPath": "uncategorized/syntax-primitives/07-unicode-labels-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/07-unicode-labels-workflow"
     },
     {
       "slug": "08-empty-lane-workflow",
@@ -146,9 +160,11 @@
       "description": "This workflow models a lane with no nodes to test empty-lane handling.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -158,7 +174,7 @@
         "lane"
       ],
       "sourcePath": "syntax-primitives/08-empty-lane",
-      "repoPath": "uncategorized/syntax-primitives/08-empty-lane-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/08-empty-lane-workflow"
     },
     {
       "slug": "09-cross-lane-circular-workflow",
@@ -166,9 +182,11 @@
       "description": "This workflow models an arrow that loops back across lanes in a circular fashion.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -179,7 +197,7 @@
         "circular"
       ],
       "sourcePath": "syntax-primitives/09-cross-lane-circular",
-      "repoPath": "uncategorized/syntax-primitives/09-cross-lane-circular-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/09-cross-lane-circular-workflow"
     },
     {
       "slug": "10-long-labels-workflow",
@@ -187,9 +205,11 @@
       "description": "This workflow models labels with extra-long descriptive text.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -199,7 +219,7 @@
         "labels"
       ],
       "sourcePath": "syntax-primitives/10-long-labels",
-      "repoPath": "uncategorized/syntax-primitives/10-long-labels-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/10-long-labels-workflow"
     },
     {
       "slug": "11-taskbox-complete-workflow",
@@ -207,9 +227,11 @@
       "description": "This workflow models a taskbox with owner, description, and system parameters.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -219,7 +241,7 @@
         "complete"
       ],
       "sourcePath": "syntax-primitives/11-taskbox-complete",
-      "repoPath": "uncategorized/syntax-primitives/11-taskbox-complete-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/11-taskbox-complete-workflow"
     },
     {
       "slug": "12-bidirectional-arrows-workflow",
@@ -227,9 +249,11 @@
       "description": "This workflow models two-way connections between the same pair of nodes.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -239,7 +263,7 @@
         "arrows"
       ],
       "sourcePath": "syntax-primitives/12-bidirectional-arrows",
-      "repoPath": "uncategorized/syntax-primitives/12-bidirectional-arrows-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/12-bidirectional-arrows-workflow"
     },
     {
       "slug": "13-parallel-flows-workflow",
@@ -247,9 +271,11 @@
       "description": "This workflow models one node splitting into three parallel tasks.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -259,7 +285,7 @@
         "flows"
       ],
       "sourcePath": "syntax-primitives/13-parallel-flows",
-      "repoPath": "uncategorized/syntax-primitives/13-parallel-flows-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/13-parallel-flows-workflow"
     },
     {
       "slug": "14-error-handling-workflow",
@@ -267,9 +293,11 @@
       "description": "This workflow models a try and retry style pattern for handling errors.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -279,7 +307,7 @@
         "handling"
       ],
       "sourcePath": "syntax-primitives/14-error-handling",
-      "repoPath": "uncategorized/syntax-primitives/14-error-handling-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/14-error-handling-workflow"
     },
     {
       "slug": "15-optional-parameters-workflow",
@@ -287,9 +315,11 @@
       "description": "This workflow models a taskbox with some optional fields left out.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -299,7 +329,7 @@
         "parameters"
       ],
       "sourcePath": "syntax-primitives/15-optional-parameters",
-      "repoPath": "uncategorized/syntax-primitives/15-optional-parameters-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/15-optional-parameters-workflow"
     },
     {
       "slug": "16-max-nodes-workflow",
@@ -307,9 +337,11 @@
       "description": "This workflow models 50 nodes in one lane as a stress test.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 2,
       "numNodes": 50,
       "numLanes": 2,
@@ -319,7 +351,7 @@
         "nodes"
       ],
       "sourcePath": "syntax-primitives/16-max-nodes",
-      "repoPath": "uncategorized/syntax-primitives/16-max-nodes-workflow"
+      "repoPath": "edge-cases/syntax-primitives/16-max-nodes-workflow"
     },
     {
       "slug": "17-minimal-nodes-workflow",
@@ -327,9 +359,11 @@
       "description": "This workflow models a workflow with a single start node only.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 2,
       "numNodes": 1,
       "numLanes": 1,
@@ -339,7 +373,7 @@
         "nodes"
       ],
       "sourcePath": "syntax-primitives/17-minimal-nodes",
-      "repoPath": "uncategorized/syntax-primitives/17-minimal-nodes-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/17-minimal-nodes-workflow"
     },
     {
       "slug": "18-complex-handles-workflow",
@@ -347,9 +381,11 @@
       "description": "This workflow models a workflow that uses every handle position in one diagram.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -359,7 +395,7 @@
         "handles"
       ],
       "sourcePath": "syntax-primitives/18-complex-handles",
-      "repoPath": "uncategorized/syntax-primitives/18-complex-handles-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/18-complex-handles-workflow"
     },
     {
       "slug": "19-label-escaping-workflow",
@@ -367,9 +403,11 @@
       "description": "This workflow models labels that include quotes and special characters.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -379,7 +417,7 @@
         "escaping"
       ],
       "sourcePath": "syntax-primitives/19-label-escaping",
-      "repoPath": "uncategorized/syntax-primitives/19-label-escaping-workflow"
+      "repoPath": "edge-cases/syntax-primitives/19-label-escaping-workflow"
     },
     {
       "slug": "20-syntax-complete-workflow",
@@ -387,9 +425,11 @@
       "description": "This workflow models one workflow using most available language features.",
       "kind": "workflow",
       "sourceDomain": "syntax-primitives",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "syntax-primitives",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "syntax-primitives"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 3,
@@ -399,7 +439,7 @@
         "complete"
       ],
       "sourcePath": "syntax-primitives/20-syntax-complete",
-      "repoPath": "uncategorized/syntax-primitives/20-syntax-complete-workflow"
+      "repoPath": "syntax-primitives/syntax-primitives/20-syntax-complete-workflow"
     },
     {
       "slug": "a-b-testing-workflow",
@@ -407,9 +447,11 @@
       "description": "This workflow models comparing two versions to see which performs better.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -420,7 +462,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/a-b-testing",
-      "repoPath": "uncategorized/patterns/a-b-testing-workflow"
+      "repoPath": "patterns/patterns/a-b-testing-workflow"
     },
     {
       "slug": "ab-test-setup-workflow",
@@ -513,12 +555,16 @@
       "primaryUseCase": "handoff",
       "secondaryUseCases": [
         "security",
-        "mcp"
+        "mcp",
+        "architecture",
+        "patterns"
       ],
       "useCases": [
         "handoff",
         "security",
-        "mcp"
+        "mcp",
+        "architecture",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 7,
@@ -569,9 +615,12 @@
       "kind": "workflow",
       "sourceDomain": "patterns",
       "primaryUseCase": "compliance",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "patterns"
+      ],
       "useCases": [
-        "compliance"
+        "compliance",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 13,
@@ -593,9 +642,12 @@
       "kind": "workflow",
       "sourceDomain": "patterns",
       "primaryUseCase": "security",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "patterns"
+      ],
       "useCases": [
-        "security"
+        "security",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 7,
@@ -619,11 +671,13 @@
       "sourceDomain": "patterns",
       "primaryUseCase": "approval",
       "secondaryUseCases": [
-        "security"
+        "security",
+        "patterns"
       ],
       "useCases": [
         "approval",
-        "security"
+        "security",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 10,
@@ -713,9 +767,11 @@
       "description": "Batch processing pattern with job scheduling, chunk-based processing, checkpoint/restart capability, error handling, and completion reporting.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 7,
       "numLanes": 2,
@@ -728,7 +784,7 @@
         "job-scheduler"
       ],
       "sourcePath": "patterns/batch-processing",
-      "repoPath": "uncategorized/patterns/batch-processing-workflow"
+      "repoPath": "patterns/patterns/batch-processing-workflow"
     },
     {
       "slug": "bidirectional-loop-workflow",
@@ -736,9 +792,11 @@
       "description": "This workflow models circular references between nodes in both directions.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 5,
       "numNodes": 16,
       "numLanes": 4,
@@ -748,7 +806,7 @@
         "decision"
       ],
       "sourcePath": "edge-cases/bidirectional-loop",
-      "repoPath": "uncategorized/edge-cases/bidirectional-loop-workflow"
+      "repoPath": "edge-cases/edge-cases/bidirectional-loop-workflow"
     },
     {
       "slug": "billing-dispute-workflow",
@@ -758,11 +816,13 @@
       "sourceDomain": "business-operations",
       "primaryUseCase": "approval",
       "secondaryUseCases": [
-        "billing"
+        "billing",
+        "commerce-automation"
       ],
       "useCases": [
         "approval",
-        "billing"
+        "billing",
+        "commerce-automation"
       ],
       "complexity": 4,
       "numNodes": 13,
@@ -785,9 +845,12 @@
       "kind": "workflow",
       "sourceDomain": "patterns",
       "primaryUseCase": "delivery",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "patterns"
+      ],
       "useCases": [
-        "delivery"
+        "delivery",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 13,
@@ -858,9 +921,11 @@
       "description": "Cache-aside pattern with cache lookup, database fallback on miss, cache population, TTL-based expiration, and write-through invalidation.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -873,7 +938,7 @@
         "performance"
       ],
       "sourcePath": "patterns/cache-aside",
-      "repoPath": "uncategorized/patterns/cache-aside-workflow"
+      "repoPath": "patterns/patterns/cache-aside-workflow"
     },
     {
       "slug": "callback-pattern-workflow",
@@ -881,9 +946,11 @@
       "description": "This workflow models an async operation that notifies a callback when done.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -895,7 +962,7 @@
         "loop"
       ],
       "sourcePath": "patterns/callback-pattern",
-      "repoPath": "uncategorized/patterns/callback-pattern-workflow"
+      "repoPath": "patterns/patterns/callback-pattern-workflow"
     },
     {
       "slug": "canary-deploy-workflow",
@@ -905,11 +972,13 @@
       "sourceDomain": "patterns",
       "primaryUseCase": "incident",
       "secondaryUseCases": [
-        "delivery"
+        "delivery",
+        "patterns"
       ],
       "useCases": [
         "incident",
-        "delivery"
+        "delivery",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 7,
@@ -1077,9 +1146,14 @@
       "kind": "workflow",
       "sourceDomain": "patterns",
       "primaryUseCase": "mcp",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture",
+        "patterns"
+      ],
       "useCases": [
-        "mcp"
+        "mcp",
+        "architecture",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 19,
@@ -1102,9 +1176,11 @@
       "description": "This workflow models keeping large payloads external and only passing references.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -1114,7 +1190,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/claim-check",
-      "repoPath": "uncategorized/patterns/claim-check-workflow"
+      "repoPath": "patterns/patterns/claim-check-workflow"
     },
     {
       "slug": "cohort-analysis-workflow",
@@ -1170,9 +1246,11 @@
       "description": "This workflow models labels that look like code comments.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -1182,7 +1260,7 @@
         "labels"
       ],
       "sourcePath": "edge-cases/comment-like-labels",
-      "repoPath": "uncategorized/edge-cases/comment-like-labels-workflow"
+      "repoPath": "edge-cases/edge-cases/comment-like-labels-workflow"
     },
     {
       "slug": "community-moderation-workflow",
@@ -1213,9 +1291,11 @@
       "description": "This workflow models rolling back work when a later step fails.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -1227,7 +1307,7 @@
         "loop"
       ],
       "sourcePath": "patterns/compensation-transaction",
-      "repoPath": "uncategorized/patterns/compensation-transaction-workflow"
+      "repoPath": "patterns/patterns/compensation-transaction-workflow"
     },
     {
       "slug": "conflict-resolution-workflow",
@@ -1308,9 +1388,11 @@
       "description": "This workflow models adding extra data from other sources.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -1321,7 +1403,7 @@
         "decision"
       ],
       "sourcePath": "patterns/content-enricher",
-      "repoPath": "uncategorized/patterns/content-enricher-workflow"
+      "repoPath": "patterns/patterns/content-enricher-workflow"
     },
     {
       "slug": "cost-center-workflow",
@@ -1350,9 +1432,11 @@
       "description": "CQRS (Command Query Responsibility Segregation) pattern with separate command and query paths, domain event publishing, read model synchronization, and DTO transformation.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 19,
       "numLanes": 4,
@@ -1366,7 +1450,7 @@
         "eventual-consistency"
       ],
       "sourcePath": "patterns/cqrs",
-      "repoPath": "uncategorized/patterns/cqrs-workflow"
+      "repoPath": "patterns/patterns/cqrs-workflow"
     },
     {
       "slug": "credit-control-workflow",
@@ -1420,9 +1504,11 @@
       "description": "This workflow models arrows that loop across lanes.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -1432,7 +1518,7 @@
         "circular"
       ],
       "sourcePath": "edge-cases/cross-lane-circular",
-      "repoPath": "uncategorized/edge-cases/cross-lane-circular-workflow"
+      "repoPath": "edge-cases/edge-cases/cross-lane-circular-workflow"
     },
     {
       "slug": "crud-user-browser-server-workflow",
@@ -1440,9 +1526,11 @@
       "description": "This workflow models user creates, reads, updates, and deletes data through a browser and server.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -1454,7 +1542,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/crud-user-browser-server",
-      "repoPath": "uncategorized/patterns/crud-user-browser-server-workflow"
+      "repoPath": "patterns/patterns/crud-user-browser-server-workflow"
     },
     {
       "slug": "customs-clearance-workflow",
@@ -1588,9 +1676,11 @@
       "description": "Dead letter queue pattern for handling failed messages with retry exhaustion detection, DLQ routing, manual inspection, and reprocessing capability.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 7,
       "numLanes": 2,
@@ -1603,7 +1693,7 @@
         "message-queue"
       ],
       "sourcePath": "patterns/dead-letter-queue",
-      "repoPath": "uncategorized/patterns/dead-letter-queue-workflow"
+      "repoPath": "patterns/patterns/dead-letter-queue-workflow"
     },
     {
       "slug": "decision-diamond-workflow",
@@ -1611,9 +1701,11 @@
       "description": "This workflow models an if or then style branch for approval or rejection.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -1623,7 +1715,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/decision-diamond",
-      "repoPath": "uncategorized/patterns/decision-diamond-workflow"
+      "repoPath": "patterns/patterns/decision-diamond-workflow"
     },
     {
       "slug": "deep-nesting-workflow",
@@ -1631,9 +1723,11 @@
       "description": "This workflow models lanes that are conceptually nested within each other.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -1643,7 +1737,7 @@
         "parallel"
       ],
       "sourcePath": "edge-cases/deep-nesting",
-      "repoPath": "uncategorized/edge-cases/deep-nesting-workflow"
+      "repoPath": "edge-cases/edge-cases/deep-nesting-workflow"
     },
     {
       "slug": "delivery-confirmation-workflow",
@@ -1702,9 +1796,11 @@
       "description": "This workflow models lanes that never connect to each other.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -1715,7 +1811,7 @@
         "loop"
       ],
       "sourcePath": "edge-cases/disconnected-lanes",
-      "repoPath": "uncategorized/edge-cases/disconnected-lanes-workflow"
+      "repoPath": "edge-cases/edge-cases/disconnected-lanes-workflow"
     },
     {
       "slug": "diversity-initiative-workflow",
@@ -1768,9 +1864,11 @@
       "description": "This workflow models the same node IDs reused in different lanes.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -1780,7 +1878,7 @@
         "ids"
       ],
       "sourcePath": "edge-cases/duplicate-node-ids",
-      "repoPath": "uncategorized/edge-cases/duplicate-node-ids-workflow"
+      "repoPath": "edge-cases/edge-cases/duplicate-node-ids-workflow"
     },
     {
       "slug": "email-campaign-workflow",
@@ -1832,9 +1930,11 @@
       "description": "This workflow models a lane with no nodes.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -1843,7 +1943,7 @@
         "lane"
       ],
       "sourcePath": "edge-cases/empty-lane",
-      "repoPath": "uncategorized/edge-cases/empty-lane-workflow"
+      "repoPath": "edge-cases/edge-cases/empty-lane-workflow"
     },
     {
       "slug": "enricher-workflow",
@@ -1851,9 +1951,11 @@
       "description": "This workflow models adding metadata to messages before passing them on.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -1862,7 +1964,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/enricher",
-      "repoPath": "uncategorized/patterns/enricher-workflow"
+      "repoPath": "patterns/patterns/enricher-workflow"
     },
     {
       "slug": "error-retry-loop-workflow",
@@ -1870,9 +1972,11 @@
       "description": "This workflow models a failed operation that retries with backoff.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -1883,7 +1987,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/error-retry-loop",
-      "repoPath": "uncategorized/patterns/error-retry-loop-workflow"
+      "repoPath": "patterns/patterns/error-retry-loop-workflow"
     },
     {
       "slug": "escalation-pattern-workflow",
@@ -1892,9 +1996,12 @@
       "kind": "workflow",
       "sourceDomain": "patterns",
       "primaryUseCase": "handoff",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "patterns"
+      ],
       "useCases": [
-        "handoff"
+        "handoff",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 10,
@@ -1913,9 +2020,14 @@
       "description": "This workflow models reacting to incoming business events.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
-      "secondaryUseCases": [],
-      "useCases": [],
+      "primaryUseCase": "architecture",
+      "secondaryUseCases": [
+        "patterns"
+      ],
+      "useCases": [
+        "architecture",
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -1925,7 +2037,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/event-driven",
-      "repoPath": "uncategorized/patterns/event-driven-workflow"
+      "repoPath": "architecture/patterns/event-driven-workflow"
     },
     {
       "slug": "event-sourcing-workflow",
@@ -1934,9 +2046,12 @@
       "kind": "workflow",
       "sourceDomain": "patterns",
       "primaryUseCase": "compliance",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "patterns"
+      ],
       "useCases": [
-        "compliance"
+        "compliance",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 10,
@@ -2031,9 +2146,11 @@
       "description": "This workflow models labels that include leading and trailing spaces.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 5,
       "numNodes": 16,
       "numLanes": 4,
@@ -2042,7 +2159,7 @@
         "whitespace"
       ],
       "sourcePath": "edge-cases/extra-whitespace",
-      "repoPath": "uncategorized/edge-cases/extra-whitespace-workflow"
+      "repoPath": "edge-cases/edge-cases/extra-whitespace-workflow"
     },
     {
       "slug": "fan-out-fan-in-workflow",
@@ -2051,9 +2168,12 @@
       "kind": "workflow",
       "sourceDomain": "patterns",
       "primaryUseCase": "ai-orchestration",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "patterns"
+      ],
       "useCases": [
-        "ai-orchestration"
+        "ai-orchestration",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 13,
@@ -2075,9 +2195,11 @@
       "description": "Feature toggle pattern with flag configuration, user targeting rules, percentage rollouts, and instant kill-switch capability for production features.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -2090,7 +2212,7 @@
         "kill-switch"
       ],
       "sourcePath": "patterns/feature-toggle",
-      "repoPath": "uncategorized/patterns/feature-toggle-workflow"
+      "repoPath": "patterns/patterns/feature-toggle-workflow"
     },
     {
       "slug": "filter-workflow",
@@ -2098,9 +2220,11 @@
       "description": "This workflow models removing items that do not meet criteria.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -2111,7 +2235,7 @@
         "loop"
       ],
       "sourcePath": "patterns/filter",
-      "repoPath": "uncategorized/patterns/filter-workflow"
+      "repoPath": "patterns/patterns/filter-workflow"
     },
     {
       "slug": "financial-reporting-workflow",
@@ -2193,9 +2317,12 @@
       "kind": "workflow",
       "sourceDomain": "business-operations",
       "primaryUseCase": "compliance",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "process-mapping"
+      ],
       "useCases": [
-        "compliance"
+        "compliance",
+        "process-mapping"
       ],
       "complexity": 4,
       "numNodes": 13,
@@ -2245,9 +2372,11 @@
       "description": "This workflow models processing each message safely only once.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -2257,7 +2386,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/idempotent-consumer",
-      "repoPath": "uncategorized/patterns/idempotent-consumer-workflow"
+      "repoPath": "patterns/patterns/idempotent-consumer-workflow"
     },
     {
       "slug": "in-app-message-workflow",
@@ -2509,9 +2638,11 @@
       "description": "This workflow models a label that contains JSON text.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -2521,7 +2652,7 @@
         "label"
       ],
       "sourcePath": "edge-cases/json-in-label",
-      "repoPath": "uncategorized/edge-cases/json-in-label-workflow"
+      "repoPath": "edge-cases/edge-cases/json-in-label-workflow"
     },
     {
       "slug": "kitting-process-workflow",
@@ -2577,9 +2708,11 @@
       "description": "This workflow models labels containing quotes and special characters.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 5,
       "numNodes": 16,
       "numLanes": 4,
@@ -2588,7 +2721,7 @@
         "escaping"
       ],
       "sourcePath": "edge-cases/label-escaping",
-      "repoPath": "uncategorized/edge-cases/label-escaping-workflow"
+      "repoPath": "edge-cases/edge-cases/label-escaping-workflow"
     },
     {
       "slug": "last-mile-delivery-workflow",
@@ -2644,9 +2777,11 @@
       "description": "This workflow models a label that contains markdown formatting.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -2656,7 +2791,7 @@
         "label"
       ],
       "sourcePath": "edge-cases/markdown-in-label",
-      "repoPath": "uncategorized/edge-cases/markdown-in-label-workflow"
+      "repoPath": "edge-cases/edge-cases/markdown-in-label-workflow"
     },
     {
       "slug": "materialized-view-workflow",
@@ -2664,9 +2799,11 @@
       "description": "This workflow models serving queries from a precomputed view.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -2678,7 +2815,7 @@
         "loop"
       ],
       "sourcePath": "patterns/materialized-view",
-      "repoPath": "uncategorized/patterns/materialized-view-workflow"
+      "repoPath": "patterns/patterns/materialized-view-workflow"
     },
     {
       "slug": "max-lanes-workflow",
@@ -2686,9 +2823,11 @@
       "description": "This workflow models 10 lanes with simple cross-lane arrows.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 10,
@@ -2697,7 +2836,7 @@
         "lanes"
       ],
       "sourcePath": "edge-cases/max-lanes",
-      "repoPath": "uncategorized/edge-cases/max-lanes-workflow"
+      "repoPath": "edge-cases/edge-cases/max-lanes-workflow"
     },
     {
       "slug": "max-nodes-workflow",
@@ -2705,9 +2844,11 @@
       "description": "This workflow models 50 nodes in a single lane as a parser stress test.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 2,
       "numNodes": 50,
       "numLanes": 2,
@@ -2716,7 +2857,7 @@
         "nodes"
       ],
       "sourcePath": "edge-cases/max-nodes",
-      "repoPath": "uncategorized/edge-cases/max-nodes-workflow"
+      "repoPath": "edge-cases/edge-cases/max-nodes-workflow"
     },
     {
       "slug": "message-queue-workflow",
@@ -2724,9 +2865,11 @@
       "description": "This workflow models asynchronous processing of work via a queue.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -2737,7 +2880,7 @@
         "decision"
       ],
       "sourcePath": "patterns/message-queue",
-      "repoPath": "uncategorized/patterns/message-queue-workflow"
+      "repoPath": "patterns/patterns/message-queue-workflow"
     },
     {
       "slug": "minimal-workflow",
@@ -2745,9 +2888,11 @@
       "description": "This workflow models a workflow with a single node only.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 2,
       "numNodes": 1,
       "numLanes": 2,
@@ -2756,7 +2901,7 @@
         "workflow"
       ],
       "sourcePath": "edge-cases/minimal-workflow",
-      "repoPath": "uncategorized/edge-cases/minimal-workflow"
+      "repoPath": "edge-cases/edge-cases/minimal-workflow"
     },
     {
       "slug": "missing-labels-workflow",
@@ -2764,9 +2909,11 @@
       "description": "This workflow models nodes without label parameters.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -2776,7 +2923,7 @@
         "decision"
       ],
       "sourcePath": "edge-cases/missing-labels",
-      "repoPath": "uncategorized/edge-cases/missing-labels-workflow"
+      "repoPath": "edge-cases/edge-cases/missing-labels-workflow"
     },
     {
       "slug": "monitoring-alert-workflow",
@@ -2832,9 +2979,11 @@
       "description": "This workflow models multiple layers of decisions before completion.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -2846,7 +2995,7 @@
         "loop"
       ],
       "sourcePath": "patterns/nested-decisions",
-      "repoPath": "uncategorized/patterns/nested-decisions-workflow"
+      "repoPath": "patterns/patterns/nested-decisions-workflow"
     },
     {
       "slug": "normalizer-workflow",
@@ -2854,9 +3003,11 @@
       "description": "This workflow models converting varied inputs to a standard format.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -2865,7 +3016,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/normalizer",
-      "repoPath": "uncategorized/patterns/normalizer-workflow"
+      "repoPath": "patterns/patterns/normalizer-workflow"
     },
     {
       "slug": "notification-pattern-workflow",
@@ -2873,9 +3024,11 @@
       "description": "This workflow models sending alerts via multiple channels.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -2885,7 +3038,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/notification-pattern",
-      "repoPath": "uncategorized/patterns/notification-pattern-workflow"
+      "repoPath": "patterns/patterns/notification-pattern-workflow"
     },
     {
       "slug": "oauth-flow-workflow",
@@ -3007,9 +3160,11 @@
       "description": "This workflow models a node with no connections.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -3018,7 +3173,7 @@
         "node"
       ],
       "sourcePath": "edge-cases/orphan-node",
-      "repoPath": "uncategorized/edge-cases/orphan-node-workflow"
+      "repoPath": "edge-cases/edge-cases/orphan-node-workflow"
     },
     {
       "slug": "packing-process-workflow",
@@ -3049,9 +3204,11 @@
       "description": "This workflow models multiple tasks that run at the same time.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -3062,7 +3219,7 @@
         "loop"
       ],
       "sourcePath": "patterns/parallel-execution",
-      "repoPath": "uncategorized/patterns/parallel-execution-workflow"
+      "repoPath": "patterns/patterns/parallel-execution-workflow"
     },
     {
       "slug": "payment-failure-workflow",
@@ -3071,9 +3228,14 @@
       "kind": "workflow",
       "sourceDomain": "business-operations",
       "primaryUseCase": "billing",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "commerce-automation",
+        "patterns"
+      ],
       "useCases": [
-        "billing"
+        "billing",
+        "commerce-automation",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 7,
@@ -3277,9 +3439,11 @@
       "description": "This workflow models periodically checking status until work is done.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -3290,7 +3454,7 @@
         "loop"
       ],
       "sourcePath": "patterns/polling-pattern",
-      "repoPath": "uncategorized/patterns/polling-pattern-workflow"
+      "repoPath": "patterns/patterns/polling-pattern-workflow"
     },
     {
       "slug": "process-manager-workflow",
@@ -3298,9 +3462,11 @@
       "description": "This workflow models orchestrating multiple services to complete a process.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -3310,7 +3476,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/process-manager",
-      "repoPath": "uncategorized/patterns/process-manager-workflow"
+      "repoPath": "patterns/patterns/process-manager-workflow"
     },
     {
       "slug": "procurement-card-workflow",
@@ -3386,9 +3552,11 @@
       "description": "This workflow models one publisher notifying many subscribers of events.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -3398,7 +3566,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/pub-sub",
-      "repoPath": "uncategorized/patterns/pub-sub-workflow"
+      "repoPath": "patterns/patterns/pub-sub-workflow"
     },
     {
       "slug": "purchase-order-workflow",
@@ -3504,9 +3672,11 @@
       "description": "This workflow models preventing too many requests from being processed.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -3516,7 +3686,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/rate-limiter",
-      "repoPath": "uncategorized/patterns/rate-limiter-workflow"
+      "repoPath": "patterns/patterns/rate-limiter-workflow"
     },
     {
       "slug": "reference-check-workflow",
@@ -3614,9 +3784,11 @@
       "description": "This workflow models a synchronous request that waits for a reply.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -3626,7 +3798,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/request-reply",
-      "repoPath": "uncategorized/patterns/request-reply-workflow"
+      "repoPath": "patterns/patterns/request-reply-workflow"
     },
     {
       "slug": "retry-with-backoff-workflow",
@@ -3634,9 +3806,11 @@
       "description": "Exponential backoff retry pattern for API calls with configurable retry limits, delay calculation, retryable error detection, and graceful degradation on permanent failures.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 20,
       "numLanes": 3,
@@ -3650,7 +3824,7 @@
         "jitter"
       ],
       "sourcePath": "patterns/retry-with-backoff",
-      "repoPath": "uncategorized/patterns/retry-with-backoff-workflow"
+      "repoPath": "patterns/patterns/retry-with-backoff-workflow"
     },
     {
       "slug": "returns-processing-workflow",
@@ -3731,9 +3905,11 @@
       "description": "This workflow models routing messages based on their content.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -3743,7 +3919,7 @@
         "decision"
       ],
       "sourcePath": "patterns/router",
-      "repoPath": "uncategorized/patterns/router-workflow"
+      "repoPath": "patterns/patterns/router-workflow"
     },
     {
       "slug": "routing-slip-workflow",
@@ -3752,9 +3928,12 @@
       "kind": "workflow",
       "sourceDomain": "patterns",
       "primaryUseCase": "handoff",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "patterns"
+      ],
       "useCases": [
-        "handoff"
+        "handoff",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 13,
@@ -3775,11 +3954,15 @@
       "sourceDomain": "patterns",
       "primaryUseCase": "delivery",
       "secondaryUseCases": [
-        "ai-orchestration"
+        "ai-orchestration",
+        "architecture",
+        "patterns"
       ],
       "useCases": [
         "delivery",
-        "ai-orchestration"
+        "ai-orchestration",
+        "architecture",
+        "patterns"
       ],
       "complexity": 5,
       "numNodes": 20,
@@ -3951,9 +4134,11 @@
       "description": "This workflow models taking periodic snapshots of important state.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -3965,7 +4150,7 @@
         "loop"
       ],
       "sourcePath": "patterns/snapshot-pattern",
-      "repoPath": "uncategorized/patterns/snapshot-pattern-workflow"
+      "repoPath": "patterns/patterns/snapshot-pattern-workflow"
     },
     {
       "slug": "sql-injection-label-workflow",
@@ -3973,9 +4158,11 @@
       "description": "This workflow models a label that looks like an SQL injection attempt.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -3985,7 +4172,7 @@
         "label"
       ],
       "sourcePath": "edge-cases/sql-injection-label",
-      "repoPath": "uncategorized/edge-cases/sql-injection-label-workflow"
+      "repoPath": "edge-cases/edge-cases/sql-injection-label-workflow"
     },
     {
       "slug": "state-machine-workflow",
@@ -3993,9 +4180,11 @@
       "description": "This workflow models tracking object state changes over time.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -4006,7 +4195,7 @@
         "parallel"
       ],
       "sourcePath": "patterns/state-machine",
-      "repoPath": "uncategorized/patterns/state-machine-workflow"
+      "repoPath": "patterns/patterns/state-machine-workflow"
     },
     {
       "slug": "stock-transfer-workflow",
@@ -4039,9 +4228,11 @@
       "description": "This workflow models gradually replacing an old system with a new one.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -4052,7 +4243,7 @@
         "decision"
       ],
       "sourcePath": "patterns/strangler-fig",
-      "repoPath": "uncategorized/patterns/strangler-fig-workflow"
+      "repoPath": "patterns/patterns/strangler-fig-workflow"
     },
     {
       "slug": "subscription-lifecycle-workflow",
@@ -4061,9 +4252,12 @@
       "kind": "workflow",
       "sourceDomain": "business-operations",
       "primaryUseCase": "billing",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "commerce-automation"
+      ],
       "useCases": [
-        "billing"
+        "billing",
+        "commerce-automation"
       ],
       "complexity": 4,
       "numNodes": 10,
@@ -4168,9 +4362,11 @@
       "description": "This workflow models an operation that times out after a delay.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -4180,7 +4376,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/timeout-pattern",
-      "repoPath": "uncategorized/patterns/timeout-pattern-workflow"
+      "repoPath": "patterns/patterns/timeout-pattern-workflow"
     },
     {
       "slug": "training-enrollment-workflow",
@@ -4213,9 +4409,11 @@
       "description": "This workflow models writing data and publishing messages in one transaction.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 13,
       "numLanes": 4,
@@ -4226,7 +4424,7 @@
         "parallel"
       ],
       "sourcePath": "patterns/transactional-outbox",
-      "repoPath": "uncategorized/patterns/transactional-outbox-workflow"
+      "repoPath": "patterns/patterns/transactional-outbox-workflow"
     },
     {
       "slug": "transform-workflow",
@@ -4234,9 +4432,11 @@
       "description": "This workflow models converting messages into a new shape.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -4245,7 +4445,7 @@
         "patterns"
       ],
       "sourcePath": "patterns/transform",
-      "repoPath": "uncategorized/patterns/transform-workflow"
+      "repoPath": "patterns/patterns/transform-workflow"
     },
     {
       "slug": "treasury-management-workflow",
@@ -4304,9 +4504,11 @@
       "description": "This workflow models emoji and international characters in labels.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -4315,7 +4517,7 @@
         "labels"
       ],
       "sourcePath": "edge-cases/unicode-labels",
-      "repoPath": "uncategorized/edge-cases/unicode-labels-workflow"
+      "repoPath": "edge-cases/edge-cases/unicode-labels-workflow"
     },
     {
       "slug": "user-onboarding-workflow",
@@ -4371,9 +4573,11 @@
       "description": "This workflow models checking that incoming data is valid.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -4383,7 +4587,7 @@
         "parallel"
       ],
       "sourcePath": "patterns/validator",
-      "repoPath": "uncategorized/patterns/validator-workflow"
+      "repoPath": "patterns/patterns/validator-workflow"
     },
     {
       "slug": "vendor-onboarding-workflow",
@@ -4422,9 +4626,11 @@
       "description": "This workflow models labels with very long text.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 1,
@@ -4436,7 +4642,7 @@
         "loop"
       ],
       "sourcePath": "edge-cases/very-long-label",
-      "repoPath": "uncategorized/edge-cases/very-long-label-workflow"
+      "repoPath": "edge-cases/edge-cases/very-long-label-workflow"
     },
     {
       "slug": "vulnerability-patch-workflow",
@@ -4500,9 +4706,14 @@
       "description": "Webhook integration workflow with endpoint registration, payload signing, delivery attempt, retry with backoff, and delivery status tracking.",
       "kind": "workflow",
       "sourceDomain": "business-operations",
-      "primaryUseCase": "uncategorized",
-      "secondaryUseCases": [],
-      "useCases": [],
+      "primaryUseCase": "architecture",
+      "secondaryUseCases": [
+        "patterns"
+      ],
+      "useCases": [
+        "architecture",
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -4515,7 +4726,7 @@
         "payload-signing"
       ],
       "sourcePath": "business-operations/webhook-integration",
-      "repoPath": "uncategorized/business-operations/webhook-integration-workflow"
+      "repoPath": "architecture/business-operations/webhook-integration-workflow"
     },
     {
       "slug": "webhook-pattern-workflow",
@@ -4523,9 +4734,11 @@
       "description": "This workflow models an HTTP callback when an event occurs.",
       "kind": "workflow",
       "sourceDomain": "patterns",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 2,
@@ -4537,7 +4750,7 @@
         "loop"
       ],
       "sourcePath": "patterns/webhook-pattern",
-      "repoPath": "uncategorized/patterns/webhook-pattern-workflow"
+      "repoPath": "patterns/patterns/webhook-pattern-workflow"
     },
     {
       "slug": "webinar-registration-workflow",
@@ -4570,9 +4783,11 @@
       "description": "This workflow models a label that contains XML text.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 5,
       "numNodes": 16,
       "numLanes": 4,
@@ -4582,7 +4797,7 @@
         "label"
       ],
       "sourcePath": "edge-cases/xml-in-label",
-      "repoPath": "uncategorized/edge-cases/xml-in-label-workflow"
+      "repoPath": "edge-cases/edge-cases/xml-in-label-workflow"
     },
     {
       "slug": "xss-label-workflow",
@@ -4590,9 +4805,11 @@
       "description": "This workflow models a label that looks like an XSS script.",
       "kind": "workflow",
       "sourceDomain": "edge-cases",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "edge-cases",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "edge-cases"
+      ],
       "complexity": 3,
       "numNodes": 10,
       "numLanes": 3,
@@ -4601,7 +4818,7 @@
         "label"
       ],
       "sourcePath": "edge-cases/xss-label",
-      "repoPath": "uncategorized/edge-cases/xss-label-workflow"
+      "repoPath": "edge-cases/edge-cases/xss-label-workflow"
     },
     {
       "slug": "yearly-audit-workflow",
@@ -4636,11 +4853,13 @@
       "sourceDomain": "business-operations",
       "primaryUseCase": "billing",
       "secondaryUseCases": [
-        "agentic"
+        "agentic",
+        "commerce-automation"
       ],
       "useCases": [
         "billing",
-        "agentic"
+        "agentic",
+        "commerce-automation"
       ],
       "complexity": 4,
       "numNodes": 47,
@@ -4667,11 +4886,13 @@
       "sourceDomain": "Architecture",
       "primaryUseCase": "security",
       "secondaryUseCases": [
-        "mcp"
+        "mcp",
+        "architecture"
       ],
       "useCases": [
         "security",
-        "mcp"
+        "mcp",
+        "architecture"
       ],
       "complexity": 4,
       "numNodes": 17,
@@ -4696,9 +4917,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "mcp",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture"
+      ],
       "useCases": [
-        "mcp"
+        "mcp",
+        "architecture"
       ],
       "complexity": 4,
       "numNodes": 18,
@@ -4722,9 +4946,11 @@
       "description": "A database-per-service architecture diagram where each microservice owns its dedicated data store, with event-driven synchronization via Kafka for cross-service data consistency. This template demonstrates the core microservices data isolation principle, showing how PostgreSQL and MongoDB coexist in a polyglot persistence strategy. Critical for architects enforcing service autonomy while maintaining eventual consistency.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 16,
       "numLanes": 4,
@@ -4739,7 +4965,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/microservices-database-per-service-architecture"
+      "repoPath": "architecture/architecture/microservices-database-per-service-architecture"
     },
     {
       "slug": "microservices-decomposition-by-business-capability",
@@ -4747,9 +4973,11 @@
       "description": "A microservices decomposition architecture diagram organized by business capabilities: Identity, Product Catalog, Pricing, and Order Fulfillment, each with independent data stores and APIs. This template shows how to break a monolith into services aligned with business domains, using a Backend-for-Frontend (BFF) pattern for client-specific aggregation. Useful for architects planning domain-driven microservice boundaries.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 17,
       "numLanes": 5,
@@ -4763,7 +4991,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/microservices-decomposition-by-business-capability"
+      "repoPath": "architecture/architecture/microservices-decomposition-by-business-capability"
     },
     {
       "slug": "microservices-strangler-fig-migration",
@@ -4772,9 +5000,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "delivery",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture"
+      ],
       "useCases": [
-        "delivery"
+        "delivery",
+        "architecture"
       ],
       "complexity": 4,
       "numNodes": 16,
@@ -4798,9 +5029,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "handoff",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture"
+      ],
       "useCases": [
-        "handoff"
+        "handoff",
+        "architecture"
       ],
       "complexity": 3,
       "numNodes": 16,
@@ -4825,9 +5059,14 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "mcp",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture",
+        "patterns"
+      ],
       "useCases": [
-        "mcp"
+        "mcp",
+        "architecture",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 13,
@@ -4851,9 +5090,14 @@
       "description": "A Backend-for-Frontend architecture diagram with separate BFF layers for web and mobile clients, each optimizing API responses for their specific platform while sharing common backend microservices. This template shows how to avoid one-size-fits-all APIs by tailoring data aggregation and payload optimization per client type. Recommended for teams serving multiple frontend platforms from a shared microservices backend.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
-      "secondaryUseCases": [],
-      "useCases": [],
+      "primaryUseCase": "architecture",
+      "secondaryUseCases": [
+        "patterns"
+      ],
+      "useCases": [
+        "architecture",
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 12,
       "numLanes": 3,
@@ -4868,7 +5112,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/microservices-backend-for-frontend-architecture"
+      "repoPath": "architecture/architecture/microservices-backend-for-frontend-architecture"
     },
     {
       "slug": "event-driven-publish-subscribe-architecture",
@@ -4876,9 +5120,11 @@
       "description": "An event-driven publish-subscribe architecture diagram with Kafka or RabbitMQ message broker, event serialization, topic partitioning, fan-out delivery to multiple consumers, and dead letter queue error handling. This template models the foundational async messaging pattern where producers and consumers are fully decoupled through a message broker. Essential for architects building loosely coupled, scalable event-driven systems.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 17,
       "numLanes": 3,
@@ -4893,7 +5139,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/event-driven-publish-subscribe-architecture"
+      "repoPath": "architecture/architecture/event-driven-publish-subscribe-architecture"
     },
     {
       "slug": "event-driven-event-sourcing-architecture",
@@ -4901,9 +5147,11 @@
       "description": "An event sourcing architecture diagram where all state changes are stored as an immutable sequence of domain events, with read projections built from the event stream and snapshot optimization for fast aggregate loading. This template shows how event sourcing eliminates data loss by preserving the complete history of every state transition. Critical for systems requiring full audit trails, temporal queries, and event replay capabilities.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 18,
       "numLanes": 4,
@@ -4918,7 +5166,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/event-driven-event-sourcing-architecture"
+      "repoPath": "architecture/architecture/event-driven-event-sourcing-architecture"
     },
     {
       "slug": "event-driven-cqrs-with-event-store-architecture",
@@ -4926,9 +5174,11 @@
       "description": "A CQRS architecture diagram combining separate command and query APIs with an event bus for asynchronous read model synchronization, including projectors that build denormalized views from domain events. This template demonstrates the full CQRS+ES stack where writes go through domain validation and reads are served from optimized materialized views. Ideal for high-throughput systems where read and write workloads have fundamentally different scaling requirements.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 18,
       "numLanes": 4,
@@ -4943,7 +5193,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/event-driven-cqrs-with-event-store-architecture"
+      "repoPath": "architecture/architecture/event-driven-cqrs-with-event-store-architecture"
     },
     {
       "slug": "event-driven-choreography-architecture",
@@ -4951,9 +5201,14 @@
       "description": "An event-driven choreography architecture diagram where microservices coordinate through events without a central orchestrator, with Order, Payment, Inventory, and Shipping services reacting to each other's domain events. This template models the decentralized coordination pattern where each service knows only its own responsibilities and publishes events for others to consume. Best for teams favoring autonomous services over centralized workflow control.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
-      "secondaryUseCases": [],
-      "useCases": [],
+      "primaryUseCase": "architecture",
+      "secondaryUseCases": [
+        "patterns"
+      ],
+      "useCases": [
+        "architecture",
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 19,
       "numLanes": 5,
@@ -4968,7 +5223,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/event-driven-choreography-architecture"
+      "repoPath": "architecture/architecture/event-driven-choreography-architecture"
     },
     {
       "slug": "event-driven-event-streaming-pipeline-architecture",
@@ -4977,9 +5232,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "delivery",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture"
+      ],
       "useCases": [
-        "delivery"
+        "delivery",
+        "architecture"
       ],
       "complexity": 4,
       "numNodes": 18,
@@ -5004,9 +5262,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "security",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture"
+      ],
       "useCases": [
-        "security"
+        "security",
+        "architecture"
       ],
       "complexity": 4,
       "numNodes": 17,
@@ -5030,9 +5291,11 @@
       "description": "A Change Data Capture architecture diagram using Debezium to tail database transaction logs and publish change events to Kafka, feeding downstream consumers that update search indexes, invalidate caches, load data warehouses, and write audit logs. This template shows how CDC eliminates dual-write problems by capturing changes at the database level without modifying application code. Critical for data synchronization across heterogeneous systems.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 17,
       "numLanes": 4,
@@ -5047,7 +5310,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/event-driven-cdc-change-data-capture-architecture"
+      "repoPath": "architecture/architecture/event-driven-cdc-change-data-capture-architecture"
     },
     {
       "slug": "event-driven-dead-letter-queue-architecture",
@@ -5057,11 +5320,15 @@
       "sourceDomain": "Architecture",
       "primaryUseCase": "incident",
       "secondaryUseCases": [
-        "compliance"
+        "compliance",
+        "architecture",
+        "patterns"
       ],
       "useCases": [
         "incident",
-        "compliance"
+        "compliance",
+        "architecture",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 16,
@@ -5085,9 +5352,11 @@
       "description": "A CQRS read-write separation architecture diagram with dedicated command and query paths, PostgreSQL for writes, Redis or Elasticsearch for optimized reads, and an event-driven synchronization layer with lag monitoring. This template demonstrates the core CQRS principle of separating read and write models to independently scale and optimize each path. Ideal for applications with asymmetric read/write ratios where query performance is critical.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 18,
       "numLanes": 4,
@@ -5102,7 +5371,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/cqrs-read-write-separation-architecture"
+      "repoPath": "architecture/architecture/cqrs-read-write-separation-architecture"
     },
     {
       "slug": "cqrs-materialized-view-architecture",
@@ -5110,9 +5379,11 @@
       "description": "A CQRS materialized view architecture diagram with multiple projectors building purpose-specific read models: order summaries, customer dashboards, analytics cubes, and search indexes, all fed from a single event stream. This template shows how to create multiple optimized query views from the same write events, each tailored to a specific use case with sub-millisecond read latency. Perfect for systems requiring diverse query patterns from a single data source.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 18,
       "numLanes": 4,
@@ -5127,7 +5398,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/cqrs-materialized-view-architecture"
+      "repoPath": "architecture/architecture/cqrs-materialized-view-architecture"
     },
     {
       "slug": "cqrs-task-based-ui-architecture",
@@ -5135,9 +5406,11 @@
       "description": "A CQRS task-based UI architecture diagram where the frontend captures user intent as explicit commands, submits them asynchronously with optimistic updates, and receives real-time confirmations via WebSocket when the read model is synchronized. This template models the modern UI pattern that replaces CRUD forms with intent-driven commands, enabling responsive user experiences with eventual consistency. Recommended for teams building reactive frontends on CQRS backends.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 19,
       "numLanes": 4,
@@ -5152,7 +5425,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/cqrs-task-based-ui-architecture"
+      "repoPath": "patterns/architecture/cqrs-task-based-ui-architecture"
     },
     {
       "slug": "serverless-api-backend-architecture",
@@ -5161,9 +5434,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "mcp",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture"
+      ],
       "useCases": [
-        "mcp"
+        "mcp",
+        "architecture"
       ],
       "complexity": 3,
       "numNodes": 15,
@@ -5187,9 +5463,11 @@
       "description": "A serverless event processing architecture diagram with S3, DynamoDB Streams, API Gateway, and CloudWatch triggers invoking Lambda functions, orchestrated by Step Functions with fan-out via SQS and dead letter queue error handling. This template shows how to build complex event processing pipelines entirely from managed serverless components, with no servers to provision or manage. Ideal for data processing workflows that need elastic scaling and built-in fault tolerance.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 17,
       "numLanes": 4,
@@ -5204,7 +5482,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/serverless-event-processing-architecture"
+      "repoPath": "architecture/architecture/serverless-event-processing-architecture"
     },
     {
       "slug": "serverless-step-functions-orchestration-architecture",
@@ -5214,11 +5492,15 @@
       "sourceDomain": "Architecture",
       "primaryUseCase": "incident",
       "secondaryUseCases": [
-        "ai-orchestration"
+        "ai-orchestration",
+        "architecture",
+        "patterns"
       ],
       "useCases": [
         "incident",
-        "ai-orchestration"
+        "ai-orchestration",
+        "architecture",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 17,
@@ -5243,9 +5525,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "handoff",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture"
+      ],
       "useCases": [
-        "handoff"
+        "handoff",
+        "architecture"
       ],
       "complexity": 3,
       "numNodes": 15,
@@ -5270,9 +5555,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "delivery",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture"
+      ],
       "useCases": [
-        "delivery"
+        "delivery",
+        "architecture"
       ],
       "complexity": 4,
       "numNodes": 17,
@@ -5297,9 +5585,14 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "handoff",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "platform-reliability",
+        "architecture"
+      ],
       "useCases": [
-        "handoff"
+        "handoff",
+        "platform-reliability",
+        "architecture"
       ],
       "complexity": 4,
       "numNodes": 18,
@@ -5325,11 +5618,15 @@
       "sourceDomain": "Architecture",
       "primaryUseCase": "delivery",
       "secondaryUseCases": [
-        "ai-orchestration"
+        "ai-orchestration",
+        "architecture",
+        "patterns"
       ],
       "useCases": [
         "delivery",
-        "ai-orchestration"
+        "ai-orchestration",
+        "architecture",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 19,
@@ -5353,9 +5650,14 @@
       "description": "A saga choreography architecture diagram where Order, Payment, and Inventory services coordinate through domain events without a central orchestrator, with each service publishing and subscribing to events that drive the transaction forward or trigger compensation. This template models the decentralized saga approach where services autonomously react to events, reducing single points of failure at the cost of increased complexity in tracking saga state. Best for teams preferring service autonomy over centralized control.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
-      "secondaryUseCases": [],
-      "useCases": [],
+      "primaryUseCase": "architecture",
+      "secondaryUseCases": [
+        "patterns"
+      ],
+      "useCases": [
+        "architecture",
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 18,
       "numLanes": 5,
@@ -5370,7 +5672,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/saga-choreography-pattern-architecture"
+      "repoPath": "architecture/architecture/saga-choreography-pattern-architecture"
     },
     {
       "slug": "saga-distributed-transaction-architecture",
@@ -5379,9 +5681,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "ai-orchestration",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture"
+      ],
       "useCases": [
-        "ai-orchestration"
+        "ai-orchestration",
+        "architecture"
       ],
       "complexity": 4,
       "numNodes": 17,
@@ -5406,9 +5711,14 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "ai-orchestration",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture",
+        "patterns"
+      ],
       "useCases": [
-        "ai-orchestration"
+        "ai-orchestration",
+        "architecture",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 17,
@@ -5435,12 +5745,18 @@
       "primaryUseCase": "approval",
       "secondaryUseCases": [
         "billing",
-        "security"
+        "security",
+        "commerce-automation",
+        "architecture",
+        "patterns"
       ],
       "useCases": [
         "approval",
         "billing",
-        "security"
+        "security",
+        "commerce-automation",
+        "architecture",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 18,
@@ -5465,9 +5781,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "mcp",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "patterns"
+      ],
       "useCases": [
-        "mcp"
+        "mcp",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 18,
@@ -5492,9 +5811,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "handoff",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "patterns"
+      ],
       "useCases": [
-        "handoff"
+        "handoff",
+        "patterns"
       ],
       "complexity": 4,
       "numNodes": 18,
@@ -5518,9 +5840,11 @@
       "description": "A retry with exponential backoff architecture diagram showing the complete retry policy engine with retryable vs non-retryable error classification, exponential delay calculation with jitter, max retry thresholds, and graceful exhaustion handling. This template models the essential resilience pattern for handling transient failures in distributed systems, preventing thundering herd problems through randomized backoff delays. Foundational for any service-to-service communication in cloud architectures.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 3,
       "numNodes": 17,
       "numLanes": 3,
@@ -5535,7 +5859,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/retry-with-exponential-backoff-architecture"
+      "repoPath": "patterns/architecture/retry-with-exponential-backoff-architecture"
     },
     {
       "slug": "rate-limiter-architecture",
@@ -5543,9 +5867,11 @@
       "description": "A rate limiter architecture diagram implementing the token bucket algorithm with Redis-backed distributed counters, sliding window logs, API key identification, rate limit headers, and multi-node synchronization for consistent enforcement. This template shows how to protect APIs from abuse and ensure fair usage across clients, with proper HTTP 429 responses and Retry-After headers. Essential for API platform teams building production-grade rate limiting infrastructure.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 3,
       "numNodes": 17,
       "numLanes": 4,
@@ -5560,7 +5886,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/rate-limiter-architecture"
+      "repoPath": "architecture/architecture/rate-limiter-architecture"
     },
     {
       "slug": "health-check-pattern-architecture",
@@ -5570,11 +5896,13 @@
       "sourceDomain": "Architecture",
       "primaryUseCase": "incident",
       "secondaryUseCases": [
-        "security"
+        "security",
+        "patterns"
       ],
       "useCases": [
         "incident",
-        "security"
+        "security",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 19,
@@ -5598,9 +5926,11 @@
       "description": "A hexagonal architecture diagram showing the clean separation between domain core, inbound adapters (REST, GraphQL, CLI, message consumers), outbound adapters (PostgreSQL, Stripe, email, Redis), and the port interfaces that connect them. This template visualizes the ports and adapters pattern where the domain core has zero dependencies on infrastructure, making it fully testable and technology-agnostic. Foundational for teams adopting clean architecture principles in their codebase.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 16,
       "numLanes": 4,
@@ -5615,7 +5945,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/hexagonal-ports-adapters-architecture"
+      "repoPath": "architecture/architecture/hexagonal-ports-adapters-architecture"
     },
     {
       "slug": "clean-architecture-layers",
@@ -5623,9 +5953,11 @@
       "description": "A clean architecture layers diagram showing the four concentric layers: Entities (domain), Use Cases (application), Interface Adapters (controllers, presenters, repositories), and Frameworks & Drivers (web server, database, cloud SDK). This template models Uncle Bob's Clean Architecture with the dependency rule where inner layers never depend on outer layers, ensuring the domain model remains pure and framework-independent. Essential reference for software architects enforcing architectural boundaries.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 3,
       "numNodes": 16,
       "numLanes": 4,
@@ -5640,7 +5972,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/clean-architecture-layers"
+      "repoPath": "architecture/architecture/clean-architecture-layers"
     },
     {
       "slug": "domain-driven-design-bounded-contexts-architecture",
@@ -5648,9 +5980,11 @@
       "description": "A DDD bounded contexts architecture diagram with Order, Customer, Shipping, and Billing contexts connected through an anti-corruption layer, shared kernel, and context map defining integration relationships. This template visualizes the strategic DDD patterns for decomposing complex domains into autonomous bounded contexts that communicate through well-defined integration events. Critical for architects applying Domain-Driven Design to large-scale enterprise systems.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 18,
       "numLanes": 5,
@@ -5665,7 +5999,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/domain-driven-design-bounded-contexts-architecture"
+      "repoPath": "architecture/architecture/domain-driven-design-bounded-contexts-architecture"
     },
     {
       "slug": "api-composition-pattern-architecture",
@@ -5674,9 +6008,14 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "incident",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "architecture",
+        "patterns"
+      ],
       "useCases": [
-        "incident"
+        "incident",
+        "architecture",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 16,
@@ -5700,9 +6039,11 @@
       "description": "A transactional outbox architecture diagram where domain writes and event publishing happen in the same database transaction, with a relay process polling the outbox table and publishing events to a message broker with guaranteed delivery. This template solves the dual-write problem where updating a database and publishing an event are not atomic, ensuring exactly-once event delivery without distributed transactions. Critical for event-driven architectures requiring reliable message publishing.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "patterns",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "patterns"
+      ],
       "complexity": 4,
       "numNodes": 18,
       "numLanes": 4,
@@ -5717,7 +6058,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/outbox-pattern-reliable-messaging-architecture"
+      "repoPath": "patterns/architecture/outbox-pattern-reliable-messaging-architecture"
     },
     {
       "slug": "ambassador-pattern-architecture",
@@ -5726,9 +6067,12 @@
       "kind": "architecture",
       "sourceDomain": "Architecture",
       "primaryUseCase": "mcp",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "patterns"
+      ],
       "useCases": [
-        "mcp"
+        "mcp",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 15,
@@ -5863,9 +6207,11 @@
       "description": "A data mesh architecture diagram with domain-oriented data ownership across Sales, Marketing, and Finance domains, each exposing self-serve data products through APIs with quality SLAs, governed by a federated data platform with a shared catalog and cross-domain query engine. This template models the paradigm shift from centralized data teams to domain-owned data products, applying microservices principles to data architecture. Essential for organizations scaling data operations beyond centralized data warehouse bottlenecks.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 17,
       "numLanes": 4,
@@ -5880,7 +6226,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/data-mesh-architecture"
+      "repoPath": "architecture/architecture/data-mesh-architecture"
     },
     {
       "slug": "cell-based-architecture",
@@ -5915,9 +6261,11 @@
       "description": "An observability architecture diagram implementing the three pillars (metrics, traces, logs) with OpenTelemetry SDK instrumentation, OTLP collector pipeline, Prometheus, Jaeger, and Loki backends, Grafana dashboards, SLO/SLI tracking, and PagerDuty alerting integration. This template provides a complete observability stack reference showing how telemetry data flows from application instrumentation through collection, storage, visualization, and incident response. Essential for SRE teams building production monitoring infrastructure.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 17,
       "numLanes": 4,
@@ -5933,7 +6281,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/observability-three-pillars-architecture"
+      "repoPath": "architecture/architecture/observability-three-pillars-architecture"
     },
     {
       "slug": "gitops-deployment-architecture",
@@ -6000,12 +6348,14 @@
       "primaryUseCase": "delivery",
       "secondaryUseCases": [
         "agentic",
-        "ai-orchestration"
+        "ai-orchestration",
+        "architecture"
       ],
       "useCases": [
         "delivery",
         "agentic",
-        "ai-orchestration"
+        "ai-orchestration",
+        "architecture"
       ],
       "complexity": 2,
       "numNodes": 7,
@@ -6115,12 +6465,16 @@
       "primaryUseCase": "agentic",
       "secondaryUseCases": [
         "ai-orchestration",
-        "mcp"
+        "mcp",
+        "architecture",
+        "patterns"
       ],
       "useCases": [
         "agentic",
         "ai-orchestration",
-        "mcp"
+        "mcp",
+        "architecture",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 12,
@@ -6171,9 +6525,11 @@
       "description": "An event-driven notification hub architecture diagram with multi-source event ingestion, template-based message rendering, user preference routing across email (SendGrid/SES), push (FCM), SMS (Twilio), and Slack channels, with delivery tracking and retry mechanisms. This template models a centralized notification system that decouples business services from delivery infrastructure, supporting multi-channel communication with user-controlled preferences. Ideal for platform teams building scalable notification infrastructure.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 4,
       "numNodes": 20,
       "numLanes": 3,
@@ -6188,7 +6544,7 @@
         "architecture-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/event-driven-notification-hub-architecture"
+      "repoPath": "architecture/architecture/event-driven-notification-hub-architecture"
     },
     {
       "slug": "agentic-supervisor-worker",
@@ -6471,11 +6827,15 @@
       "sourceDomain": "Architecture",
       "primaryUseCase": "ai-orchestration",
       "secondaryUseCases": [
-        "mcp"
+        "mcp",
+        "architecture",
+        "patterns"
       ],
       "useCases": [
         "ai-orchestration",
-        "mcp"
+        "mcp",
+        "architecture",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 13,
@@ -6643,9 +7003,12 @@
       "kind": "architecture",
       "sourceDomain": "DevOps",
       "primaryUseCase": "mcp",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "patterns"
+      ],
       "useCases": [
-        "mcp"
+        "mcp",
+        "patterns"
       ],
       "complexity": 3,
       "numNodes": 9,
@@ -6934,11 +7297,13 @@
       "sourceDomain": "Architecture",
       "primaryUseCase": "security",
       "secondaryUseCases": [
-        "mcp"
+        "mcp",
+        "agentic-security"
       ],
       "useCases": [
         "security",
-        "mcp"
+        "mcp",
+        "agentic-security"
       ],
       "complexity": 3,
       "numNodes": 12,
@@ -7116,9 +7481,11 @@
       "description": "OpenClaw architecture for a dedicated Mac Mini or homelab server with persistent workspace, agent state, and remote messaging access.",
       "kind": "architecture",
       "sourceDomain": "Architecture",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "architecture",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "architecture"
+      ],
       "complexity": 2,
       "numNodes": 7,
       "numLanes": 3,
@@ -7133,7 +7500,7 @@
         "Local Server"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/architecture/openclaw-dedicated-local-machine-architecture"
+      "repoPath": "architecture/architecture/openclaw-dedicated-local-machine-architecture"
     },
     {
       "slug": "openclaw-vps-self-managed-architecture",
@@ -7227,11 +7594,13 @@
       "sourceDomain": "Process Mapping",
       "primaryUseCase": "incident",
       "secondaryUseCases": [
-        "compliance"
+        "compliance",
+        "process-mapping"
       ],
       "useCases": [
         "incident",
-        "compliance"
+        "compliance",
+        "process-mapping"
       ],
       "complexity": 2,
       "numNodes": 10,
@@ -7253,9 +7622,12 @@
       "kind": "workflow",
       "sourceDomain": "Process Mapping",
       "primaryUseCase": "handoff",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "process-mapping"
+      ],
       "useCases": [
-        "handoff"
+        "handoff",
+        "process-mapping"
       ],
       "complexity": 2,
       "numNodes": 12,
@@ -7278,11 +7650,13 @@
       "sourceDomain": "Process Mapping",
       "primaryUseCase": "handoff",
       "secondaryUseCases": [
-        "approval"
+        "approval",
+        "process-mapping"
       ],
       "useCases": [
         "handoff",
-        "approval"
+        "approval",
+        "process-mapping"
       ],
       "complexity": 2,
       "numNodes": 10,
@@ -7305,11 +7679,13 @@
       "sourceDomain": "Process Mapping",
       "primaryUseCase": "handoff",
       "secondaryUseCases": [
-        "support"
+        "support",
+        "process-mapping"
       ],
       "useCases": [
         "handoff",
-        "support"
+        "support",
+        "process-mapping"
       ],
       "complexity": 2,
       "numNodes": 11,
@@ -7331,9 +7707,12 @@
       "kind": "workflow",
       "sourceDomain": "Process Mapping",
       "primaryUseCase": "onboarding",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "process-mapping"
+      ],
       "useCases": [
-        "onboarding"
+        "onboarding",
+        "process-mapping"
       ],
       "complexity": 3,
       "numNodes": 13,
@@ -7354,9 +7733,11 @@
       "description": "Process redesign workflow that identifies bottlenecks, designs the future state, adjusts the design and deploys the technology solution on the new baseline.",
       "kind": "workflow",
       "sourceDomain": "Process Mapping",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "process-mapping",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "process-mapping"
+      ],
       "complexity": 2,
       "numNodes": 12,
       "numLanes": 2,
@@ -7368,7 +7749,7 @@
         "redesign"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/process-mapping/process-analysis-future-state-workflow"
+      "repoPath": "process-mapping/process-mapping/process-analysis-future-state-workflow"
     },
     {
       "slug": "work-tracking-dashboard-workflow",
@@ -7376,9 +7757,11 @@
       "description": "Work visibility workflow: create the centralized tracking record, define status categories, keep the information current and publish it on a central dashboard.",
       "kind": "workflow",
       "sourceDomain": "Process Mapping",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "process-mapping",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "process-mapping"
+      ],
       "complexity": 2,
       "numNodes": 12,
       "numLanes": 2,
@@ -7390,7 +7773,7 @@
         "visibility"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/process-mapping/work-tracking-dashboard-workflow"
+      "repoPath": "process-mapping/process-mapping/work-tracking-dashboard-workflow"
     },
     {
       "slug": "cross-department-customer-onboarding-workflow",
@@ -7399,9 +7782,12 @@
       "kind": "workflow",
       "sourceDomain": "Process Mapping",
       "primaryUseCase": "onboarding",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "process-mapping"
+      ],
       "useCases": [
-        "onboarding"
+        "onboarding",
+        "process-mapping"
       ],
       "complexity": 3,
       "numNodes": 32,
@@ -7425,11 +7811,13 @@
       "sourceDomain": "Process Mapping",
       "primaryUseCase": "handoff",
       "secondaryUseCases": [
-        "onboarding"
+        "onboarding",
+        "process-mapping"
       ],
       "useCases": [
         "handoff",
-        "onboarding"
+        "onboarding",
+        "process-mapping"
       ],
       "complexity": 3,
       "numNodes": 19,
@@ -7452,11 +7840,13 @@
       "sourceDomain": "Process Mapping",
       "primaryUseCase": "approval",
       "secondaryUseCases": [
-        "billing"
+        "billing",
+        "process-mapping"
       ],
       "useCases": [
         "approval",
-        "billing"
+        "billing",
+        "process-mapping"
       ],
       "complexity": 2,
       "numNodes": 10,
@@ -7479,9 +7869,12 @@
       "kind": "workflow",
       "sourceDomain": "Diagram Authoring",
       "primaryUseCase": "security",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "diagram-authoring"
+      ],
       "useCases": [
-        "security"
+        "security",
+        "diagram-authoring"
       ],
       "complexity": 1,
       "numNodes": 4,
@@ -7502,9 +7895,12 @@
       "kind": "workflow",
       "sourceDomain": "Diagram Authoring",
       "primaryUseCase": "security",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "diagram-authoring"
+      ],
       "useCases": [
-        "security"
+        "security",
+        "diagram-authoring"
       ],
       "complexity": 2,
       "numNodes": 11,
@@ -7527,11 +7923,13 @@
       "sourceDomain": "Diagram Authoring",
       "primaryUseCase": "security",
       "secondaryUseCases": [
-        "mcp"
+        "mcp",
+        "diagram-authoring"
       ],
       "useCases": [
         "security",
-        "mcp"
+        "mcp",
+        "diagram-authoring"
       ],
       "complexity": 2,
       "numNodes": 6,
@@ -7553,11 +7951,15 @@
       "sourceDomain": "Diagram Authoring",
       "primaryUseCase": "onboarding",
       "secondaryUseCases": [
-        "security"
+        "security",
+        "commerce-automation",
+        "diagram-authoring"
       ],
       "useCases": [
         "onboarding",
-        "security"
+        "security",
+        "commerce-automation",
+        "diagram-authoring"
       ],
       "complexity": 2,
       "numNodes": 10,
@@ -7580,11 +7982,13 @@
       "sourceDomain": "Agentic Security",
       "primaryUseCase": "security",
       "secondaryUseCases": [
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "useCases": [
         "security",
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -7607,11 +8011,13 @@
       "sourceDomain": "Agentic Security",
       "primaryUseCase": "security",
       "secondaryUseCases": [
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "useCases": [
         "security",
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -7635,12 +8041,14 @@
       "primaryUseCase": "approval",
       "secondaryUseCases": [
         "security",
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "useCases": [
         "approval",
         "security",
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -7664,12 +8072,14 @@
       "primaryUseCase": "security",
       "secondaryUseCases": [
         "compliance",
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "useCases": [
         "security",
         "compliance",
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "complexity": 2,
       "numNodes": 6,
@@ -7693,12 +8103,14 @@
       "primaryUseCase": "security",
       "secondaryUseCases": [
         "compliance",
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "useCases": [
         "security",
         "compliance",
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "complexity": 2,
       "numNodes": 10,
@@ -7751,11 +8163,13 @@
       "sourceDomain": "Agentic Security",
       "primaryUseCase": "security",
       "secondaryUseCases": [
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "useCases": [
         "security",
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -7808,12 +8222,14 @@
       "primaryUseCase": "security",
       "secondaryUseCases": [
         "compliance",
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "useCases": [
         "security",
         "compliance",
-        "agentic"
+        "agentic",
+        "agentic-security"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -7835,9 +8251,14 @@
       "kind": "workflow",
       "sourceDomain": "Mindmap",
       "primaryUseCase": "agentic",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agentic-architecture",
+        "mindmap"
+      ],
       "useCases": [
-        "agentic"
+        "agentic",
+        "agentic-architecture",
+        "mindmap"
       ],
       "complexity": 3,
       "numNodes": 32,
@@ -7860,11 +8281,15 @@
       "sourceDomain": "Mindmap",
       "primaryUseCase": "incident",
       "secondaryUseCases": [
-        "agentic"
+        "agentic",
+        "agentic-architecture",
+        "mindmap"
       ],
       "useCases": [
         "incident",
-        "agentic"
+        "agentic",
+        "agentic-architecture",
+        "mindmap"
       ],
       "complexity": 3,
       "numNodes": 13,
@@ -7887,9 +8312,12 @@
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
       "primaryUseCase": "agentic",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agentic-architecture"
+      ],
       "useCases": [
-        "agentic"
+        "agentic",
+        "agentic-architecture"
       ],
       "complexity": 2,
       "numNodes": 9,
@@ -7911,9 +8339,12 @@
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
       "primaryUseCase": "agentic",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agentic-architecture"
+      ],
       "useCases": [
-        "agentic"
+        "agentic",
+        "agentic-architecture"
       ],
       "complexity": 3,
       "numNodes": 22,
@@ -7936,11 +8367,13 @@
       "sourceDomain": "Agentic Architecture",
       "primaryUseCase": "agentic",
       "secondaryUseCases": [
-        "context-management"
+        "context-management",
+        "agentic-architecture"
       ],
       "useCases": [
         "agentic",
-        "context-management"
+        "context-management",
+        "agentic-architecture"
       ],
       "complexity": 3,
       "numNodes": 29,
@@ -7962,9 +8395,12 @@
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
       "primaryUseCase": "agentic",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agentic-architecture"
+      ],
       "useCases": [
-        "agentic"
+        "agentic",
+        "agentic-architecture"
       ],
       "complexity": 3,
       "numNodes": 24,
@@ -7986,9 +8422,14 @@
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
       "primaryUseCase": "agentic",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agentic-architecture",
+        "agentic-security"
+      ],
       "useCases": [
-        "agentic"
+        "agentic",
+        "agentic-architecture",
+        "agentic-security"
       ],
       "complexity": 2,
       "numNodes": 12,
@@ -8011,11 +8452,15 @@
       "sourceDomain": "Agentic Architecture",
       "primaryUseCase": "agentic",
       "secondaryUseCases": [
-        "mcp"
+        "mcp",
+        "agentic-architecture",
+        "agentic-security"
       ],
       "useCases": [
         "agentic",
-        "mcp"
+        "mcp",
+        "agentic-architecture",
+        "agentic-security"
       ],
       "complexity": 1,
       "numNodes": 5,
@@ -8039,12 +8484,14 @@
       "primaryUseCase": "handoff",
       "secondaryUseCases": [
         "agentic",
-        "mcp"
+        "mcp",
+        "agentic-architecture"
       ],
       "useCases": [
         "handoff",
         "agentic",
-        "mcp"
+        "mcp",
+        "agentic-architecture"
       ],
       "complexity": 2,
       "numNodes": 7,
@@ -8066,9 +8513,12 @@
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
       "primaryUseCase": "agentic",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agentic-architecture"
+      ],
       "useCases": [
-        "agentic"
+        "agentic",
+        "agentic-architecture"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -8091,11 +8541,15 @@
       "sourceDomain": "Agentic Architecture",
       "primaryUseCase": "handoff",
       "secondaryUseCases": [
-        "agentic"
+        "agentic",
+        "agentic-architecture",
+        "agentic-security"
       ],
       "useCases": [
         "handoff",
-        "agentic"
+        "agentic",
+        "agentic-architecture",
+        "agentic-security"
       ],
       "complexity": 2,
       "numNodes": 10,
@@ -8117,9 +8571,12 @@
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
       "primaryUseCase": "agentic",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agentic-architecture"
+      ],
       "useCases": [
-        "agentic"
+        "agentic",
+        "agentic-architecture"
       ],
       "complexity": 2,
       "numNodes": 6,
@@ -8141,9 +8598,12 @@
       "kind": "workflow",
       "sourceDomain": "Commerce Automation",
       "primaryUseCase": "billing",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "commerce-automation"
+      ],
       "useCases": [
-        "billing"
+        "billing",
+        "commerce-automation"
       ],
       "complexity": 2,
       "numNodes": 9,
@@ -8166,9 +8626,12 @@
       "kind": "workflow",
       "sourceDomain": "Commerce Automation",
       "primaryUseCase": "billing",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "commerce-automation"
+      ],
       "useCases": [
-        "billing"
+        "billing",
+        "commerce-automation"
       ],
       "complexity": 2,
       "numNodes": 11,
@@ -8189,9 +8652,11 @@
       "description": "The trust layer behind agent-to-agent payments on Coinbase: the agent initiates the spend, the transaction is broadcast, the block confirms and the payment finalizes on-chain.",
       "kind": "workflow",
       "sourceDomain": "Commerce Automation",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "commerce-automation",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "commerce-automation"
+      ],
       "complexity": 1,
       "numNodes": 5,
       "numLanes": 2,
@@ -8203,7 +8668,7 @@
         "base"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/commerce-automation/coinbase-trust-flow-onchain-settlement"
+      "repoPath": "commerce-automation/commerce-automation/coinbase-trust-flow-onchain-settlement"
     },
     {
       "slug": "stripe-trust-flow-fiat-authorization",
@@ -8214,12 +8679,14 @@
       "primaryUseCase": "approval",
       "secondaryUseCases": [
         "security",
-        "compliance"
+        "compliance",
+        "commerce-automation"
       ],
       "useCases": [
         "approval",
         "security",
-        "compliance"
+        "compliance",
+        "commerce-automation"
       ],
       "complexity": 1,
       "numNodes": 5,
@@ -8242,11 +8709,13 @@
       "sourceDomain": "Commerce Automation",
       "primaryUseCase": "billing",
       "secondaryUseCases": [
-        "agentic"
+        "agentic",
+        "commerce-automation"
       ],
       "useCases": [
         "billing",
-        "agentic"
+        "agentic",
+        "commerce-automation"
       ],
       "complexity": 3,
       "numNodes": 21,
@@ -8267,9 +8736,11 @@
       "description": "n8n as the central integration layer: one workflow decides whether an event is a product sync or an order, routes it to the right channel and closes the loop.",
       "kind": "workflow",
       "sourceDomain": "Commerce Automation",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "commerce-automation",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "commerce-automation"
+      ],
       "complexity": 2,
       "numNodes": 11,
       "numLanes": 1,
@@ -8282,7 +8753,7 @@
         "woocommerce"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/commerce-automation/multi-platform-ecommerce-integration-hub"
+      "repoPath": "commerce-automation/commerce-automation/multi-platform-ecommerce-integration-hub"
     },
     {
       "slug": "ai-product-sync-pipeline-workflow",
@@ -8291,9 +8762,12 @@
       "kind": "workflow",
       "sourceDomain": "Commerce Automation",
       "primaryUseCase": "delivery",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "commerce-automation"
+      ],
       "useCases": [
-        "delivery"
+        "delivery",
+        "commerce-automation"
       ],
       "complexity": 2,
       "numNodes": 12,
@@ -8315,9 +8789,12 @@
       "kind": "workflow",
       "sourceDomain": "Commerce Automation",
       "primaryUseCase": "handoff",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "commerce-automation"
+      ],
       "useCases": [
-        "handoff"
+        "handoff",
+        "commerce-automation"
       ],
       "complexity": 3,
       "numNodes": 14,
@@ -8338,9 +8815,11 @@
       "description": "Slack as interface, River as agent surface, Aquifer as foundation and a separate harness: the four layers behind an internal agent that treats a session as a durable entity.",
       "kind": "workflow",
       "sourceDomain": "Commerce Automation",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "commerce-automation",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "commerce-automation"
+      ],
       "complexity": 3,
       "numNodes": 13,
       "numLanes": 4,
@@ -8353,7 +8832,7 @@
         "session"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/commerce-automation/shopify-river-four-layer-agent-architecture"
+      "repoPath": "commerce-automation/commerce-automation/shopify-river-four-layer-agent-architecture"
     },
     {
       "slug": "shopify-river-brain-hands-decoupling-architecture",
@@ -8361,9 +8840,14 @@
       "description": "Decoupling the brain from the hands: the harness calls the LLM and emits tool intents, while the sandbox executes them, so a new agent is a profile and not a platform.",
       "kind": "workflow",
       "sourceDomain": "Commerce Automation",
-      "primaryUseCase": "uncategorized",
-      "secondaryUseCases": [],
-      "useCases": [],
+      "primaryUseCase": "commerce-automation",
+      "secondaryUseCases": [
+        "agentic-security"
+      ],
+      "useCases": [
+        "commerce-automation",
+        "agentic-security"
+      ],
       "complexity": 2,
       "numNodes": 12,
       "numLanes": 3,
@@ -8375,7 +8859,7 @@
         "agent-architecture"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/commerce-automation/shopify-river-brain-hands-decoupling-architecture"
+      "repoPath": "commerce-automation/commerce-automation/shopify-river-brain-hands-decoupling-architecture"
     },
     {
       "slug": "shopify-river-session-modes-workflow",
@@ -8384,9 +8868,12 @@
       "kind": "workflow",
       "sourceDomain": "Commerce Automation",
       "primaryUseCase": "approval",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "commerce-automation"
+      ],
       "useCases": [
-        "approval"
+        "approval",
+        "commerce-automation"
       ],
       "complexity": 2,
       "numNodes": 9,
@@ -8410,11 +8897,13 @@
       "sourceDomain": "LLM Operations",
       "primaryUseCase": "handoff",
       "secondaryUseCases": [
-        "mcp"
+        "mcp",
+        "llm-operations"
       ],
       "useCases": [
         "handoff",
-        "mcp"
+        "mcp",
+        "llm-operations"
       ],
       "complexity": 2,
       "numNodes": 10,
@@ -8437,11 +8926,13 @@
       "sourceDomain": "LLM Operations",
       "primaryUseCase": "mcp",
       "secondaryUseCases": [
-        "context-management"
+        "context-management",
+        "llm-operations"
       ],
       "useCases": [
         "mcp",
-        "context-management"
+        "context-management",
+        "llm-operations"
       ],
       "complexity": 2,
       "numNodes": 12,
@@ -8463,9 +8954,12 @@
       "kind": "workflow",
       "sourceDomain": "LLM Operations",
       "primaryUseCase": "context-management",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "llm-operations"
+      ],
       "useCases": [
-        "context-management"
+        "context-management",
+        "llm-operations"
       ],
       "complexity": 3,
       "numNodes": 14,
@@ -8488,11 +8982,13 @@
       "sourceDomain": "LLM Operations",
       "primaryUseCase": "handoff",
       "secondaryUseCases": [
-        "mcp"
+        "mcp",
+        "llm-operations"
       ],
       "useCases": [
         "handoff",
-        "mcp"
+        "mcp",
+        "llm-operations"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -8513,9 +9009,11 @@
       "description": "Output on a leash: the model generates against an output schema, the orchestrator validates that it parses as JSON or a diff, and regenerates or formats when it does not.",
       "kind": "workflow",
       "sourceDomain": "LLM Operations",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "llm-operations",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "llm-operations"
+      ],
       "complexity": 2,
       "numNodes": 8,
       "numLanes": 2,
@@ -8527,7 +9025,7 @@
         "llmops"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/llm-operations/structured-output-validation-workflow"
+      "repoPath": "llm-operations/llm-operations/structured-output-validation-workflow"
     },
     {
       "slug": "agent-world-model-simulation-loop",
@@ -8535,9 +9033,11 @@
       "description": "The agent analyses the request, the world model simulates the action, the simulated outcome returns a confirmation and the agent executes — with an adjustment loop on divergence.",
       "kind": "workflow",
       "sourceDomain": "Agent Simulation",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "agent-simulation",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "agent-simulation"
+      ],
       "complexity": 2,
       "numNodes": 12,
       "numLanes": 3,
@@ -8549,7 +9049,7 @@
         "agent-testing"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/agent-simulation/agent-world-model-simulation-loop"
+      "repoPath": "agent-simulation/agent-simulation/agent-world-model-simulation-loop"
     },
     {
       "slug": "validation-simulator-inside-agent-workflow",
@@ -8557,9 +9057,11 @@
       "description": "The validation simulator sits inside the workflow, not after it: the agent analyses the claim attachments, detects the anomaly and simulates the reimbursement before executing it.",
       "kind": "workflow",
       "sourceDomain": "Agent Simulation",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "agent-simulation",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "agent-simulation"
+      ],
       "complexity": 3,
       "numNodes": 14,
       "numLanes": 4,
@@ -8571,7 +9073,7 @@
         "simulation"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/agent-simulation/validation-simulator-inside-agent-workflow"
+      "repoPath": "agent-simulation/agent-simulation/validation-simulator-inside-agent-workflow"
     },
     {
       "slug": "agentworld-testing-pipeline-workflow",
@@ -8580,9 +9082,12 @@
       "kind": "workflow",
       "sourceDomain": "Agent Simulation",
       "primaryUseCase": "delivery",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agent-simulation"
+      ],
       "useCases": [
-        "delivery"
+        "delivery",
+        "agent-simulation"
       ],
       "complexity": 3,
       "numNodes": 14,
@@ -8604,9 +9109,12 @@
       "kind": "workflow",
       "sourceDomain": "Agent Simulation",
       "primaryUseCase": "agentic",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agent-simulation"
+      ],
       "useCases": [
-        "agentic"
+        "agentic",
+        "agent-simulation"
       ],
       "complexity": 2,
       "numNodes": 11,
@@ -8628,9 +9136,12 @@
       "kind": "workflow",
       "sourceDomain": "Agent Simulation",
       "primaryUseCase": "agentic",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agent-simulation"
+      ],
       "useCases": [
-        "agentic"
+        "agentic",
+        "agent-simulation"
       ],
       "complexity": 3,
       "numNodes": 13,
@@ -8652,9 +9163,12 @@
       "kind": "workflow",
       "sourceDomain": "Agent Simulation",
       "primaryUseCase": "agentic",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agent-simulation"
+      ],
       "useCases": [
-        "agentic"
+        "agentic",
+        "agent-simulation"
       ],
       "complexity": 3,
       "numNodes": 16,
@@ -8676,9 +9190,12 @@
       "kind": "workflow",
       "sourceDomain": "Agent Simulation",
       "primaryUseCase": "agentic",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "agent-simulation"
+      ],
       "useCases": [
-        "agentic"
+        "agentic",
+        "agent-simulation"
       ],
       "complexity": 2,
       "numNodes": 12,
@@ -8700,9 +9217,12 @@
       "kind": "workflow",
       "sourceDomain": "Platform Reliability",
       "primaryUseCase": "incident",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "platform-reliability"
+      ],
       "useCases": [
-        "incident"
+        "incident",
+        "platform-reliability"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -8723,9 +9243,11 @@
       "description": "Traffic through any edge proxy to a mesh control plane spread over AWS, GCP and metal, with quorum databases and no single-cloud dependency in the routing path.",
       "kind": "workflow",
       "sourceDomain": "Platform Reliability",
-      "primaryUseCase": "uncategorized",
+      "primaryUseCase": "platform-reliability",
       "secondaryUseCases": [],
-      "useCases": [],
+      "useCases": [
+        "platform-reliability"
+      ],
       "complexity": 2,
       "numNodes": 9,
       "numLanes": 1,
@@ -8737,7 +9259,7 @@
         "architecture"
       ],
       "sourcePath": "",
-      "repoPath": "uncategorized/platform-reliability/multi-cloud-mesh-resilience-architecture"
+      "repoPath": "platform-reliability/platform-reliability/multi-cloud-mesh-resilience-architecture"
     },
     {
       "slug": "cross-cloud-failover-deployment-pipeline",
@@ -8746,9 +9268,12 @@
       "kind": "workflow",
       "sourceDomain": "Platform Reliability",
       "primaryUseCase": "delivery",
-      "secondaryUseCases": [],
+      "secondaryUseCases": [
+        "platform-reliability"
+      ],
       "useCases": [
-        "delivery"
+        "delivery",
+        "platform-reliability"
       ],
       "complexity": 2,
       "numNodes": 11,

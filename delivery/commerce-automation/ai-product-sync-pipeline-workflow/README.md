@@ -6,7 +6,7 @@ Product sync between platforms with an AI agent in the middle: field extraction,
 **Kind:** workflow  
 **Source domain:** Commerce Automation  
 **Primary use case:** delivery  
-**Secondary use cases:** None  
+**Secondary use cases:** commerce-automation  
 **Complexity:** 2/5  
 **Nodes:** 12  
 **Lanes:** 3  

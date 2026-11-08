@@ -6,7 +6,7 @@ Option 4: external participants, per-client gateways and routers, department pre
 **Kind:** workflow  
 **Source domain:** Agentic Architecture  
 **Primary use case:** handoff  
-**Secondary use cases:** agentic  
+**Secondary use cases:** agentic, agentic-architecture, agentic-security  
 **Complexity:** 2/5  
 **Nodes:** 10  
 **Lanes:** 4  

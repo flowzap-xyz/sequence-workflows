@@ -6,7 +6,7 @@ A planner decomposes the request on a shared board, specialized workers claim ta
 **Kind:** workflow  
 **Source domain:** Agentic Architecture  
 **Primary use case:** agentic  
-**Secondary use cases:** None  
+**Secondary use cases:** agentic-architecture  
 **Complexity:** 2/5  
 **Nodes:** 6  
 **Lanes:** 4  

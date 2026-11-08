@@ -6,7 +6,7 @@ A dead letter queue architecture diagram with retry policies, exponential backof
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** incident  
-**Secondary use cases:** compliance  
+**Secondary use cases:** compliance, architecture, patterns  
 **Complexity:** 3/5  
 **Nodes:** 16  
 **Lanes:** 3  

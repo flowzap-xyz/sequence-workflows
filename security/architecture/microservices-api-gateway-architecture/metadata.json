@@ -6,11 +6,13 @@
   "source_domain": "Architecture",
   "primary_use_case": "security",
   "secondary_use_cases": [
-    "mcp"
+    "mcp",
+    "architecture"
   ],
   "use_cases": [
     "security",
-    "mcp"
+    "mcp",
+    "architecture"
   ],
   "complexity": 4,
   "num_nodes": 17,

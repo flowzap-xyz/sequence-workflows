@@ -6,7 +6,7 @@ A multi-cloud serverless architecture diagram with DNS-based traffic routing bet
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** handoff  
-**Secondary use cases:** None  
+**Secondary use cases:** platform-reliability, architecture  
 **Complexity:** 4/5  
 **Nodes:** 18  
 **Lanes:** 4  

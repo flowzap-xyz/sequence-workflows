@@ -6,7 +6,7 @@ An event-driven agentic AI architecture that replaces the central orchestrator w
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** agentic  
-**Secondary use cases:** ai-orchestration, mcp  
+**Secondary use cases:** ai-orchestration, mcp, architecture, patterns  
 **Complexity:** 3/5  
 **Nodes:** 12  
 **Lanes:** 5  

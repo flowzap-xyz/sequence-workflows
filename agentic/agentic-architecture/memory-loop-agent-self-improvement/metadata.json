@@ -6,11 +6,13 @@
   "source_domain": "Agentic Architecture",
   "primary_use_case": "agentic",
   "secondary_use_cases": [
-    "context-management"
+    "context-management",
+    "agentic-architecture"
   ],
   "use_cases": [
     "agentic",
-    "context-management"
+    "context-management",
+    "agentic-architecture"
   ],
   "complexity": 3,
   "num_nodes": 29,

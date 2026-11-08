@@ -5,9 +5,12 @@
   "kind": "architecture",
   "source_domain": "Architecture",
   "primary_use_case": "security",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "architecture"
+  ],
   "use_cases": [
-    "security"
+    "security",
+    "architecture"
   ],
   "complexity": 4,
   "num_nodes": 17,

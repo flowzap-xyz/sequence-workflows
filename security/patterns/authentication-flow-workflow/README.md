@@ -6,7 +6,7 @@ User authentication workflow with credential validation, MFA challenge, JWT toke
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** security  
-**Secondary use cases:** None  
+**Secondary use cases:** patterns  
 **Complexity:** 3/5  
 **Nodes:** 7  
 **Lanes:** 2  

@@ -1,0 +1,41 @@
+ControlPlane { # Kubernetes Control Plane
+n1: rectangle label:"API Server"
+n2: rectangle label:"etcd (Cluster State)"
+n3: rectangle label:"Scheduler"
+n4: rectangle label:"Controller Manager"
+n5: rectangle label:"Cloud Controller"
+n1.handle(right) -> n2.handle(left) [label="Store State"]
+n1.handle(bottom) -> n3.handle(top) [label="Schedule Pods"]
+n3.handle(right) -> n4.handle(left) [label="Reconcile"]
+n4.handle(right) -> n5.handle(left) [label="Cloud Resources"]
+n3.handle(bottom) -> WorkerNode.n6.handle(top) [label="Assign Pod"]
+}
+WorkerNode { # Worker Node
+n6: rectangle label:"Kubelet"
+n7: rectangle label:"Container Runtime (containerd)"
+n8: rectangle label:"kube-proxy"
+n9: rectangle label:"Pod A (App Container)"
+n10: rectangle label:"Pod B (App Container)"
+n11: rectangle label:"Pod C (Sidecar + App)"
+n6.handle(right) -> n7.handle(left) [label="Pull Image"]
+n7.handle(right) -> n9.handle(left) [label="Start Container"]
+n7.handle(bottom) -> n10.handle(top) [label="Start Container"]
+n7.handle(bottom) -> n11.handle(top) [label="Start Container"]
+n8.handle(bottom) -> Networking.n12.handle(top) [label="Service Routing"]
+}
+Networking { # Networking Layer
+n12: rectangle label:"ClusterIP Service"
+n13: rectangle label:"Ingress Controller"
+n14: rectangle label:"Network Policy"
+n15: rectangle label:"Service Mesh (Istio)"
+n12.handle(right) -> n13.handle(left) [label="Expose"]
+n13.handle(right) -> n14.handle(left) [label="Filter"]
+n14.handle(right) -> n15.handle(left) [label="mTLS"]
+}
+Storage { # Persistent Storage
+n16: rectangle label:"PersistentVolume"
+n17: rectangle label:"StorageClass (SSD/HDD)"
+n18: rectangle label:"CSI Driver"
+n16.handle(right) -> n17.handle(left) [label="Provision"]
+n17.handle(right) -> n18.handle(left) [label="Cloud Disk"]
+}

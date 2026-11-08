@@ -5,9 +5,12 @@
   "kind": "workflow",
   "source_domain": "Process Mapping",
   "primary_use_case": "handoff",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "process-mapping"
+  ],
   "use_cases": [
-    "handoff"
+    "handoff",
+    "process-mapping"
   ],
   "complexity": 2,
   "num_nodes": 12,

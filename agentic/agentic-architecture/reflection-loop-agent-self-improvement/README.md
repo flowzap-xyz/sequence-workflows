@@ -6,7 +6,7 @@ The reflection loop: a worker drafts, a critic reviews the draft against the bri
 **Kind:** workflow  
 **Source domain:** Agentic Architecture  
 **Primary use case:** agentic  
-**Secondary use cases:** None  
+**Secondary use cases:** agentic-architecture  
 **Complexity:** 3/5  
 **Nodes:** 22  
 **Lanes:** 4  

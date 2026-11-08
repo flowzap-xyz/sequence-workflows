@@ -1,0 +1,27 @@
+Input { # Input
+n1: circle label:"Start"
+n2: rectangle label:"Creative brief submitted"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Generators.n3.handle(top) [label="Brief"]
+n2.handle(bottom) -> Generators.n4.handle(top) [label="Brief"]
+n2.handle(bottom) -> Generators.n5.handle(top) [label="Brief"]
+}
+Generators { # Generator Agents
+n3: rectangle label:"Agent A: Draft option 1"
+n4: rectangle label:"Agent B: Draft option 2"
+n5: rectangle label:"Agent C: Draft option 3"
+n3.handle(bottom) -> Evaluator.n6.handle(top) [label="Option 1"]
+n4.handle(bottom) -> Evaluator.n6.handle(top) [label="Option 2"]
+n5.handle(bottom) -> Evaluator.n6.handle(top) [label="Option 3"]
+}
+Evaluator { # Evaluator Agent
+n6: rectangle label:"Score all options"
+n7: diamond label:"Quality threshold met?"
+n8: rectangle label:"Select best output"
+n9: circle label:"Done"
+n6.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="Yes"]
+n7.handle(top) -> Generators.n3.handle(bottom) [label="No - Refine"]
+n8.handle(right) -> n9.handle(left)
+loop [refine until quality threshold met] n3 n4 n5 n6 n7
+}

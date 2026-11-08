@@ -5,9 +5,12 @@
   "kind": "architecture",
   "source_domain": "Architecture",
   "primary_use_case": "mcp",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "patterns"
+  ],
   "use_cases": [
-    "mcp"
+    "mcp",
+    "patterns"
   ],
   "complexity": 3,
   "num_nodes": 15,

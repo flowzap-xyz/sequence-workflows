@@ -1,0 +1,21 @@
+agent { # Agent
+n1: circle label:"Session Start"
+n2: rectangle label:"Request Tool Call"
+n5: rectangle label:"Process Result"
+n6: circle label:"Session End"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> sandbox.n3.handle(top) [label="tool call"]
+}
+
+sandbox { # Sandbox
+n3: diamond label:"Path in Workspace?"
+n4: rectangle label:"Execute in Ephemeral Container"
+n7: rectangle label:"Deny - Log Security Event"
+n8: rectangle label:"Return Result to Agent"
+n3.handle(right) -> n4.handle(left) [label="yes"]
+n3.handle(bottom) -> n7.handle(top) [label="no"]
+n4.handle(right) -> n8.handle(left)
+n7.handle(right) -> n8.handle(bottom)
+n8.handle(top) -> agent.n5.handle(bottom) [label="result"]
+n5.handle(right) -> n6.handle(left)
+}

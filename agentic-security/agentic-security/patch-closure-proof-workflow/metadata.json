@@ -1,0 +1,32 @@
+{
+  "template_id": "patch-closure-proof-workflow",
+  "workflow_id": "patch-closure-proof",
+  "title": "Patch Closure Proof Workflow",
+  "kind": "workflow",
+  "source_domain": "Agentic Security",
+  "primary_use_case": "agentic-security",
+  "secondary_use_cases": [
+    "incident",
+    "security",
+    "agentic"
+  ],
+  "use_cases": [
+    "agentic-security",
+    "incident",
+    "security",
+    "agentic"
+  ],
+  "complexity": 2,
+  "num_nodes": 12,
+  "num_lanes": 4,
+  "tags": [
+    "patch-management",
+    "closing-proof",
+    "remediation",
+    "assurance",
+    "incident"
+  ],
+  "description": "Closing-proof workflow across detection, remediation and assurance: measure the fix rather than the reaction, rate the outage risk and refuse closure without evidence.",
+  "source_path": "",
+  "repo_path": "agentic-security/agentic-security/patch-closure-proof-workflow"
+}

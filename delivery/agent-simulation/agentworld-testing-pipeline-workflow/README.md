@@ -6,7 +6,7 @@ A QA pipeline with a simulator in the loop: configure perturbations, add scenari
 **Kind:** workflow  
 **Source domain:** Agent Simulation  
 **Primary use case:** delivery  
-**Secondary use cases:** None  
+**Secondary use cases:** agent-simulation  
 **Complexity:** 3/5  
 **Nodes:** 14  
 **Lanes:** 3  

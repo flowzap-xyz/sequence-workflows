@@ -1,0 +1,48 @@
+Caller { # Calling Service
+n1: circle label:"Initiate Request"
+n2: rectangle label:"Send HTTP Request"
+n19: rectangle label:"Receive Response"
+n20: circle label:"Request Complete"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> RetryPolicy.n3.handle(top) [label="Execute"]
+n19.handle(right) -> n20.handle(left)
+}
+RetryPolicy { # Retry Policy Engine
+n3: rectangle label:"Attempt Request"
+n8: diamond label:"Response Status?"
+n9: rectangle label:"Return Success"
+n10: diamond label:"Retryable Error?"
+n11: rectangle label:"Return Permanent Failure"
+n12: rectangle label:"Calculate Backoff Delay"
+n13: diamond label:"Max Retries Exceeded?"
+n14: rectangle label:"Wait with Jitter"
+n15: rectangle label:"Return Exhausted Error"
+n16: rectangle label:"Forward Success"
+n17: rectangle label:"Forward Failure"
+n18: rectangle label:"Forward Exhausted"
+n3.handle(bottom) -> Target.n4.handle(top) [label="HTTP"]
+n8.handle(right) -> n9.handle(left) [label="2xx"]
+n8.handle(bottom) -> n10.handle(top) [label="Error"]
+n9.handle(right) -> n16.handle(left)
+n10.handle(right) -> n12.handle(left) [label="429/503/Timeout"]
+n10.handle(bottom) -> n11.handle(top) [label="400/401/404"]
+n11.handle(right) -> n17.handle(left)
+n12.handle(right) -> n13.handle(left) [label="2^n * base"]
+n13.handle(bottom) -> n15.handle(top) [label="Yes"]
+n13.handle(right) -> n14.handle(left) [label="No"]
+n15.handle(right) -> n18.handle(left)
+n16.handle(top) -> Caller.n19.handle(bottom) [label="Success"]
+n17.handle(top) -> Caller.n19.handle(bottom) [label="Non-Retryable"]
+n18.handle(top) -> Caller.n19.handle(bottom) [label="Max Retries"]
+}
+Target { # Target Service
+n4: rectangle label:"Process Request"
+n5: diamond label:"Service Healthy?"
+n6: rectangle label:"Return 200 OK"
+n7: rectangle label:"Return 503 Unavailable"
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left) [label="Yes"]
+n5.handle(bottom) -> n7.handle(top) [label="No"]
+n6.handle(top) -> RetryPolicy.n8.handle(bottom) [label="Success"]
+n7.handle(top) -> RetryPolicy.n8.handle(bottom) [label="Error"]
+}

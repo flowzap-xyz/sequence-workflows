@@ -1,0 +1,23 @@
+{
+  "template_id": "06-nested-lanes-workflow",
+  "workflow_id": "06-nested-lanes",
+  "title": "06 Nested Lanes Workflow",
+  "kind": "workflow",
+  "source_domain": "syntax-primitives",
+  "primary_use_case": "syntax-primitives",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "syntax-primitives"
+  ],
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 3,
+  "tags": [
+    "06",
+    "nested",
+    "lanes"
+  ],
+  "description": "This workflow models lanes that conceptually contain other lanes.",
+  "source_path": "syntax-primitives/06-nested-lanes",
+  "repo_path": "syntax-primitives/syntax-primitives/06-nested-lanes-workflow"
+}

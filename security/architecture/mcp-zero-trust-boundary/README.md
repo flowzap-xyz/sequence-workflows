@@ -6,7 +6,7 @@ MCP security gateway architecture that authenticates tool calls, routes executio
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** security  
-**Secondary use cases:** mcp  
+**Secondary use cases:** mcp, agentic-security  
 **Complexity:** 3/5  
 **Nodes:** 12  
 **Lanes:** 3  

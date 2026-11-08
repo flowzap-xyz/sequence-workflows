@@ -1,0 +1,28 @@
+{
+  "template_id": "outbox-pattern-reliable-messaging-architecture",
+  "workflow_id": "outbox-pattern-reliable-messaging-architecture",
+  "title": "Outbox Pattern for Reliable Messaging Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "patterns",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "patterns"
+  ],
+  "complexity": 4,
+  "num_nodes": 18,
+  "num_lanes": 4,
+  "tags": [
+    "outbox-pattern",
+    "transactional-outbox",
+    "reliable-messaging",
+    "dual-write",
+    "exactly-once",
+    "debezium",
+    "event-publishing",
+    "architecture-diagram"
+  ],
+  "description": "A transactional outbox architecture diagram where domain writes and event publishing happen in the same database transaction, with a relay process polling the outbox table and publishing events to a message broker with guaranteed delivery. This template solves the dual-write problem where updating a database and publishing an event are not atomic, ensuring exactly-once event delivery without distributed transactions. Critical for event-driven architectures requiring reliable message publishing.",
+  "source_path": "",
+  "repo_path": "patterns/architecture/outbox-pattern-reliable-messaging-architecture"
+}

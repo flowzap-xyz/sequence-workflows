@@ -1,0 +1,28 @@
+{
+  "template_id": "ai-product-sync-pipeline-workflow",
+  "workflow_id": "ai-product-sync-pipeline",
+  "title": "AI Product Sync Pipeline Workflow",
+  "kind": "workflow",
+  "source_domain": "Commerce Automation",
+  "primary_use_case": "commerce-automation",
+  "secondary_use_cases": [
+    "delivery"
+  ],
+  "use_cases": [
+    "commerce-automation",
+    "delivery"
+  ],
+  "complexity": 2,
+  "num_nodes": 12,
+  "num_lanes": 3,
+  "tags": [
+    "n8n",
+    "product-sync",
+    "ai-agents",
+    "schema-normalization",
+    "ecommerce"
+  ],
+  "description": "Product sync between platforms with an AI agent in the middle: field extraction, category mapping and schema normalization before the write-back returns 200 OK.",
+  "source_path": "",
+  "repo_path": "commerce-automation/commerce-automation/ai-product-sync-pipeline-workflow"
+}

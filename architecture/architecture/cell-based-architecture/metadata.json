@@ -1,0 +1,31 @@
+{
+  "template_id": "cell-based-architecture",
+  "workflow_id": "cell-based-architecture",
+  "title": "Cell-Based Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "handoff"
+  ],
+  "use_cases": [
+    "architecture",
+    "handoff"
+  ],
+  "complexity": 4,
+  "num_nodes": 20,
+  "num_lanes": 4,
+  "tags": [
+    "cell-based-architecture",
+    "blast-radius",
+    "geographic-routing",
+    "fault-isolation",
+    "independent-cells",
+    "cross-cell-replication",
+    "hyperscale",
+    "architecture-diagram"
+  ],
+  "description": "A cell-based architecture diagram with geographic routing to independent, self-contained cells (US-East, EU-West), each with its own gateway, compute, database, cache, and message queue, plus shared services for cross-cell replication and global configuration. This template models the cell architecture pattern used by hyperscale systems to achieve blast radius isolation, where failures in one cell cannot affect users in another. Key for architects designing systems that require extreme availability and fault isolation.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/cell-based-architecture"
+}

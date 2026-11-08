@@ -6,11 +6,13 @@
   "source_domain": "patterns",
   "primary_use_case": "incident",
   "secondary_use_cases": [
-    "delivery"
+    "delivery",
+    "patterns"
   ],
   "use_cases": [
     "incident",
-    "delivery"
+    "delivery",
+    "patterns"
   ],
   "complexity": 3,
   "num_nodes": 7,

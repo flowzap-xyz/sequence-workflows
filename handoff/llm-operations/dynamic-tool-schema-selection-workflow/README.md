@@ -6,7 +6,7 @@ Instead of loading all 50 tool schemas into every request, the agent analyses th
 **Kind:** workflow  
 **Source domain:** LLM Operations  
 **Primary use case:** handoff  
-**Secondary use cases:** mcp  
+**Secondary use cases:** mcp, llm-operations  
 **Complexity:** 2/5  
 **Nodes:** 8  
 **Lanes:** 3  

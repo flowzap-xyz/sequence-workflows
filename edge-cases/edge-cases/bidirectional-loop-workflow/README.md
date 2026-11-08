@@ -1,0 +1,19 @@
+# Bidirectional Loop Workflow
+
+This workflow models circular references between nodes in both directions.
+
+**Template ID:** `bidirectional-loop-workflow`  
+**Kind:** workflow  
+**Source domain:** edge-cases  
+**Primary use case:** edge-cases  
+**Secondary use cases:** None  
+**Complexity:** 5/5  
+**Nodes:** 16  
+**Lanes:** 4  
+**Tags:** [bidirectional, loop, decision]  
+**Source path:** `edge-cases/bidirectional-loop`  
+**Repo path:** `edge-cases/edge-cases/bidirectional-loop-workflow`
+
+## Files
+- `workflow.fz` — FlowZap Code source
+- `metadata.json` — Structured metadata

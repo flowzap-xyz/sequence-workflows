@@ -6,7 +6,7 @@ Five-lane architecture for agent-driven checkout: merchant edge, commerce servic
 **Kind:** workflow  
 **Source domain:** Commerce Automation  
 **Primary use case:** billing  
-**Secondary use cases:** agentic  
+**Secondary use cases:** agentic, commerce-automation  
 **Complexity:** 3/5  
 **Nodes:** 21  
 **Lanes:** 5  

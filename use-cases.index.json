@@ -1074,115 +1074,649 @@
         }
       ]
     },
-    "uncategorized": {
-      "label": "Uncategorized",
-      "count": 158,
+    "commerce-automation": {
+      "label": "Commerce Automation",
+      "count": 4,
+      "templates": [
+        {
+          "slug": "coinbase-trust-flow-onchain-settlement",
+          "title": "Coinbase Trust Flow — On-Chain Settlement",
+          "repoPath": "commerce-automation/commerce-automation/coinbase-trust-flow-onchain-settlement"
+        },
+        {
+          "slug": "multi-platform-ecommerce-integration-hub",
+          "title": "Multi-Platform eCommerce Integration Hub",
+          "repoPath": "commerce-automation/commerce-automation/multi-platform-ecommerce-integration-hub"
+        },
+        {
+          "slug": "shopify-river-four-layer-agent-architecture",
+          "title": "Shopify River 4-Layer Agent Architecture",
+          "repoPath": "commerce-automation/commerce-automation/shopify-river-four-layer-agent-architecture"
+        },
+        {
+          "slug": "shopify-river-brain-hands-decoupling-architecture",
+          "title": "Shopify River Brain-Hands Decoupling Architecture",
+          "repoPath": "commerce-automation/commerce-automation/shopify-river-brain-hands-decoupling-architecture"
+        }
+      ]
+    },
+    "process-mapping": {
+      "label": "Process Mapping",
+      "count": 2,
+      "templates": [
+        {
+          "slug": "process-analysis-future-state-workflow",
+          "title": "Process Analysis & Future State Workflow",
+          "repoPath": "process-mapping/process-mapping/process-analysis-future-state-workflow"
+        },
+        {
+          "slug": "work-tracking-dashboard-workflow",
+          "title": "Work Tracking Dashboard Workflow",
+          "repoPath": "process-mapping/process-mapping/work-tracking-dashboard-workflow"
+        }
+      ]
+    },
+    "agentic-architecture": {
+      "label": "Agentic Architecture",
+      "count": 0,
+      "templates": []
+    },
+    "agentic-security": {
+      "label": "Agentic Security",
+      "count": 0,
+      "templates": []
+    },
+    "agent-simulation": {
+      "label": "Agent Simulation",
+      "count": 2,
+      "templates": [
+        {
+          "slug": "agent-world-model-simulation-loop",
+          "title": "Agent-World Model Simulation Loop",
+          "repoPath": "agent-simulation/agent-simulation/agent-world-model-simulation-loop"
+        },
+        {
+          "slug": "validation-simulator-inside-agent-workflow",
+          "title": "Validation Simulator Inside the Agent Workflow",
+          "repoPath": "agent-simulation/agent-simulation/validation-simulator-inside-agent-workflow"
+        }
+      ]
+    },
+    "llm-operations": {
+      "label": "LLM Operations",
+      "count": 1,
+      "templates": [
+        {
+          "slug": "structured-output-validation-workflow",
+          "title": "Structured Output Validation Workflow",
+          "repoPath": "llm-operations/llm-operations/structured-output-validation-workflow"
+        }
+      ]
+    },
+    "diagram-authoring": {
+      "label": "Diagram Authoring",
+      "count": 0,
+      "templates": []
+    },
+    "platform-reliability": {
+      "label": "Platform Reliability",
+      "count": 1,
+      "templates": [
+        {
+          "slug": "multi-cloud-mesh-resilience-architecture",
+          "title": "Multi-Cloud Mesh Resilience Architecture",
+          "repoPath": "platform-reliability/platform-reliability/multi-cloud-mesh-resilience-architecture"
+        }
+      ]
+    },
+    "mindmap": {
+      "label": "Mind Map",
+      "count": 0,
+      "templates": []
+    },
+    "syntax-primitives": {
+      "label": "Syntax Primitives",
+      "count": 18,
       "templates": [
         {
           "slug": "01-basic-lane-workflow",
           "title": "01 Basic Lane Workflow",
-          "repoPath": "uncategorized/syntax-primitives/01-basic-lane-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/01-basic-lane-workflow"
         },
         {
           "slug": "02-handle-positions-workflow",
           "title": "02 Handle Positions Workflow",
-          "repoPath": "uncategorized/syntax-primitives/02-handle-positions-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/02-handle-positions-workflow"
         },
         {
           "slug": "03-all-shapes-workflow",
           "title": "03 All Shapes Workflow",
-          "repoPath": "uncategorized/syntax-primitives/03-all-shapes-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/03-all-shapes-workflow"
         },
         {
           "slug": "04-labeled-arrows-workflow",
           "title": "04 Labeled Arrows Workflow",
-          "repoPath": "uncategorized/syntax-primitives/04-labeled-arrows-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/04-labeled-arrows-workflow"
         },
         {
           "slug": "05-multiple-lanes-workflow",
           "title": "05 Multiple Lanes Workflow",
-          "repoPath": "uncategorized/syntax-primitives/05-multiple-lanes-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/05-multiple-lanes-workflow"
         },
         {
           "slug": "06-nested-lanes-workflow",
           "title": "06 Nested Lanes Workflow",
-          "repoPath": "uncategorized/syntax-primitives/06-nested-lanes-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/06-nested-lanes-workflow"
         },
         {
           "slug": "07-unicode-labels-workflow",
           "title": "07 Unicode Labels Workflow",
-          "repoPath": "uncategorized/syntax-primitives/07-unicode-labels-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/07-unicode-labels-workflow"
         },
         {
           "slug": "08-empty-lane-workflow",
           "title": "08 Empty Lane Workflow",
-          "repoPath": "uncategorized/syntax-primitives/08-empty-lane-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/08-empty-lane-workflow"
         },
         {
           "slug": "09-cross-lane-circular-workflow",
           "title": "09 Cross Lane Circular Workflow",
-          "repoPath": "uncategorized/syntax-primitives/09-cross-lane-circular-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/09-cross-lane-circular-workflow"
         },
         {
           "slug": "10-long-labels-workflow",
           "title": "10 Long Labels Workflow",
-          "repoPath": "uncategorized/syntax-primitives/10-long-labels-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/10-long-labels-workflow"
         },
         {
           "slug": "11-taskbox-complete-workflow",
           "title": "11 Taskbox Complete Workflow",
-          "repoPath": "uncategorized/syntax-primitives/11-taskbox-complete-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/11-taskbox-complete-workflow"
         },
         {
           "slug": "12-bidirectional-arrows-workflow",
           "title": "12 Bidirectional Arrows Workflow",
-          "repoPath": "uncategorized/syntax-primitives/12-bidirectional-arrows-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/12-bidirectional-arrows-workflow"
         },
         {
           "slug": "13-parallel-flows-workflow",
           "title": "13 Parallel Flows Workflow",
-          "repoPath": "uncategorized/syntax-primitives/13-parallel-flows-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/13-parallel-flows-workflow"
         },
         {
           "slug": "14-error-handling-workflow",
           "title": "14 Error Handling Workflow",
-          "repoPath": "uncategorized/syntax-primitives/14-error-handling-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/14-error-handling-workflow"
         },
         {
           "slug": "15-optional-parameters-workflow",
           "title": "15 Optional Parameters Workflow",
-          "repoPath": "uncategorized/syntax-primitives/15-optional-parameters-workflow"
-        },
-        {
-          "slug": "16-max-nodes-workflow",
-          "title": "16 Max Nodes Workflow",
-          "repoPath": "uncategorized/syntax-primitives/16-max-nodes-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/15-optional-parameters-workflow"
         },
         {
           "slug": "17-minimal-nodes-workflow",
           "title": "17 Minimal Nodes Workflow",
-          "repoPath": "uncategorized/syntax-primitives/17-minimal-nodes-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/17-minimal-nodes-workflow"
         },
         {
           "slug": "18-complex-handles-workflow",
           "title": "18 Complex Handles Workflow",
-          "repoPath": "uncategorized/syntax-primitives/18-complex-handles-workflow"
-        },
-        {
-          "slug": "19-label-escaping-workflow",
-          "title": "19 Label Escaping Workflow",
-          "repoPath": "uncategorized/syntax-primitives/19-label-escaping-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/18-complex-handles-workflow"
         },
         {
           "slug": "20-syntax-complete-workflow",
           "title": "20 Syntax Complete Workflow",
-          "repoPath": "uncategorized/syntax-primitives/20-syntax-complete-workflow"
+          "repoPath": "syntax-primitives/syntax-primitives/20-syntax-complete-workflow"
+        }
+      ]
+    },
+    "edge-cases": {
+      "label": "Edge Cases",
+      "count": 23,
+      "templates": [
+        {
+          "slug": "16-max-nodes-workflow",
+          "title": "16 Max Nodes Workflow",
+          "repoPath": "edge-cases/syntax-primitives/16-max-nodes-workflow"
         },
+        {
+          "slug": "19-label-escaping-workflow",
+          "title": "19 Label Escaping Workflow",
+          "repoPath": "edge-cases/syntax-primitives/19-label-escaping-workflow"
+        },
+        {
+          "slug": "bidirectional-loop-workflow",
+          "title": "Bidirectional Loop Workflow",
+          "repoPath": "edge-cases/edge-cases/bidirectional-loop-workflow"
+        },
+        {
+          "slug": "comment-like-labels-workflow",
+          "title": "Comment Like Labels Workflow",
+          "repoPath": "edge-cases/edge-cases/comment-like-labels-workflow"
+        },
+        {
+          "slug": "cross-lane-circular-workflow",
+          "title": "Cross Lane Circular Workflow",
+          "repoPath": "edge-cases/edge-cases/cross-lane-circular-workflow"
+        },
+        {
+          "slug": "deep-nesting-workflow",
+          "title": "Deep Nesting Workflow",
+          "repoPath": "edge-cases/edge-cases/deep-nesting-workflow"
+        },
+        {
+          "slug": "disconnected-lanes-workflow",
+          "title": "Disconnected Lanes Workflow",
+          "repoPath": "edge-cases/edge-cases/disconnected-lanes-workflow"
+        },
+        {
+          "slug": "duplicate-node-ids-workflow",
+          "title": "Duplicate Node Ids Workflow",
+          "repoPath": "edge-cases/edge-cases/duplicate-node-ids-workflow"
+        },
+        {
+          "slug": "empty-lane-workflow",
+          "title": "Empty Lane Workflow",
+          "repoPath": "edge-cases/edge-cases/empty-lane-workflow"
+        },
+        {
+          "slug": "extra-whitespace-workflow",
+          "title": "Extra Whitespace Workflow",
+          "repoPath": "edge-cases/edge-cases/extra-whitespace-workflow"
+        },
+        {
+          "slug": "json-in-label-workflow",
+          "title": "Json In Label Workflow",
+          "repoPath": "edge-cases/edge-cases/json-in-label-workflow"
+        },
+        {
+          "slug": "label-escaping-workflow",
+          "title": "Label Escaping Workflow",
+          "repoPath": "edge-cases/edge-cases/label-escaping-workflow"
+        },
+        {
+          "slug": "markdown-in-label-workflow",
+          "title": "Markdown In Label Workflow",
+          "repoPath": "edge-cases/edge-cases/markdown-in-label-workflow"
+        },
+        {
+          "slug": "max-lanes-workflow",
+          "title": "Max Lanes Workflow",
+          "repoPath": "edge-cases/edge-cases/max-lanes-workflow"
+        },
+        {
+          "slug": "max-nodes-workflow",
+          "title": "Max Nodes Workflow",
+          "repoPath": "edge-cases/edge-cases/max-nodes-workflow"
+        },
+        {
+          "slug": "minimal-workflow",
+          "title": "Minimal Workflow",
+          "repoPath": "edge-cases/edge-cases/minimal-workflow"
+        },
+        {
+          "slug": "missing-labels-workflow",
+          "title": "Missing Labels Workflow",
+          "repoPath": "edge-cases/edge-cases/missing-labels-workflow"
+        },
+        {
+          "slug": "orphan-node-workflow",
+          "title": "Orphan Node Workflow",
+          "repoPath": "edge-cases/edge-cases/orphan-node-workflow"
+        },
+        {
+          "slug": "sql-injection-label-workflow",
+          "title": "Sql Injection Label Workflow",
+          "repoPath": "edge-cases/edge-cases/sql-injection-label-workflow"
+        },
+        {
+          "slug": "unicode-labels-workflow",
+          "title": "Unicode Labels Workflow",
+          "repoPath": "edge-cases/edge-cases/unicode-labels-workflow"
+        },
+        {
+          "slug": "very-long-label-workflow",
+          "title": "Very Long Label Workflow",
+          "repoPath": "edge-cases/edge-cases/very-long-label-workflow"
+        },
+        {
+          "slug": "xml-in-label-workflow",
+          "title": "Xml In Label Workflow",
+          "repoPath": "edge-cases/edge-cases/xml-in-label-workflow"
+        },
+        {
+          "slug": "xss-label-workflow",
+          "title": "Xss Label Workflow",
+          "repoPath": "edge-cases/edge-cases/xss-label-workflow"
+        }
+      ]
+    },
+    "architecture": {
+      "label": "Reference Architecture",
+      "count": 22,
+      "templates": [
+        {
+          "slug": "event-driven-workflow",
+          "title": "Event Driven Workflow",
+          "repoPath": "architecture/patterns/event-driven-workflow"
+        },
+        {
+          "slug": "webhook-integration-workflow",
+          "title": "Webhook Integration Workflow",
+          "repoPath": "architecture/business-operations/webhook-integration-workflow"
+        },
+        {
+          "slug": "microservices-database-per-service-architecture",
+          "title": "Microservices Database-Per-Service Architecture",
+          "repoPath": "architecture/architecture/microservices-database-per-service-architecture"
+        },
+        {
+          "slug": "microservices-decomposition-by-business-capability",
+          "title": "Microservices Decomposition by Business Capability",
+          "repoPath": "architecture/architecture/microservices-decomposition-by-business-capability"
+        },
+        {
+          "slug": "microservices-backend-for-frontend-architecture",
+          "title": "Microservices Backend-for-Frontend (BFF) Architecture",
+          "repoPath": "architecture/architecture/microservices-backend-for-frontend-architecture"
+        },
+        {
+          "slug": "event-driven-publish-subscribe-architecture",
+          "title": "Event-Driven Publish-Subscribe Architecture",
+          "repoPath": "architecture/architecture/event-driven-publish-subscribe-architecture"
+        },
+        {
+          "slug": "event-driven-event-sourcing-architecture",
+          "title": "Event-Driven Event Sourcing Architecture",
+          "repoPath": "architecture/architecture/event-driven-event-sourcing-architecture"
+        },
+        {
+          "slug": "event-driven-cqrs-with-event-store-architecture",
+          "title": "Event-Driven CQRS with Event Store Architecture",
+          "repoPath": "architecture/architecture/event-driven-cqrs-with-event-store-architecture"
+        },
+        {
+          "slug": "event-driven-choreography-architecture",
+          "title": "Event-Driven Choreography Architecture",
+          "repoPath": "architecture/architecture/event-driven-choreography-architecture"
+        },
+        {
+          "slug": "event-driven-cdc-change-data-capture-architecture",
+          "title": "Event-Driven CDC (Change Data Capture) Architecture",
+          "repoPath": "architecture/architecture/event-driven-cdc-change-data-capture-architecture"
+        },
+        {
+          "slug": "cqrs-read-write-separation-architecture",
+          "title": "CQRS Read-Write Separation Architecture",
+          "repoPath": "architecture/architecture/cqrs-read-write-separation-architecture"
+        },
+        {
+          "slug": "cqrs-materialized-view-architecture",
+          "title": "CQRS Materialized View Architecture",
+          "repoPath": "architecture/architecture/cqrs-materialized-view-architecture"
+        },
+        {
+          "slug": "serverless-event-processing-architecture",
+          "title": "Serverless Event Processing Architecture",
+          "repoPath": "architecture/architecture/serverless-event-processing-architecture"
+        },
+        {
+          "slug": "saga-choreography-pattern-architecture",
+          "title": "Saga Choreography Pattern Architecture",
+          "repoPath": "architecture/architecture/saga-choreography-pattern-architecture"
+        },
+        {
+          "slug": "rate-limiter-architecture",
+          "title": "Rate Limiter Architecture",
+          "repoPath": "architecture/architecture/rate-limiter-architecture"
+        },
+        {
+          "slug": "hexagonal-ports-adapters-architecture",
+          "title": "Hexagonal (Ports and Adapters) Architecture",
+          "repoPath": "architecture/architecture/hexagonal-ports-adapters-architecture"
+        },
+        {
+          "slug": "clean-architecture-layers",
+          "title": "Clean Architecture Layers",
+          "repoPath": "architecture/architecture/clean-architecture-layers"
+        },
+        {
+          "slug": "domain-driven-design-bounded-contexts-architecture",
+          "title": "Domain-Driven Design Bounded Contexts Architecture",
+          "repoPath": "architecture/architecture/domain-driven-design-bounded-contexts-architecture"
+        },
+        {
+          "slug": "data-mesh-architecture",
+          "title": "Data Mesh Architecture",
+          "repoPath": "architecture/architecture/data-mesh-architecture"
+        },
+        {
+          "slug": "observability-three-pillars-architecture",
+          "title": "Observability Three Pillars Architecture",
+          "repoPath": "architecture/architecture/observability-three-pillars-architecture"
+        },
+        {
+          "slug": "event-driven-notification-hub-architecture",
+          "title": "Event-Driven Notification Hub Architecture",
+          "repoPath": "architecture/architecture/event-driven-notification-hub-architecture"
+        },
+        {
+          "slug": "openclaw-dedicated-local-machine-architecture",
+          "title": "OpenClaw Dedicated Local Machine Architecture",
+          "repoPath": "architecture/architecture/openclaw-dedicated-local-machine-architecture"
+        }
+      ]
+    },
+    "patterns": {
+      "label": "Patterns",
+      "count": 40,
+      "templates": [
         {
           "slug": "a-b-testing-workflow",
           "title": "A B Testing Workflow",
-          "repoPath": "uncategorized/patterns/a-b-testing-workflow"
+          "repoPath": "patterns/patterns/a-b-testing-workflow"
         },
+        {
+          "slug": "batch-processing-workflow",
+          "title": "Batch Processing Workflow",
+          "repoPath": "patterns/patterns/batch-processing-workflow"
+        },
+        {
+          "slug": "cache-aside-workflow",
+          "title": "Cache Aside Workflow",
+          "repoPath": "patterns/patterns/cache-aside-workflow"
+        },
+        {
+          "slug": "callback-pattern-workflow",
+          "title": "Callback Pattern Workflow",
+          "repoPath": "patterns/patterns/callback-pattern-workflow"
+        },
+        {
+          "slug": "claim-check-workflow",
+          "title": "Claim Check Workflow",
+          "repoPath": "patterns/patterns/claim-check-workflow"
+        },
+        {
+          "slug": "compensation-transaction-workflow",
+          "title": "Compensation Transaction Workflow",
+          "repoPath": "patterns/patterns/compensation-transaction-workflow"
+        },
+        {
+          "slug": "content-enricher-workflow",
+          "title": "Content Enricher Workflow",
+          "repoPath": "patterns/patterns/content-enricher-workflow"
+        },
+        {
+          "slug": "cqrs-workflow",
+          "title": "Cqrs Workflow",
+          "repoPath": "patterns/patterns/cqrs-workflow"
+        },
+        {
+          "slug": "crud-user-browser-server-workflow",
+          "title": "Crud User Browser Server Workflow",
+          "repoPath": "patterns/patterns/crud-user-browser-server-workflow"
+        },
+        {
+          "slug": "dead-letter-queue-workflow",
+          "title": "Dead Letter Queue Workflow",
+          "repoPath": "patterns/patterns/dead-letter-queue-workflow"
+        },
+        {
+          "slug": "decision-diamond-workflow",
+          "title": "Decision Diamond Workflow",
+          "repoPath": "patterns/patterns/decision-diamond-workflow"
+        },
+        {
+          "slug": "enricher-workflow",
+          "title": "Enricher Workflow",
+          "repoPath": "patterns/patterns/enricher-workflow"
+        },
+        {
+          "slug": "error-retry-loop-workflow",
+          "title": "Error Retry Loop Workflow",
+          "repoPath": "patterns/patterns/error-retry-loop-workflow"
+        },
+        {
+          "slug": "feature-toggle-workflow",
+          "title": "Feature Toggle Workflow",
+          "repoPath": "patterns/patterns/feature-toggle-workflow"
+        },
+        {
+          "slug": "filter-workflow",
+          "title": "Filter Workflow",
+          "repoPath": "patterns/patterns/filter-workflow"
+        },
+        {
+          "slug": "idempotent-consumer-workflow",
+          "title": "Idempotent Consumer Workflow",
+          "repoPath": "patterns/patterns/idempotent-consumer-workflow"
+        },
+        {
+          "slug": "materialized-view-workflow",
+          "title": "Materialized View Workflow",
+          "repoPath": "patterns/patterns/materialized-view-workflow"
+        },
+        {
+          "slug": "message-queue-workflow",
+          "title": "Message Queue Workflow",
+          "repoPath": "patterns/patterns/message-queue-workflow"
+        },
+        {
+          "slug": "nested-decisions-workflow",
+          "title": "Nested Decisions Workflow",
+          "repoPath": "patterns/patterns/nested-decisions-workflow"
+        },
+        {
+          "slug": "normalizer-workflow",
+          "title": "Normalizer Workflow",
+          "repoPath": "patterns/patterns/normalizer-workflow"
+        },
+        {
+          "slug": "notification-pattern-workflow",
+          "title": "Notification Pattern Workflow",
+          "repoPath": "patterns/patterns/notification-pattern-workflow"
+        },
+        {
+          "slug": "parallel-execution-workflow",
+          "title": "Parallel Execution Workflow",
+          "repoPath": "patterns/patterns/parallel-execution-workflow"
+        },
+        {
+          "slug": "polling-pattern-workflow",
+          "title": "Polling Pattern Workflow",
+          "repoPath": "patterns/patterns/polling-pattern-workflow"
+        },
+        {
+          "slug": "process-manager-workflow",
+          "title": "Process Manager Workflow",
+          "repoPath": "patterns/patterns/process-manager-workflow"
+        },
+        {
+          "slug": "pub-sub-workflow",
+          "title": "Pub Sub Workflow",
+          "repoPath": "patterns/patterns/pub-sub-workflow"
+        },
+        {
+          "slug": "rate-limiter-workflow",
+          "title": "Rate Limiter Workflow",
+          "repoPath": "patterns/patterns/rate-limiter-workflow"
+        },
+        {
+          "slug": "request-reply-workflow",
+          "title": "Request Reply Workflow",
+          "repoPath": "patterns/patterns/request-reply-workflow"
+        },
+        {
+          "slug": "retry-with-backoff-workflow",
+          "title": "Retry With Backoff Workflow",
+          "repoPath": "patterns/patterns/retry-with-backoff-workflow"
+        },
+        {
+          "slug": "router-workflow",
+          "title": "Router Workflow",
+          "repoPath": "patterns/patterns/router-workflow"
+        },
+        {
+          "slug": "snapshot-pattern-workflow",
+          "title": "Snapshot Pattern Workflow",
+          "repoPath": "patterns/patterns/snapshot-pattern-workflow"
+        },
+        {
+          "slug": "state-machine-workflow",
+          "title": "State Machine Workflow",
+          "repoPath": "patterns/patterns/state-machine-workflow"
+        },
+        {
+          "slug": "strangler-fig-workflow",
+          "title": "Strangler Fig Workflow",
+          "repoPath": "patterns/patterns/strangler-fig-workflow"
+        },
+        {
+          "slug": "timeout-pattern-workflow",
+          "title": "Timeout Pattern Workflow",
+          "repoPath": "patterns/patterns/timeout-pattern-workflow"
+        },
+        {
+          "slug": "transactional-outbox-workflow",
+          "title": "Transactional Outbox Workflow",
+          "repoPath": "patterns/patterns/transactional-outbox-workflow"
+        },
+        {
+          "slug": "transform-workflow",
+          "title": "Transform Workflow",
+          "repoPath": "patterns/patterns/transform-workflow"
+        },
+        {
+          "slug": "validator-workflow",
+          "title": "Validator Workflow",
+          "repoPath": "patterns/patterns/validator-workflow"
+        },
+        {
+          "slug": "webhook-pattern-workflow",
+          "title": "Webhook Pattern Workflow",
+          "repoPath": "patterns/patterns/webhook-pattern-workflow"
+        },
+        {
+          "slug": "cqrs-task-based-ui-architecture",
+          "title": "CQRS Task-Based UI Architecture",
+          "repoPath": "patterns/architecture/cqrs-task-based-ui-architecture"
+        },
+        {
+          "slug": "retry-with-exponential-backoff-architecture",
+          "title": "Retry with Exponential Backoff Architecture",
+          "repoPath": "patterns/architecture/retry-with-exponential-backoff-architecture"
+        },
+        {
+          "slug": "outbox-pattern-reliable-messaging-architecture",
+          "title": "Outbox Pattern for Reliable Messaging Architecture",
+          "repoPath": "patterns/architecture/outbox-pattern-reliable-messaging-architecture"
+        }
+      ]
+    },
+    "uncategorized": {
+      "label": "Uncategorized",
+      "count": 45,
+      "templates": [
         {
           "slug": "background-check-workflow",
           "title": "Background Check Workflow",
@@ -1194,29 +1728,9 @@
           "repoPath": "uncategorized/finance/bank-reconciliation-workflow"
         },
         {
-          "slug": "batch-processing-workflow",
-          "title": "Batch Processing Workflow",
-          "repoPath": "uncategorized/patterns/batch-processing-workflow"
-        },
-        {
-          "slug": "bidirectional-loop-workflow",
-          "title": "Bidirectional Loop Workflow",
-          "repoPath": "uncategorized/edge-cases/bidirectional-loop-workflow"
-        },
-        {
           "slug": "bonus-allocation-workflow",
           "title": "Bonus Allocation Workflow",
           "repoPath": "uncategorized/hr/bonus-allocation-workflow"
-        },
-        {
-          "slug": "cache-aside-workflow",
-          "title": "Cache Aside Workflow",
-          "repoPath": "uncategorized/patterns/cache-aside-workflow"
-        },
-        {
-          "slug": "callback-pattern-workflow",
-          "title": "Callback Pattern Workflow",
-          "repoPath": "uncategorized/patterns/callback-pattern-workflow"
         },
         {
           "slug": "candidate-rejection-workflow",
@@ -1239,19 +1753,9 @@
           "repoPath": "uncategorized/devops/chaos-engineering-workflow"
         },
         {
-          "slug": "claim-check-workflow",
-          "title": "Claim Check Workflow",
-          "repoPath": "uncategorized/patterns/claim-check-workflow"
-        },
-        {
           "slug": "cohort-analysis-workflow",
           "title": "Cohort Analysis Workflow",
           "repoPath": "uncategorized/business-operations/cohort-analysis-workflow"
-        },
-        {
-          "slug": "comment-like-labels-workflow",
-          "title": "Comment Like Labels Workflow",
-          "repoPath": "uncategorized/edge-cases/comment-like-labels-workflow"
         },
         {
           "slug": "community-moderation-workflow",
@@ -1259,29 +1763,14 @@
           "repoPath": "uncategorized/business-operations/community-moderation-workflow"
         },
         {
-          "slug": "compensation-transaction-workflow",
-          "title": "Compensation Transaction Workflow",
-          "repoPath": "uncategorized/patterns/compensation-transaction-workflow"
-        },
-        {
           "slug": "container-loading-workflow",
           "title": "Container Loading Workflow",
           "repoPath": "uncategorized/logistics/container-loading-workflow"
         },
         {
-          "slug": "content-enricher-workflow",
-          "title": "Content Enricher Workflow",
-          "repoPath": "uncategorized/patterns/content-enricher-workflow"
-        },
-        {
           "slug": "cost-center-workflow",
           "title": "Cost Center Workflow",
           "repoPath": "uncategorized/finance/cost-center-workflow"
-        },
-        {
-          "slug": "cqrs-workflow",
-          "title": "Cqrs Workflow",
-          "repoPath": "uncategorized/patterns/cqrs-workflow"
         },
         {
           "slug": "credit-control-workflow",
@@ -1294,16 +1783,6 @@
           "repoPath": "uncategorized/logistics/cross-docking-workflow"
         },
         {
-          "slug": "cross-lane-circular-workflow",
-          "title": "Cross Lane Circular Workflow",
-          "repoPath": "uncategorized/edge-cases/cross-lane-circular-workflow"
-        },
-        {
-          "slug": "crud-user-browser-server-workflow",
-          "title": "Crud User Browser Server Workflow",
-          "repoPath": "uncategorized/patterns/crud-user-browser-server-workflow"
-        },
-        {
           "slug": "customs-clearance-workflow",
           "title": "Customs Clearance Workflow",
           "repoPath": "uncategorized/logistics/customs-clearance-workflow"
@@ -1314,39 +1793,14 @@
           "repoPath": "uncategorized/logistics/damaged-goods-workflow"
         },
         {
-          "slug": "dead-letter-queue-workflow",
-          "title": "Dead Letter Queue Workflow",
-          "repoPath": "uncategorized/patterns/dead-letter-queue-workflow"
-        },
-        {
-          "slug": "decision-diamond-workflow",
-          "title": "Decision Diamond Workflow",
-          "repoPath": "uncategorized/patterns/decision-diamond-workflow"
-        },
-        {
-          "slug": "deep-nesting-workflow",
-          "title": "Deep Nesting Workflow",
-          "repoPath": "uncategorized/edge-cases/deep-nesting-workflow"
-        },
-        {
           "slug": "delivery-confirmation-workflow",
           "title": "Delivery Confirmation Workflow",
           "repoPath": "uncategorized/logistics/delivery-confirmation-workflow"
         },
         {
-          "slug": "disconnected-lanes-workflow",
-          "title": "Disconnected Lanes Workflow",
-          "repoPath": "uncategorized/edge-cases/disconnected-lanes-workflow"
-        },
-        {
           "slug": "diversity-initiative-workflow",
           "title": "Diversity Initiative Workflow",
           "repoPath": "uncategorized/hr/diversity-initiative-workflow"
-        },
-        {
-          "slug": "duplicate-node-ids-workflow",
-          "title": "Duplicate Node Ids Workflow",
-          "repoPath": "uncategorized/edge-cases/duplicate-node-ids-workflow"
         },
         {
           "slug": "email-campaign-workflow",
@@ -1359,54 +1813,14 @@
           "repoPath": "uncategorized/hr/employee-engagement-workflow"
         },
         {
-          "slug": "empty-lane-workflow",
-          "title": "Empty Lane Workflow",
-          "repoPath": "uncategorized/edge-cases/empty-lane-workflow"
-        },
-        {
-          "slug": "enricher-workflow",
-          "title": "Enricher Workflow",
-          "repoPath": "uncategorized/patterns/enricher-workflow"
-        },
-        {
-          "slug": "error-retry-loop-workflow",
-          "title": "Error Retry Loop Workflow",
-          "repoPath": "uncategorized/patterns/error-retry-loop-workflow"
-        },
-        {
-          "slug": "event-driven-workflow",
-          "title": "Event Driven Workflow",
-          "repoPath": "uncategorized/patterns/event-driven-workflow"
-        },
-        {
           "slug": "expense-allocation-workflow",
           "title": "Expense Allocation Workflow",
           "repoPath": "uncategorized/finance/expense-allocation-workflow"
         },
         {
-          "slug": "extra-whitespace-workflow",
-          "title": "Extra Whitespace Workflow",
-          "repoPath": "uncategorized/edge-cases/extra-whitespace-workflow"
-        },
-        {
-          "slug": "feature-toggle-workflow",
-          "title": "Feature Toggle Workflow",
-          "repoPath": "uncategorized/patterns/feature-toggle-workflow"
-        },
-        {
-          "slug": "filter-workflow",
-          "title": "Filter Workflow",
-          "repoPath": "uncategorized/patterns/filter-workflow"
-        },
-        {
           "slug": "fixed-assets-workflow",
           "title": "Fixed Assets Workflow",
           "repoPath": "uncategorized/finance/fixed-assets-workflow"
-        },
-        {
-          "slug": "idempotent-consumer-workflow",
-          "title": "Idempotent Consumer Workflow",
-          "repoPath": "uncategorized/patterns/idempotent-consumer-workflow"
         },
         {
           "slug": "in-app-message-workflow",
@@ -1434,19 +1848,9 @@
           "repoPath": "uncategorized/hr/job-posting-workflow"
         },
         {
-          "slug": "json-in-label-workflow",
-          "title": "Json In Label Workflow",
-          "repoPath": "uncategorized/edge-cases/json-in-label-workflow"
-        },
-        {
           "slug": "kitting-process-workflow",
           "title": "Kitting Process Workflow",
           "repoPath": "uncategorized/logistics/kitting-process-workflow"
-        },
-        {
-          "slug": "label-escaping-workflow",
-          "title": "Label Escaping Workflow",
-          "repoPath": "uncategorized/edge-cases/label-escaping-workflow"
         },
         {
           "slug": "last-mile-delivery-workflow",
@@ -1454,74 +1858,14 @@
           "repoPath": "uncategorized/logistics/last-mile-delivery-workflow"
         },
         {
-          "slug": "markdown-in-label-workflow",
-          "title": "Markdown In Label Workflow",
-          "repoPath": "uncategorized/edge-cases/markdown-in-label-workflow"
-        },
-        {
-          "slug": "materialized-view-workflow",
-          "title": "Materialized View Workflow",
-          "repoPath": "uncategorized/patterns/materialized-view-workflow"
-        },
-        {
-          "slug": "max-lanes-workflow",
-          "title": "Max Lanes Workflow",
-          "repoPath": "uncategorized/edge-cases/max-lanes-workflow"
-        },
-        {
-          "slug": "max-nodes-workflow",
-          "title": "Max Nodes Workflow",
-          "repoPath": "uncategorized/edge-cases/max-nodes-workflow"
-        },
-        {
-          "slug": "message-queue-workflow",
-          "title": "Message Queue Workflow",
-          "repoPath": "uncategorized/patterns/message-queue-workflow"
-        },
-        {
-          "slug": "minimal-workflow",
-          "title": "Minimal Workflow",
-          "repoPath": "uncategorized/edge-cases/minimal-workflow"
-        },
-        {
-          "slug": "missing-labels-workflow",
-          "title": "Missing Labels Workflow",
-          "repoPath": "uncategorized/edge-cases/missing-labels-workflow"
-        },
-        {
           "slug": "monthly-close-workflow",
           "title": "Monthly Close Workflow",
           "repoPath": "uncategorized/finance/monthly-close-workflow"
         },
         {
-          "slug": "nested-decisions-workflow",
-          "title": "Nested Decisions Workflow",
-          "repoPath": "uncategorized/patterns/nested-decisions-workflow"
-        },
-        {
-          "slug": "normalizer-workflow",
-          "title": "Normalizer Workflow",
-          "repoPath": "uncategorized/patterns/normalizer-workflow"
-        },
-        {
-          "slug": "notification-pattern-workflow",
-          "title": "Notification Pattern Workflow",
-          "repoPath": "uncategorized/patterns/notification-pattern-workflow"
-        },
-        {
-          "slug": "orphan-node-workflow",
-          "title": "Orphan Node Workflow",
-          "repoPath": "uncategorized/edge-cases/orphan-node-workflow"
-        },
-        {
           "slug": "packing-process-workflow",
           "title": "Packing Process Workflow",
           "repoPath": "uncategorized/logistics/packing-process-workflow"
-        },
-        {
-          "slug": "parallel-execution-workflow",
-          "title": "Parallel Execution Workflow",
-          "repoPath": "uncategorized/patterns/parallel-execution-workflow"
         },
         {
           "slug": "personalization-engine-workflow",
@@ -1534,16 +1878,6 @@
           "repoPath": "uncategorized/logistics/picking-process-workflow"
         },
         {
-          "slug": "polling-pattern-workflow",
-          "title": "Polling Pattern Workflow",
-          "repoPath": "uncategorized/patterns/polling-pattern-workflow"
-        },
-        {
-          "slug": "process-manager-workflow",
-          "title": "Process Manager Workflow",
-          "repoPath": "uncategorized/patterns/process-manager-workflow"
-        },
-        {
           "slug": "procurement-card-workflow",
           "title": "Procurement Card Workflow",
           "repoPath": "uncategorized/finance/procurement-card-workflow"
@@ -1552,11 +1886,6 @@
           "slug": "promotion-process-workflow",
           "title": "Promotion Process Workflow",
           "repoPath": "uncategorized/hr/promotion-process-workflow"
-        },
-        {
-          "slug": "pub-sub-workflow",
-          "title": "Pub Sub Workflow",
-          "repoPath": "uncategorized/patterns/pub-sub-workflow"
         },
         {
           "slug": "push-notification-workflow",
@@ -1572,11 +1901,6 @@
           "slug": "quality-inspection-workflow",
           "title": "Quality Inspection Workflow",
           "repoPath": "uncategorized/logistics/quality-inspection-workflow"
-        },
-        {
-          "slug": "rate-limiter-workflow",
-          "title": "Rate Limiter Workflow",
-          "repoPath": "uncategorized/patterns/rate-limiter-workflow"
         },
         {
           "slug": "reference-check-workflow",
@@ -1599,24 +1923,9 @@
           "repoPath": "uncategorized/logistics/reorder-process-workflow"
         },
         {
-          "slug": "request-reply-workflow",
-          "title": "Request Reply Workflow",
-          "repoPath": "uncategorized/patterns/request-reply-workflow"
-        },
-        {
-          "slug": "retry-with-backoff-workflow",
-          "title": "Retry With Backoff Workflow",
-          "repoPath": "uncategorized/patterns/retry-with-backoff-workflow"
-        },
-        {
           "slug": "reverse-logistics-workflow",
           "title": "Reverse Logistics Workflow",
           "repoPath": "uncategorized/logistics/reverse-logistics-workflow"
-        },
-        {
-          "slug": "router-workflow",
-          "title": "Router Workflow",
-          "repoPath": "uncategorized/patterns/router-workflow"
         },
         {
           "slug": "search-optimization-workflow",
@@ -1624,249 +1933,14 @@
           "repoPath": "uncategorized/business-operations/search-optimization-workflow"
         },
         {
-          "slug": "snapshot-pattern-workflow",
-          "title": "Snapshot Pattern Workflow",
-          "repoPath": "uncategorized/patterns/snapshot-pattern-workflow"
-        },
-        {
-          "slug": "sql-injection-label-workflow",
-          "title": "Sql Injection Label Workflow",
-          "repoPath": "uncategorized/edge-cases/sql-injection-label-workflow"
-        },
-        {
-          "slug": "state-machine-workflow",
-          "title": "State Machine Workflow",
-          "repoPath": "uncategorized/patterns/state-machine-workflow"
-        },
-        {
-          "slug": "strangler-fig-workflow",
-          "title": "Strangler Fig Workflow",
-          "repoPath": "uncategorized/patterns/strangler-fig-workflow"
-        },
-        {
-          "slug": "timeout-pattern-workflow",
-          "title": "Timeout Pattern Workflow",
-          "repoPath": "uncategorized/patterns/timeout-pattern-workflow"
-        },
-        {
-          "slug": "transactional-outbox-workflow",
-          "title": "Transactional Outbox Workflow",
-          "repoPath": "uncategorized/patterns/transactional-outbox-workflow"
-        },
-        {
-          "slug": "transform-workflow",
-          "title": "Transform Workflow",
-          "repoPath": "uncategorized/patterns/transform-workflow"
-        },
-        {
           "slug": "treasury-management-workflow",
           "title": "Treasury Management Workflow",
           "repoPath": "uncategorized/finance/treasury-management-workflow"
         },
         {
-          "slug": "unicode-labels-workflow",
-          "title": "Unicode Labels Workflow",
-          "repoPath": "uncategorized/edge-cases/unicode-labels-workflow"
-        },
-        {
           "slug": "user-segmentation-workflow",
           "title": "User Segmentation Workflow",
           "repoPath": "uncategorized/business-operations/user-segmentation-workflow"
-        },
-        {
-          "slug": "validator-workflow",
-          "title": "Validator Workflow",
-          "repoPath": "uncategorized/patterns/validator-workflow"
-        },
-        {
-          "slug": "very-long-label-workflow",
-          "title": "Very Long Label Workflow",
-          "repoPath": "uncategorized/edge-cases/very-long-label-workflow"
-        },
-        {
-          "slug": "webhook-integration-workflow",
-          "title": "Webhook Integration Workflow",
-          "repoPath": "uncategorized/business-operations/webhook-integration-workflow"
-        },
-        {
-          "slug": "webhook-pattern-workflow",
-          "title": "Webhook Pattern Workflow",
-          "repoPath": "uncategorized/patterns/webhook-pattern-workflow"
-        },
-        {
-          "slug": "xml-in-label-workflow",
-          "title": "Xml In Label Workflow",
-          "repoPath": "uncategorized/edge-cases/xml-in-label-workflow"
-        },
-        {
-          "slug": "xss-label-workflow",
-          "title": "Xss Label Workflow",
-          "repoPath": "uncategorized/edge-cases/xss-label-workflow"
-        },
-        {
-          "slug": "microservices-database-per-service-architecture",
-          "title": "Microservices Database-Per-Service Architecture",
-          "repoPath": "uncategorized/architecture/microservices-database-per-service-architecture"
-        },
-        {
-          "slug": "microservices-decomposition-by-business-capability",
-          "title": "Microservices Decomposition by Business Capability",
-          "repoPath": "uncategorized/architecture/microservices-decomposition-by-business-capability"
-        },
-        {
-          "slug": "microservices-backend-for-frontend-architecture",
-          "title": "Microservices Backend-for-Frontend (BFF) Architecture",
-          "repoPath": "uncategorized/architecture/microservices-backend-for-frontend-architecture"
-        },
-        {
-          "slug": "event-driven-publish-subscribe-architecture",
-          "title": "Event-Driven Publish-Subscribe Architecture",
-          "repoPath": "uncategorized/architecture/event-driven-publish-subscribe-architecture"
-        },
-        {
-          "slug": "event-driven-event-sourcing-architecture",
-          "title": "Event-Driven Event Sourcing Architecture",
-          "repoPath": "uncategorized/architecture/event-driven-event-sourcing-architecture"
-        },
-        {
-          "slug": "event-driven-cqrs-with-event-store-architecture",
-          "title": "Event-Driven CQRS with Event Store Architecture",
-          "repoPath": "uncategorized/architecture/event-driven-cqrs-with-event-store-architecture"
-        },
-        {
-          "slug": "event-driven-choreography-architecture",
-          "title": "Event-Driven Choreography Architecture",
-          "repoPath": "uncategorized/architecture/event-driven-choreography-architecture"
-        },
-        {
-          "slug": "event-driven-cdc-change-data-capture-architecture",
-          "title": "Event-Driven CDC (Change Data Capture) Architecture",
-          "repoPath": "uncategorized/architecture/event-driven-cdc-change-data-capture-architecture"
-        },
-        {
-          "slug": "cqrs-read-write-separation-architecture",
-          "title": "CQRS Read-Write Separation Architecture",
-          "repoPath": "uncategorized/architecture/cqrs-read-write-separation-architecture"
-        },
-        {
-          "slug": "cqrs-materialized-view-architecture",
-          "title": "CQRS Materialized View Architecture",
-          "repoPath": "uncategorized/architecture/cqrs-materialized-view-architecture"
-        },
-        {
-          "slug": "cqrs-task-based-ui-architecture",
-          "title": "CQRS Task-Based UI Architecture",
-          "repoPath": "uncategorized/architecture/cqrs-task-based-ui-architecture"
-        },
-        {
-          "slug": "serverless-event-processing-architecture",
-          "title": "Serverless Event Processing Architecture",
-          "repoPath": "uncategorized/architecture/serverless-event-processing-architecture"
-        },
-        {
-          "slug": "saga-choreography-pattern-architecture",
-          "title": "Saga Choreography Pattern Architecture",
-          "repoPath": "uncategorized/architecture/saga-choreography-pattern-architecture"
-        },
-        {
-          "slug": "retry-with-exponential-backoff-architecture",
-          "title": "Retry with Exponential Backoff Architecture",
-          "repoPath": "uncategorized/architecture/retry-with-exponential-backoff-architecture"
-        },
-        {
-          "slug": "rate-limiter-architecture",
-          "title": "Rate Limiter Architecture",
-          "repoPath": "uncategorized/architecture/rate-limiter-architecture"
-        },
-        {
-          "slug": "hexagonal-ports-adapters-architecture",
-          "title": "Hexagonal (Ports and Adapters) Architecture",
-          "repoPath": "uncategorized/architecture/hexagonal-ports-adapters-architecture"
-        },
-        {
-          "slug": "clean-architecture-layers",
-          "title": "Clean Architecture Layers",
-          "repoPath": "uncategorized/architecture/clean-architecture-layers"
-        },
-        {
-          "slug": "domain-driven-design-bounded-contexts-architecture",
-          "title": "Domain-Driven Design Bounded Contexts Architecture",
-          "repoPath": "uncategorized/architecture/domain-driven-design-bounded-contexts-architecture"
-        },
-        {
-          "slug": "outbox-pattern-reliable-messaging-architecture",
-          "title": "Outbox Pattern for Reliable Messaging Architecture",
-          "repoPath": "uncategorized/architecture/outbox-pattern-reliable-messaging-architecture"
-        },
-        {
-          "slug": "data-mesh-architecture",
-          "title": "Data Mesh Architecture",
-          "repoPath": "uncategorized/architecture/data-mesh-architecture"
-        },
-        {
-          "slug": "observability-three-pillars-architecture",
-          "title": "Observability Three Pillars Architecture",
-          "repoPath": "uncategorized/architecture/observability-three-pillars-architecture"
-        },
-        {
-          "slug": "event-driven-notification-hub-architecture",
-          "title": "Event-Driven Notification Hub Architecture",
-          "repoPath": "uncategorized/architecture/event-driven-notification-hub-architecture"
-        },
-        {
-          "slug": "openclaw-dedicated-local-machine-architecture",
-          "title": "OpenClaw Dedicated Local Machine Architecture",
-          "repoPath": "uncategorized/architecture/openclaw-dedicated-local-machine-architecture"
-        },
-        {
-          "slug": "process-analysis-future-state-workflow",
-          "title": "Process Analysis & Future State Workflow",
-          "repoPath": "uncategorized/process-mapping/process-analysis-future-state-workflow"
-        },
-        {
-          "slug": "work-tracking-dashboard-workflow",
-          "title": "Work Tracking Dashboard Workflow",
-          "repoPath": "uncategorized/process-mapping/work-tracking-dashboard-workflow"
-        },
-        {
-          "slug": "coinbase-trust-flow-onchain-settlement",
-          "title": "Coinbase Trust Flow — On-Chain Settlement",
-          "repoPath": "uncategorized/commerce-automation/coinbase-trust-flow-onchain-settlement"
-        },
-        {
-          "slug": "multi-platform-ecommerce-integration-hub",
-          "title": "Multi-Platform eCommerce Integration Hub",
-          "repoPath": "uncategorized/commerce-automation/multi-platform-ecommerce-integration-hub"
-        },
-        {
-          "slug": "shopify-river-four-layer-agent-architecture",
-          "title": "Shopify River 4-Layer Agent Architecture",
-          "repoPath": "uncategorized/commerce-automation/shopify-river-four-layer-agent-architecture"
-        },
-        {
-          "slug": "shopify-river-brain-hands-decoupling-architecture",
-          "title": "Shopify River Brain-Hands Decoupling Architecture",
-          "repoPath": "uncategorized/commerce-automation/shopify-river-brain-hands-decoupling-architecture"
-        },
-        {
-          "slug": "structured-output-validation-workflow",
-          "title": "Structured Output Validation Workflow",
-          "repoPath": "uncategorized/llm-operations/structured-output-validation-workflow"
-        },
-        {
-          "slug": "agent-world-model-simulation-loop",
-          "title": "Agent-World Model Simulation Loop",
-          "repoPath": "uncategorized/agent-simulation/agent-world-model-simulation-loop"
-        },
-        {
-          "slug": "validation-simulator-inside-agent-workflow",
-          "title": "Validation Simulator Inside the Agent Workflow",
-          "repoPath": "uncategorized/agent-simulation/validation-simulator-inside-agent-workflow"
-        },
-        {
-          "slug": "multi-cloud-mesh-resilience-architecture",
-          "title": "Multi-Cloud Mesh Resilience Architecture",
-          "repoPath": "uncategorized/platform-reliability/multi-cloud-mesh-resilience-architecture"
         }
       ]
     }

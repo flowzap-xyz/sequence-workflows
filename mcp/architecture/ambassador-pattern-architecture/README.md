@@ -6,7 +6,7 @@ An ambassador pattern architecture diagram with a local proxy sidecar handling a
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** mcp  
-**Secondary use cases:** None  
+**Secondary use cases:** patterns  
 **Complexity:** 3/5  
 **Nodes:** 15  
 **Lanes:** 3  

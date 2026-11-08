@@ -6,11 +6,13 @@
   "source_domain": "Diagram Authoring",
   "primary_use_case": "security",
   "secondary_use_cases": [
-    "mcp"
+    "mcp",
+    "diagram-authoring"
   ],
   "use_cases": [
     "security",
-    "mcp"
+    "mcp",
+    "diagram-authoring"
   ],
   "complexity": 2,
   "num_nodes": 6,

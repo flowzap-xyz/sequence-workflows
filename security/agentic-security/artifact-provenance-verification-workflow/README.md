@@ -6,7 +6,7 @@ Build, provenance and registry lanes: an artifact is only accepted when its atte
 **Kind:** workflow  
 **Source domain:** Agentic Security  
 **Primary use case:** security  
-**Secondary use cases:** agentic  
+**Secondary use cases:** agentic, agentic-security  
 **Complexity:** 2/5  
 **Nodes:** 8  
 **Lanes:** 3  

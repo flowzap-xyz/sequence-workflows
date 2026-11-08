@@ -1,0 +1,22 @@
+{
+  "template_id": "transform-workflow",
+  "workflow_id": "transform",
+  "title": "Transform Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "patterns",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "patterns"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "transform",
+    "patterns"
+  ],
+  "description": "This workflow models converting messages into a new shape.",
+  "source_path": "patterns/transform",
+  "repo_path": "patterns/patterns/transform-workflow"
+}

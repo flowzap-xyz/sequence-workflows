@@ -6,7 +6,7 @@ A context gateway that assembles raw context from the vector store and logs, com
 **Kind:** workflow  
 **Source domain:** LLM Operations  
 **Primary use case:** mcp  
-**Secondary use cases:** context-management  
+**Secondary use cases:** context-management, llm-operations  
 **Complexity:** 2/5  
 **Nodes:** 12  
 **Lanes:** 4  

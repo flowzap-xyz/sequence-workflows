@@ -6,7 +6,7 @@ A health check pattern architecture diagram with load balancer probes, deep heal
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** incident  
-**Secondary use cases:** security  
+**Secondary use cases:** security, patterns  
 **Complexity:** 3/5  
 **Nodes:** 19  
 **Lanes:** 4  

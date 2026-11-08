@@ -6,11 +6,15 @@
   "source_domain": "Architecture",
   "primary_use_case": "ai-orchestration",
   "secondary_use_cases": [
-    "mcp"
+    "mcp",
+    "architecture",
+    "patterns"
   ],
   "use_cases": [
     "ai-orchestration",
-    "mcp"
+    "mcp",
+    "architecture",
+    "patterns"
   ],
   "complexity": 3,
   "num_nodes": 13,

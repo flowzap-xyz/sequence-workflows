@@ -6,7 +6,7 @@ A serverless edge computing architecture diagram with CloudFront or Cloudflare e
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** handoff  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture  
 **Complexity:** 3/5  
 **Nodes:** 15  
 **Lanes:** 3  

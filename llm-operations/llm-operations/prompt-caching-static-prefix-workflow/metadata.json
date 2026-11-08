@@ -1,0 +1,28 @@
+{
+  "template_id": "prompt-caching-static-prefix-workflow",
+  "workflow_id": "prompt-caching-static-prefix",
+  "title": "Prompt Caching with Static Prefix Workflow",
+  "kind": "workflow",
+  "source_domain": "LLM Operations",
+  "primary_use_case": "llm-operations",
+  "secondary_use_cases": [
+    "context-management"
+  ],
+  "use_cases": [
+    "llm-operations",
+    "context-management"
+  ],
+  "complexity": 3,
+  "num_nodes": 14,
+  "num_lanes": 2,
+  "tags": [
+    "token-optimization",
+    "prompt-caching",
+    "kv-cache",
+    "context-management",
+    "llmops"
+  ],
+  "description": "Static system prompt assembled once and cached by the provider, then only the volatile user input is appended — a cache hit reads 50k tokens from the KV cache.",
+  "source_path": "",
+  "repo_path": "llm-operations/llm-operations/prompt-caching-static-prefix-workflow"
+}

@@ -6,7 +6,7 @@ Layer 4 of the agent containment stack: arguments are sanitized, secrets strippe
 **Kind:** workflow  
 **Source domain:** Agentic Security  
 **Primary use case:** security  
-**Secondary use cases:** compliance, agentic  
+**Secondary use cases:** compliance, agentic, agentic-security  
 **Complexity:** 2/5  
 **Nodes:** 6  
 **Lanes:** 2  

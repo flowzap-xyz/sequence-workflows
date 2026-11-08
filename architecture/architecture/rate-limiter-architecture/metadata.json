@@ -1,0 +1,28 @@
+{
+  "template_id": "rate-limiter-architecture",
+  "workflow_id": "rate-limiter-architecture",
+  "title": "Rate Limiter Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "architecture"
+  ],
+  "complexity": 3,
+  "num_nodes": 17,
+  "num_lanes": 4,
+  "tags": [
+    "rate-limiter",
+    "token-bucket",
+    "sliding-window",
+    "redis",
+    "api-protection",
+    "throttling",
+    "distributed-rate-limiting",
+    "architecture-diagram"
+  ],
+  "description": "A rate limiter architecture diagram implementing the token bucket algorithm with Redis-backed distributed counters, sliding window logs, API key identification, rate limit headers, and multi-node synchronization for consistent enforcement. This template shows how to protect APIs from abuse and ensure fair usage across clients, with proper HTTP 429 responses and Retry-After headers. Essential for API platform teams building production-grade rate limiting infrastructure.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/rate-limiter-architecture"
+}

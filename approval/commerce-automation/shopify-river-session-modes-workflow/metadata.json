@@ -5,9 +5,12 @@
   "kind": "workflow",
   "source_domain": "Commerce Automation",
   "primary_use_case": "approval",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "commerce-automation"
+  ],
   "use_cases": [
-    "approval"
+    "approval",
+    "commerce-automation"
   ],
   "complexity": 2,
   "num_nodes": 9,

@@ -1,0 +1,31 @@
+{
+  "template_id": "ai-native-hierarchical-architecture",
+  "workflow_id": "ai-native-hierarchical-architecture",
+  "title": "AI-Native Hierarchical Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "agentic",
+    "ai-orchestration"
+  ],
+  "use_cases": [
+    "architecture",
+    "agentic",
+    "ai-orchestration"
+  ],
+  "complexity": 4,
+  "num_nodes": 16,
+  "num_lanes": 4,
+  "tags": [
+    "ai-native",
+    "hierarchical",
+    "agentic-ai",
+    "enterprise",
+    "multi-agent",
+    "architecture-diagram"
+  ],
+  "description": "A hierarchical multi-agent architecture that scales orchestration by stacking supervisors and team leads (a tree structure), which mirrors enterprise org structures and helps partition context. This is the 'enterprise-grade agentic AI architecture' when a single orchestrator cannot manage all workers directly. Ideal for large enterprises and multi-domain workflows.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/ai-native-hierarchical-architecture"
+}

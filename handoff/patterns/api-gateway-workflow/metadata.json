@@ -7,12 +7,16 @@
   "primary_use_case": "handoff",
   "secondary_use_cases": [
     "security",
-    "mcp"
+    "mcp",
+    "architecture",
+    "patterns"
   ],
   "use_cases": [
     "handoff",
     "security",
-    "mcp"
+    "mcp",
+    "architecture",
+    "patterns"
   ],
   "complexity": 3,
   "num_nodes": 7,

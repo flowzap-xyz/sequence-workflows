@@ -6,7 +6,7 @@ A service discovery architecture diagram with Consul or Eureka registry, client-
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** handoff  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture  
 **Complexity:** 3/5  
 **Nodes:** 16  
 **Lanes:** 3  

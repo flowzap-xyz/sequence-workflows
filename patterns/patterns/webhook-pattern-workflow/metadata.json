@@ -1,0 +1,25 @@
+{
+  "template_id": "webhook-pattern-workflow",
+  "workflow_id": "webhook-pattern",
+  "title": "Webhook Pattern Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "patterns",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "patterns"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "webhook",
+    "pattern",
+    "patterns",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models an HTTP callback when an event occurs.",
+  "source_path": "patterns/webhook-pattern",
+  "repo_path": "patterns/patterns/webhook-pattern-workflow"
+}

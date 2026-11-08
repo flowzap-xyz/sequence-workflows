@@ -1,0 +1,25 @@
+{
+  "template_id": "validation-simulator-inside-agent-workflow",
+  "workflow_id": "validation-simulator-inside-agent",
+  "title": "Validation Simulator Inside the Agent Workflow",
+  "kind": "workflow",
+  "source_domain": "Agent Simulation",
+  "primary_use_case": "agent-simulation",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "agent-simulation"
+  ],
+  "complexity": 3,
+  "num_nodes": 14,
+  "num_lanes": 4,
+  "tags": [
+    "qwen",
+    "agentworld",
+    "validation",
+    "insurance",
+    "simulation"
+  ],
+  "description": "The validation simulator sits inside the workflow, not after it: the agent analyses the claim attachments, detects the anomaly and simulates the reimbursement before executing it.",
+  "source_path": "",
+  "repo_path": "agent-simulation/agent-simulation/validation-simulator-inside-agent-workflow"
+}

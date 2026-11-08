@@ -6,7 +6,7 @@ Layer 2 of the agent containment stack: a permission gate checks the whitelist a
 **Kind:** workflow  
 **Source domain:** Agentic Security  
 **Primary use case:** security  
-**Secondary use cases:** agentic  
+**Secondary use cases:** agentic, agentic-security  
 **Complexity:** 2/5  
 **Nodes:** 8  
 **Lanes:** 2  

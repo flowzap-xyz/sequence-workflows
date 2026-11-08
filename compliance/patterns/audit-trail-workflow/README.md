@@ -6,7 +6,7 @@ This workflow models logging all important actions for compliance.
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** compliance  
-**Secondary use cases:** None  
+**Secondary use cases:** patterns  
 **Complexity:** 4/5  
 **Nodes:** 13  
 **Lanes:** 4  

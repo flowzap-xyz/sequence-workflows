@@ -1,0 +1,32 @@
+{
+  "template_id": "stripe-trust-flow-fiat-authorization",
+  "workflow_id": "stripe-trust-flow-fiat-authorization",
+  "title": "Stripe Trust Flow — Fiat Authorization",
+  "kind": "workflow",
+  "source_domain": "Commerce Automation",
+  "primary_use_case": "commerce-automation",
+  "secondary_use_cases": [
+    "approval",
+    "security",
+    "compliance"
+  ],
+  "use_cases": [
+    "commerce-automation",
+    "approval",
+    "security",
+    "compliance"
+  ],
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 2,
+  "tags": [
+    "stripe",
+    "trust-flow",
+    "risk-engine",
+    "authorization",
+    "fiat"
+  ],
+  "description": "The trust layer behind agent-mediated payments at Stripe: the agent submits a shared payment token, the risk engine approves it and fiat clears through the banking rails.",
+  "source_path": "",
+  "repo_path": "commerce-automation/commerce-automation/stripe-trust-flow-fiat-authorization"
+}

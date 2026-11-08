@@ -6,7 +6,7 @@ Mid-simulation crisis injection: the baseline is captured, a market event is inj
 **Kind:** workflow  
 **Source domain:** Agent Simulation  
 **Primary use case:** agentic  
-**Secondary use cases:** None  
+**Secondary use cases:** agent-simulation  
 **Complexity:** 3/5  
 **Nodes:** 16  
 **Lanes:** 3  

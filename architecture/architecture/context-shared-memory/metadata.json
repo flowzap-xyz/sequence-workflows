@@ -1,0 +1,30 @@
+{
+  "template_id": "context-shared-memory",
+  "workflow_id": "context-shared-memory",
+  "title": "Context Management - Shared Memory",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "agentic",
+    "context-management"
+  ],
+  "use_cases": [
+    "architecture",
+    "agentic",
+    "context-management"
+  ],
+  "complexity": 3,
+  "num_nodes": 9,
+  "num_lanes": 4,
+  "tags": [
+    "context-management",
+    "shared-memory",
+    "multi-agent",
+    "orchestrator",
+    "architecture-diagram"
+  ],
+  "description": "Multi-agent coordination pattern where an orchestrator breaks work into subtasks, specialist agents pull from and push to a shared state store, and the orchestrator composes the final answer from that shared state. Multi-agent setups feel coherent instead of each assistant having its own inconsistent memory.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/context-shared-memory"
+}

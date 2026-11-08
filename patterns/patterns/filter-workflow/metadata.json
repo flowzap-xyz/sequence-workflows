@@ -1,0 +1,24 @@
+{
+  "template_id": "filter-workflow",
+  "workflow_id": "filter",
+  "title": "Filter Workflow",
+  "kind": "workflow",
+  "source_domain": "patterns",
+  "primary_use_case": "patterns",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "patterns"
+  ],
+  "complexity": 4,
+  "num_nodes": 13,
+  "num_lanes": 4,
+  "tags": [
+    "filter",
+    "patterns",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models removing items that do not meet criteria.",
+  "source_path": "patterns/filter",
+  "repo_path": "patterns/patterns/filter-workflow"
+}

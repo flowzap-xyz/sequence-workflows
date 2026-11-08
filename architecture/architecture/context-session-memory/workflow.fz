@@ -1,0 +1,39 @@
+User { # User
+n1: circle label="User sends message"
+n2: rectangle label="See agent reply"
+
+n1.handle(right) -> Agent.n3.handle(left)
+Agent.n8.handle(right) -> n2.handle(left)
+}
+
+Agent { # Agent
+n3: rectangle label="Receive message"
+n4: rectangle label="Load session history"
+n5: rectangle label="Assemble prompt"
+n6: rectangle label="Call LLM"
+n7: rectangle label="Receive LLM reply"
+n8: rectangle label="Return answer to user"
+n9: rectangle label="Persist updated session"
+
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left)
+n6.handle(right) -> LLM.n10.handle(left)
+n7.handle(right) -> n8.handle(left)
+n8.handle(bottom) -> n9.handle(top) [label="Save session"]
+}
+
+Memory { # Session Store
+n11: rectangle label="Read session state"
+n12: rectangle label="Write session state"
+
+n3.handle(bottom) -> n11.handle(top) [label="Get history"]
+n11.handle(right) -> Agent.n4.handle(left)
+Agent.n9.handle(bottom) -> n12.handle(top) [label="Store history"]
+}
+
+LLM { # LLM
+n10: rectangle label="Generate answer"
+
+n10.handle(right) -> Agent.n7.handle(left)
+}

@@ -1,0 +1,34 @@
+{
+  "template_id": "claw-code-harness-architecture",
+  "workflow_id": "claw-code-harness-architecture",
+  "title": "Claw Code Harness Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "ai-orchestration",
+    "mcp"
+  ],
+  "use_cases": [
+    "architecture",
+    "ai-orchestration",
+    "mcp"
+  ],
+  "complexity": 4,
+  "num_nodes": 17,
+  "num_lanes": 4,
+  "tags": [
+    "Claw Code",
+    "Claude Code",
+    "Harness Engineering",
+    "AI Agent Architecture",
+    "MCP",
+    "Python Orchestration",
+    "Rust Runtime",
+    "LLM",
+    "Agent Runtime"
+  ],
+  "description": "Claw Code harness architecture diagram showing the user loop, Python orchestration layer, Rust runtime, and external systems such as the LLM provider, file system, and MCP server.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/claw-code-harness-architecture"
+}

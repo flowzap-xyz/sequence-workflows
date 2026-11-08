@@ -7,12 +7,14 @@
   "primary_use_case": "approval",
   "secondary_use_cases": [
     "security",
-    "compliance"
+    "compliance",
+    "commerce-automation"
   ],
   "use_cases": [
     "approval",
     "security",
-    "compliance"
+    "compliance",
+    "commerce-automation"
   ],
   "complexity": 1,
   "num_nodes": 5,

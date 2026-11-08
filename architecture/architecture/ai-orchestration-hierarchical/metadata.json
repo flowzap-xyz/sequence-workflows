@@ -1,0 +1,32 @@
+{
+  "template_id": "ai-orchestration-hierarchical",
+  "workflow_id": "ai-orchestration-hierarchical",
+  "title": "AI Orchestration - Hierarchical (Org Chart)",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "agentic",
+    "ai-orchestration"
+  ],
+  "use_cases": [
+    "architecture",
+    "agentic",
+    "ai-orchestration"
+  ],
+  "complexity": 4,
+  "num_nodes": 17,
+  "num_lanes": 5,
+  "tags": [
+    "ai-native",
+    "hierarchical",
+    "org-chart",
+    "enterprise",
+    "multi-agent",
+    "architecture-diagram",
+    "orchestration"
+  ],
+  "description": "An org-chart architecture with multi-level structure. A top-level supervisor manages team leads, who each manage their own pool of specialist workers. Teams within teams. Best for enterprise-scale automation with 10+ specialized agents spanning multiple domains.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/ai-orchestration-hierarchical"
+}

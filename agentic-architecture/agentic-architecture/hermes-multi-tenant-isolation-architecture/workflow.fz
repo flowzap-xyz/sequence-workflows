@@ -1,0 +1,33 @@
+external_users { # External Clients
+  n1: circle label:"Client A User"
+  n2: circle label:"Client B User"
+  shared_host.n7.handle(bottom) -> shared_host.n9.handle(top) [label="local backend risk"]
+  shared_host.n6.handle(bottom) -> shared_host.n9.handle(top) [label="local backend risk"]
+  shared_host.n7.handle(bottom) -> shared_host.n8.handle(top) [label="shared board"]
+  shared_host.n6.handle(bottom) -> shared_host.n8.handle(top) [label="shared board"]
+  shared_host.n6.handle(bottom) -> client_a_tools.n12.handle(top) [label="/research"]
+  shared_host.n6.handle(right) -> client_a_tools.n11.handle(left) [label="/support"]
+  shared_host.n6.handle(right) -> client_a_tools.n10.handle(left) [label="/engineering"]
+  shared_host.n4.handle(top) -> shared_host.n5.handle(bottom) [label="ops only"]
+  shared_host.n4.handle(bottom) -> shared_host.n7.handle(top) [label="Token B"]
+  shared_host.n4.handle(right) -> shared_host.n6.handle(left) [label="Token A"]
+  shared_host.n3.handle(right) -> shared_host.n4.handle(left)
+  external_users.n2.handle(right) -> shared_host.n3.handle(left) [label="webhook"]
+  external_users.n1.handle(right) -> shared_host.n3.handle(left) [label="webhook"]
+}
+
+shared_host { # Shared Host Environment
+  n3: rectangle label:"Reverse Proxy"
+  n4: rectangle label:"Shared Gateway"
+  n5: rectangle label:"Admin Dashboard"
+  n6: rectangle label:"Profile: acme"
+  n7: rectangle label:"Profile: beta"
+  n8: rectangle label:"kanban.db"
+  n9: rectangle label:"Host Filesystem"
+}
+
+client_a_tools { # Client A Internal
+  n10: rectangle label:"Engineering tools"
+  n11: rectangle label:"Support tools"
+  n12: rectangle label:"Research tools"
+}

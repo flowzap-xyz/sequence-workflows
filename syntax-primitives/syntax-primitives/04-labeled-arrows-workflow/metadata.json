@@ -1,0 +1,23 @@
+{
+  "template_id": "04-labeled-arrows-workflow",
+  "workflow_id": "04-labeled-arrows",
+  "title": "04 Labeled Arrows Workflow",
+  "kind": "workflow",
+  "source_domain": "syntax-primitives",
+  "primary_use_case": "syntax-primitives",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "syntax-primitives"
+  ],
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "04",
+    "labeled",
+    "arrows"
+  ],
+  "description": "This workflow models connections with descriptive labels between nodes.",
+  "source_path": "syntax-primitives/04-labeled-arrows",
+  "repo_path": "syntax-primitives/syntax-primitives/04-labeled-arrows-workflow"
+}

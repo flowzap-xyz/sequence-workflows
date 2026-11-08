@@ -6,7 +6,7 @@ This workflow models checking user permissions before actions run.
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** approval  
-**Secondary use cases:** security  
+**Secondary use cases:** security, patterns  
 **Complexity:** 3/5  
 **Nodes:** 10  
 **Lanes:** 3  

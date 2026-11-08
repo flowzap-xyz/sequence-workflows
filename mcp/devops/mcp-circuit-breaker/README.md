@@ -6,7 +6,7 @@ A resilience pattern that wraps MCP calls with health-aware gates using three st
 **Kind:** architecture  
 **Source domain:** DevOps  
 **Primary use case:** mcp  
-**Secondary use cases:** None  
+**Secondary use cases:** patterns  
 **Complexity:** 3/5  
 **Nodes:** 9  
 **Lanes:** 3  

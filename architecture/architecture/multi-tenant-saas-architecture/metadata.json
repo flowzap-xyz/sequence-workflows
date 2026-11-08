@@ -1,0 +1,33 @@
+{
+  "template_id": "multi-tenant-saas-architecture",
+  "workflow_id": "multi-tenant-saas-architecture",
+  "title": "Multi-Tenant SaaS Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "security",
+    "delivery"
+  ],
+  "use_cases": [
+    "architecture",
+    "security",
+    "delivery"
+  ],
+  "complexity": 4,
+  "num_nodes": 17,
+  "num_lanes": 4,
+  "tags": [
+    "multi-tenant",
+    "saas-architecture",
+    "tenant-isolation",
+    "row-level-security",
+    "shared-infrastructure",
+    "enterprise-tier",
+    "data-isolation",
+    "architecture-diagram"
+  ],
+  "description": "A multi-tenant SaaS architecture diagram with tenant identification, tier-based routing (shared vs dedicated pools), row-level security, per-tenant encryption keys, and isolated backup strategies for standard and enterprise isolation models. This template models the architecture decisions for building SaaS platforms that serve multiple customers from shared infrastructure while maintaining strict data isolation. Critical for SaaS architects balancing cost efficiency with enterprise security requirements.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/multi-tenant-saas-architecture"
+}

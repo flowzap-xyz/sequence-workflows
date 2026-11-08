@@ -1,0 +1,28 @@
+{
+  "template_id": "retry-with-exponential-backoff-architecture",
+  "workflow_id": "retry-with-exponential-backoff-architecture",
+  "title": "Retry with Exponential Backoff Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "patterns",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "patterns"
+  ],
+  "complexity": 3,
+  "num_nodes": 17,
+  "num_lanes": 3,
+  "tags": [
+    "retry-pattern",
+    "exponential-backoff",
+    "jitter",
+    "transient-failure",
+    "resilience",
+    "error-handling",
+    "thundering-herd",
+    "architecture-diagram"
+  ],
+  "description": "A retry with exponential backoff architecture diagram showing the complete retry policy engine with retryable vs non-retryable error classification, exponential delay calculation with jitter, max retry thresholds, and graceful exhaustion handling. This template models the essential resilience pattern for handling transient failures in distributed systems, preventing thundering herd problems through randomized backoff delays. Foundational for any service-to-service communication in cloud architectures.",
+  "source_path": "",
+  "repo_path": "patterns/architecture/retry-with-exponential-backoff-architecture"
+}

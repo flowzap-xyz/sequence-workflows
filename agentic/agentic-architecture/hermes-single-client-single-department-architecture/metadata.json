@@ -6,11 +6,15 @@
   "source_domain": "Agentic Architecture",
   "primary_use_case": "agentic",
   "secondary_use_cases": [
-    "mcp"
+    "mcp",
+    "agentic-architecture",
+    "agentic-security"
   ],
   "use_cases": [
     "agentic",
-    "mcp"
+    "mcp",
+    "agentic-architecture",
+    "agentic-security"
   ],
   "complexity": 1,
   "num_nodes": 5,

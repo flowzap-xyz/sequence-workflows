@@ -5,9 +5,12 @@
   "kind": "workflow",
   "source_domain": "Agentic Architecture",
   "primary_use_case": "agentic",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "agentic-architecture"
+  ],
   "use_cases": [
-    "agentic"
+    "agentic",
+    "agentic-architecture"
   ],
   "complexity": 2,
   "num_nodes": 6,

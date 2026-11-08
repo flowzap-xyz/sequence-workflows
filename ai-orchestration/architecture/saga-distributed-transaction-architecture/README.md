@@ -6,7 +6,7 @@ A distributed transaction architecture diagram implementing the two-phase commit
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** ai-orchestration  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture  
 **Complexity:** 4/5  
 **Nodes:** 17  
 **Lanes:** 4  

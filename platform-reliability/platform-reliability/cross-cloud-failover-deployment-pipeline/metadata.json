@@ -1,0 +1,28 @@
+{
+  "template_id": "cross-cloud-failover-deployment-pipeline",
+  "workflow_id": "cross-cloud-failover-deployment-pipeline",
+  "title": "Cross-Cloud Failover Deployment Pipeline",
+  "kind": "workflow",
+  "source_domain": "Platform Reliability",
+  "primary_use_case": "platform-reliability",
+  "secondary_use_cases": [
+    "delivery"
+  ],
+  "use_cases": [
+    "platform-reliability",
+    "delivery"
+  ],
+  "complexity": 2,
+  "num_nodes": 11,
+  "num_lanes": 5,
+  "tags": [
+    "multi-cloud",
+    "deployment",
+    "failover",
+    "ci-cd",
+    "health-check"
+  ],
+  "description": "CI builds the container, pushes it to a cross-cloud registry, deploys to AWS, GCP and metal, health-checks every endpoint and updates mesh routing only when all are healthy.",
+  "source_path": "",
+  "repo_path": "platform-reliability/platform-reliability/cross-cloud-failover-deployment-pipeline"
+}

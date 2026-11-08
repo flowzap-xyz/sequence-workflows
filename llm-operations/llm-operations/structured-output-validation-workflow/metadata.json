@@ -1,0 +1,25 @@
+{
+  "template_id": "structured-output-validation-workflow",
+  "workflow_id": "structured-output-validation",
+  "title": "Structured Output Validation Workflow",
+  "kind": "workflow",
+  "source_domain": "LLM Operations",
+  "primary_use_case": "llm-operations",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "llm-operations"
+  ],
+  "complexity": 2,
+  "num_nodes": 8,
+  "num_lanes": 2,
+  "tags": [
+    "token-optimization",
+    "structured-output",
+    "validation",
+    "json-schema",
+    "llmops"
+  ],
+  "description": "Output on a leash: the model generates against an output schema, the orchestrator validates that it parses as JSON or a diff, and regenerates or formats when it does not.",
+  "source_path": "",
+  "repo_path": "llm-operations/llm-operations/structured-output-validation-workflow"
+}

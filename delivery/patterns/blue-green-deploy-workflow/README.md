@@ -6,7 +6,7 @@ Blue-green deployment pattern with parallel environment setup, smoke testing, lo
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** delivery  
-**Secondary use cases:** None  
+**Secondary use cases:** patterns  
 **Complexity:** 4/5  
 **Nodes:** 13  
 **Lanes:** 4  

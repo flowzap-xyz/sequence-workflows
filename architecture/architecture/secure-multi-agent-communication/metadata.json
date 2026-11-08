@@ -1,0 +1,37 @@
+{
+  "template_id": "secure-multi-agent-communication",
+  "workflow_id": "secure-multi-agent-communication",
+  "title": "Secure Multi-Agent Communication",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "security",
+    "agentic",
+    "mcp"
+  ],
+  "use_cases": [
+    "architecture",
+    "security",
+    "agentic",
+    "mcp"
+  ],
+  "complexity": 4,
+  "num_nodes": 20,
+  "num_lanes": 4,
+  "tags": [
+    "Multi-Agent",
+    "AI Agent Security",
+    "Secure Multi-Agent",
+    "mTLS",
+    "API Gateway",
+    "Scoped Tokens",
+    "Agent-to-Agent Communication",
+    "A2A",
+    "Orchestrator",
+    "Worker Agent"
+  ],
+  "description": "Multi-agent security architecture with scoped tokens, API gateway enforcement, mTLS-protected worker calls, and orchestrator-driven result aggregation.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/secure-multi-agent-communication"
+}

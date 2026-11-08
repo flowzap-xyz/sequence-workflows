@@ -6,7 +6,7 @@ Option 2: one client with several entry points, a prefix router that maps /eng o
 **Kind:** workflow  
 **Source domain:** Agentic Architecture  
 **Primary use case:** handoff  
-**Secondary use cases:** agentic, mcp  
+**Secondary use cases:** agentic, mcp, agentic-architecture  
 **Complexity:** 2/5  
 **Nodes:** 7  
 **Lanes:** 4  

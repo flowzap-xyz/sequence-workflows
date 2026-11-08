@@ -1,0 +1,33 @@
+User { # User
+n1: circle label:"Start"
+n2: rectangle label:"Sign up with email & interests"
+n3: diamond label:"Vibe confirmed?"
+n4: rectangle label:"Ask for more details"
+n5: rectangle label:"Show default product list"
+n6: circle label:"End"
+
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> AI Recommender.n7.handle(left) [label="Submit details"]
+AI Recommender.n7.handle(right) -> n3.handle(left) [label="Suggestions ready"]
+n3.handle(right) -> AI Recommender.n8.handle(left) [label="Yes"]
+n3.handle(bottom) -> n4.handle(top) [label="No"]
+n4.handle(right) -> AI Recommender.n7.handle(left) [label="Refine"]
+n4.handle(bottom) -> n5.handle(top) [label="Max retries: 2"]
+n5.handle(right) -> Cart.n9.handle(left) [label="Proceed with defaults"]
+}
+
+AI Recommender { # AI Recommender
+n7: rectangle label:"Analyze profile & suggest 3 products"
+n8: rectangle label:"Prepare cart data"
+
+n8.handle(right) -> Cart.n9.handle(left) [label="Add to cart"]
+loop [retry up to 2 times] n7 n3 n4
+}
+
+Cart { # Cart
+n9: rectangle label:"Auto-add products to cart"
+n10: rectangle label:"Send welcome email"
+
+n9.handle(right) -> n10.handle(left) [label="Email"]
+n10.handle(right) -> User.n6.handle(left) [label="Complete"]
+}

@@ -6,7 +6,7 @@ Browser to MiroFish stack to LLM API: the seed document is distributed to each a
 **Kind:** workflow  
 **Source domain:** Agent Simulation  
 **Primary use case:** agentic  
-**Secondary use cases:** None  
+**Secondary use cases:** agent-simulation  
 **Complexity:** 2/5  
 **Nodes:** 11  
 **Lanes:** 3  

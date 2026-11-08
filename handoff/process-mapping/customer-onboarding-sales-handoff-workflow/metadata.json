@@ -6,11 +6,13 @@
   "source_domain": "Process Mapping",
   "primary_use_case": "handoff",
   "secondary_use_cases": [
-    "onboarding"
+    "onboarding",
+    "process-mapping"
   ],
   "use_cases": [
     "handoff",
-    "onboarding"
+    "onboarding",
+    "process-mapping"
   ],
   "complexity": 3,
   "num_nodes": 19,

@@ -6,7 +6,7 @@ Fan-out/fan-in pattern with work distribution to parallel workers, concurrent ex
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** ai-orchestration  
-**Secondary use cases:** None  
+**Secondary use cases:** patterns  
 **Complexity:** 4/5  
 **Nodes:** 13  
 **Lanes:** 4  

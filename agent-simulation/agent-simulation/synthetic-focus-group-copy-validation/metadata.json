@@ -1,0 +1,28 @@
+{
+  "template_id": "synthetic-focus-group-copy-validation",
+  "workflow_id": "synthetic-focus-group-copy-validation",
+  "title": "Synthetic Focus Group — Copy Validation",
+  "kind": "workflow",
+  "source_domain": "Agent Simulation",
+  "primary_use_case": "agent-simulation",
+  "secondary_use_cases": [
+    "agentic"
+  ],
+  "use_cases": [
+    "agent-simulation",
+    "agentic"
+  ],
+  "complexity": 3,
+  "num_nodes": 13,
+  "num_lanes": 3,
+  "tags": [
+    "mirofish",
+    "synthetic-research",
+    "copy-validation",
+    "agent-swarm",
+    "personas"
+  ],
+  "description": "Pre-launch copy validation: a builder spawns 50 LLM agents with a persona config, collects and ranks top objections, then builds the report.",
+  "source_path": "",
+  "repo_path": "agent-simulation/agent-simulation/synthetic-focus-group-copy-validation"
+}

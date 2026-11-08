@@ -5,9 +5,12 @@
   "kind": "workflow",
   "source_domain": "Commerce Automation",
   "primary_use_case": "handoff",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "commerce-automation"
+  ],
   "use_cases": [
-    "handoff"
+    "handoff",
+    "commerce-automation"
   ],
   "complexity": 3,
   "num_nodes": 14,

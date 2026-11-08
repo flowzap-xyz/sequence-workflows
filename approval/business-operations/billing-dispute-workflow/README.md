@@ -6,7 +6,7 @@ Billing dispute workflow with dispute intake, transaction review, fraud analysis
 **Kind:** workflow  
 **Source domain:** business-operations  
 **Primary use case:** approval  
-**Secondary use cases:** billing  
+**Secondary use cases:** billing, commerce-automation  
 **Complexity:** 4/5  
 **Nodes:** 13  
 **Lanes:** 4  

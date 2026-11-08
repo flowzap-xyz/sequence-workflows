@@ -1,0 +1,25 @@
+agent { # Agent
+n1: circle label:"User Prompt Received"
+n2: rectangle label:"Agent Plans Tool Call"
+n5: rectangle label:"Process Final Result"
+n6: circle label:"Response to User"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> stack.n3.handle(top) [label="tool call"]
+}
+
+stack { # Containment Stack
+n3: rectangle label:"L1 - Sandbox Ephemeral Container"
+n4: rectangle label:"L2 - Whitelist Permission Check"
+n7: diamond label:"Dangerous Operation?"
+n8: rectangle label:"L3 - Human Approves"
+n9: rectangle label:"Execute Tool"
+n10: rectangle label:"L4 - Audit to Immutable SIEM"
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n7.handle(left)
+n7.handle(right) -> n8.handle(left) [label="yes"]
+n7.handle(bottom) -> n9.handle(top) [label="no"]
+n8.handle(right) -> n9.handle(left)
+n9.handle(right) -> n10.handle(left)
+n10.handle(top) -> agent.n5.handle(bottom) [label="result"]
+n5.handle(right) -> n6.handle(left)
+}

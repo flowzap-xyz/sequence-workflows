@@ -6,7 +6,7 @@ The memory loop: before planning, the planner queries the memory store for simil
 **Kind:** workflow  
 **Source domain:** Agentic Architecture  
 **Primary use case:** agentic  
-**Secondary use cases:** context-management  
+**Secondary use cases:** context-management, agentic-architecture  
 **Complexity:** 3/5  
 **Nodes:** 29  
 **Lanes:** 5  

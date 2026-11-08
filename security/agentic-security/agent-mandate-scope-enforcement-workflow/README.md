@@ -6,7 +6,7 @@ Consent is not a mandate: a third-party agent's requested scope is compared to t
 **Kind:** workflow  
 **Source domain:** Agentic Security  
 **Primary use case:** security  
-**Secondary use cases:** compliance, agentic  
+**Secondary use cases:** compliance, agentic, agentic-security  
 **Complexity:** 2/5  
 **Nodes:** 8  
 **Lanes:** 3  

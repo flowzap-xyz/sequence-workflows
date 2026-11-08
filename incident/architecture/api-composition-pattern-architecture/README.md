@@ -6,7 +6,7 @@ An API composition architecture diagram with a composer service that fans out pa
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** incident  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture, patterns  
 **Complexity:** 3/5  
 **Nodes:** 16  
 **Lanes:** 3  

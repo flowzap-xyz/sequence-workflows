@@ -6,7 +6,7 @@ Handoff workflow with a completeness gate: the handoff checklist must be fully m
 **Kind:** workflow  
 **Source domain:** Process Mapping  
 **Primary use case:** handoff  
-**Secondary use cases:** approval  
+**Secondary use cases:** approval, process-mapping  
 **Complexity:** 2/5  
 **Nodes:** 10  
 **Lanes:** 2  

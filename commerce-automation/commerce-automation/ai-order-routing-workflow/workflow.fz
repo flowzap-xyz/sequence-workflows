@@ -1,0 +1,37 @@
+channels { # Sales Channels
+  n1: rectangle label:"Order Received"
+  n2: diamond label:"Platform?"
+  n3: rectangle label:"Unified Order Payload"
+  n1.handle(right) -> n2.handle(left)
+  n2.handle(bottom) -> n3.handle(top)
+  n3.handle(right) -> agent.n4.handle(left) [label="new order"]
+}
+
+agent { # AI Decision Engine
+  n4: rectangle label:"AI: Classify Order"
+  n5: diamond label:"Risk Score?"
+  n6: rectangle label:"Auto-Process"
+  n7: rectangle label:"Flag for Review"
+  n8: diamond label:"Inventory Check"
+  n9: rectangle label:"Route to Warehouse"
+  n10: rectangle label:"Backorder Queue"
+  n4.handle(left) -> channels.n3.handle(right) [label="ack"]
+  n4.handle(right) -> n5.handle(left)
+  n5.handle(right) -> n6.handle(left) [label="low"]
+  n5.handle(bottom) -> n7.handle(top) [label="high"]
+  n6.handle(right) -> n8.handle(left)
+  n8.handle(right) -> n9.handle(left) [label="in stock"]
+  n8.handle(bottom) -> n10.handle(top) [label="none"]
+  n9.handle(right) -> ops.n11.handle(left) [label="dispatch"]
+}
+
+ops { # Operations
+  n11: rectangle label:"OMS / ERP Write"
+  n12: rectangle label:"Shipment Created"
+  n13: rectangle label:"Notify Customer"
+  n14: circle label:"Complete"
+  n11.handle(left) -> agent.n9.handle(right) [label="confirmed"]
+  n11.handle(right) -> n12.handle(left)
+  n12.handle(right) -> n13.handle(left)
+  n13.handle(right) -> n14.handle(left)
+}

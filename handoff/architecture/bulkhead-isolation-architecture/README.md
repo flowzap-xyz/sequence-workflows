@@ -6,7 +6,7 @@ A bulkhead isolation architecture diagram with separate thread pools for critica
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** handoff  
-**Secondary use cases:** None  
+**Secondary use cases:** patterns  
 **Complexity:** 4/5  
 **Nodes:** 18  
 **Lanes:** 4  

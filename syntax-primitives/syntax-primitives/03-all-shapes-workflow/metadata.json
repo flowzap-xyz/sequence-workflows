@@ -1,0 +1,23 @@
+{
+  "template_id": "03-all-shapes-workflow",
+  "workflow_id": "03-all-shapes",
+  "title": "03 All Shapes Workflow",
+  "kind": "workflow",
+  "source_domain": "syntax-primitives",
+  "primary_use_case": "syntax-primitives",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "syntax-primitives"
+  ],
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "03",
+    "all",
+    "shapes"
+  ],
+  "description": "This workflow models a workflow that demonstrates circle, rectangle, diamond, and taskbox shapes.",
+  "source_path": "syntax-primitives/03-all-shapes",
+  "repo_path": "syntax-primitives/syntax-primitives/03-all-shapes-workflow"
+}

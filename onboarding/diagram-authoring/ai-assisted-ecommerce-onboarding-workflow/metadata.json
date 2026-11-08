@@ -6,11 +6,15 @@
   "source_domain": "Diagram Authoring",
   "primary_use_case": "onboarding",
   "secondary_use_cases": [
-    "security"
+    "security",
+    "commerce-automation",
+    "diagram-authoring"
   ],
   "use_cases": [
     "onboarding",
-    "security"
+    "security",
+    "commerce-automation",
+    "diagram-authoring"
   ],
   "complexity": 2,
   "num_nodes": 10,

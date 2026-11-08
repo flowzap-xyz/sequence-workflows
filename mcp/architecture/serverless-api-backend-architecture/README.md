@@ -6,7 +6,7 @@ A serverless API backend architecture diagram with API Gateway, Lambda authorize
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** mcp  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture  
 **Complexity:** 3/5  
 **Nodes:** 15  
 **Lanes:** 3  

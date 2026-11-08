@@ -6,7 +6,7 @@ An order fulfillment saga architecture diagram with four sequential steps: custo
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** approval  
-**Secondary use cases:** billing, security  
+**Secondary use cases:** billing, security, commerce-automation, architecture, patterns  
 **Complexity:** 4/5  
 **Nodes:** 18  
 **Lanes:** 3  

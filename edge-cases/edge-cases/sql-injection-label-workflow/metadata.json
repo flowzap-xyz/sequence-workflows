@@ -1,0 +1,23 @@
+{
+  "template_id": "sql-injection-label-workflow",
+  "workflow_id": "sql-injection-label",
+  "title": "Sql Injection Label Workflow",
+  "kind": "workflow",
+  "source_domain": "edge-cases",
+  "primary_use_case": "edge-cases",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "edge-cases"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 2,
+  "tags": [
+    "sql",
+    "injection",
+    "label"
+  ],
+  "description": "This workflow models a label that looks like an SQL injection attempt.",
+  "source_path": "edge-cases/sql-injection-label",
+  "repo_path": "edge-cases/edge-cases/sql-injection-label-workflow"
+}

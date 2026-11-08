@@ -6,7 +6,7 @@ A microservices API gateway architecture diagram showing request routing, JWT au
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** security  
-**Secondary use cases:** mcp  
+**Secondary use cases:** mcp, architecture  
 **Complexity:** 4/5  
 **Nodes:** 17  
 **Lanes:** 3  

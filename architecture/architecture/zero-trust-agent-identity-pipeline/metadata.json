@@ -1,0 +1,37 @@
+{
+  "template_id": "zero-trust-agent-identity-pipeline",
+  "workflow_id": "zero-trust-agent-identity-pipeline",
+  "title": "Zero Trust Agent Identity Pipeline",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "security",
+    "delivery",
+    "mcp"
+  ],
+  "use_cases": [
+    "architecture",
+    "security",
+    "delivery",
+    "mcp"
+  ],
+  "complexity": 3,
+  "num_nodes": 12,
+  "num_lanes": 3,
+  "tags": [
+    "AI Agent Security",
+    "Zero Trust",
+    "Agent Identity",
+    "Non-Human Identity",
+    "NHI",
+    "OAuth 2.0 Token Exchange",
+    "OBO Token",
+    "SPIFFE",
+    "MCP",
+    "JWT"
+  ],
+  "description": "Zero-trust AI agent identity architecture with JWT validation, scoped OBO token exchange, SPIFFE/SVID workload identity, and MCP tool authorization.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/zero-trust-agent-identity-pipeline"
+}

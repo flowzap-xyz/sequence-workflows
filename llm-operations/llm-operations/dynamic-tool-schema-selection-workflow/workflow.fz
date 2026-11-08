@@ -1,0 +1,23 @@
+agent { # AI Agent
+n1: circle label:"New objective"
+n2: rectangle label:"Analyze required capabilities"
+n5: rectangle label:"Construct prompt with 2 schemas"
+n8: circle label:"Execute step"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> registry.n3.handle(top) [label="Request tools by intent"]
+n5.handle(bottom) -> llm.n6.handle(top) [label="Send lean request"]
+}
+
+registry { # MCP Tool Registry
+n3: diamond label:"Match intent to tools"
+n4: rectangle label:"Extract specific schemas (not all 50)"
+n3.handle(right) -> n4.handle(left)
+n4.handle(top) -> agent.n5.handle(bottom) [label="Return 2 schemas"]
+}
+
+llm { # Model API
+n6: rectangle label:"Process 500 tool tokens (not 10k)"
+n7: rectangle label:"Select tool to call"
+n6.handle(right) -> n7.handle(left)
+n7.handle(top) -> agent.n8.handle(bottom) [label="Return tool call"]
+}

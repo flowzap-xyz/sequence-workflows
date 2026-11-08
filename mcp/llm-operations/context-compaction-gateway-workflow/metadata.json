@@ -6,11 +6,13 @@
   "source_domain": "LLM Operations",
   "primary_use_case": "mcp",
   "secondary_use_cases": [
-    "context-management"
+    "context-management",
+    "llm-operations"
   ],
   "use_cases": [
     "mcp",
-    "context-management"
+    "context-management",
+    "llm-operations"
   ],
   "complexity": 2,
   "num_nodes": 12,

@@ -1,0 +1,18 @@
+Trigger { # Trigger
+n1: circle label:"Start"
+n2: rectangle label:"Incoming request"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> Pipeline.n3.handle(top) [label="Input"]
+}
+Pipeline { # Sequential Pipeline
+n3: rectangle label:"Agent A: Parse input"
+n4: rectangle label:"Agent B: Enrich data"
+n5: rectangle label:"Agent C: Analyze"
+n6: rectangle label:"Agent D: Format output"
+n7: circle label:"Done"
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left)
+n6.handle(right) -> n7.handle(left)
+n6.handle(top) -> Trigger.n2.handle(bottom) [label="Final output"]
+}

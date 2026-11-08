@@ -1,0 +1,28 @@
+{
+  "template_id": "shopify-river-brain-hands-decoupling-architecture",
+  "workflow_id": "shopify-river-brain-hands-decoupling-architecture",
+  "title": "Shopify River Brain-Hands Decoupling Architecture",
+  "kind": "workflow",
+  "source_domain": "Commerce Automation",
+  "primary_use_case": "commerce-automation",
+  "secondary_use_cases": [
+    "agentic-security"
+  ],
+  "use_cases": [
+    "commerce-automation",
+    "agentic-security"
+  ],
+  "complexity": 2,
+  "num_nodes": 12,
+  "num_lanes": 3,
+  "tags": [
+    "shopify",
+    "river",
+    "harness",
+    "sandbox",
+    "agent-architecture"
+  ],
+  "description": "Decoupling the brain from the hands: the harness calls the LLM and emits tool intents, while the sandbox executes them, so a new agent is a profile and not a platform.",
+  "source_path": "",
+  "repo_path": "commerce-automation/commerce-automation/shopify-river-brain-hands-decoupling-architecture"
+}

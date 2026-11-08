@@ -1,0 +1,31 @@
+{
+  "template_id": "event-driven-domain-events-architecture",
+  "workflow_id": "event-driven-domain-events-architecture",
+  "title": "Event-Driven Domain Events Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "security"
+  ],
+  "use_cases": [
+    "architecture",
+    "security"
+  ],
+  "complexity": 4,
+  "num_nodes": 17,
+  "num_lanes": 4,
+  "tags": [
+    "domain-events",
+    "ddd",
+    "aggregate-root",
+    "bounded-context",
+    "event-dispatcher",
+    "integration-events",
+    "domain-driven-design",
+    "architecture-diagram"
+  ],
+  "description": "A domain events architecture diagram showing how aggregate roots raise domain events that are dispatched both in-process to local handlers and cross-boundary to integration event consumers in other bounded contexts. This template models the DDD event pattern where domain logic triggers side effects through a clean event dispatcher, maintaining separation between domain and infrastructure concerns. Key for teams implementing Domain-Driven Design with event-based integration.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/event-driven-domain-events-architecture"
+}

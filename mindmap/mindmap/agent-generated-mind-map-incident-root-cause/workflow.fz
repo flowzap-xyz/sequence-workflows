@@ -1,0 +1,33 @@
+mindmap { # Mindmap
+  n1: circle label:"SRE Agent: API Latency Surge"
+  n2: rectangle label:"Detection"
+  n3: rectangle label:"Diagnosis"
+  n4: rectangle label:"Mitigation"
+  n5: rectangle label:"Scaling"
+  n6: rectangle label:"Observability"
+  n7: rectangle label:"Communication"
+  n8: rectangle label:"Alert Rules"
+  n9: rectangle label:"Anomaly Detection"
+  n10: rectangle label:"Service Dependency"
+  n11: rectangle label:"Log Analysis"
+  n12: rectangle label:"Circuit Breaker"
+  n13: rectangle label:"Throttling"
+  n1.handle(top) -> n2.handle(bottom)
+  n1.handle(right) -> n3.handle(left)
+  n1.handle(bottom) -> n4.handle(top)
+  n1.handle(left) -> n5.handle(right)
+  n2.handle(right) -> n8.handle(left)
+  n3.handle(top) -> n10.handle(bottom)
+  n3.handle(top) -> n11.handle(bottom)
+  n4.handle(right) -> n12.handle(bottom)
+  n1.handle(top) -> n8.handle(bottom)
+  n2.handle(top) -> n10.handle(top)
+  n3.handle(left) -> n1.handle(right)
+  n3.handle(bottom) -> n12.handle(top)
+  n3.handle(right) -> n13.handle(left)
+  n13.handle(bottom) -> n4.handle(right)
+  n6.handle(right) -> n1.handle(left)
+  n7.handle(top) -> n1.handle(bottom)
+  n11.handle(left) -> n2.handle(bottom)
+  n9.handle(top) -> n2.handle(left)
+}

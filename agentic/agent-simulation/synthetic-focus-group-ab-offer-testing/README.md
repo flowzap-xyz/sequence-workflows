@@ -6,7 +6,7 @@ A/B offer testing with synthetic agents: variant A and variant B are evaluated f
 **Kind:** workflow  
 **Source domain:** Agent Simulation  
 **Primary use case:** agentic  
-**Secondary use cases:** None  
+**Secondary use cases:** agent-simulation  
 **Complexity:** 2/5  
 **Nodes:** 12  
 **Lanes:** 2  

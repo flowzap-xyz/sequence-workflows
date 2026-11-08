@@ -6,7 +6,7 @@ API Gateway pattern with request authentication, rate limiting, request routing 
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** handoff  
-**Secondary use cases:** security, mcp  
+**Secondary use cases:** security, mcp, architecture, patterns  
 **Complexity:** 3/5  
 **Nodes:** 7  
 **Lanes:** 2  

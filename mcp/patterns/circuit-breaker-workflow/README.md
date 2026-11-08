@@ -6,7 +6,7 @@ Circuit breaker resilience pattern with closed, open, and half-open states for p
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** mcp  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture, patterns  
 **Complexity:** 4/5  
 **Nodes:** 19  
 **Lanes:** 3  

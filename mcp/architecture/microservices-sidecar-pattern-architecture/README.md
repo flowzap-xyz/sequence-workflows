@@ -6,7 +6,7 @@ A sidecar pattern architecture diagram showing Envoy proxy, log collector, and c
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** mcp  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture, patterns  
 **Complexity:** 4/5  
 **Nodes:** 13  
 **Lanes:** 3  

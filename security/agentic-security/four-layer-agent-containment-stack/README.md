@@ -6,7 +6,7 @@ The full containment stack in one diagram: sandbox, permission gate, HITL approv
 **Kind:** workflow  
 **Source domain:** Agentic Security  
 **Primary use case:** security  
-**Secondary use cases:** compliance, agentic  
+**Secondary use cases:** compliance, agentic, agentic-security  
 **Complexity:** 2/5  
 **Nodes:** 10  
 **Lanes:** 2  

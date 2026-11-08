@@ -6,7 +6,7 @@ Task box diagram for invoice approval: owner, description and system on every st
 **Kind:** workflow  
 **Source domain:** Process Mapping  
 **Primary use case:** approval  
-**Secondary use cases:** billing  
+**Secondary use cases:** billing, process-mapping  
 **Complexity:** 2/5  
 **Nodes:** 10  
 **Lanes:** 1  

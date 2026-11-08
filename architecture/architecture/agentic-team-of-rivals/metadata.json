@@ -1,0 +1,30 @@
+{
+  "template_id": "agentic-team-of-rivals",
+  "workflow_id": "agentic-team-of-rivals",
+  "title": "Agentic Team of Rivals Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "agentic"
+  ],
+  "use_cases": [
+    "architecture",
+    "agentic"
+  ],
+  "complexity": 3,
+  "num_nodes": 5,
+  "num_lanes": 3,
+  "tags": [
+    "agentic",
+    "team-of-rivals",
+    "multi-agent",
+    "critic",
+    "veto",
+    "architecture-diagram",
+    "ai-team"
+  ],
+  "description": "The most architecturally sophisticated multi-agent pattern. Agents are assigned not just roles but opposing incentives. A Planner is optimistic about goal completion. A Critic is constitutionally skeptical and holds veto authority. Errors get caught through adversarial pressure rather than trusting a single model's self-assessment.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/agentic-team-of-rivals"
+}

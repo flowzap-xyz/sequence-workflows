@@ -6,11 +6,15 @@
   "source_domain": "Agentic Architecture",
   "primary_use_case": "handoff",
   "secondary_use_cases": [
-    "agentic"
+    "agentic",
+    "agentic-architecture",
+    "agentic-security"
   ],
   "use_cases": [
     "handoff",
-    "agentic"
+    "agentic",
+    "agentic-architecture",
+    "agentic-security"
   ],
   "complexity": 2,
   "num_nodes": 10,

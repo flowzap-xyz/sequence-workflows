@@ -1,0 +1,22 @@
+{
+  "template_id": "max-lanes-workflow",
+  "workflow_id": "max-lanes",
+  "title": "Max Lanes Workflow",
+  "kind": "workflow",
+  "source_domain": "edge-cases",
+  "primary_use_case": "edge-cases",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "edge-cases"
+  ],
+  "complexity": 3,
+  "num_nodes": 10,
+  "num_lanes": 10,
+  "tags": [
+    "max",
+    "lanes"
+  ],
+  "description": "This workflow models 10 lanes with simple cross-lane arrows.",
+  "source_path": "edge-cases/max-lanes",
+  "repo_path": "edge-cases/edge-cases/max-lanes-workflow"
+}

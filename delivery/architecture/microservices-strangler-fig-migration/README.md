@@ -6,7 +6,7 @@ A strangler fig migration architecture diagram showing the incremental replaceme
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** delivery  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture  
 **Complexity:** 4/5  
 **Nodes:** 16  
 **Lanes:** 4  

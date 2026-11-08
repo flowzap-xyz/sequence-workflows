@@ -1,0 +1,17 @@
+planner_agent { # Planner Agent
+  n1: rectangle label:"Declare Step-by-Step Plan & Acceptance Criteria"
+  n1.handle(right) -> executor_agent.n2.handle(left) [label="Task Plan + Criteria"]
+}
+
+executor_agent { # Executor Agent
+  n2: rectangle label:"Execute Remote Code & Tools"
+  n2.handle(right) -> critic_agent.n3.handle(left) [label="Execution Summary"]
+}
+
+critic_agent { # Critic Agent
+  n3: rectangle label:"Validate vs Acceptance Criteria"
+  n4: diamond label:"Passed Gate?"
+
+  n3.handle(bottom) -> n4.handle(top)
+  n4.handle(top) -> planner_agent.n1.handle(bottom) [label="Veto (Reject & Explain)"]
+}

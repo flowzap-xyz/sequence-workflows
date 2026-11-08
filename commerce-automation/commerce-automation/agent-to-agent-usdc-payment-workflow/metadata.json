@@ -1,0 +1,29 @@
+{
+  "template_id": "agent-to-agent-usdc-payment-workflow",
+  "workflow_id": "agent-to-agent-usdc-payment",
+  "title": "Agent-to-Agent USDC Payment Workflow",
+  "kind": "workflow",
+  "source_domain": "Commerce Automation",
+  "primary_use_case": "commerce-automation",
+  "secondary_use_cases": [
+    "billing"
+  ],
+  "use_cases": [
+    "commerce-automation",
+    "billing"
+  ],
+  "complexity": 2,
+  "num_nodes": 9,
+  "num_lanes": 3,
+  "tags": [
+    "coinbase",
+    "agentkit",
+    "usdc",
+    "x402",
+    "agent-payments",
+    "stablecoin"
+  ],
+  "description": "Coinbase AgentKit flow: a human allocates a USDC budget, the agent authenticates its Base wallet, pays an x402 invoice and processes the supplier data, with no fiat in the path.",
+  "source_path": "",
+  "repo_path": "commerce-automation/commerce-automation/agent-to-agent-usdc-payment-workflow"
+}

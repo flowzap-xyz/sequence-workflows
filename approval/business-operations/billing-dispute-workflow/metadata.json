@@ -6,11 +6,13 @@
   "source_domain": "business-operations",
   "primary_use_case": "approval",
   "secondary_use_cases": [
-    "billing"
+    "billing",
+    "commerce-automation"
   ],
   "use_cases": [
     "approval",
-    "billing"
+    "billing",
+    "commerce-automation"
   ],
   "complexity": 4,
   "num_nodes": 13,

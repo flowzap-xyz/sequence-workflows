@@ -1,0 +1,28 @@
+{
+  "template_id": "event-driven-cqrs-with-event-store-architecture",
+  "workflow_id": "event-driven-cqrs-with-event-store-architecture",
+  "title": "Event-Driven CQRS with Event Store Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "architecture"
+  ],
+  "complexity": 4,
+  "num_nodes": 18,
+  "num_lanes": 4,
+  "tags": [
+    "cqrs",
+    "event-store",
+    "command-query-separation",
+    "read-model",
+    "write-model",
+    "projector",
+    "eventual-consistency",
+    "architecture-diagram"
+  ],
+  "description": "A CQRS architecture diagram combining separate command and query APIs with an event bus for asynchronous read model synchronization, including projectors that build denormalized views from domain events. This template demonstrates the full CQRS+ES stack where writes go through domain validation and reads are served from optimized materialized views. Ideal for high-throughput systems where read and write workloads have fundamentally different scaling requirements.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/event-driven-cqrs-with-event-store-architecture"
+}

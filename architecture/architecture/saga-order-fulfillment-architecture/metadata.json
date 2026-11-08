@@ -1,0 +1,39 @@
+{
+  "template_id": "saga-order-fulfillment-architecture",
+  "workflow_id": "saga-order-fulfillment-architecture",
+  "title": "Saga Order Fulfillment Architecture",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "approval",
+    "billing",
+    "security",
+    "commerce-automation",
+    "patterns"
+  ],
+  "use_cases": [
+    "architecture",
+    "approval",
+    "billing",
+    "security",
+    "commerce-automation",
+    "patterns"
+  ],
+  "complexity": 4,
+  "num_nodes": 18,
+  "num_lanes": 3,
+  "tags": [
+    "order-fulfillment",
+    "saga-pattern",
+    "e-commerce",
+    "payment-authorization",
+    "inventory-reservation",
+    "compensation-chain",
+    "distributed-transaction",
+    "architecture-diagram"
+  ],
+  "description": "An order fulfillment saga architecture diagram with four sequential steps: customer verification, inventory reservation, payment authorization, and shipment creation, with a compensation chain that reverses completed steps on failure. This template models the end-to-end order lifecycle as a saga, showing how each service participates in the transaction and how compensating actions maintain data consistency. Ideal for e-commerce architects designing reliable order processing pipelines.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/saga-order-fulfillment-architecture"
+}

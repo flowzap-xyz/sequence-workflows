@@ -1,0 +1,29 @@
+Agent { # AI Agent
+n1: circle label:"Start"
+n2: rectangle label:"Request tool action"
+n3: rectangle label:"Receive grant"
+n4: rectangle label:"Execute scoped action"
+n5: circle label:"Done"
+n1.handle(right) -> n2.handle(left)
+n2.handle(bottom) -> PolicyEngine.n6.handle(top) [label="Action + context"]
+n3.handle(right) -> n4.handle(left)
+n4.handle(right) -> n5.handle(left)
+}
+
+PolicyEngine { # Policy Engine
+n6: rectangle label:"Evaluate RBAC + ABAC"
+n7: rectangle label:"Issue JIT grant request"
+n8: rectangle label:"Receive JIT credential"
+n9: rectangle label:"Return scoped grant"
+n6.handle(right) -> n7.handle(left)
+n7.handle(bottom) -> JITManager.n10.handle(top) [label="Grant request"]
+n8.handle(right) -> n9.handle(left)
+n9.handle(top) -> Agent.n3.handle(bottom) [label="Scoped grant"]
+}
+
+JITManager { # JIT Access Manager
+n10: rectangle label:"Create short-lived credential"
+n11: rectangle label:"Return JIT credential"
+n10.handle(right) -> n11.handle(left)
+n11.handle(top) -> PolicyEngine.n8.handle(bottom) [label="JIT credential"]
+}

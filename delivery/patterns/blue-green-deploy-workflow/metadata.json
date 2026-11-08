@@ -5,9 +5,12 @@
   "kind": "workflow",
   "source_domain": "patterns",
   "primary_use_case": "delivery",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "patterns"
+  ],
   "use_cases": [
-    "delivery"
+    "delivery",
+    "patterns"
   ],
   "complexity": 4,
   "num_nodes": 13,

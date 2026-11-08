@@ -6,11 +6,15 @@
   "source_domain": "Architecture",
   "primary_use_case": "incident",
   "secondary_use_cases": [
-    "compliance"
+    "compliance",
+    "architecture",
+    "patterns"
   ],
   "use_cases": [
     "incident",
-    "compliance"
+    "compliance",
+    "architecture",
+    "patterns"
   ],
   "complexity": 3,
   "num_nodes": 16,

@@ -6,7 +6,7 @@ Failed payment recovery workflow with smart retry scheduling, dunning email sequ
 **Kind:** workflow  
 **Source domain:** business-operations  
 **Primary use case:** billing  
-**Secondary use cases:** None  
+**Secondary use cases:** commerce-automation, patterns  
 **Complexity:** 3/5  
 **Nodes:** 7  
 **Lanes:** 2  

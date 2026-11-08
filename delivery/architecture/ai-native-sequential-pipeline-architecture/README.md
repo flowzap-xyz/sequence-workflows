@@ -6,7 +6,7 @@ A sequential pipeline architecture chaining multiple agents in a fixed order (pa
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** delivery  
-**Secondary use cases:** agentic, ai-orchestration  
+**Secondary use cases:** agentic, ai-orchestration, architecture  
 **Complexity:** 2/5  
 **Nodes:** 7  
 **Lanes:** 2  

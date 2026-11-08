@@ -6,11 +6,15 @@
   "source_domain": "Architecture",
   "primary_use_case": "incident",
   "secondary_use_cases": [
-    "ai-orchestration"
+    "ai-orchestration",
+    "architecture",
+    "patterns"
   ],
   "use_cases": [
     "incident",
-    "ai-orchestration"
+    "ai-orchestration",
+    "architecture",
+    "patterns"
   ],
   "complexity": 4,
   "num_nodes": 17,

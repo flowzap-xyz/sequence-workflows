@@ -6,7 +6,7 @@ End-to-end agentic commerce workflow showing how an AI assistant (ChatGPT) orche
 **Kind:** workflow  
 **Source domain:** business-operations  
 **Primary use case:** billing  
-**Secondary use cases:** agentic  
+**Secondary use cases:** agentic, commerce-automation  
 **Complexity:** 4/5  
 **Nodes:** 47  
 **Lanes:** 5  

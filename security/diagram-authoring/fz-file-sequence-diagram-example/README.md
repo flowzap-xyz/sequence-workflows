@@ -6,7 +6,7 @@ The reference example from the .fz file announcement: a text-first sequence diag
 **Kind:** workflow  
 **Source domain:** Diagram Authoring  
 **Primary use case:** security  
-**Secondary use cases:** None  
+**Secondary use cases:** diagram-authoring  
 **Complexity:** 1/5  
 **Nodes:** 4  
 **Lanes:** 2  

@@ -6,7 +6,7 @@ Static system prompt assembled once and cached by the provider, then only the vo
 **Kind:** workflow  
 **Source domain:** LLM Operations  
 **Primary use case:** context-management  
-**Secondary use cases:** None  
+**Secondary use cases:** llm-operations  
 **Complexity:** 3/5  
 **Nodes:** 14  
 **Lanes:** 2  

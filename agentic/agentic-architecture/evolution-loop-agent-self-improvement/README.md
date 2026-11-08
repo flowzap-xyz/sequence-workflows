@@ -6,7 +6,7 @@ The evolution loop: an optimizer benchmarks candidate agents against the product
 **Kind:** workflow  
 **Source domain:** Agentic Architecture  
 **Primary use case:** agentic  
-**Secondary use cases:** None  
+**Secondary use cases:** agentic-architecture  
 **Complexity:** 3/5  
 **Nodes:** 24  
 **Lanes:** 5  

@@ -1,0 +1,24 @@
+team_users { # Client Entry Points
+  n1: circle label:"Team User"
+  hermes_profile.n5.handle(right) -> department_modes.n7.handle(left) [label="if /support"]
+  hermes_profile.n5.handle(right) -> department_modes.n6.handle(left) [label="if /eng"]
+  entry_point.n4.handle(right) -> hermes_profile.n5.handle(left) [label="loads profile"]
+  entry_point.n3.handle(right) -> entry_point.n4.handle(left)
+  entry_point.n2.handle(right) -> entry_point.n3.handle(left)
+  team_users.n1.handle(right) -> entry_point.n2.handle(left) [label="/eng or /support"]
+}
+
+entry_point { # Bot & Routing
+  n2: rectangle label:"Shared Bot"
+  n3: rectangle label:"Gateway"
+  n4: diamond label:"Prefix Router"
+}
+
+hermes_profile { # Unified Profile
+  n5: rectangle label:"Profile: acme"
+}
+
+department_modes { # Internal Logic
+  n6: rectangle label:"Engineering Mode"
+  n7: rectangle label:"Support Mode"
+}

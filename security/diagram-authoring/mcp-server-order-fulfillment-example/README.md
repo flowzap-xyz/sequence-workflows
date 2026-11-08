@@ -6,7 +6,7 @@ Compact order fulfillment diagram generated through the FlowZap MCP server, writ
 **Kind:** workflow  
 **Source domain:** Diagram Authoring  
 **Primary use case:** security  
-**Secondary use cases:** mcp  
+**Secondary use cases:** mcp, diagram-authoring  
 **Complexity:** 2/5  
 **Nodes:** 6  
 **Lanes:** 2  

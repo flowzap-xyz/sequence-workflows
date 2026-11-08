@@ -6,7 +6,7 @@ SaaS subscription lifecycle workflow with trial signup, conversion nurturing, pa
 **Kind:** workflow  
 **Source domain:** business-operations  
 **Primary use case:** billing  
-**Secondary use cases:** None  
+**Secondary use cases:** commerce-automation  
 **Complexity:** 4/5  
 **Nodes:** 10  
 **Lanes:** 3  

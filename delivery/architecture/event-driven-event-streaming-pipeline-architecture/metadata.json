@@ -5,9 +5,12 @@
   "kind": "architecture",
   "source_domain": "Architecture",
   "primary_use_case": "delivery",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "architecture"
+  ],
   "use_cases": [
-    "delivery"
+    "delivery",
+    "architecture"
   ],
   "complexity": 4,
   "num_nodes": 18,

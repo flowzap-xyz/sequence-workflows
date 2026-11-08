@@ -1,0 +1,35 @@
+{
+  "template_id": "runtime-permission-gating",
+  "workflow_id": "runtime-permission-gating",
+  "title": "Runtime Permission Gating",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "security",
+    "compliance"
+  ],
+  "use_cases": [
+    "architecture",
+    "security",
+    "compliance"
+  ],
+  "complexity": 3,
+  "num_nodes": 11,
+  "num_lanes": 3,
+  "tags": [
+    "AI Agent Security",
+    "Least Privilege",
+    "Permission Gating",
+    "AI Agent Permissions",
+    "JIT Access",
+    "Policy Engine",
+    "RBAC",
+    "ABAC",
+    "OPA",
+    "Cerbos"
+  ],
+  "description": "Least-privilege AI agent architecture with policy-engine evaluation, just-in-time access, short-lived credentials, and action-scoped grants before tool execution.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/runtime-permission-gating"
+}

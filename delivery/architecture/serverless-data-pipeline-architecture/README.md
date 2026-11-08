@@ -6,7 +6,7 @@ A serverless data pipeline architecture diagram with Kinesis ingestion, Lambda t
 **Kind:** architecture  
 **Source domain:** Architecture  
 **Primary use case:** delivery  
-**Secondary use cases:** None  
+**Secondary use cases:** architecture  
 **Complexity:** 4/5  
 **Nodes:** 17  
 **Lanes:** 4  

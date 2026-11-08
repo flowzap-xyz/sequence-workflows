@@ -6,7 +6,7 @@ Layer 3 of the agent containment stack: dangerous tool calls are suspended and s
 **Kind:** workflow  
 **Source domain:** Agentic Security  
 **Primary use case:** approval  
-**Secondary use cases:** security, agentic  
+**Secondary use cases:** security, agentic, agentic-security  
 **Complexity:** 2/5  
 **Nodes:** 8  
 **Lanes:** 2  

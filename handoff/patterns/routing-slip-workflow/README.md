@@ -6,7 +6,7 @@ This workflow models having messages carry their own routing instructions.
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** handoff  
-**Secondary use cases:** None  
+**Secondary use cases:** patterns  
 **Complexity:** 4/5  
 **Nodes:** 13  
 **Lanes:** 4  

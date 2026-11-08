@@ -6,7 +6,7 @@ Stripe Agent Toolkit flow: the consumer approves an agent spend, the agent reque
 **Kind:** workflow  
 **Source domain:** Commerce Automation  
 **Primary use case:** billing  
-**Secondary use cases:** None  
+**Secondary use cases:** commerce-automation  
 **Complexity:** 2/5  
 **Nodes:** 11  
 **Lanes:** 4  

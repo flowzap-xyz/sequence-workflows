@@ -89,6 +89,86 @@ USE_CASES = [
         'labels': {'en': 'Context Management', 'fr': 'Gestion de Contexte', 'zh': '上下文管理'},
         'keywords': ['context-management', 'session-memory', 'rolling-summary', 'profile-memory', 'semantic-memory', 'episodic-memory', 'hybrid-retrieval', 'shared-memory', 'vector-db', 'memory'],
     },
+    # Domains the FlowZap library added after the first taxonomy. They are
+    # matched on the `domain` field, never guessed from keywords.
+    {
+        'id': 'commerce-automation',
+        'labels': {'en': 'Commerce Automation', 'fr': 'Automatisation commerciale', 'zh': '商业自动化'},
+        'domains': ['Commerce Automation'],
+        'keywords': ['commerce', 'shopify', 'stripe', 'checkout', 'product sync'],
+    },
+    {
+        'id': 'process-mapping',
+        'labels': {'en': 'Process Mapping', 'fr': 'Cartographie de processus', 'zh': '流程映射'},
+        'domains': ['Process Mapping'],
+        'keywords': ['process mapping', 'as-is', 'to-be', 'process analysis'],
+    },
+    {
+        'id': 'agentic-architecture',
+        'labels': {'en': 'Agentic Architecture', 'fr': 'Architecture agentique', 'zh': '智能体架构'},
+        'domains': ['Agentic Architecture'],
+        'keywords': ['agentic architecture', 'self-improvement', 'reflection loop'],
+    },
+    {
+        'id': 'agentic-security',
+        'labels': {'en': 'Agentic Security', 'fr': 'Sécurité agentique', 'zh': '智能体安全'},
+        'domains': ['Agentic Security'],
+        'keywords': ['containment', 'permission gate', 'mandate', 'provenance', 'sandbox'],
+    },
+    {
+        'id': 'agent-simulation',
+        'labels': {'en': 'Agent Simulation', 'fr': 'Simulation agentique', 'zh': '智能体模拟'},
+        'domains': ['Agent Simulation'],
+        'keywords': ['synthetic focus group', 'simulation', 'agent world'],
+    },
+    {
+        'id': 'llm-operations',
+        'labels': {'en': 'LLM Operations', 'fr': 'Opérations LLM', 'zh': 'LLM 运维'},
+        'domains': ['LLM Operations'],
+        'keywords': ['prompt caching', 'model router', 'tool schema', 'compaction'],
+    },
+    {
+        'id': 'diagram-authoring',
+        'labels': {'en': 'Diagram Authoring', 'fr': 'Rédaction de diagrammes', 'zh': '图表编写'},
+        'domains': ['Diagram Authoring'],
+        'keywords': ['fz file', 'example diagram', 'authoring'],
+    },
+    {
+        'id': 'platform-reliability',
+        'labels': {'en': 'Platform Reliability', 'fr': 'Fiabilité de plateforme', 'zh': '平台可靠性'},
+        'domains': ['Platform Reliability'],
+        'keywords': ['failover', 'outage', 'multi-cloud mesh'],
+    },
+    {
+        'id': 'mindmap',
+        'labels': {'en': 'Mind Map', 'fr': 'Carte mentale', 'zh': '思维导图'},
+        'domains': ['Mindmap'],
+        'keywords': ['mind map', 'mindmap', 'root cause map'],
+    },
+    {
+        'id': 'syntax-primitives',
+        'labels': {'en': 'Syntax Primitives', 'fr': 'Primitives de syntaxe', 'zh': '语法基础'},
+        'domains': ['syntax-primitives'],
+        'keywords': ['basic lane', 'handle positions', 'all shapes'],
+    },
+    {
+        'id': 'edge-cases',
+        'labels': {'en': 'Edge Cases', 'fr': 'Cas limites', 'zh': '边界情况'},
+        'domains': ['edge-cases'],
+        'keywords': ['edge case', 'escaping', 'max nodes', 'duplicate node ids'],
+    },
+    {
+        'id': 'architecture',
+        'labels': {'en': 'Reference Architecture', 'fr': 'Architectures de référence', 'zh': '参考架构'},
+        'domains': ['Architecture'],
+        'keywords': ['microservices', 'event-driven', 'serverless', 'saga'],
+    },
+    {
+        'id': 'patterns',
+        'labels': {'en': 'Patterns', 'fr': 'Patrons', 'zh': '模式'},
+        'domains': ['patterns'],
+        'keywords': ['pattern', 'retry', 'circuit breaker', 'pub sub'],
+    },
 ]
 
 LEGACY_TOP_LEVEL_DIRS = [
@@ -168,9 +248,21 @@ def compute_use_cases(entry: dict) -> list[str]:
             if part
         )
     )
-    matches: list[str] = []
+    # Intent first: a handoff stays a handoff even when its source domain is
+    # "Architecture". The domain mapping only rescues templates that no
+    # keyword classified.
+    matches: list[str] = [
+        use_case['id']
+        for use_case in USE_CASES
+        if any(normalize_text(keyword) in haystack for keyword in use_case['keywords'])
+    ]
+    if matches:
+        return matches
+
+    entry_domain = normalize_text(entry.get('domain') or '')
     for use_case in USE_CASES:
-        if any(normalize_text(keyword) in haystack for keyword in use_case['keywords']):
+        domains = [normalize_text(d) for d in use_case.get('domains') or []]
+        if entry_domain and entry_domain in domains:
             matches.append(use_case['id'])
     return matches
 

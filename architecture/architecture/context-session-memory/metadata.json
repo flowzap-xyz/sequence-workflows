@@ -1,0 +1,28 @@
+{
+  "template_id": "context-session-memory",
+  "workflow_id": "context-session-memory",
+  "title": "Context Management - Session Memory",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "context-management"
+  ],
+  "use_cases": [
+    "architecture",
+    "context-management"
+  ],
+  "complexity": 2,
+  "num_nodes": 9,
+  "num_lanes": 3,
+  "tags": [
+    "context-management",
+    "session-memory",
+    "short-term",
+    "memory",
+    "architecture-diagram"
+  ],
+  "description": "Short-term context pattern where the channel sends new messages plus recent history. The agent runtime merges that with local session state, assembles the prompt, and persists the response back into history. Simple but cost and latency grow with history length.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/context-session-memory"
+}

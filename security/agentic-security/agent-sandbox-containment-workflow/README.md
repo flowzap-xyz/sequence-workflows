@@ -6,7 +6,7 @@ Layer 1 of the agent containment stack: every tool call executes in an ephemeral
 **Kind:** workflow  
 **Source domain:** Agentic Security  
 **Primary use case:** security  
-**Secondary use cases:** agentic  
+**Secondary use cases:** agentic, agentic-security  
 **Complexity:** 2/5  
 **Nodes:** 8  
 **Lanes:** 2  

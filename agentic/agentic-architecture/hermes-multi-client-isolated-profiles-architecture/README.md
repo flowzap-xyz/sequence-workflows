@@ -6,7 +6,7 @@ Option 3, the core multi-tenant setup: per-token entry points, one gateway per c
 **Kind:** workflow  
 **Source domain:** Agentic Architecture  
 **Primary use case:** agentic  
-**Secondary use cases:** None  
+**Secondary use cases:** agentic-architecture  
 **Complexity:** 2/5  
 **Nodes:** 8  
 **Lanes:** 4  

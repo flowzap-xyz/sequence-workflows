@@ -1,0 +1,25 @@
+{
+  "template_id": "very-long-label-workflow",
+  "workflow_id": "very-long-label",
+  "title": "Very Long Label Workflow",
+  "kind": "workflow",
+  "source_domain": "edge-cases",
+  "primary_use_case": "edge-cases",
+  "secondary_use_cases": [],
+  "use_cases": [
+    "edge-cases"
+  ],
+  "complexity": 1,
+  "num_nodes": 5,
+  "num_lanes": 1,
+  "tags": [
+    "very",
+    "long",
+    "label",
+    "decision",
+    "loop"
+  ],
+  "description": "This workflow models labels with very long text.",
+  "source_path": "edge-cases/very-long-label",
+  "repo_path": "edge-cases/edge-cases/very-long-label-workflow"
+}

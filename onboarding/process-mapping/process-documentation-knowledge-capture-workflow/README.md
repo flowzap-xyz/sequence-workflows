@@ -6,7 +6,7 @@ Knowledge capture workflow: document the current process steps, write the step-b
 **Kind:** workflow  
 **Source domain:** Process Mapping  
 **Primary use case:** onboarding  
-**Secondary use cases:** None  
+**Secondary use cases:** process-mapping  
 **Complexity:** 3/5  
 **Nodes:** 13  
 **Lanes:** 2  

@@ -1,0 +1,30 @@
+browser { # Your Browser
+n1: circle label:"Start"
+n2: rectangle label:"Paste seed doc & configure agents"
+n3: rectangle label:"Launch"
+n10: rectangle label:"View discussion logs & insights"
+n11: circle label:"Done"
+n1.handle(right) -> n2.handle(left)
+n2.handle(right) -> n3.handle(left)
+n3.handle(bottom) -> mirofish.n4.handle(top) [label="POST /simulation/start"]
+n10.handle(right) -> n11.handle(left)
+}
+
+mirofish { # MiroFish Stack (:3000 / :5001)
+n4: rectangle label:"Spawn N agents with personas"
+n5: rectangle label:"Distribute seed doc to each agent"
+n6: rectangle label:"Orchestrate interaction rounds"
+n9: rectangle label:"Aggregate logs & prepare results"
+n4.handle(right) -> n5.handle(left)
+n5.handle(right) -> n6.handle(left)
+n6.handle(bottom) -> llm.n7.handle(top) [label="Parallel agent prompts"]
+n9.handle(top) -> browser.n10.handle(bottom) [label="Results JSON"]
+}
+
+llm { # LLM API (OpenAI / Ollama / DeepInfra)
+n7: rectangle label:"Run inference per agent"
+n8: rectangle label:"Return agent response"
+n7.handle(right) -> n8.handle(left)
+loop [per round] n7 n8
+n8.handle(top) -> mirofish.n9.handle(bottom) [label="Agent outputs"]
+}

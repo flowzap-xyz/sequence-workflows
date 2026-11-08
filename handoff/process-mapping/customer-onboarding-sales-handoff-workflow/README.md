@@ -6,7 +6,7 @@ Three-lane onboarding workflow where the sales team hands the closed deal to the
 **Kind:** workflow  
 **Source domain:** Process Mapping  
 **Primary use case:** handoff  
-**Secondary use cases:** onboarding  
+**Secondary use cases:** onboarding, process-mapping  
 **Complexity:** 3/5  
 **Nodes:** 19  
 **Lanes:** 3  

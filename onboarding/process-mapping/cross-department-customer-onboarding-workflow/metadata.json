@@ -5,9 +5,12 @@
   "kind": "workflow",
   "source_domain": "Process Mapping",
   "primary_use_case": "onboarding",
-  "secondary_use_cases": [],
+  "secondary_use_cases": [
+    "process-mapping"
+  ],
   "use_cases": [
-    "onboarding"
+    "onboarding",
+    "process-mapping"
   ],
   "complexity": 3,
   "num_nodes": 32,

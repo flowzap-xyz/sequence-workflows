@@ -25,7 +25,20 @@ A synchronized FlowZap template corpus with **356 canonical templates**, mirrore
 - `ai-orchestration/` — AI Orchestration (7)
 - `mcp/` — MCP Architecture (11)
 - `context-management/` — Context Management (7)
-- `uncategorized/` — Unmatched canonical templates (158)
+- `commerce-automation/` — Commerce Automation (4)
+- `process-mapping/` — Process Mapping (2)
+- `agentic-architecture/` — Agentic Architecture (0)
+- `agentic-security/` — Agentic Security (0)
+- `agent-simulation/` — Agent Simulation (2)
+- `llm-operations/` — LLM Operations (1)
+- `diagram-authoring/` — Diagram Authoring (0)
+- `platform-reliability/` — Platform Reliability (1)
+- `mindmap/` — Mind Map (0)
+- `syntax-primitives/` — Syntax Primitives (18)
+- `edge-cases/` — Edge Cases (23)
+- `architecture/` — Reference Architecture (22)
+- `patterns/` — Patterns (40)
+- `uncategorized/` — Unmatched canonical templates (45)
 
 ## Generated Indexes
 

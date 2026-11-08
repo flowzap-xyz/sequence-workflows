@@ -6,7 +6,7 @@ Coinbase AgentKit flow: a human allocates a USDC budget, the agent authenticates
 **Kind:** workflow  
 **Source domain:** Commerce Automation  
 **Primary use case:** billing  
-**Secondary use cases:** None  
+**Secondary use cases:** commerce-automation  
 **Complexity:** 2/5  
 **Nodes:** 9  
 **Lanes:** 3  

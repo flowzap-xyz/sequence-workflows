@@ -6,7 +6,7 @@ Five-lane customer onboarding workflow spanning sales, legal, finance, onboardin
 **Kind:** workflow  
 **Source domain:** Process Mapping  
 **Primary use case:** onboarding  
-**Secondary use cases:** None  
+**Secondary use cases:** process-mapping  
 **Complexity:** 3/5  
 **Nodes:** 32  
 **Lanes:** 5  

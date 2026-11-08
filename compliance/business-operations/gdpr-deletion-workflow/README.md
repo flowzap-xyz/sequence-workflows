@@ -6,7 +6,7 @@ GDPR data deletion workflow with identity verification, data inventory scan, PII
 **Kind:** workflow  
 **Source domain:** business-operations  
 **Primary use case:** compliance  
-**Secondary use cases:** None  
+**Secondary use cases:** process-mapping  
 **Complexity:** 4/5  
 **Nodes:** 13  
 **Lanes:** 4  

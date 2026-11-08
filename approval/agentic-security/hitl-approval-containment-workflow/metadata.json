@@ -7,12 +7,14 @@
   "primary_use_case": "approval",
   "secondary_use_cases": [
     "security",
-    "agentic"
+    "agentic",
+    "agentic-security"
   ],
   "use_cases": [
     "approval",
     "security",
-    "agentic"
+    "agentic",
+    "agentic-security"
   ],
   "complexity": 2,
   "num_nodes": 8,

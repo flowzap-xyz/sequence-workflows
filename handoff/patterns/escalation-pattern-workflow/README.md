@@ -6,7 +6,7 @@ This workflow models escalating issues to higher authority when needed.
 **Kind:** workflow  
 **Source domain:** patterns  
 **Primary use case:** handoff  
-**Secondary use cases:** None  
+**Secondary use cases:** patterns  
 **Complexity:** 3/5  
 **Nodes:** 10  
 **Lanes:** 3  

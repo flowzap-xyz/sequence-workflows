@@ -1,0 +1,32 @@
+{
+  "template_id": "ai-orchestration-parallel-fan-out",
+  "workflow_id": "ai-orchestration-parallel-fan-out",
+  "title": "AI Orchestration - Parallel Fan-Out (Map-Reduce)",
+  "kind": "architecture",
+  "source_domain": "Architecture",
+  "primary_use_case": "architecture",
+  "secondary_use_cases": [
+    "agentic",
+    "ai-orchestration"
+  ],
+  "use_cases": [
+    "architecture",
+    "agentic",
+    "ai-orchestration"
+  ],
+  "complexity": 3,
+  "num_nodes": 9,
+  "num_lanes": 3,
+  "tags": [
+    "ai-native",
+    "parallel-fan-out",
+    "map-reduce",
+    "coordinator",
+    "multi-agent",
+    "architecture-diagram",
+    "orchestration"
+  ],
+  "description": "A map-reduce style architecture where a coordinator fans out tasks to multiple parallel worker agents (style check, security audit, performance analysis), gathers all results, and makes an aggregate decision. Best for PR reviews, code reviews, and multi-dimensional analysis.",
+  "source_path": "",
+  "repo_path": "architecture/architecture/ai-orchestration-parallel-fan-out"
+}
