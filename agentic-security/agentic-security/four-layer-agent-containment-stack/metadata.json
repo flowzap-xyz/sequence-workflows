@@ -1,0 +1,33 @@
+{
+  "template_id": "four-layer-agent-containment-stack",
+  "workflow_id": "four-layer-agent-containment-stack",
+  "title": "Four-Layer Agent Containment Stack",
+  "kind": "workflow",
+  "source_domain": "Agentic Security",
+  "primary_use_case": "agentic-security",
+  "secondary_use_cases": [
+    "security",
+    "compliance",
+    "agentic"
+  ],
+  "use_cases": [
+    "agentic-security",
+    "security",
+    "compliance",
+    "agentic"
+  ],
+  "complexity": 2,
+  "num_nodes": 10,
+  "num_lanes": 2,
+  "tags": [
+    "agent-containment",
+    "sandbox",
+    "permissions",
+    "hitl",
+    "audit",
+    "blast-radius"
+  ],
+  "description": "The full containment stack in one diagram: sandbox, permission gate, HITL approval and SIEM audit applied in sequence around a single dangerous tool call.",
+  "source_path": "",
+  "repo_path": "agentic-security/agentic-security/four-layer-agent-containment-stack"
+}

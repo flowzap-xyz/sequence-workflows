@@ -1,0 +1,28 @@
+{
+  "template_id": "n8n-json-workflow-as-flowzap-code",
+  "workflow_id": "n8n-json-workflow-as-flowzap-code",
+  "title": "n8n JSON Workflow as FlowZap Code",
+  "kind": "workflow",
+  "source_domain": "Diagram Authoring",
+  "primary_use_case": "diagram-authoring",
+  "secondary_use_cases": [
+    "security"
+  ],
+  "use_cases": [
+    "diagram-authoring",
+    "security"
+  ],
+  "complexity": 2,
+  "num_nodes": 11,
+  "num_lanes": 1,
+  "tags": [
+    "n8n",
+    "flowzap-code",
+    "automation",
+    "json",
+    "conversion"
+  ],
+  "description": "An n8n automation rendered as FlowZap Code: manual trigger, spreadsheet read, batch iteration, AI field mapping, PDF generation, email send, with success and error logging branches.",
+  "source_path": "",
+  "repo_path": "diagram-authoring/diagram-authoring/n8n-json-workflow-as-flowzap-code"
+}

@@ -1,0 +1,30 @@
+{
+  "template_id": "artifact-provenance-verification-workflow",
+  "workflow_id": "artifact-provenance-verification",
+  "title": "Artifact Provenance Verification Workflow",
+  "kind": "workflow",
+  "source_domain": "Agentic Security",
+  "primary_use_case": "agentic-security",
+  "secondary_use_cases": [
+    "security",
+    "agentic"
+  ],
+  "use_cases": [
+    "agentic-security",
+    "security",
+    "agentic"
+  ],
+  "complexity": 2,
+  "num_nodes": 8,
+  "num_lanes": 3,
+  "tags": [
+    "provenance",
+    "supply-chain",
+    "attestation",
+    "build",
+    "registry"
+  ],
+  "description": "Build, provenance and registry lanes: an artifact is only accepted when its attestation matches the build that produced it, and a hijacked repo sends it back to build.",
+  "source_path": "",
+  "repo_path": "agentic-security/agentic-security/artifact-provenance-verification-workflow"
+}

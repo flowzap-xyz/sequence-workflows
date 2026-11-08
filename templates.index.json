@@ -7868,13 +7868,13 @@
       "description": "The reference example from the .fz file announcement: a text-first sequence diagram with two lanes, four nodes and one labeled message, stored as a portable .fz file.",
       "kind": "workflow",
       "sourceDomain": "Diagram Authoring",
-      "primaryUseCase": "security",
+      "primaryUseCase": "diagram-authoring",
       "secondaryUseCases": [
-        "diagram-authoring"
+        "security"
       ],
       "useCases": [
-        "security",
-        "diagram-authoring"
+        "diagram-authoring",
+        "security"
       ],
       "complexity": 1,
       "numNodes": 4,
@@ -7886,7 +7886,7 @@
         "sequence-diagram"
       ],
       "sourcePath": "",
-      "repoPath": "security/diagram-authoring/fz-file-sequence-diagram-example"
+      "repoPath": "diagram-authoring/diagram-authoring/fz-file-sequence-diagram-example"
     },
     {
       "slug": "n8n-json-workflow-as-flowzap-code",
@@ -7894,13 +7894,13 @@
       "description": "An n8n automation rendered as FlowZap Code: manual trigger, spreadsheet read, batch iteration, AI field mapping, PDF generation, email send, with success and error logging branches.",
       "kind": "workflow",
       "sourceDomain": "Diagram Authoring",
-      "primaryUseCase": "security",
+      "primaryUseCase": "diagram-authoring",
       "secondaryUseCases": [
-        "diagram-authoring"
+        "security"
       ],
       "useCases": [
-        "security",
-        "diagram-authoring"
+        "diagram-authoring",
+        "security"
       ],
       "complexity": 2,
       "numNodes": 11,
@@ -7913,7 +7913,7 @@
         "conversion"
       ],
       "sourcePath": "",
-      "repoPath": "security/diagram-authoring/n8n-json-workflow-as-flowzap-code"
+      "repoPath": "diagram-authoring/diagram-authoring/n8n-json-workflow-as-flowzap-code"
     },
     {
       "slug": "mcp-server-order-fulfillment-example",
@@ -7921,15 +7921,15 @@
       "description": "Compact order fulfillment diagram generated through the FlowZap MCP server, written with the shorthand syntax: sales validation with a validity gate, then fulfillment processing and shipping.",
       "kind": "workflow",
       "sourceDomain": "Diagram Authoring",
-      "primaryUseCase": "security",
+      "primaryUseCase": "diagram-authoring",
       "secondaryUseCases": [
-        "mcp",
-        "diagram-authoring"
+        "security",
+        "mcp"
       ],
       "useCases": [
+        "diagram-authoring",
         "security",
-        "mcp",
-        "diagram-authoring"
+        "mcp"
       ],
       "complexity": 2,
       "numNodes": 6,
@@ -7941,7 +7941,7 @@
         "order-fulfillment"
       ],
       "sourcePath": "",
-      "repoPath": "security/diagram-authoring/mcp-server-order-fulfillment-example"
+      "repoPath": "diagram-authoring/diagram-authoring/mcp-server-order-fulfillment-example"
     },
     {
       "slug": "ai-assisted-ecommerce-onboarding-workflow",
@@ -7949,17 +7949,17 @@
       "description": "Vibe-coding example: a cart lane and an AI lane, where the assistant analyses the shopper profile, asks for missing details and adds the suggested products to the cart.",
       "kind": "workflow",
       "sourceDomain": "Diagram Authoring",
-      "primaryUseCase": "onboarding",
+      "primaryUseCase": "diagram-authoring",
       "secondaryUseCases": [
-        "security",
-        "commerce-automation",
-        "diagram-authoring"
-      ],
-      "useCases": [
         "onboarding",
         "security",
-        "commerce-automation",
-        "diagram-authoring"
+        "commerce-automation"
+      ],
+      "useCases": [
+        "diagram-authoring",
+        "onboarding",
+        "security",
+        "commerce-automation"
       ],
       "complexity": 2,
       "numNodes": 10,
@@ -7972,7 +7972,7 @@
         "cart"
       ],
       "sourcePath": "",
-      "repoPath": "onboarding/diagram-authoring/ai-assisted-ecommerce-onboarding-workflow"
+      "repoPath": "diagram-authoring/diagram-authoring/ai-assisted-ecommerce-onboarding-workflow"
     },
     {
       "slug": "agent-sandbox-containment-workflow",
@@ -7980,15 +7980,15 @@
       "description": "Layer 1 of the agent containment stack: every tool call executes in an ephemeral container, and any path outside the workspace is denied and logged as a security event.",
       "kind": "workflow",
       "sourceDomain": "Agentic Security",
-      "primaryUseCase": "security",
+      "primaryUseCase": "agentic-security",
       "secondaryUseCases": [
-        "agentic",
-        "agentic-security"
+        "security",
+        "agentic"
       ],
       "useCases": [
+        "agentic-security",
         "security",
-        "agentic",
-        "agentic-security"
+        "agentic"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -8001,7 +8001,7 @@
         "tool-call"
       ],
       "sourcePath": "",
-      "repoPath": "security/agentic-security/agent-sandbox-containment-workflow"
+      "repoPath": "agentic-security/agentic-security/agent-sandbox-containment-workflow"
     },
     {
       "slug": "permission-gate-containment-workflow",
@@ -8009,15 +8009,15 @@
       "description": "Layer 2 of the agent containment stack: a permission gate checks the whitelist and path scope before execution, and aborts the call with a logged denial when the scope does not match.",
       "kind": "workflow",
       "sourceDomain": "Agentic Security",
-      "primaryUseCase": "security",
+      "primaryUseCase": "agentic-security",
       "secondaryUseCases": [
-        "agentic",
-        "agentic-security"
+        "security",
+        "agentic"
       ],
       "useCases": [
+        "agentic-security",
         "security",
-        "agentic",
-        "agentic-security"
+        "agentic"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -8030,7 +8030,7 @@
         "blast-radius"
       ],
       "sourcePath": "",
-      "repoPath": "security/agentic-security/permission-gate-containment-workflow"
+      "repoPath": "agentic-security/agentic-security/permission-gate-containment-workflow"
     },
     {
       "slug": "hitl-approval-containment-workflow",
@@ -8038,17 +8038,17 @@
       "description": "Layer 3 of the agent containment stack: dangerous tool calls are suspended and sent to a human reviewer, who approves or aborts the operation before anything executes.",
       "kind": "workflow",
       "sourceDomain": "Agentic Security",
-      "primaryUseCase": "approval",
+      "primaryUseCase": "agentic-security",
       "secondaryUseCases": [
-        "security",
-        "agentic",
-        "agentic-security"
-      ],
-      "useCases": [
         "approval",
         "security",
-        "agentic",
-        "agentic-security"
+        "agentic"
+      ],
+      "useCases": [
+        "agentic-security",
+        "approval",
+        "security",
+        "agentic"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -8061,7 +8061,7 @@
         "dangerous-operations"
       ],
       "sourcePath": "",
-      "repoPath": "approval/agentic-security/hitl-approval-containment-workflow"
+      "repoPath": "agentic-security/agentic-security/hitl-approval-containment-workflow"
     },
     {
       "slug": "audit-logging-siem-containment-workflow",
@@ -8069,17 +8069,17 @@
       "description": "Layer 4 of the agent containment stack: arguments are sanitized, secrets stripped and the action trace written to the SIEM before execution continues.",
       "kind": "workflow",
       "sourceDomain": "Agentic Security",
-      "primaryUseCase": "security",
+      "primaryUseCase": "agentic-security",
       "secondaryUseCases": [
-        "compliance",
-        "agentic",
-        "agentic-security"
-      ],
-      "useCases": [
         "security",
         "compliance",
-        "agentic",
-        "agentic-security"
+        "agentic"
+      ],
+      "useCases": [
+        "agentic-security",
+        "security",
+        "compliance",
+        "agentic"
       ],
       "complexity": 2,
       "numNodes": 6,
@@ -8092,7 +8092,7 @@
         "secrets"
       ],
       "sourcePath": "",
-      "repoPath": "security/agentic-security/audit-logging-siem-containment-workflow"
+      "repoPath": "agentic-security/agentic-security/audit-logging-siem-containment-workflow"
     },
     {
       "slug": "four-layer-agent-containment-stack",
@@ -8100,17 +8100,17 @@
       "description": "The full containment stack in one diagram: sandbox, permission gate, HITL approval and SIEM audit applied in sequence around a single dangerous tool call.",
       "kind": "workflow",
       "sourceDomain": "Agentic Security",
-      "primaryUseCase": "security",
+      "primaryUseCase": "agentic-security",
       "secondaryUseCases": [
-        "compliance",
-        "agentic",
-        "agentic-security"
-      ],
-      "useCases": [
         "security",
         "compliance",
-        "agentic",
-        "agentic-security"
+        "agentic"
+      ],
+      "useCases": [
+        "agentic-security",
+        "security",
+        "compliance",
+        "agentic"
       ],
       "complexity": 2,
       "numNodes": 10,
@@ -8124,7 +8124,7 @@
         "blast-radius"
       ],
       "sourcePath": "",
-      "repoPath": "security/agentic-security/four-layer-agent-containment-stack"
+      "repoPath": "agentic-security/agentic-security/four-layer-agent-containment-stack"
     },
     {
       "slug": "patch-closure-proof-workflow",
@@ -8132,12 +8132,14 @@
       "description": "Closing-proof workflow across detection, remediation and assurance: measure the fix rather than the reaction, rate the outage risk and refuse closure without evidence.",
       "kind": "workflow",
       "sourceDomain": "Agentic Security",
-      "primaryUseCase": "incident",
+      "primaryUseCase": "agentic-security",
       "secondaryUseCases": [
+        "incident",
         "security",
         "agentic"
       ],
       "useCases": [
+        "agentic-security",
         "incident",
         "security",
         "agentic"
@@ -8153,7 +8155,7 @@
         "incident"
       ],
       "sourcePath": "",
-      "repoPath": "incident/agentic-security/patch-closure-proof-workflow"
+      "repoPath": "agentic-security/agentic-security/patch-closure-proof-workflow"
     },
     {
       "slug": "artifact-provenance-verification-workflow",
@@ -8161,15 +8163,15 @@
       "description": "Build, provenance and registry lanes: an artifact is only accepted when its attestation matches the build that produced it, and a hijacked repo sends it back to build.",
       "kind": "workflow",
       "sourceDomain": "Agentic Security",
-      "primaryUseCase": "security",
+      "primaryUseCase": "agentic-security",
       "secondaryUseCases": [
-        "agentic",
-        "agentic-security"
+        "security",
+        "agentic"
       ],
       "useCases": [
+        "agentic-security",
         "security",
-        "agentic",
-        "agentic-security"
+        "agentic"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -8182,7 +8184,7 @@
         "registry"
       ],
       "sourcePath": "",
-      "repoPath": "security/agentic-security/artifact-provenance-verification-workflow"
+      "repoPath": "agentic-security/agentic-security/artifact-provenance-verification-workflow"
     },
     {
       "slug": "independent-action-verification-workflow",
@@ -8190,12 +8192,14 @@
       "description": "Rule 3 in practice: the agent that acts emits the action trace, a separate verification lane confirms the effect, and only a human closes the case.",
       "kind": "workflow",
       "sourceDomain": "Agentic Security",
-      "primaryUseCase": "security",
+      "primaryUseCase": "agentic-security",
       "secondaryUseCases": [
+        "security",
         "compliance",
         "agentic"
       ],
       "useCases": [
+        "agentic-security",
         "security",
         "compliance",
         "agentic"
@@ -8211,7 +8215,7 @@
         "hitl"
       ],
       "sourcePath": "",
-      "repoPath": "security/agentic-security/independent-action-verification-workflow"
+      "repoPath": "agentic-security/agentic-security/independent-action-verification-workflow"
     },
     {
       "slug": "agent-mandate-scope-enforcement-workflow",
@@ -8219,17 +8223,17 @@
       "description": "Consent is not a mandate: a third-party agent's requested scope is compared to the customer mandate before read-only access is granted, and every access event is audited.",
       "kind": "workflow",
       "sourceDomain": "Agentic Security",
-      "primaryUseCase": "security",
+      "primaryUseCase": "agentic-security",
       "secondaryUseCases": [
-        "compliance",
-        "agentic",
-        "agentic-security"
-      ],
-      "useCases": [
         "security",
         "compliance",
-        "agentic",
-        "agentic-security"
+        "agentic"
+      ],
+      "useCases": [
+        "agentic-security",
+        "security",
+        "compliance",
+        "agentic"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -8242,7 +8246,7 @@
         "consent"
       ],
       "sourcePath": "",
-      "repoPath": "security/agentic-security/agent-mandate-scope-enforcement-workflow"
+      "repoPath": "agentic-security/agentic-security/agent-mandate-scope-enforcement-workflow"
     },
     {
       "slug": "problem-mind-map-credit-decision",
@@ -8250,15 +8254,15 @@
       "description": "A problem mind map for an AI credit decision, mapping decisions, data, policies, actors, risks, constraints and open questions before any component is designed.",
       "kind": "workflow",
       "sourceDomain": "Mindmap",
-      "primaryUseCase": "agentic",
+      "primaryUseCase": "mindmap",
       "secondaryUseCases": [
-        "agentic-architecture",
-        "mindmap"
+        "agentic",
+        "agentic-architecture"
       ],
       "useCases": [
+        "mindmap",
         "agentic",
-        "agentic-architecture",
-        "mindmap"
+        "agentic-architecture"
       ],
       "complexity": 3,
       "numNodes": 32,
@@ -8271,7 +8275,7 @@
         "agentic-architecture"
       ],
       "sourcePath": "",
-      "repoPath": "agentic/mindmap/problem-mind-map-credit-decision"
+      "repoPath": "mindmap/mindmap/problem-mind-map-credit-decision"
     },
     {
       "slug": "agent-generated-mind-map-incident-root-cause",
@@ -8279,17 +8283,17 @@
       "description": "An AGMM example: an SRE agent outputs its API latency root-cause reasoning chain as an interactive mind map, reversing the Human-to-Machine explainability flow.",
       "kind": "workflow",
       "sourceDomain": "Mindmap",
-      "primaryUseCase": "incident",
+      "primaryUseCase": "mindmap",
       "secondaryUseCases": [
-        "agentic",
-        "agentic-architecture",
-        "mindmap"
-      ],
-      "useCases": [
         "incident",
         "agentic",
-        "agentic-architecture",
-        "mindmap"
+        "agentic-architecture"
+      ],
+      "useCases": [
+        "mindmap",
+        "incident",
+        "agentic",
+        "agentic-architecture"
       ],
       "complexity": 3,
       "numNodes": 13,
@@ -8303,7 +8307,7 @@
         "agentic-architecture"
       ],
       "sourcePath": "",
-      "repoPath": "incident/mindmap/agent-generated-mind-map-incident-root-cause"
+      "repoPath": "mindmap/mindmap/agent-generated-mind-map-incident-root-cause"
     },
     {
       "slug": "agentic-taste-evaluation-loop",
@@ -8311,13 +8315,13 @@
       "description": "Legacy executor, LLM-as-judge evaluator and next-gen consumer: an evaluator scores the full trajectory, rejects structural sloppiness and forwards only validated payloads.",
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
-      "primaryUseCase": "agentic",
+      "primaryUseCase": "agentic-architecture",
       "secondaryUseCases": [
-        "agentic-architecture"
+        "agentic"
       ],
       "useCases": [
-        "agentic",
-        "agentic-architecture"
+        "agentic-architecture",
+        "agentic"
       ],
       "complexity": 2,
       "numNodes": 9,
@@ -8330,7 +8334,7 @@
         "trajectory"
       ],
       "sourcePath": "",
-      "repoPath": "agentic/agentic-architecture/agentic-taste-evaluation-loop"
+      "repoPath": "agentic-architecture/agentic-architecture/agentic-taste-evaluation-loop"
     },
     {
       "slug": "reflection-loop-agent-self-improvement",
@@ -8338,13 +8342,13 @@
       "description": "The reflection loop: a worker drafts, a critic reviews the draft against the brief and the orchestrator only approves once the revision closes every gap.",
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
-      "primaryUseCase": "agentic",
+      "primaryUseCase": "agentic-architecture",
       "secondaryUseCases": [
-        "agentic-architecture"
+        "agentic"
       ],
       "useCases": [
-        "agentic",
-        "agentic-architecture"
+        "agentic-architecture",
+        "agentic"
       ],
       "complexity": 3,
       "numNodes": 22,
@@ -8357,7 +8361,7 @@
         "agent-frameworks"
       ],
       "sourcePath": "",
-      "repoPath": "agentic/agentic-architecture/reflection-loop-agent-self-improvement"
+      "repoPath": "agentic-architecture/agentic-architecture/reflection-loop-agent-self-improvement"
     },
     {
       "slug": "memory-loop-agent-self-improvement",
@@ -8365,15 +8369,15 @@
       "description": "The memory loop: before planning, the planner queries the memory store for similar past lessons, then writes the new lesson back once the task is closed.",
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
-      "primaryUseCase": "agentic",
+      "primaryUseCase": "agentic-architecture",
       "secondaryUseCases": [
-        "context-management",
-        "agentic-architecture"
+        "agentic",
+        "context-management"
       ],
       "useCases": [
+        "agentic-architecture",
         "agentic",
-        "context-management",
-        "agentic-architecture"
+        "context-management"
       ],
       "complexity": 3,
       "numNodes": 29,
@@ -8386,7 +8390,7 @@
         "agent-frameworks"
       ],
       "sourcePath": "",
-      "repoPath": "agentic/agentic-architecture/memory-loop-agent-self-improvement"
+      "repoPath": "agentic-architecture/agentic-architecture/memory-loop-agent-self-improvement"
     },
     {
       "slug": "evolution-loop-agent-self-improvement",
@@ -8394,13 +8398,13 @@
       "description": "The evolution loop: an optimizer benchmarks candidate agents against the production baseline, keeps the best score and confirms persistence before promotion.",
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
-      "primaryUseCase": "agentic",
+      "primaryUseCase": "agentic-architecture",
       "secondaryUseCases": [
-        "agentic-architecture"
+        "agentic"
       ],
       "useCases": [
-        "agentic",
-        "agentic-architecture"
+        "agentic-architecture",
+        "agentic"
       ],
       "complexity": 3,
       "numNodes": 24,
@@ -8413,7 +8417,7 @@
         "agent-frameworks"
       ],
       "sourcePath": "",
-      "repoPath": "agentic/agentic-architecture/evolution-loop-agent-self-improvement"
+      "repoPath": "agentic-architecture/agentic-architecture/evolution-loop-agent-self-improvement"
     },
     {
       "slug": "hermes-multi-tenant-isolation-architecture",
@@ -8421,14 +8425,14 @@
       "description": "Shared host, per-client profiles and tool boundaries: how external clients reach their own Hermes workspaces without seeing another tenant's tools or data.",
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
-      "primaryUseCase": "agentic",
+      "primaryUseCase": "agentic-architecture",
       "secondaryUseCases": [
-        "agentic-architecture",
+        "agentic",
         "agentic-security"
       ],
       "useCases": [
-        "agentic",
         "agentic-architecture",
+        "agentic",
         "agentic-security"
       ],
       "complexity": 2,
@@ -8442,7 +8446,7 @@
         "sandboxing"
       ],
       "sourcePath": "",
-      "repoPath": "agentic/agentic-architecture/hermes-multi-tenant-isolation-architecture"
+      "repoPath": "agentic-architecture/agentic-architecture/hermes-multi-tenant-isolation-architecture"
     },
     {
       "slug": "hermes-single-client-single-department-architecture",
@@ -8450,16 +8454,16 @@
       "description": "Option 1 of the Hermes multi-tenant setup: one external actor, one gateway, one isolated workspace inside an execution sandbox, and a single client profile.",
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
-      "primaryUseCase": "agentic",
+      "primaryUseCase": "agentic-architecture",
       "secondaryUseCases": [
+        "agentic",
         "mcp",
-        "agentic-architecture",
         "agentic-security"
       ],
       "useCases": [
+        "agentic-architecture",
         "agentic",
         "mcp",
-        "agentic-architecture",
         "agentic-security"
       ],
       "complexity": 1,
@@ -8473,7 +8477,7 @@
         "sandboxing"
       ],
       "sourcePath": "",
-      "repoPath": "agentic/agentic-architecture/hermes-single-client-single-department-architecture"
+      "repoPath": "agentic-architecture/agentic-architecture/hermes-single-client-single-department-architecture"
     },
     {
       "slug": "hermes-single-client-multi-department-routing-architecture",
@@ -8481,17 +8485,17 @@
       "description": "Option 2: one client with several entry points, a prefix router that maps /eng or /support to a mode, and a single unified Hermes profile behind the gateway.",
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
-      "primaryUseCase": "handoff",
+      "primaryUseCase": "agentic-architecture",
       "secondaryUseCases": [
-        "agentic",
-        "mcp",
-        "agentic-architecture"
-      ],
-      "useCases": [
         "handoff",
         "agentic",
-        "mcp",
-        "agentic-architecture"
+        "mcp"
+      ],
+      "useCases": [
+        "agentic-architecture",
+        "handoff",
+        "agentic",
+        "mcp"
       ],
       "complexity": 2,
       "numNodes": 7,
@@ -8504,7 +8508,7 @@
         "gateway"
       ],
       "sourcePath": "",
-      "repoPath": "handoff/agentic-architecture/hermes-single-client-multi-department-routing-architecture"
+      "repoPath": "agentic-architecture/agentic-architecture/hermes-single-client-multi-department-routing-architecture"
     },
     {
       "slug": "hermes-multi-client-isolated-profiles-architecture",
@@ -8512,13 +8516,13 @@
       "description": "Option 3, the core multi-tenant setup: per-token entry points, one gateway per client, and isolated Hermes profiles running in separate containers.",
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
-      "primaryUseCase": "agentic",
+      "primaryUseCase": "agentic-architecture",
       "secondaryUseCases": [
-        "agentic-architecture"
+        "agentic"
       ],
       "useCases": [
-        "agentic",
-        "agentic-architecture"
+        "agentic-architecture",
+        "agentic"
       ],
       "complexity": 2,
       "numNodes": 8,
@@ -8531,7 +8535,7 @@
         "docker"
       ],
       "sourcePath": "",
-      "repoPath": "agentic/agentic-architecture/hermes-multi-client-isolated-profiles-architecture"
+      "repoPath": "agentic-architecture/agentic-architecture/hermes-multi-client-isolated-profiles-architecture"
     },
     {
       "slug": "hermes-full-multi-tenant-department-routing-architecture",
@@ -8539,16 +8543,16 @@
       "description": "Option 4: external participants, per-client gateways and routers, department prefixes inside each tenant, and a sandbox per client.",
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
-      "primaryUseCase": "handoff",
+      "primaryUseCase": "agentic-architecture",
       "secondaryUseCases": [
+        "handoff",
         "agentic",
-        "agentic-architecture",
         "agentic-security"
       ],
       "useCases": [
+        "agentic-architecture",
         "handoff",
         "agentic",
-        "agentic-architecture",
         "agentic-security"
       ],
       "complexity": 2,
@@ -8562,7 +8566,7 @@
         "departments"
       ],
       "sourcePath": "",
-      "repoPath": "handoff/agentic-architecture/hermes-full-multi-tenant-department-routing-architecture"
+      "repoPath": "agentic-architecture/agentic-architecture/hermes-full-multi-tenant-department-routing-architecture"
     },
     {
       "slug": "hermes-kanban-agent-coordination-workflow",
@@ -8570,13 +8574,13 @@
       "description": "A planner decomposes the request on a shared board, specialized workers claim tasks, and the orchestrator delivers once every card is closed.",
       "kind": "workflow",
       "sourceDomain": "Agentic Architecture",
-      "primaryUseCase": "agentic",
+      "primaryUseCase": "agentic-architecture",
       "secondaryUseCases": [
-        "agentic-architecture"
+        "agentic"
       ],
       "useCases": [
-        "agentic",
-        "agentic-architecture"
+        "agentic-architecture",
+        "agentic"
       ],
       "complexity": 2,
       "numNodes": 6,
@@ -8589,7 +8593,7 @@
         "coordination"
       ],
       "sourcePath": "",
-      "repoPath": "agentic/agentic-architecture/hermes-kanban-agent-coordination-workflow"
+      "repoPath": "agentic-architecture/agentic-architecture/hermes-kanban-agent-coordination-workflow"
     },
     {
       "slug": "agent-to-agent-usdc-payment-workflow",

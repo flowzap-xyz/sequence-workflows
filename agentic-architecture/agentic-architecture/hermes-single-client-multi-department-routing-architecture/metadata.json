@@ -1,0 +1,32 @@
+{
+  "template_id": "hermes-single-client-multi-department-routing-architecture",
+  "workflow_id": "hermes-single-client-multi-department-routing-architecture",
+  "title": "Hermes Single Client, Multi-Department Routing Architecture",
+  "kind": "workflow",
+  "source_domain": "Agentic Architecture",
+  "primary_use_case": "agentic-architecture",
+  "secondary_use_cases": [
+    "handoff",
+    "agentic",
+    "mcp"
+  ],
+  "use_cases": [
+    "agentic-architecture",
+    "handoff",
+    "agentic",
+    "mcp"
+  ],
+  "complexity": 2,
+  "num_nodes": 7,
+  "num_lanes": 4,
+  "tags": [
+    "hermes",
+    "multi-tenant",
+    "routing",
+    "departments",
+    "gateway"
+  ],
+  "description": "Option 2: one client with several entry points, a prefix router that maps /eng or /support to a mode, and a single unified Hermes profile behind the gateway.",
+  "source_path": "",
+  "repo_path": "agentic-architecture/agentic-architecture/hermes-single-client-multi-department-routing-architecture"
+}

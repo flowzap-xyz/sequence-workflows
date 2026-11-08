@@ -105,12 +105,14 @@ USE_CASES = [
     },
     {
         'id': 'agentic-architecture',
+        'exclusive': True,
         'labels': {'en': 'Agentic Architecture', 'fr': 'Architecture agentique', 'zh': '智能体架构'},
         'domains': ['Agentic Architecture'],
         'keywords': ['agentic architecture', 'self-improvement', 'reflection loop'],
     },
     {
         'id': 'agentic-security',
+        'exclusive': True,
         'labels': {'en': 'Agentic Security', 'fr': 'Sécurité agentique', 'zh': '智能体安全'},
         'domains': ['Agentic Security'],
         'keywords': ['containment', 'permission gate', 'mandate', 'provenance', 'sandbox'],
@@ -129,6 +131,7 @@ USE_CASES = [
     },
     {
         'id': 'diagram-authoring',
+        'exclusive': True,
         'labels': {'en': 'Diagram Authoring', 'fr': 'Rédaction de diagrammes', 'zh': '图表编写'},
         'domains': ['Diagram Authoring'],
         'keywords': ['fz file', 'example diagram', 'authoring'],
@@ -141,6 +144,7 @@ USE_CASES = [
     },
     {
         'id': 'mindmap',
+        'exclusive': True,
         'labels': {'en': 'Mind Map', 'fr': 'Carte mentale', 'zh': '思维导图'},
         'domains': ['Mindmap'],
         'keywords': ['mind map', 'mindmap', 'root cause map'],
@@ -248,18 +252,27 @@ def compute_use_cases(entry: dict) -> list[str]:
             if part
         )
     )
-    # Intent first: a handoff stays a handoff even when its source domain is
-    # "Architecture". The domain mapping only rescues templates that no
-    # keyword classified.
+    entry_domain = normalize_text(entry.get('domain') or '')
+    # A product area carried by the domain itself wins over wording: a template
+    # filed under "Agentic Architecture" stays there even though its text also
+    # says "agent". Without this the four newest areas stay empty forever.
     matches: list[str] = [
         use_case['id']
         for use_case in USE_CASES
-        if any(normalize_text(keyword) in haystack for keyword in use_case['keywords'])
+        if use_case.get('exclusive') and entry_domain in [normalize_text(d) for d in use_case.get('domains') or []]
+    ]
+    # Intent next: a handoff stays a handoff even when its source domain is
+    # "Architecture". The domain mapping only rescues templates that no
+    # keyword classified.
+    matches += [
+        use_case['id']
+        for use_case in USE_CASES
+        if use_case['id'] not in matches
+        and any(normalize_text(keyword) in haystack for keyword in use_case['keywords'])
     ]
     if matches:
         return matches
 
-    entry_domain = normalize_text(entry.get('domain') or '')
     for use_case in USE_CASES:
         domains = [normalize_text(d) for d in use_case.get('domains') or []]
         if entry_domain and entry_domain in domains:

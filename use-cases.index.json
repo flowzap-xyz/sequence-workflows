@@ -2,7 +2,7 @@
   "useCases": {
     "handoff": {
       "label": "Handoff",
-      "count": 24,
+      "count": 22,
       "templates": [
         {
           "slug": "api-gateway-workflow",
@@ -100,16 +100,6 @@
           "repoPath": "handoff/process-mapping/customer-onboarding-sales-handoff-workflow"
         },
         {
-          "slug": "hermes-single-client-multi-department-routing-architecture",
-          "title": "Hermes Single Client, Multi-Department Routing Architecture",
-          "repoPath": "handoff/agentic-architecture/hermes-single-client-multi-department-routing-architecture"
-        },
-        {
-          "slug": "hermes-full-multi-tenant-department-routing-architecture",
-          "title": "Hermes Full Multi-Tenant with Department Routing",
-          "repoPath": "handoff/agentic-architecture/hermes-full-multi-tenant-department-routing-architecture"
-        },
-        {
           "slug": "ai-order-routing-workflow",
           "title": "AI Order Routing Workflow",
           "repoPath": "handoff/commerce-automation/ai-order-routing-workflow"
@@ -128,7 +118,7 @@
     },
     "approval": {
       "label": "Approval",
-      "count": 22,
+      "count": 21,
       "templates": [
         {
           "slug": "access-review-workflow",
@@ -226,11 +216,6 @@
           "repoPath": "approval/process-mapping/task-box-invoice-approval-workflow"
         },
         {
-          "slug": "hitl-approval-containment-workflow",
-          "title": "HITL Approval Containment Workflow",
-          "repoPath": "approval/agentic-security/hitl-approval-containment-workflow"
-        },
-        {
           "slug": "stripe-trust-flow-fiat-authorization",
           "title": "Stripe Trust Flow — Fiat Authorization",
           "repoPath": "approval/commerce-automation/stripe-trust-flow-fiat-authorization"
@@ -244,7 +229,7 @@
     },
     "incident": {
       "label": "Incident",
-      "count": 14,
+      "count": 12,
       "templates": [
         {
           "slug": "canary-deploy-workflow",
@@ -302,16 +287,6 @@
           "repoPath": "incident/process-mapping/incident-root-cause-prevention-workflow"
         },
         {
-          "slug": "patch-closure-proof-workflow",
-          "title": "Patch Closure Proof Workflow",
-          "repoPath": "incident/agentic-security/patch-closure-proof-workflow"
-        },
-        {
-          "slug": "agent-generated-mind-map-incident-root-cause",
-          "title": "Agent-Generated Mind Map — Incident Root Cause",
-          "repoPath": "incident/mindmap/agent-generated-mind-map-incident-root-cause"
-        },
-        {
           "slug": "gcp-account-suspension-outage-cascade",
           "title": "GCP Account Suspension Outage Cascade",
           "repoPath": "incident/platform-reliability/gcp-account-suspension-outage-cascade"
@@ -320,7 +295,7 @@
     },
     "onboarding": {
       "label": "Onboarding",
-      "count": 9,
+      "count": 8,
       "templates": [
         {
           "slug": "ab-test-setup-workflow",
@@ -361,11 +336,6 @@
           "slug": "cross-department-customer-onboarding-workflow",
           "title": "Cross-Department Customer Onboarding Workflow",
           "repoPath": "onboarding/process-mapping/cross-department-customer-onboarding-workflow"
-        },
-        {
-          "slug": "ai-assisted-ecommerce-onboarding-workflow",
-          "title": "AI-Assisted E-Commerce Onboarding Workflow",
-          "repoPath": "onboarding/diagram-authoring/ai-assisted-ecommerce-onboarding-workflow"
         }
       ]
     },
@@ -443,7 +413,7 @@
     },
     "security": {
       "label": "Security & Access",
-      "count": 27,
+      "count": 17,
       "templates": [
         {
           "slug": "api-key-rotation-workflow",
@@ -529,56 +499,6 @@
           "slug": "secure-multi-agent-communication",
           "title": "Secure Multi-Agent Communication",
           "repoPath": "security/architecture/secure-multi-agent-communication"
-        },
-        {
-          "slug": "fz-file-sequence-diagram-example",
-          "title": "FZ File Sequence Diagram Example",
-          "repoPath": "security/diagram-authoring/fz-file-sequence-diagram-example"
-        },
-        {
-          "slug": "n8n-json-workflow-as-flowzap-code",
-          "title": "n8n JSON Workflow as FlowZap Code",
-          "repoPath": "security/diagram-authoring/n8n-json-workflow-as-flowzap-code"
-        },
-        {
-          "slug": "mcp-server-order-fulfillment-example",
-          "title": "MCP Server Order Fulfillment Example",
-          "repoPath": "security/diagram-authoring/mcp-server-order-fulfillment-example"
-        },
-        {
-          "slug": "agent-sandbox-containment-workflow",
-          "title": "Agent Sandbox Containment Workflow",
-          "repoPath": "security/agentic-security/agent-sandbox-containment-workflow"
-        },
-        {
-          "slug": "permission-gate-containment-workflow",
-          "title": "Permission Gate Containment Workflow",
-          "repoPath": "security/agentic-security/permission-gate-containment-workflow"
-        },
-        {
-          "slug": "audit-logging-siem-containment-workflow",
-          "title": "Audit Logging & SIEM Containment Workflow",
-          "repoPath": "security/agentic-security/audit-logging-siem-containment-workflow"
-        },
-        {
-          "slug": "four-layer-agent-containment-stack",
-          "title": "Four-Layer Agent Containment Stack",
-          "repoPath": "security/agentic-security/four-layer-agent-containment-stack"
-        },
-        {
-          "slug": "artifact-provenance-verification-workflow",
-          "title": "Artifact Provenance Verification Workflow",
-          "repoPath": "security/agentic-security/artifact-provenance-verification-workflow"
-        },
-        {
-          "slug": "independent-action-verification-workflow",
-          "title": "Independent Action Verification Workflow",
-          "repoPath": "security/agentic-security/independent-action-verification-workflow"
-        },
-        {
-          "slug": "agent-mandate-scope-enforcement-workflow",
-          "title": "Agent Mandate Scope Enforcement Workflow",
-          "repoPath": "security/agentic-security/agent-mandate-scope-enforcement-workflow"
         }
       ]
     },
@@ -787,7 +707,7 @@
     },
     "agentic": {
       "label": "Agentic Teams",
-      "count": 28,
+      "count": 19,
       "templates": [
         {
           "slug": "ai-native-single-agent-architecture",
@@ -863,51 +783,6 @@
           "slug": "context-shared-memory",
           "title": "Context Management - Shared Memory",
           "repoPath": "agentic/architecture/context-shared-memory"
-        },
-        {
-          "slug": "problem-mind-map-credit-decision",
-          "title": "Problem Mind Map — Credit Decision",
-          "repoPath": "agentic/mindmap/problem-mind-map-credit-decision"
-        },
-        {
-          "slug": "agentic-taste-evaluation-loop",
-          "title": "Agentic Taste Evaluation Loop",
-          "repoPath": "agentic/agentic-architecture/agentic-taste-evaluation-loop"
-        },
-        {
-          "slug": "reflection-loop-agent-self-improvement",
-          "title": "Reflection Loop — Agent Self-Improvement",
-          "repoPath": "agentic/agentic-architecture/reflection-loop-agent-self-improvement"
-        },
-        {
-          "slug": "memory-loop-agent-self-improvement",
-          "title": "Memory Loop — Agent Self-Improvement",
-          "repoPath": "agentic/agentic-architecture/memory-loop-agent-self-improvement"
-        },
-        {
-          "slug": "evolution-loop-agent-self-improvement",
-          "title": "Evolution Loop — Agent Self-Improvement",
-          "repoPath": "agentic/agentic-architecture/evolution-loop-agent-self-improvement"
-        },
-        {
-          "slug": "hermes-multi-tenant-isolation-architecture",
-          "title": "Hermes Multi-Tenant Isolation Architecture",
-          "repoPath": "agentic/agentic-architecture/hermes-multi-tenant-isolation-architecture"
-        },
-        {
-          "slug": "hermes-single-client-single-department-architecture",
-          "title": "Hermes Single Client, Single Department Architecture",
-          "repoPath": "agentic/agentic-architecture/hermes-single-client-single-department-architecture"
-        },
-        {
-          "slug": "hermes-multi-client-isolated-profiles-architecture",
-          "title": "Hermes Multi-Client Isolated Profiles Architecture",
-          "repoPath": "agentic/agentic-architecture/hermes-multi-client-isolated-profiles-architecture"
-        },
-        {
-          "slug": "hermes-kanban-agent-coordination-workflow",
-          "title": "Hermes Kanban Agent Coordination Workflow",
-          "repoPath": "agentic/agentic-architecture/hermes-kanban-agent-coordination-workflow"
         },
         {
           "slug": "mirofish-synthetic-focus-group-architecture",
@@ -1118,13 +993,110 @@
     },
     "agentic-architecture": {
       "label": "Agentic Architecture",
-      "count": 0,
-      "templates": []
+      "count": 10,
+      "templates": [
+        {
+          "slug": "agentic-taste-evaluation-loop",
+          "title": "Agentic Taste Evaluation Loop",
+          "repoPath": "agentic-architecture/agentic-architecture/agentic-taste-evaluation-loop"
+        },
+        {
+          "slug": "reflection-loop-agent-self-improvement",
+          "title": "Reflection Loop — Agent Self-Improvement",
+          "repoPath": "agentic-architecture/agentic-architecture/reflection-loop-agent-self-improvement"
+        },
+        {
+          "slug": "memory-loop-agent-self-improvement",
+          "title": "Memory Loop — Agent Self-Improvement",
+          "repoPath": "agentic-architecture/agentic-architecture/memory-loop-agent-self-improvement"
+        },
+        {
+          "slug": "evolution-loop-agent-self-improvement",
+          "title": "Evolution Loop — Agent Self-Improvement",
+          "repoPath": "agentic-architecture/agentic-architecture/evolution-loop-agent-self-improvement"
+        },
+        {
+          "slug": "hermes-multi-tenant-isolation-architecture",
+          "title": "Hermes Multi-Tenant Isolation Architecture",
+          "repoPath": "agentic-architecture/agentic-architecture/hermes-multi-tenant-isolation-architecture"
+        },
+        {
+          "slug": "hermes-single-client-single-department-architecture",
+          "title": "Hermes Single Client, Single Department Architecture",
+          "repoPath": "agentic-architecture/agentic-architecture/hermes-single-client-single-department-architecture"
+        },
+        {
+          "slug": "hermes-single-client-multi-department-routing-architecture",
+          "title": "Hermes Single Client, Multi-Department Routing Architecture",
+          "repoPath": "agentic-architecture/agentic-architecture/hermes-single-client-multi-department-routing-architecture"
+        },
+        {
+          "slug": "hermes-multi-client-isolated-profiles-architecture",
+          "title": "Hermes Multi-Client Isolated Profiles Architecture",
+          "repoPath": "agentic-architecture/agentic-architecture/hermes-multi-client-isolated-profiles-architecture"
+        },
+        {
+          "slug": "hermes-full-multi-tenant-department-routing-architecture",
+          "title": "Hermes Full Multi-Tenant with Department Routing",
+          "repoPath": "agentic-architecture/agentic-architecture/hermes-full-multi-tenant-department-routing-architecture"
+        },
+        {
+          "slug": "hermes-kanban-agent-coordination-workflow",
+          "title": "Hermes Kanban Agent Coordination Workflow",
+          "repoPath": "agentic-architecture/agentic-architecture/hermes-kanban-agent-coordination-workflow"
+        }
+      ]
     },
     "agentic-security": {
       "label": "Agentic Security",
-      "count": 0,
-      "templates": []
+      "count": 9,
+      "templates": [
+        {
+          "slug": "agent-sandbox-containment-workflow",
+          "title": "Agent Sandbox Containment Workflow",
+          "repoPath": "agentic-security/agentic-security/agent-sandbox-containment-workflow"
+        },
+        {
+          "slug": "permission-gate-containment-workflow",
+          "title": "Permission Gate Containment Workflow",
+          "repoPath": "agentic-security/agentic-security/permission-gate-containment-workflow"
+        },
+        {
+          "slug": "hitl-approval-containment-workflow",
+          "title": "HITL Approval Containment Workflow",
+          "repoPath": "agentic-security/agentic-security/hitl-approval-containment-workflow"
+        },
+        {
+          "slug": "audit-logging-siem-containment-workflow",
+          "title": "Audit Logging & SIEM Containment Workflow",
+          "repoPath": "agentic-security/agentic-security/audit-logging-siem-containment-workflow"
+        },
+        {
+          "slug": "four-layer-agent-containment-stack",
+          "title": "Four-Layer Agent Containment Stack",
+          "repoPath": "agentic-security/agentic-security/four-layer-agent-containment-stack"
+        },
+        {
+          "slug": "patch-closure-proof-workflow",
+          "title": "Patch Closure Proof Workflow",
+          "repoPath": "agentic-security/agentic-security/patch-closure-proof-workflow"
+        },
+        {
+          "slug": "artifact-provenance-verification-workflow",
+          "title": "Artifact Provenance Verification Workflow",
+          "repoPath": "agentic-security/agentic-security/artifact-provenance-verification-workflow"
+        },
+        {
+          "slug": "independent-action-verification-workflow",
+          "title": "Independent Action Verification Workflow",
+          "repoPath": "agentic-security/agentic-security/independent-action-verification-workflow"
+        },
+        {
+          "slug": "agent-mandate-scope-enforcement-workflow",
+          "title": "Agent Mandate Scope Enforcement Workflow",
+          "repoPath": "agentic-security/agentic-security/agent-mandate-scope-enforcement-workflow"
+        }
+      ]
     },
     "agent-simulation": {
       "label": "Agent Simulation",
@@ -1155,8 +1127,29 @@
     },
     "diagram-authoring": {
       "label": "Diagram Authoring",
-      "count": 0,
-      "templates": []
+      "count": 4,
+      "templates": [
+        {
+          "slug": "fz-file-sequence-diagram-example",
+          "title": "FZ File Sequence Diagram Example",
+          "repoPath": "diagram-authoring/diagram-authoring/fz-file-sequence-diagram-example"
+        },
+        {
+          "slug": "n8n-json-workflow-as-flowzap-code",
+          "title": "n8n JSON Workflow as FlowZap Code",
+          "repoPath": "diagram-authoring/diagram-authoring/n8n-json-workflow-as-flowzap-code"
+        },
+        {
+          "slug": "mcp-server-order-fulfillment-example",
+          "title": "MCP Server Order Fulfillment Example",
+          "repoPath": "diagram-authoring/diagram-authoring/mcp-server-order-fulfillment-example"
+        },
+        {
+          "slug": "ai-assisted-ecommerce-onboarding-workflow",
+          "title": "AI-Assisted E-Commerce Onboarding Workflow",
+          "repoPath": "diagram-authoring/diagram-authoring/ai-assisted-ecommerce-onboarding-workflow"
+        }
+      ]
     },
     "platform-reliability": {
       "label": "Platform Reliability",
@@ -1171,8 +1164,19 @@
     },
     "mindmap": {
       "label": "Mind Map",
-      "count": 0,
-      "templates": []
+      "count": 2,
+      "templates": [
+        {
+          "slug": "problem-mind-map-credit-decision",
+          "title": "Problem Mind Map — Credit Decision",
+          "repoPath": "mindmap/mindmap/problem-mind-map-credit-decision"
+        },
+        {
+          "slug": "agent-generated-mind-map-incident-root-cause",
+          "title": "Agent-Generated Mind Map — Incident Root Cause",
+          "repoPath": "mindmap/mindmap/agent-generated-mind-map-incident-root-cause"
+        }
+      ]
     },
     "syntax-primitives": {
       "label": "Syntax Primitives",

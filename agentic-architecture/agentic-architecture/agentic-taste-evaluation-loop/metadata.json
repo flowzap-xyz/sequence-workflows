@@ -1,0 +1,28 @@
+{
+  "template_id": "agentic-taste-evaluation-loop",
+  "workflow_id": "agentic-taste-evaluation-loop",
+  "title": "Agentic Taste Evaluation Loop",
+  "kind": "workflow",
+  "source_domain": "Agentic Architecture",
+  "primary_use_case": "agentic-architecture",
+  "secondary_use_cases": [
+    "agentic"
+  ],
+  "use_cases": [
+    "agentic-architecture",
+    "agentic"
+  ],
+  "complexity": 2,
+  "num_nodes": 9,
+  "num_lanes": 3,
+  "tags": [
+    "agentic-taste",
+    "llm-as-judge",
+    "agent-evaluation",
+    "interoperability",
+    "trajectory"
+  ],
+  "description": "Legacy executor, LLM-as-judge evaluator and next-gen consumer: an evaluator scores the full trajectory, rejects structural sloppiness and forwards only validated payloads.",
+  "source_path": "",
+  "repo_path": "agentic-architecture/agentic-architecture/agentic-taste-evaluation-loop"
+}
