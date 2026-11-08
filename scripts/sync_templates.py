@@ -296,10 +296,15 @@ def make_readme(entry: dict, primary_use_case: str, secondary_use_cases: list[st
     return '\n'.join(lines).strip() + '\n'
 
 
+KEPT_TOP_LEVEL_DIRS = {'scripts'}
+
+
 def clean_repo_root() -> None:
-    for name in LEGACY_TOP_LEVEL_DIRS:
-        path = REPO_ROOT / name
-        if path.is_dir():
+    # Remove every generated top-level directory, not a hardcoded list: when the
+    # taxonomy changes, folders produced by an earlier run would otherwise
+    # survive and leave the same template committed in two paths.
+    for path in REPO_ROOT.iterdir():
+        if path.is_dir() and path.name not in KEPT_TOP_LEVEL_DIRS and not path.name.startswith('.'):
             shutil.rmtree(path)
     for name in ('metadata.csv', 'templates.index.json', 'use-cases.index.json', 'README.md', 'CONTRIBUTING.md'):
         path = REPO_ROOT / name
